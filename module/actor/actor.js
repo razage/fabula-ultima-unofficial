@@ -1,3 +1,5 @@
+import { clamp } from "../other/helpers.js";
+
 export class FabulaUltimaActor extends Actor {
     prepareData() {
         super.prepareData();
@@ -16,7 +18,7 @@ export class FabulaUltimaActor extends Actor {
 
         //Calculate statistics
         for (let [key, statistic] of Object.entries(system.attributes)) {
-            statistic.current = statistic.base + statistic.bonus;
+            statistic.current = clamp(statistic.base + statistic.bonus, 6, 12);
         }
 
         // Calculate the character's level
@@ -25,7 +27,7 @@ export class FabulaUltimaActor extends Actor {
         for (let [key, klass] of Object.entries(system.classes)) {
             _tempLevel += klass.level;
         }
-        system.characterLevel = _tempLevel;
+        system.characterLevel = clamp(_tempLevel, 5, 50);
 
         // Update resources to reflect bonuses
         system.hp.max =
@@ -38,17 +40,9 @@ export class FabulaUltimaActor extends Actor {
             system.mp.bonus;
         system.ip.max = 6 + system.ip.bonus;
 
-        if (system.hp.value > system.hp.max) {
-            system.hp.value = system.hp.max;
-        }
-
-        if (system.mp.value > system.mp.max) {
-            system.mp.value = system.mp.max;
-        }
-
-        if (system.ip.value > system.ip.max) {
-            system.ip.value = system.ip.max;
-        }
+        system.hp.value = clamp(system.hp.value, 0, system.hp.max);
+        system.mp.value = clamp(system.mp.value, 0, system.mp.max);
+        system.ip.value = clamp(system.ip.value, 0, system.ip.max);
 
         system.hp.crisis = Math.floor(system.hp.max / 2);
 
