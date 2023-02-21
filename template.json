@@ -3,31 +3,31 @@
         "types": ["player", "enemy", "group", "world"],
         "templates": {},
         "player": {
-            "schemaVersion": "0.0.4",
+            "schemaVersion": "0.0.5",
             "pronouns": "",
             "identity": "",
             "theme": "",
             "origin": "",
             "attributes": {
                 "dexterity": {
-                    "base": 0,
+                    "base": 6,
                     "bonus": 0,
-                    "current": 0
+                    "current": 6
                 },
                 "insight": {
-                    "base": 0,
+                    "base": 6,
                     "bonus": 0,
-                    "current": 0
+                    "current": 6
                 },
                 "might": {
-                    "base": 0,
+                    "base": 6,
                     "bonus": 0,
-                    "current": 0
+                    "current": 6
                 },
                 "willpower": {
-                    "base": 0,
+                    "base": 6,
                     "bonus": 0,
-                    "current": 0
+                    "current": 6
                 }
             },
             "statuses": {
@@ -36,18 +36,19 @@
                 "weakened": false,
                 "shaken": false,
                 "enraged": false,
-                "poisoned": false
+                "poisoned": false,
+                "crisis": false
             },
             "bonds": [],
             "hp": {
-                "value": 0,
-                "max": 0,
-                "crisis": 0,
+                "value": 35,
+                "max": 35,
+                "crisis": 17,
                 "bonus": 0
             },
             "mp": {
-                "value": 0,
-                "max": 0,
+                "value": 35,
+                "max": 35,
                 "bonus": 0
             },
             "ip": {
@@ -58,8 +59,8 @@
             "fabulaPoints": 3,
             "experiencePoints": 0,
             "initiativeMod": 0,
-            "defense": 0,
-            "magicDefense": 0,
+            "defense": 6,
+            "magicDefense": 6,
             "equipment": {
                 "accessory": {},
                 "armor": {},
