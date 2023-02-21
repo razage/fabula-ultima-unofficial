@@ -1,0 +1,89 @@
+{
+    "Actor": {
+        "types": ["player", "enemy", "group", "world"],
+        "templates": {},
+        "player": {
+            "schemaVersion": "0.0.4",
+            "pronouns": "",
+            "identity": "",
+            "theme": "",
+            "origin": "",
+            "attributes": {
+                "dexterity": {
+                    "base": 0,
+                    "bonus": 0,
+                    "current": 0
+                },
+                "insight": {
+                    "base": 0,
+                    "bonus": 0,
+                    "current": 0
+                },
+                "might": {
+                    "base": 0,
+                    "bonus": 0,
+                    "current": 0
+                },
+                "willpower": {
+                    "base": 0,
+                    "bonus": 0,
+                    "current": 0
+                }
+            },
+            "statuses": {
+                "slowed": false,
+                "dazed": false,
+                "weakened": false,
+                "shaken": false,
+                "enraged": false,
+                "poisoned": false
+            },
+            "bonds": [],
+            "hp": {
+                "value": 0,
+                "max": 0,
+                "crisis": 0,
+                "bonus": 0
+            },
+            "mp": {
+                "value": 0,
+                "max": 0,
+                "bonus": 0
+            },
+            "ip": {
+                "value": 6,
+                "max": 6,
+                "bonus": 0
+            },
+            "fabulaPoints": 3,
+            "experiencePoints": 0,
+            "initiativeMod": 0,
+            "defense": 0,
+            "magicDefense": 0,
+            "equipment": {
+                "accessory": {},
+                "armor": {},
+                "mainHand": {},
+                "offHand": {}
+            },
+            "characterLevel": 0,
+            "classes": [
+                {
+                    "className": "Fury",
+                    "level": 2
+                },
+                {
+                    "className": "Orator",
+                    "level": 3
+                }
+            ],
+            "spells": [],
+            "heroicSkills": [],
+            "rituals": [],
+            "zenit": 500
+        }
+    },
+    "Item": {
+        "types": ["weapon", "armor", "accessory", "consumable"]
+    }
+}

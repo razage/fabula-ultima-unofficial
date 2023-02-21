@@ -1,0 +1,38 @@
+{
+    "name": "fabulaultima",
+    "type": "module",
+    "version": "0.0.1",
+    "description": "Implementing Fabula Ultima in FoundryVTT.",
+    "main": "index.js",
+    "scripts": {
+        "build": "gulp buildAll",
+        "build:css": "gulp buildCSS",
+        "build:watch": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/razage/fabula-ultima-unofficial.git"
+    },
+    "keywords": [
+        "fabula",
+        "ultima",
+        "rpg",
+        "ttrpg",
+        "tabletop",
+        "foundry",
+        "vtt",
+        "jrpg",
+        "roleplay"
+    ],
+    "author": "razage",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/razage/fabula-ultima-unofficial/issues"
+    },
+    "homepage": "https://github.com/razage/fabula-ultima-unofficial#readme",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-less": "^5.0.0",
+        "less": "^4.1.3"
+    }
+}

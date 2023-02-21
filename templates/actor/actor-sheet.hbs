@@ -1,0 +1,216 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <div class="header-fields">
+            <div class="flexrow">
+                <img
+                    class="profile-img"
+                    src="{{actor.img}}"
+                    data-edit="img"
+                    title="{{actor.name}}"
+                    height="250"
+                    width="200"
+                />
+                <label for="charname">{{localize "FU.Bio.name"}}</label>
+                <input
+                    name="name"
+                    type="text"
+                    data-dtype="String"
+                    value="{{actor.name}}"
+                />
+                <label for="pronouns">{{localize "FU.Bio.pronouns"}}</label>
+                <input
+                    name="system.pronouns"
+                    type="text"
+                    data-dtype="String"
+                    value="{{actor.system.pronouns}}"
+                />
+            </div>
+            <div class="resources grid grid-3col">
+                <div class="flexrow">
+                    <div class="flexcol">
+                        <div class="grid grid-1col">
+                            <label
+                                for="system.hp.value"
+                                title="{{localize 'FU.Resources.hp'}}"
+                            >HP</label>
+                            <div class="grid grid-3col">
+                                <input
+                                    name="system.hp.value"
+                                    type="text"
+                                    data-dtype="Number"
+                                    value="{{actor.system.hp.value}}"
+                                />
+                                <span> / </span>
+                                <span class="hp">{{actor.system.hp.max}}</span>
+                            </div>
+                            <label for="crisis">{{localize
+                                    "FU.Status.crisis"
+                                }}</label>
+                            <p
+                                class="hp"
+                                name="crisis"
+                            >{{actor.system.hp.crisis}}</p>
+                        </div>
+                    </div>
+
+                    <div class="flexcol">
+                        <div class="grid grid-1col">
+                            <label
+                                for="system.mp.value"
+                                title="{{localize 'FU.Resources.mp'}}"
+                            >MP</label>
+                            <div class="grid grid-3col">
+                                <input
+                                    name="system.mp.value"
+                                    type="text"
+                                    data-dtype="Number"
+                                    value="{{actor.system.mp.value}}"
+                                />
+                                <span> / </span>
+                                <span class="mp">{{actor.system.mp.max}}</span>
+                            </div>
+                        </div></div>
+                    <div class="flexcol">
+                        <div class="grid grid-1col">
+                            <label
+                                for="system.ip.value"
+                                title="{{localize 'FU.Resources.ip'}}"
+                            >IP</label>
+                            <div class="grid grid-3col">
+                                <input
+                                    name="system.ip.value"
+                                    type="text"
+                                    data-dtype="Number"
+                                    value="{{actor.system.ip.value}}"
+                                />
+                                <span> / </span>
+                                <span class="ip">{{actor.system.ip.max}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="attributes">{{localize
+                "FU.Attributes.name"
+            }}</a>
+        <a class="item" data-tab="classes">{{localize "FU.Classes.plural"}}</a>
+        <a class="item" data-tab="equipment">{{localize
+                "FU.Equipment.name"
+            }}</a>
+        <a class="item" data-tab="backpack">{{localize "FU.Backpack.name"}}</a>
+        <a class="item" data-tab="spells">{{localize "FU.Spells.name"}}</a>
+        <a class="item" data-tab="bio">Bio</a>
+        <a class="item" data-tab="bonds">{{localize "FU.Bonds.name"}}</a>
+    </nav>
+
+    <section class="sheet-body">
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            <div class="grid grid-4col">
+                <div class="flexrow">
+                    {{#each actor.system.attributes as |attribute key|}}
+
+                        <label for="system.attributes.{{key}}.base">{{localize
+                                (concat "FU.Attributes." key)
+                            }}</label>
+                        <select name="system.attributes.{{key}}.base" data-dtype="Number">
+                            <option {{#if_eq attribute.base 6}} selected {{/if_eq}}value="6">d6</option>
+                            <option {{#if_eq attribute.base 8}} selected {{/if_eq}}value="8">d8</option>
+                            <option {{#if_eq attribute.base 10}} selected {{/if_eq}}value="10">d10</option>
+                            <option {{#if_eq attribute.base 12}} selected {{/if_eq}}value="12">d12</option>
+                        </select>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="tab classes" data-group="primary" data-tab="classes">
+
+        </div>
+
+        <div class="tab equipment" data-group="primary" data-tab="equipment">
+
+        </div>
+
+        <div class="tab backpack" data-group="primary" data-tab="backpack">
+            <span>
+                <p>{{localize "FU.Resources.currency"}}: </p>
+                <input
+                    type="text"
+                    name="system.zenit"
+                    data-dtype="Number"
+                    value="{{actor.system.zenit}}"
+                />
+            </span>
+        </div>
+
+        <div class="tab spells" data-group="primary" data-tab="spells">
+
+        </div>
+
+        <div class="tab bio" data-group="primary" data-tab="bio">
+            <div class="trait-labels flexrow">
+                <label for="identity">{{localize "FU.Traits.identity"}}</label>
+                <label for="theme">{{localize "FU.Traits.theme"}}</label>
+                <label for="origin">{{localize "FU.Traits.origin"}}</label>
+            </div>
+            <div class="flexrow">
+                <input
+                    class="identity"
+                    name="system.identity"
+                    type="text"
+                    data-dtype="String"
+                    value="{{actor.system.identity}}"
+                />
+                <input
+                    class="theme"
+                    name="system.theme"
+                    type="text"
+                    data-dtype="String"
+                    value="{{actor.system.theme}}"
+                />
+                <input
+                    class="origin"
+                    name="system.origin"
+                    type="text"
+                    data-dtype="String"
+                    value="{{actor.system.origin}}"
+                />
+            </div>
+        </div>
+
+        <div class="tab bonds" data-group="primary" data-tab="bonds">
+            <p>This is the bond tab</p>
+        </div>
+    </section>
+
+    {{!-- <section class="fabula">
+        <label>{{localize "FU.Resources.fp"}}</label>
+        <input type="text" data-dtype="Number" />
+        <ul>
+            <li>{{localize "FU.Fabula.exNone"}}</li>
+            <li>{{localize "FU.Fabula.exVillian"}}</li>
+            <li>{{localize "FU.Fabula.exFumble"}}</li>
+            <li>{{localize "FU.Fabula.exSurrender"}}</li>
+        </ul>
+        <ul>
+            <li>{{localize "FU.Fabula.exTrait"}}</li>
+            <li>{{localize "FU.Fabula.exBond"}}</li>
+            <li>{{localize "FU.Fabula.exStory"}}</li>
+        </ul>
+    </section>
+
+    <section class="experience">
+        <label>{{localize "FU.Resources.xp"}}</label>
+        <input type="text" data-dtype="Number" />
+        <ul>
+            <p>{{localize "FU.Experience.exAuto"}}</p>
+            <li>{{localize "FU.Experience.exFP"}}</li>
+            <li>{{localize "FU.Experience.exUP"}}</li>
+            <p>{{localize "FU.Experience.exLevel"}}</p>
+        </ul>
+    </section> --}}
+</form>

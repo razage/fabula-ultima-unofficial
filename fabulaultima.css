@@ -1,0 +1,40 @@
+.trait-labels {
+  text-align: center;
+}
+.sheet nav.sheet-tabs {
+  margin: 0;
+}
+nav.sheet-tabs {
+  background: #d7ffd7;
+}
+nav.sheet-tabs a.item {
+  width: 100%;
+  background: #fce3fc;
+}
+nav.sheet-tabs a.item.active {
+  background: #c1c1f3;
+}
+.resources label[for="system.hp.value"],
+.resources input[name="system.hp.value"],
+.resources input[name="system.hp.max"],
+.resources label[for="crisis"],
+.resources p.crisis,
+.resources .hp {
+  color: #ff0000;
+}
+.resources label[for="system.mp.value"],
+.resources input[name="system.mp.value"],
+.resources input[name="system.mp.max"],
+.resources .mp {
+  color: #0000ff;
+}
+.resources label[for="system.ip.value"],
+.resources input[name="system.ip.value"],
+.resources input[name="system.ip.max"],
+.resources .ip {
+  color: #00ff00;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
