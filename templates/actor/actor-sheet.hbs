@@ -91,6 +91,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="flexrow flex-center">
+                    <span class="fabula">
+                        <label
+                            for="system.fabulaPoints"
+                            title="{{localize 'FU.Resources.fp'}}"
+                        ><i class="fa-solid fa-feather"></i> FP:</label>
+                        <input
+                            name="system.fabulaPoints"
+                            type="text"
+                            data-dtype="Number"
+                            value="{{actor.system.fabulaPoints}}"
+                        />
+                    </span>
+                    <span class="experience">
+                        <label for="system.experiencePoints" title="{{localize 'FU.Resources.xp'}}"><i class="fa-solid fa-arrow-trend-up"></i> XP:</label>
+                        <input
+                            name="system.experiencePoints"
+                            type="text"
+                            data-dtype="Number"
+                            value="{{actor.system.experiencePoints}}"
+                        />
+                    </span>
+                </div>
             </div>
         </div>
     </header>
@@ -115,13 +138,22 @@
                 <div class="flexrow">
                     {{#each actor.system.attributes as |attribute key|}}
 
-                        <label for="system.attributes.{{key}}.base">{{localize
-                                (concat "FU.Attributes." key)
-                            }}</label>
-                        <select
-                            name="system.attributes.{{key}}.base"
-                            data-dtype="Number"
-                        >
+                        <label for="system.attributes.{{key}}.base">
+                            {{#if_eq key "dexterity"}}
+                                <i class="fa-solid fa-person-running"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "insight"}}
+                                <i class="fa-solid fa-head-side-brain"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "might"}}
+                                <i class="fa-solid fa-dumbbell"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "willpower"}}
+                                <i class="fa-solid fa-people-group"></i>
+                            {{/if_eq}}
+                            {{localize (concat "FU.Attributes." key)}}
+                        </label>
+                        <select name="system.attributes.{{key}}.base" data-dtype="Number">
                             <option {{#if_eq attribute.base 6}} selected {{/if_eq}}value="6">d6</option>
                             <option {{#if_eq attribute.base 8}} selected {{/if_eq}}value="8">d8</option>
                             <option {{#if_eq attribute.base 10}} selected {{/if_eq}}value="10">d10</option>
@@ -143,8 +175,8 @@
         <div class="tab backpack" data-group="primary" data-tab="backpack">
             <span class="currency">
                 <i class="fas fa-duotone fa-coins"></i>{{localize
-                        "FU.Resources.currency"
-                    }}:
+                    "FU.Resources.currency"
+                }}:
                 <input
                     type="text"
                     name="system.zenit"
