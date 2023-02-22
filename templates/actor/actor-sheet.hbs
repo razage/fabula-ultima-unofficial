@@ -1,5 +1,5 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
-    <header class="sheet-header">
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header flexcol">
         <div class="header-fields">
             <div class="flexrow">
                 <img
@@ -25,35 +25,37 @@
                     value="{{actor.system.pronouns}}"
                 />
             </div>
+
             <div class="resources grid grid-3col">
                 <div class="flexrow">
-                    <div class="flexcol">
+                    <div class="flexcol" style="background: #f5b0bb">
                         <div class="grid grid-1col">
                             <label
                                 for="system.hp.value"
                                 title="{{localize 'FU.Resources.hp'}}"
-                            ><i class="fas fa-solid fa-heart"></i>HP</label>
-                            <div class="grid grid-3col">
-                                <input
-                                    name="system.hp.value"
-                                    type="text"
-                                    data-dtype="Number"
-                                    value="{{actor.system.hp.value}}"
-                                />
-                                <span> / </span>
-                                <span class="hp">{{actor.system.hp.max}}</span>
-                            </div>
-                            <label for="crisis"><i class="fas fa-solid fa-heart-pulse"></i>{{localize
-                                    "FU.Status.crisis"
-                                }}</label>
-                            <p
-                                class="hp"
-                                name="crisis"
-                            >{{actor.system.hp.crisis}}</p>
+                            >
+                                <i class="fas fa-solid fa-heart"></i>HP:
+                            </label>
+                            <input
+                                name="system.hp.value"
+                                type="text"
+                                data-dtype="Number"
+                                value="{{actor.system.hp.value}}"
+                            />
+                            <span class="hp"> / {{actor.system.hp.max}}</span>
+                            <span class="hp" name="crisis">
+                                <p>
+                                    <i
+                                        class="fas fa-solid fa-heart-pulse"
+                                    ></i>{{localize "FU.Status.crisis"}}:
+                                    {{actor.system.hp.crisis}}
+                                </p>
+                            </span>
+
                         </div>
                     </div>
 
-                    <div class="flexcol">
+                    <div class="flexcol" style="background: #b0d6f5">
                         <div class="grid grid-1col">
                             <label
                                 for="system.mp.value"
@@ -70,7 +72,7 @@
                                 <span class="mp">{{actor.system.mp.max}}</span>
                             </div>
                         </div></div>
-                    <div class="flexcol">
+                    <div class="flexcol" style="background: #b0f5b3">
                         <div class="grid grid-1col">
                             <label
                                 for="system.ip.value"
@@ -116,7 +118,10 @@
                         <label for="system.attributes.{{key}}.base">{{localize
                                 (concat "FU.Attributes." key)
                             }}</label>
-                        <select name="system.attributes.{{key}}.base" data-dtype="Number">
+                        <select
+                            name="system.attributes.{{key}}.base"
+                            data-dtype="Number"
+                        >
                             <option {{#if_eq attribute.base 6}} selected {{/if_eq}}value="6">d6</option>
                             <option {{#if_eq attribute.base 8}} selected {{/if_eq}}value="8">d8</option>
                             <option {{#if_eq attribute.base 10}} selected {{/if_eq}}value="10">d10</option>
@@ -136,8 +141,10 @@
         </div>
 
         <div class="tab backpack" data-group="primary" data-tab="backpack">
-            <span>
-                <p><i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}: </p>
+            <span class="currency">
+                <i class="fas fa-duotone fa-coins"></i>{{localize
+                        "FU.Resources.currency"
+                    }}:
                 <input
                     type="text"
                     name="system.zenit"

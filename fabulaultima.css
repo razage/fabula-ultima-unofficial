@@ -14,6 +14,9 @@ nav.sheet-tabs a.item {
 nav.sheet-tabs a.item.active {
   background: #c1c1f3;
 }
+.resources input {
+  width: 2rem;
+}
 .resources label[for="system.hp.value"],
 .resources input[name="system.hp.value"],
 .resources input[name="system.hp.max"],
@@ -33,6 +36,21 @@ nav.sheet-tabs a.item.active {
 .resources input[name="system.ip.max"],
 .resources .ip {
   color: #00ff00;
+}
+.resources i {
+  font-size: 1.5rem;
+  padding-right: 8px;
+}
+.tab.backpack i {
+  font-size: 1.5rem;
+  padding-right: 8px;
+}
+.tab.backpack input {
+  width: 6rem;
+}
+.tab.backpack input[name="system.zenit"],
+.tab.backpack .currency {
+  color: #ffff00;
 }
 html {
   margin: 0;
