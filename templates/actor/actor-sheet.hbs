@@ -10,7 +10,7 @@
                     height="250"
                     width="200"
                 />
-                <label for="charname">{{localize "FU.Bio.name"}}</label>
+                <label for="charname">{{localize "FU.Bio.nameLabel"}}</label>
                 <input name="name" type="text" data-dtype="String" value="{{actor.name}}" />
                 <label for="pronouns">{{localize "FU.Bio.pronouns"}}</label>
                 <input
@@ -65,9 +65,7 @@
                         </div></div>
                     <div class="flexcol" style="background: #b0f5b3">
                         <div class="grid grid-1col">
-                            <label for="system.ip.value" title="{{localize 'FU.Resources.ip'}}"><i
-                                    class="fas fa-solid fa-backpack"
-                                ></i>IP</label>
+                            <label for="system.ip.value" title="{{localize 'FU.Resources.ip'}}"><i class="fas fa-solid fa-bag-shopping"></i>IP</label>
                             <div class="grid grid-3col">
                                 <input
                                     name="system.ip.value"
@@ -81,10 +79,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="flexrow flex-center">
+                <div class="flexrow">
                     <span class="fabula">
                         <label for="system.fabulaPoints" title="{{localize 'FU.Resources.fp'}}">
-                            <i class="fa-solid fa-feather"></i>
+                            <i class="fas fa-solid fa-feather"></i>
                             FP:
                         </label>
                         <input
@@ -96,7 +94,7 @@
                     </span>
                     <span class="experience">
                         <label for="system.experiencePoints" title="{{localize 'FU.Resources.xp'}}">
-                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <i class="fas fa-solid fa-arrow-trend-up"></i>
                             XP:
                         </label>
                         <input
@@ -112,13 +110,13 @@
     </header>
 
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="attributes">{{localize "FU.Attributes.name"}}</a>
-        <a class="item" data-tab="classes">{{localize "FU.Classes.plural"}}</a>
-        <a class="item" data-tab="equipment">{{localize "FU.Equipment.name"}}</a>
-        <a class="item" data-tab="backpack">{{localize "FU.Backpack.name"}}</a>
-        <a class="item" data-tab="spells">{{localize "FU.Spells.name"}}</a>
-        <a class="item" data-tab="bio">Bio</a>
-        <a class="item" data-tab="bonds">{{localize "FU.Bonds.name"}}</a>
+        <a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i> {{localize "FU.Attributes.name"}}</a>
+        <a class="item" data-tab="classes"><i class="fas fa-solid fa-hat-wizard"></i> {{localize "FU.Classes.plural"}}</a>
+        <a class="item" data-tab="equipment"><i class="fas fa-solid fa-helmet-battle"></i> {{localize "FU.Equipment.name"}}</a>
+        <a class="item" data-tab="backpack"><i class="fas fa-solid fa-backpack"></i> {{localize "FU.Backpack.name"}}</a>
+        <a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i> {{localize "FU.Spells.name"}}</a>
+        <a class="item" data-tab="bio"><i class="fas fa-solid fa-message"></i> {{localize "FU.Bio.name"}}</a>
+        <a class="item" data-tab="bonds"><i class="fas fa-solid fa-handshake-angle"></i> {{localize "FU.Bonds.name"}}</a>
     </nav>
 
     <section class="sheet-body">
@@ -129,16 +127,16 @@
 
                         <label for="system.attributes.{{key}}.base">
                             {{#if_eq key "dexterity"}}
-                                <i class="fa-solid fa-person-running"></i>
+                                <i class="fas fa-solid fa-person-running"></i>
                             {{/if_eq}}
                             {{#if_eq key "insight"}}
-                                <i class="fa-solid fa-head-side-brain"></i>
+                                <i class="fas fa-solid fa-head-side-brain"></i>
                             {{/if_eq}}
                             {{#if_eq key "might"}}
-                                <i class="fa-solid fa-dumbbell"></i>
+                                <i class="fas fa-solid fa-dumbbell"></i>
                             {{/if_eq}}
                             {{#if_eq key "willpower"}}
-                                <i class="fa-solid fa-people-group"></i>
+                                <i class="fas fa-solid fa-people-group"></i>
                             {{/if_eq}}
                             {{localize (concat "FU.Attributes." key)}}
                         </label>

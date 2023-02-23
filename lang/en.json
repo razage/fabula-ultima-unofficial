@@ -10,6 +10,15 @@
     "FU.Attributes.defense": "Defense",
     "FU.Attributes.magicDefense": "Magic Defense",
 
+    "FU.Short.dexterity": "DEX",
+    "FU.Short.difficultyLevel": "DL",
+    "FU.Short.highRoll": "HR",
+    "FU.Short.insight": "INS",
+    "FU.Short.might": "MIG",
+    "FU.Short.skillLevel": "SL",
+    "FU.Short.willpower": "WLP",
+    "FU.Short.zenit": "z",
+
     "FU.Status.name": "Status Effects",
     "FU.Status.slow": "Slow",
     "FU.Status.dazed": "Dazed",
@@ -26,7 +35,8 @@
     "FU.Resources.xp": "Experience Points",
     "FU.Resources.currency": "Zenit",
 
-    "FU.Bio.name": "Name",
+    "FU.Bio.nameLabel": "Name",
+    "FU.Bio.name": "Bio",
     "FU.Bio.pronouns": "Pronouns",
 
     "FU.Traits.identity": "Identity",
