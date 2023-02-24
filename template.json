@@ -3,7 +3,7 @@
         "types": ["player", "enemy", "group", "world"],
         "templates": {},
         "player": {
-            "schemaVersion": "0.0.5",
+            "schemaVersion": "1.0",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -70,12 +70,31 @@
             "characterLevel": 0,
             "classes": [
                 {
-                    "className": "Fury",
-                    "level": 2
+                    "level": 2,
+                    "benefits": {
+                        "resource": {
+                            "hp": 0,
+                            "mp": 5,
+                            "ip": 0
+                        },
+                        "rituals": {
+                            "ritualism": true
+                        }
+                    }
                 },
                 {
-                    "className": "Orator",
-                    "level": 3
+                    "level": 3,
+                    "benefits": {
+                        "resource": {
+                            "hp": 5,
+                            "mp": 0,
+                            "ip": 0
+                        },
+                        "martial": {
+                            "melee": true,
+                            "armor": true
+                        }
+                    }
                 }
             ],
             "spells": [],
@@ -85,6 +104,84 @@
         }
     },
     "Item": {
-        "types": ["weapon", "armor", "accessory", "consumable"]
+        "types": [
+            "weapon",
+            "armor",
+            "accessory",
+            "consumable",
+            "arcanum",
+            "class",
+            "spells",
+            "skills"
+        ],
+        "templates": {
+            "itemCommon": {
+                "isMartial": false,
+                "cost": 0,
+                "quality": ""
+            },
+            "armorStats": {
+                "defense": 0,
+                "mDefense": 0,
+                "initiative": 0
+            }
+        },
+        "accessory": {
+            "templates": ["itemCommon"],
+            "schemaVersion": "1.0",
+            "quality": "rare"
+        },
+        "arcanum": {
+            "schemaVersion": "1.0",
+            "domains": "",
+            "merge": "",
+            "isMerged": false,
+            "dismiss": ""
+        },
+        "armor": {
+            "templates": ["itemCommon", "armorStats"],
+            "schemaVersion": "1.0"
+        },
+        "class": {
+            "schemaVersion": "1.0",
+            "level": 0,
+            "benefits": {
+                "resource": {
+                    "hp": 0,
+                    "mp": 0,
+                    "ip": 0
+                },
+                "martial": {
+                    "melee": false,
+                    "ranged": false,
+                    "armor": false,
+                    "shields": false
+                },
+                "rituals": {
+                    "arcanism": false,
+                    "chimerism": false,
+                    "elementalism": false,
+                    "entropism": false,
+                    "ritualism": false,
+                    "spiritism": false
+                }
+            },
+            "skills": []
+        },
+        "weapon": {
+            "templates": ["itemCommon", "armorStats"],
+            "schemaVersion": "1.0",
+            "accuracy": {
+                "roll": "",
+                "bonus": 0
+            },
+            "damage": {
+                "roll": "",
+                "bonus": 0,
+                "type": "physical"
+            },
+            "hands": 1,
+            "range": ""
+        }
     }
 }
