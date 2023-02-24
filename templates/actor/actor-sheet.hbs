@@ -176,7 +176,17 @@
         </div>
 
         <div class="tab classes" data-group="primary" data-tab="classes">
-            <p>Classes go here</p>
+            <div class="flexrow">
+            {{#each system.classes as |klass key|}}
+                <div class="flexcol">
+                    <p>Class: {{key}}</p>
+                    <p>Class Level: {{klass.level}}</p>
+                    <p>HP Bonus: {{klass.benefits.resource.hp}}</p>
+                    <p>MP Bonus: {{klass.benefits.resource.mp}}</p>
+                    <p>IP Bonus: {{klass.benefits.resource.ip}}</p>
+                </div>
+            {{/each}}
+            </div>
         </div>
 
         <div class="tab equipment" data-group="primary" data-tab="equipment">
