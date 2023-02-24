@@ -38,20 +38,17 @@
                             <span class="hp" name="crisis">
                                 <p>
                                     <i class="fas fa-solid fa-heart-pulse"></i>{{localize
-                                        "FU.Status.crisis"
-                                    }}:
-                                    {{actor.system.hp.crisis}}
+                                    "FU.Status.crisis" }}: {{actor.system.hp.crisis}}
                                 </p>
                             </span>
-
                         </div>
                     </div>
 
                     <div class="flexcol" style="background: #b0d6f5">
                         <div class="grid grid-1col">
-                            <label for="system.mp.value" title="{{localize 'FU.Resources.mp'}}"><i
-                                    class="fas fa-solid fa-sparkles"
-                                ></i>MP</label>
+                            <label for="system.mp.value" title="{{localize 'FU.Resources.mp'}}"
+                                ><i class="fas fa-solid fa-sparkles"></i>MP</label
+                            >
                             <div class="grid grid-3col">
                                 <input
                                     name="system.mp.value"
@@ -62,10 +59,13 @@
                                 <span> / </span>
                                 <span class="mp">{{actor.system.mp.max}}</span>
                             </div>
-                        </div></div>
+                        </div>
+                    </div>
                     <div class="flexcol" style="background: #b0f5b3">
                         <div class="grid grid-1col">
-                            <label for="system.ip.value" title="{{localize 'FU.Resources.ip'}}"><i class="fas fa-solid fa-bag-shopping"></i>IP</label>
+                            <label for="system.ip.value" title="{{localize 'FU.Resources.ip'}}"
+                                ><i class="fas fa-solid fa-bag-shopping"></i>IP</label
+                            >
                             <div class="grid grid-3col">
                                 <input
                                     name="system.ip.value"
@@ -110,53 +110,77 @@
     </header>
 
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i> {{localize "FU.Attributes.name"}}</a>
-        <a class="item" data-tab="classes"><i class="fas fa-solid fa-hat-wizard"></i> {{localize "FU.Classes.plural"}}</a>
-        <a class="item" data-tab="equipment"><i class="fas fa-solid fa-helmet-battle"></i> {{localize "FU.Equipment.name"}}</a>
-        <a class="item" data-tab="backpack"><i class="fas fa-solid fa-backpack"></i> {{localize "FU.Backpack.name"}}</a>
-        <a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i> {{localize "FU.Spells.name"}}</a>
-        <a class="item" data-tab="bio"><i class="fas fa-solid fa-message"></i> {{localize "FU.Bio.name"}}</a>
-        <a class="item" data-tab="bonds"><i class="fas fa-solid fa-handshake-angle"></i> {{localize "FU.Bonds.name"}}</a>
+        <a class="item" data-tab="attributes"
+            ><i class="fas fa-solid fa-person"></i> {{localize "FU.Attributes.name"}}</a
+        >
+        <a class="item" data-tab="classes"
+            ><i class="fas fa-solid fa-hat-wizard"></i> {{localize "FU.Classes.plural"}}</a
+        >
+        <a class="item" data-tab="equipment"
+            ><i class="fas fa-solid fa-helmet-battle"></i> {{localize "FU.Equipment.name"}}</a
+        >
+        <a class="item" data-tab="backpack"
+            ><i class="fas fa-solid fa-backpack"></i> {{localize "FU.Backpack.name"}}</a
+        >
+        <a class="item" data-tab="spells"
+            ><i class="fas fa-solid fa-book"></i> {{localize "FU.Spells.name"}}</a
+        >
+
+        <a class="item" data-tab="bio"
+            ><i class="fas fa-solid fa-message"></i> {{localize "FU.Bio.name"}}</a
+        >
+        <a class="item" data-tab="bonds"
+            ><i class="fas fa-solid fa-handshake-angle"></i> {{localize "FU.Bonds.name"}}</a
+        >
     </nav>
 
     <section class="sheet-body">
         <div class="tab attributes" data-group="primary" data-tab="attributes">
+            <div class="grid grid-3-col">
+                <div class="flexrow">
+                    <span class="defense"
+                        >{{localize "FU.Attributes.defense"}}: {{system.defense}}</span
+                    >
+                    <span class="mdefense"
+                        >{{localize "FU.Attributes.magicDefense"}}: {{system.magicDefense}}</span
+                    >
+                    <span class="initiative"
+                        >{{localize "FU.Attributes.initiative"}}: {{system.initiativeMod}}</span
+                    >
+                </div>
+            </div>
             <div class="grid grid-4col">
                 <div class="flexrow">
                     {{#each actor.system.attributes as |attribute key|}}
 
-                        <label for="system.attributes.{{key}}.base">
-                            {{#if_eq key "dexterity"}}
-                                <i class="fas fa-solid fa-person-running"></i>
-                            {{/if_eq}}
-                            {{#if_eq key "insight"}}
-                                <i class="fas fa-solid fa-head-side-brain"></i>
-                            {{/if_eq}}
-                            {{#if_eq key "might"}}
-                                <i class="fas fa-solid fa-dumbbell"></i>
-                            {{/if_eq}}
-                            {{#if_eq key "willpower"}}
-                                <i class="fas fa-solid fa-people-group"></i>
-                            {{/if_eq}}
-                            {{localize (concat "FU.Attributes." key)}}
-                        </label>
-                        <select name="system.attributes.{{key}}.base" data-dtype="Number">
-                            <option {{#if_eq attribute.base 6}} selected {{/if_eq}}value="6">d6</option>
-                            <option {{#if_eq attribute.base 8}} selected {{/if_eq}}value="8">d8</option>
-                            <option {{#if_eq attribute.base 10}} selected {{/if_eq}}value="10">d10</option>
-                            <option {{#if_eq attribute.base 12}} selected {{/if_eq}}value="12">d12</option>
-                        </select>
+                    <label for="system.attributes.{{key}}.base">
+                        {{#if_eq key "dexterity"}}
+                        <i class="fas fa-solid fa-person-running"></i>
+                        {{/if_eq}} {{#if_eq key "insight"}}
+                        <i class="fas fa-solid fa-head-side-brain"></i>
+                        {{/if_eq}} {{#if_eq key "might"}}
+                        <i class="fas fa-solid fa-dumbbell"></i>
+                        {{/if_eq}} {{#if_eq key "willpower"}}
+                        <i class="fas fa-solid fa-people-group"></i>
+                        {{/if_eq}} {{localize (concat "FU.Attributes." key)}}
+                    </label>
+                    <select name="system.attributes.{{key}}.base" data-dtype="Number">
+                        <option {{#if_eq attribute.base 6}} selected {{/if_eq}}value="6">d6</option>
+                        <option {{#if_eq attribute.base 8}} selected {{/if_eq}}value="8">d8</option>
+                        <option {{#if_eq attribute.base 10}} selected {{/if_eq}}value="10">d10</option>
+                        <option {{#if_eq attribute.base 12}} selected {{/if_eq}}value="12">d12</option>
+                    </select>
                     {{/each}}
                 </div>
             </div>
         </div>
 
         <div class="tab classes" data-group="primary" data-tab="classes">
-
+            <p>Classes go here</p>
         </div>
 
         <div class="tab equipment" data-group="primary" data-tab="equipment">
-
+            <p>Equipment goes here</p>
         </div>
 
         <div class="tab backpack" data-group="primary" data-tab="backpack">
@@ -172,7 +196,7 @@
         </div>
 
         <div class="tab spells" data-group="primary" data-tab="spells">
-
+            <p>Spells go here</p>
         </div>
 
         <div class="tab bio" data-group="primary" data-tab="bio">
@@ -210,31 +234,4 @@
             <p>This is the bond tab</p>
         </div>
     </section>
-
-    {{!-- <section class="fabula">
-        <label>{{localize "FU.Resources.fp"}}</label>
-        <input type="text" data-dtype="Number" />
-        <ul>
-            <li>{{localize "FU.Fabula.exNone"}}</li>
-            <li>{{localize "FU.Fabula.exVillian"}}</li>
-            <li>{{localize "FU.Fabula.exFumble"}}</li>
-            <li>{{localize "FU.Fabula.exSurrender"}}</li>
-        </ul>
-        <ul>
-            <li>{{localize "FU.Fabula.exTrait"}}</li>
-            <li>{{localize "FU.Fabula.exBond"}}</li>
-            <li>{{localize "FU.Fabula.exStory"}}</li>
-        </ul>
-    </section>
-
-    <section class="experience">
-        <label>{{localize "FU.Resources.xp"}}</label>
-        <input type="text" data-dtype="Number" />
-        <ul>
-            <p>{{localize "FU.Experience.exAuto"}}</p>
-            <li>{{localize "FU.Experience.exFP"}}</li>
-            <li>{{localize "FU.Experience.exUP"}}</li>
-            <p>{{localize "FU.Experience.exLevel"}}</p>
-        </ul>
-    </section> --}}
 </form>
