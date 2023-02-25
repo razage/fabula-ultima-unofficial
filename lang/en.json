@@ -128,6 +128,9 @@
     "FU.Spells.ventus": "Ventus",
     "FU.Spells.vortex": "Vortex",
 
+    "FU.Navigation.tabGear": "Gear",
+    "FU.Navigation.tabRolls": "Rolls",
+
     "FU.Experience.exAuto": "At the end of each session, you automatically gain <b>5 XP</b>. Then:",
     "FU.Experience.exFP": "Gain <b>XP</b> equal to <b>[Fabula Points spent by the group / number of Player Characters]</b>.",
     "FU.Experience.exUP": "Gain <b>XP</b> equal to <b>[Ultima Points spent by Villians]</b>",

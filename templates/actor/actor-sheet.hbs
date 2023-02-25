@@ -59,57 +59,55 @@
     </header>
 
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="attributes"
-            ><i class="fas fa-solid fa-person"></i> {{localize "FU.Attributes.name"}}</a
-        >
-        <a class="item" data-tab="classes"
-            ><i class="fas fa-solid fa-hat-wizard"></i> {{localize "FU.Classes.plural"}}</a
-        >
-        <a class="item" data-tab="equipment"
-            ><i class="fas fa-solid fa-helmet-battle"></i> {{localize "FU.Equipment.name"}}</a
-        >
-        <a class="item" data-tab="backpack"
-            ><i class="fas fa-solid fa-backpack"></i> {{localize "FU.Backpack.name"}}</a
-        >
-        <a class="item" data-tab="spells"
-            ><i class="fas fa-solid fa-book"></i> {{localize "FU.Spells.name"}}</a
-        >
-        <a class="item" data-tab="bio"
-            ><i class="fas fa-solid fa-message"></i> {{localize "FU.Bio.name"}}</a
-        >
+        <a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i>
+            {{localize "FU.Navigation.tabRolls"}}</a>
+        <a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i>
+            {{localize "FU.Attributes.name"}}</a>
+        <a class="item" data-tab="classes"><i class="fas fa-solid fa-hat-wizard"></i>
+            {{localize "FU.Classes.plural"}}</a>
+        <a class="item" data-tab="backpack"><i class="fas fa-solid fa-backpack"></i>
+            {{localize "FU.Navigation.tabGear"}}</a>
+        <a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i>
+            {{localize "FU.Spells.name"}}</a>
+        <a class="item" data-tab="bio"><i class="fas fa-solid fa-message"></i>
+            {{localize "FU.Bio.name"}}</a>
     </nav>
 
     <section class="sheet-body">
+        <div class="tab rolls" data-group="primary" data-tab="rolls">
+            <p>Dice rolling stuff goes here.</p>
+        </div>
+
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             <div class="grid grid-3-col">
                 <div class="flexrow">
-                    <span class="defense"
-                        >{{localize "FU.Attributes.defense"}}: {{system.defense}}</span
-                    >
-                    <span class="mdefense"
-                        >{{localize "FU.Attributes.magicDefense"}}: {{system.magicDefense}}</span
-                    >
-                    <span class="initiative"
-                        >{{localize "FU.Attributes.initiative"}}: {{system.initiativeMod}}</span
-                    >
+                    <span class="defense">{{localize "FU.Attributes.defense"}}:
+                        {{system.defense}}</span>
+                    <span class="mdefense">{{localize "FU.Attributes.magicDefense"}}:
+                        {{system.magicDefense}}</span>
+                    <span class="initiative">{{localize "FU.Attributes.initiative"}}:
+                        {{system.initiativeMod}}</span>
                 </div>
             </div>
             <div class="grid grid-4col">
                 <div class="flexrow">
                     {{#each actor.system.attributes as |attribute key|}}
-
-                    <label for="system.attributes.{{key}}.base">
-                        {{#if_eq key "dexterity"}}
-                        <i class="fas fa-solid fa-person-running"></i>
-                        {{/if_eq}} {{#if_eq key "insight"}}
-                        <i class="fas fa-solid fa-head-side-brain"></i>
-                        {{/if_eq}} {{#if_eq key "might"}}
-                        <i class="fas fa-solid fa-dumbbell"></i>
-                        {{/if_eq}} {{#if_eq key "willpower"}}
-                        <i class="fas fa-solid fa-people-group"></i>
-                        {{/if_eq}} {{localize (concat "FU.Attributes." key)}}
-                    </label>
-                    {{> "systems/fabulaultima/templates/actor/attribute-dropdown.hbs" stat=key obj=attribute}}
+                        <label for="system.attributes.{{key}}.base">
+                            {{#if_eq key "dexterity"}}
+                                <i class="fas fa-solid fa-person-running"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "insight"}}
+                                <i class="fas fa-solid fa-head-side-brain"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "might"}}
+                                <i class="fas fa-solid fa-dumbbell"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "willpower"}}
+                                <i class="fas fa-solid fa-people-group"></i>
+                            {{/if_eq}}
+                            {{localize (concat "FU.Attributes." key)}}
+                        </label>
+                        {{> "systems/fabulaultima/templates/actor/attribute-dropdown.hbs" stat=key obj=attribute}}
                     {{/each}}
                 </div>
             </div>
@@ -124,10 +122,6 @@
             </div>
         </div>
 
-        <div class="tab equipment" data-group="primary" data-tab="equipment">
-            <p>Equipment goes here</p>
-        </div>
-
         <div class="tab backpack" data-group="primary" data-tab="backpack">
             <span class="currency">
                 <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:
@@ -138,6 +132,7 @@
                     value="{{actor.system.zenit}}"
                 />
             </span>
+            <p>Equipment goes here</p>
         </div>
 
         <div class="tab spells" data-group="primary" data-tab="spells">

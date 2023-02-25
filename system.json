@@ -4,7 +4,7 @@
     "description": "An unofficial implementation of the Fabula Ultima ruleset for Foundry VTT.",
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "compatibility": {
         "minimum": "10.284",
         "verified": "10.291"
@@ -20,7 +20,7 @@
         }
     ],
     "packs": [],
-    "manifest": "",
+    "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
     "download": "",
     "primaryTokeAttribute": "hp",
     "secondaryTokenAttribute": "mp"
