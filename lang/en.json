@@ -28,6 +28,7 @@
     "FU.Status.poisoned": "Poisoned",
     "FU.Status.crisis": "Crisis",
 
+    "FU.Resources.name": "Resources",
     "FU.Resources.hp": "Hit Points",
     "FU.Resources.mp": "Mind Points",
     "FU.Resources.ip": "Item Points",
@@ -90,6 +91,14 @@
 
     "FU.Backpack.name": "Backpack",
 
+    "FU.Rituals.name": "Rituals",
+    "FU.Rituals.arcanism": "Arcanism",
+    "FU.Rituals.chimerism": "Chimerism",
+    "FU.Rituals.elementalism": "Elementalism",
+    "FU.Rituals.entropism": "Entropism",
+    "FU.Rituals.ritualism": "Ritualism",
+    "FU.Rituals.spiritism": "Spiritism",
+
     "FU.Spells.name": "Spells",
     "FU.Spells.acceleration": "Acceleration",
     "FU.Spells.anomaly": "Anomaly",
@@ -130,6 +139,10 @@
 
     "FU.Navigation.tabGear": "Gear",
     "FU.Navigation.tabRolls": "Rolls",
+
+    "FU.UI.benefits": "Free Benefits",
+    "FU.UI.characterLevel": "Character Level",
+    "FU.UI.classLevel": "Class Level",
 
     "FU.Experience.exAuto": "At the end of each session, you automatically gain <b>5 XP</b>. Then:",
     "FU.Experience.exFP": "Gain <b>XP</b> equal to <b>[Fabula Points spent by the group / number of Player Characters]</b>.",

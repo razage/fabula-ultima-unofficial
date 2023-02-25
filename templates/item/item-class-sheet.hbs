@@ -1,47 +1,55 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <img
-        class="item-img"
-        src="{{item.img}}"
-        data-edit="img"
-        height="100"
-        width="100"
-    />
-	<h1>{{item.name}}</h1>
+    <header class="sheet-header">
+        <img
+            class="item-img"
+            src="{{item.img}}"
+            data-edit="img"
+            height="100"
+            width="100"
+        />
+        <h1>{{item.name}}</h1>
+        <label for="system.level">{{localize "FU.UI.classLevel"}}: </label>
+        <input type="text" data-dtype="Number" name="system.level" value="{{item.system.level}}" />
+    </header>
+
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="bonuses">Bonuses</a>
-        <a class="item" data-tab="rituals">Rituals</a>
+        <a class="item" data-tab="bonuses">{{localize "FU.UI.benefits"}}</a>
+        <a class="item" data-tab="rituals">{{localize "FU.Rituals.name"}}</a>
     </nav>
 
     <section class="sheet-body">
         <div class="tab bonuses" data-group="primary" data-tab="bonuses">
-            <h2>Resources</h2>
+            <h2>{{localize "FU.Resources.name"}}</h2>
             <div class="grid grid-2col">
                 <div class="flexrow">
-                    <label for="system.benefits.resource.hp">HP</label>
+                    <label for="system.benefits.resource.hp" title="{{localize 'FU.Resources.hp'}}">HP</label>
                     <input
                         type="text"
                         data-dtype="Number"
                         name="system.benefits.resource.hp"
+                        title="{{localize 'FU.Resources.hp'}}"
                         value="{{item.system.benefits.resource.hp}}"
                     />
                 </div>
 
                 <div class="flexrow">
-                    <label for="system.benefits.resource.mp">MP</label>
+                    <label for="system.benefits.resource.mp" title="{{localize 'FU.Resources.mp'}}">MP</label>
                     <input
                         type="text"
                         data-dtype="Number"
                         name="system.benefits.resource.mp"
+                        title="{{localize 'FU.Resources.mp'}}"
                         value="{{item.system.benefits.resource.mp}}"
                     />
                 </div>
 
                 <div class="flexrow">
-                    <label for="system.benefits.resource.ip">IP</label>
+                    <label for="system.benefits.resource.ip" title="{{localize 'FU.Resources.ip'}}">IP</label>
                     <input
                         type="text"
                         data-dtype="Number"
                         name="system.benefits.resource.ip"
+                        title="{{localize 'FU.Resources.ip'}}"
                         value="{{item.system.benefits.resource.ip}}"
                     />
                 </div>
@@ -67,19 +75,19 @@
         <div class="tab rituals" data-group="primary" data-tab="rituals">
             <div class="grid grid-6col">
 				<div class="flexrow">
-					<label for="system.benefits.rituals.arcanism">Arcanism</label>
+					<label for="system.benefits.rituals.arcanism">{{localize "FU.Rituals.arcanism"}}</label>
                     <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.arcanism" {{#if item.system.benefits.rituals.arcanism}}checked{{/if}}/>
-					<label for="system.benefits.rituals.chimerism">Chimerism</label>
+					<label for="system.benefits.rituals.chimerism">{{localize "FU.Rituals.chimerism"}}</label>
                     <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.chimerism" {{#if item.system.benefits.rituals.chimerism}}checked{{/if}}/>
-					<label for="system.benefits.rituals.elementalism">Elementalism</label>
+					<label for="system.benefits.rituals.elementalism">{{localize "FU.Rituals.elementalism"}}</label>
                     <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.elementalism" {{#if item.system.benefits.rituals.elementalism}}checked{{/if}}/>
                 </div>
 				<div class="flexrow">
-					<label for="system.benefits.rituals.entropism">Entropism</label>
+					<label for="system.benefits.rituals.entropism">{{localize "FU.Rituals.entropism"}}</label>
                     <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.entropism" {{#if item.system.benefits.rituals.entropism}}checked{{/if}}/>
-					<label for="system.benefits.rituals.ritualism">Ritualism</label>
+					<label for="system.benefits.rituals.ritualism">{{localize "FU.Rituals.ritualism"}}</label>
                     <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.ritualism" {{#if item.system.benefits.rituals.ritualism}}checked{{/if}}/>
-					<label for="system.benefits.rituals.spiritism">Spiritism</label>
+					<label for="system.benefits.rituals.spiritism">{{localize "FU.Rituals.spiritism"}}</label>
                     <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.spiritism" {{#if item.system.benefits.rituals.spiritism}}checked{{/if}}/>
                 </div>
 			</div>
