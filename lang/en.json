@@ -91,6 +91,12 @@
 
     "FU.Backpack.name": "Backpack",
 
+    "FU.Proficiencies.name": "Equipment Proficiencies",
+    "FU.Proficiencies.armor": "Martial Armors",
+    "FU.Proficiencies.melee": "Martial Melee Weapons",
+    "FU.Proficiencies.ranged": "Martial Ranged Weapons",
+    "FU.Proficiencies.shield": "Martial Shields",
+
     "FU.Rituals.name": "Rituals",
     "FU.Rituals.arcanism": "Arcanism",
     "FU.Rituals.chimerism": "Chimerism",
