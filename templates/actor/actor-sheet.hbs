@@ -125,12 +125,8 @@
         <a class="item" data-tab="spells"
             ><i class="fas fa-solid fa-book"></i> {{localize "FU.Spells.name"}}</a
         >
-
         <a class="item" data-tab="bio"
             ><i class="fas fa-solid fa-message"></i> {{localize "FU.Bio.name"}}</a
-        >
-        <a class="item" data-tab="bonds"
-            ><i class="fas fa-solid fa-handshake-angle"></i> {{localize "FU.Bonds.name"}}</a
         >
     </nav>
 
@@ -164,12 +160,7 @@
                         <i class="fas fa-solid fa-people-group"></i>
                         {{/if_eq}} {{localize (concat "FU.Attributes." key)}}
                     </label>
-                    <select name="system.attributes.{{key}}.base" data-dtype="Number">
-                        <option {{#if_eq attribute.base 6}} selected {{/if_eq}}value="6">d6</option>
-                        <option {{#if_eq attribute.base 8}} selected {{/if_eq}}value="8">d8</option>
-                        <option {{#if_eq attribute.base 10}} selected {{/if_eq}}value="10">d10</option>
-                        <option {{#if_eq attribute.base 12}} selected {{/if_eq}}value="12">d12</option>
-                    </select>
+                    {{> "systems/fabulaultima/templates/actor/attribute-dropdown.hbs" stat=key obj=attribute}}
                     {{/each}}
                 </div>
             </div>
@@ -178,13 +169,7 @@
         <div class="tab classes" data-group="primary" data-tab="classes">
             <div class="flexrow">
             {{#each system.classes as |klass key|}}
-                <div class="flexcol">
-                    <p>Class: {{key}}</p>
-                    <p>Class Level: {{klass.level}}</p>
-                    <p>HP Bonus: {{klass.benefits.resource.hp}}</p>
-                    <p>MP Bonus: {{klass.benefits.resource.mp}}</p>
-                    <p>IP Bonus: {{klass.benefits.resource.ip}}</p>
-                </div>
+                {{> "systems/fabulaultima/templates/actor/class-card.hbs" className=key class=klass}}
             {{/each}}
             </div>
         </div>
@@ -238,10 +223,10 @@
                     value="{{actor.system.origin}}"
                 />
             </div>
-        </div>
-
-        <div class="tab bonds" data-group="primary" data-tab="bonds">
-            <p>This is the bond tab</p>
+            <h2>Bonds</h2>
+            <div class="bonds">
+                <p>Bonds go here</p>
+            </div>
         </div>
     </section>
 </form>
