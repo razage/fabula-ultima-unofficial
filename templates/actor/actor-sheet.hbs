@@ -23,9 +23,9 @@
 
             <div class="resources grid grid-3col">
                 <div class="flexrow">
-                    {{> "systems/fabulaultima/templates/actor/resource-card.hbs" r="hp" title=(localize 'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max}}
-                    {{> "systems/fabulaultima/templates/actor/resource-card.hbs" r="mp" title=(localize 'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value" rValue=actor.system.mp.value rMax=actor.system.mp.max}}
-                    {{> "systems/fabulaultima/templates/actor/resource-card.hbs" r="ip" title=(localize 'FU.Resources.ip') icon="fas fa-solid fa-bag-shopping" inputName="system.ip.value" rValue=actor.system.ip.value rMax=actor.system.ip.max}}
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize 'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max}}
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="mp" title=(localize 'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value" rValue=actor.system.mp.value rMax=actor.system.mp.max}}
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="ip" title=(localize 'FU.Resources.ip') icon="fas fa-solid fa-bag-shopping" inputName="system.ip.value" rValue=actor.system.ip.value rMax=actor.system.ip.max}}
                 </div>
 
                 <div class="flexrow">
@@ -107,7 +107,7 @@
                             {{/if_eq}}
                             {{localize (concat "FU.Attributes." key)}}
                         </label>
-                        {{> "systems/fabulaultima/templates/actor/attribute-dropdown.hbs" stat=key obj=attribute}}
+                        {{> "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs" stat=key obj=attribute}}
                     {{/each}}
                 </div>
             </div>
@@ -119,7 +119,7 @@
                 {{#each actor.items as |item id|}}
                     {{#if_eq item.type 'class'}}
                         <div class="item" data-item-id="{{item.id}}">
-                            {{> "systems/fabulaultima/templates/actor/class-card.hbs" class=item}}
+                            {{> "systems/fabulaultima/templates/actor/partials/class-card.hbs" class=item}}
                         </div>
                     {{/if_eq}}
                 {{/each}}
