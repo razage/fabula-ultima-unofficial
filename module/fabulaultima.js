@@ -1,14 +1,17 @@
 import { FabulaUltimaActor } from "./actor/actor.js";
 import { FabulaUltimaActorSheet } from "./actor/actor-sheet.js";
+import { FabulaUltimaItem } from "./item/item.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 
 Hooks.once("init", async function () {
     game.fabulaultima = {
         FabulaUltimaActor,
+        FabulaUltimaItem,
     };
 
     // Define custom Entity classes
     CONFIG.Actor.documentClass = FabulaUltimaActor;
+    CONFIG.Item.documentClass = FabulaUltimaItem;
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("fabulaultima", FabulaUltimaActorSheet, {
