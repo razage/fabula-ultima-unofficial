@@ -15,18 +15,39 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         });
     }
 
-    getData() {
-        const context = super.getData();
-        const actorData = this.actor.toObject(false);
+    async getData() {
+        const data = super.getData();
 
-        // Add context.data for easier access
-        context.system = actorData.system;
-        context.flags = actorData.flags;
+        if (this.actor.type === "player") {
+            this._prepareCharacterItems(data);
+        }
 
-        return context;
+        return data;
     }
 
-    // activateListeners(html) {
-    //     super.activateListeners(html);
-    // }
+    _prepareCharacterItems(sheetData) {
+        const actorData = sheetData.actor;
+
+        const classes = [];
+
+        sheetData.items.forEach((item) => {
+            if (item.type === "class") classes.push(item);
+        });
+
+        // This gets put into the actor object. For consistency, my data is stored in actor.system
+        actorData.system.classes = classes;
+    }
+
+    activateListeners(html) {
+        super.activateListeners(html);
+
+        if (!this.options.editable) return;
+
+        html.find(".item-edit").click((ev) => {
+            const parent = $(ev.currentTarget).parents(".item");
+            const item = this.actor.items.get(parent.data("itemId"));
+
+            item.sheet.render(true);
+        });
+    }
 }

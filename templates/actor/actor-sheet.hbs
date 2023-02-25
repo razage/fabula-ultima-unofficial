@@ -114,17 +114,15 @@
         </div>
 
         <div class="tab classes" data-group="primary" data-tab="classes">
-            <h2 style="text-align: center">Character Level: {{actor.system.characterLevel}}</h2>
-            <div class="flexrow item-list">
-                {{#if actor.items}}
-                    {{#each actor.items as |item id|}}
-                        {{#if_eq item.type 'class'}}
-                            <div class="item" data-item-id="{{item.id}}">
-                                {{> "systems/fabulaultima/templates/actor/class-card.hbs" class=item}}
-                            </div>
-                        {{/if_eq}}
-                    {{/each}}
-                {{/if}}
+            <h2 style="text-align: center">{{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}</h2>
+            <div class="flexcol item-list">
+                {{#each actor.items as |item id|}}
+                    {{#if_eq item.type 'class'}}
+                        <div class="item" data-item-id="{{item.id}}">
+                            {{> "systems/fabulaultima/templates/actor/class-card.hbs" class=item}}
+                        </div>
+                    {{/if_eq}}
+                {{/each}}
             </div>
             </div>
         </div>

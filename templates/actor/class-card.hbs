@@ -1,7 +1,10 @@
-<div class="class-card flexcol">
-    <p>Class: {{class.name}}</p>
-    <p>Class Level: {{class.system.level}}</p>
-    <p>HP Bonus: {{class.system.benefits.resource.hp}}</p>
-    <p>MP Bonus: {{class.system.benefits.resource.mp}}</p>
-    <p>IP Bonus: {{class.system.benefits.resource.ip}}</p>
+<div class="class-card" style="background: #ffddcc; border: 1px solid #000000;">
+    <div class="grid grid-3col">
+        <div class="flexrow">
+            <img src="{{class.img}}" width="60" height="60" />
+            <p>{{class.name}}</p>
+            <p>{{class.system.level}}</p>
+            <p class="item-edit">Edit</p>
+        </div>
+    </div>
 </div>
