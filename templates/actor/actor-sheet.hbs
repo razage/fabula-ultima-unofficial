@@ -23,62 +23,11 @@
 
             <div class="resources grid grid-3col">
                 <div class="flexrow">
-                    <div class="flexcol" style="background: #f5b0bb">
-                        <div class="grid grid-1col">
-                            <label for="system.hp.value" title="{{localize 'FU.Resources.hp'}}">
-                                <i class="fas fa-solid fa-heart"></i>HP:
-                            </label>
-                            <input
-                                name="system.hp.value"
-                                type="text"
-                                data-dtype="Number"
-                                value="{{actor.system.hp.value}}"
-                            />
-                            <span class="hp"> / {{actor.system.hp.max}}</span>
-                            <span class="hp" name="crisis">
-                                <p>
-                                    <i class="fas fa-solid fa-heart-pulse"></i>{{localize
-                                    "FU.Status.crisis" }}: {{actor.system.hp.crisis}}
-                                </p>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="flexcol" style="background: #b0d6f5">
-                        <div class="grid grid-1col">
-                            <label for="system.mp.value" title="{{localize 'FU.Resources.mp'}}"
-                                ><i class="fas fa-solid fa-sparkles"></i>MP</label
-                            >
-                            <div class="grid grid-3col">
-                                <input
-                                    name="system.mp.value"
-                                    type="text"
-                                    data-dtype="Number"
-                                    value="{{actor.system.mp.value}}"
-                                />
-                                <span> / </span>
-                                <span class="mp">{{actor.system.mp.max}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flexcol" style="background: #b0f5b3">
-                        <div class="grid grid-1col">
-                            <label for="system.ip.value" title="{{localize 'FU.Resources.ip'}}"
-                                ><i class="fas fa-solid fa-bag-shopping"></i>IP</label
-                            >
-                            <div class="grid grid-3col">
-                                <input
-                                    name="system.ip.value"
-                                    type="text"
-                                    data-dtype="Number"
-                                    value="{{actor.system.ip.value}}"
-                                />
-                                <span> / </span>
-                                <span class="ip">{{actor.system.ip.max}}</span>
-                            </div>
-                        </div>
-                    </div>
+                    {{> "systems/fabulaultima/templates/actor/resource-card.hbs" r="hp" title=(localize 'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max}}
+                    {{> "systems/fabulaultima/templates/actor/resource-card.hbs" r="mp" title=(localize 'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value" rValue=actor.system.mp.value rMax=actor.system.mp.max}}
+                    {{> "systems/fabulaultima/templates/actor/resource-card.hbs" r="ip" title=(localize 'FU.Resources.ip') icon="fas fa-solid fa-bag-shopping" inputName="system.ip.value" rValue=actor.system.ip.value rMax=actor.system.ip.max}}
                 </div>
+
                 <div class="flexrow">
                     <span class="fabula">
                         <label for="system.fabulaPoints" title="{{localize 'FU.Resources.fp'}}">
@@ -167,6 +116,7 @@
         </div>
 
         <div class="tab classes" data-group="primary" data-tab="classes">
+            <h2 style="text-align: center">Character Level: {{actor.system.characterLevel}}</h2>
             <div class="flexrow">
             {{#each system.classes as |klass key|}}
                 {{> "systems/fabulaultima/templates/actor/class-card.hbs" className=key class=klass}}

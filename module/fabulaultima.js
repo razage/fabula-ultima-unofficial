@@ -35,4 +35,12 @@ Hooks.once("init", async function () {
             return opts.inverse(this);
         }
     });
+
+    Handlebars.registerHelper("toUpperCase", function (str) {
+        try {
+            return str.toUpperCase();
+        } catch (error) {
+            return "";
+        }
+    });
 });

@@ -1,0 +1,17 @@
+<div class="flexcol" style="background: #f5b0bb">
+    <div class="grid grid-1col">
+        <label for="{{inputName}}" title="{{title}}">
+            <i class="{{icon}}"></i>{{toUpperCase r}}:
+        </label>
+        <input name="{{inputName}}" type="text" data-dtype="Number" value="{{rValue}}" />
+        <span class="{{r}}"> / {{rMax}}</span>
+        {{#if_eq r "hp"}}
+            <span class="{{r}}" name="crisis">
+                <p>
+                    <i class="fas fa-solid fa-heart-pulse"></i>{{localize "FU.Status.crisis"}}:
+                    {{crisis}}
+                </p>
+            </span>
+        {{/if_eq}}
+    </div>
+</div>
