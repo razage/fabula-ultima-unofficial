@@ -28,14 +28,19 @@ export class FabulaUltimaActor extends Actor {
 
         // Calculate class-based stats
         let _tempLevel = 0;
+        let _classBackup = [];
 
-        for (let [key, klass] of Object.entries(system.classes)) {
-            system.hp.bonus += klass.benefits.resource.hp;
-            system.mp.bonus += klass.benefits.resource.mp;
-            system.ip.bonus += klass.benefits.resource.ip;
+        for (let [key, klass] of Object.entries(actorData.items)) {
+            if (klass.type === "class") {
+                _classBackup.push(klass);
+                system.hp.bonus += klass.system.benefits.resource.hp;
+                system.mp.bonus += klass.system.benefits.resource.mp;
+                system.ip.bonus += klass.system.benefits.resource.ip;
 
-            _tempLevel += klass.level;
+                _tempLevel += klass.system.level;
+            } else continue;
         }
+        system.classes = _classBackup;
         system.characterLevel = clamp(_tempLevel, 5, 50);
 
         // Update resources to reflect bonuses

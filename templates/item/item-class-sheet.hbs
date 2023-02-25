@@ -1,0 +1,88 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <img
+        class="item-img"
+        src="{{item.img}}"
+        data-edit="img"
+        height="100"
+        width="100"
+    />
+	<h1>{{item.name}}</h1>
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="bonuses">Bonuses</a>
+        <a class="item" data-tab="rituals">Rituals</a>
+    </nav>
+
+    <section class="sheet-body">
+        <div class="tab bonuses" data-group="primary" data-tab="bonuses">
+            <h2>Resources</h2>
+            <div class="grid grid-2col">
+                <div class="flexrow">
+                    <label for="system.benefits.resource.hp">HP</label>
+                    <input
+                        type="text"
+                        data-dtype="Number"
+                        name="system.benefits.resource.hp"
+                        value="{{item.system.benefits.resource.hp}}"
+                    />
+                </div>
+
+                <div class="flexrow">
+                    <label for="system.benefits.resource.mp">MP</label>
+                    <input
+                        type="text"
+                        data-dtype="Number"
+                        name="system.benefits.resource.mp"
+                        value="{{item.system.benefits.resource.mp}}"
+                    />
+                </div>
+
+                <div class="flexrow">
+                    <label for="system.benefits.resource.ip">IP</label>
+                    <input
+                        type="text"
+                        data-dtype="Number"
+                        name="system.benefits.resource.ip"
+                        value="{{item.system.benefits.resource.ip}}"
+                    />
+                </div>
+            </div>
+
+            <h2>Equipment Proficiency</h2>
+            <div class="grid grid-4col">
+                <div class="flexrow">
+                    <label for="system.benefits.martial.melee">Martial Weapons</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.melee" {{#if item.system.benefits.martial.melee}}checked{{/if}}/>
+					<label for="system.benefits.martial.ranged">Martial Ranged Weapons</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.ranged" {{#if item.system.benefits.martial.ranged}}checked{{/if}}/>
+                </div>
+				<div class="flexrow">
+                    <label for="system.benefits.martial.armor">Martial Armors</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.armor" {{#if item.system.benefits.martial.armor}}checked{{/if}}/>
+					<label for="system.benefits.martial.shields">Martial Shields</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.shields" {{#if item.system.benefits.martial.shields}}checked{{/if}}/>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab rituals" data-group="primary" data-tab="rituals">
+            <div class="grid grid-6col">
+				<div class="flexrow">
+					<label for="system.benefits.rituals.arcanism">Arcanism</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.arcanism" {{#if item.system.benefits.rituals.arcanism}}checked{{/if}}/>
+					<label for="system.benefits.rituals.chimerism">Chimerism</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.chimerism" {{#if item.system.benefits.rituals.chimerism}}checked{{/if}}/>
+					<label for="system.benefits.rituals.elementalism">Elementalism</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.elementalism" {{#if item.system.benefits.rituals.elementalism}}checked{{/if}}/>
+                </div>
+				<div class="flexrow">
+					<label for="system.benefits.rituals.entropism">Entropism</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.entropism" {{#if item.system.benefits.rituals.entropism}}checked{{/if}}/>
+					<label for="system.benefits.rituals.ritualism">Ritualism</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.ritualism" {{#if item.system.benefits.rituals.ritualism}}checked{{/if}}/>
+					<label for="system.benefits.rituals.spiritism">Spiritism</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.rituals.spiritism" {{#if item.system.benefits.rituals.spiritism}}checked{{/if}}/>
+                </div>
+			</div>
+        </div>
+    </section>
+</form>

@@ -115,10 +115,17 @@
 
         <div class="tab classes" data-group="primary" data-tab="classes">
             <h2 style="text-align: center">Character Level: {{actor.system.characterLevel}}</h2>
-            <div class="flexrow">
-            {{#each system.classes as |klass key|}}
-                {{> "systems/fabulaultima/templates/actor/class-card.hbs" className=key class=klass}}
-            {{/each}}
+            <div class="flexrow item-list">
+                {{#if actor.items}}
+                    {{#each actor.items as |item id|}}
+                        {{#if_eq item.type 'class'}}
+                            <div class="item" data-item-id="{{item.id}}">
+                                {{> "systems/fabulaultima/templates/actor/class-card.hbs" class=item}}
+                            </div>
+                        {{/if_eq}}
+                    {{/each}}
+                {{/if}}
+            </div>
             </div>
         </div>
 

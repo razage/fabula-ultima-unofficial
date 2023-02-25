@@ -3,7 +3,7 @@
         "types": ["player", "enemy", "group", "world"],
         "templates": {},
         "player": {
-            "schemaVersion": "1.01",
+            "schemaVersion": "1.02",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -68,35 +68,7 @@
                 "offHand": {}
             },
             "characterLevel": 0,
-            "classes": {
-                "Chimerist": {
-                    "level": 2,
-                    "benefits": {
-                        "resource": {
-                            "hp": 0,
-                            "mp": 5,
-                            "ip": 0
-                        },
-                        "rituals": {
-                            "ritualism": true
-                        }
-                    }
-                },
-                "Fury": {
-                    "level": 3,
-                    "benefits": {
-                        "resource": {
-                            "hp": 5,
-                            "mp": 0,
-                            "ip": 0
-                        },
-                        "martial": {
-                            "melee": true,
-                            "armor": true
-                        }
-                    }
-                }
-            },
+            "classes": [],
             "spells": [],
             "heroicSkills": [],
             "rituals": [],
@@ -144,7 +116,7 @@
         },
         "class": {
             "schemaVersion": "1.0",
-            "level": 0,
+            "level": 1,
             "benefits": {
                 "resource": {
                     "hp": 0,

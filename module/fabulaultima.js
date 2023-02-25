@@ -1,6 +1,7 @@
 import { FabulaUltimaActor } from "./actor/actor.js";
 import { FabulaUltimaActorSheet } from "./actor/actor-sheet.js";
 import { FabulaUltimaItem } from "./item/item.js";
+import { FabulaUltimaItemSheet } from "./item/item-sheet.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 
 Hooks.once("init", async function () {
@@ -14,9 +15,9 @@ Hooks.once("init", async function () {
     CONFIG.Item.documentClass = FabulaUltimaItem;
 
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("fabulaultima", FabulaUltimaActorSheet, {
-        makeDefault: true,
-    });
+    Items.unregisterSheet("core", ItemSheet);
+    Actors.registerSheet("fabulaultima", FabulaUltimaActorSheet, { makeDefault: true });
+    Items.registerSheet("fabulaultima", FabulaUltimaItemSheet, { makeDefault: true });
 
     // Preload Handlebars partials
     preloadHandlebarsTemplates();
