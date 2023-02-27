@@ -4,9 +4,9 @@
     "description": "An unofficial implementation of the Fabula Ultima ruleset for Foundry VTT.",
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "compatibility": {
-        "minimum": "10.284",
+        "minimum": "10",
         "verified": "10.291"
     },
     "esmodules": ["module/fabulaultima.js"],

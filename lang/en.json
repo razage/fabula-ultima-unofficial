@@ -143,6 +143,10 @@
     "FU.Spells.ventus": "Ventus",
     "FU.Spells.vortex": "Vortex",
 
+    "FU.Chat.critical": "Critical Success!",
+    "FU.Chat.fumble": "FUMBLE!!!",
+    "FU.Chat.rolling": "Rolling",
+
     "FU.Navigation.tabGear": "Gear",
     "FU.Navigation.tabRolls": "Rolls",
 

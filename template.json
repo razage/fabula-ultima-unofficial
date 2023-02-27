@@ -3,28 +3,32 @@
         "types": ["player", "enemy", "group", "world"],
         "templates": {},
         "player": {
-            "schemaVersion": "1.02",
+            "schemaVersion": "1.1",
             "pronouns": "",
             "identity": "",
             "theme": "",
             "origin": "",
             "attributes": {
                 "dexterity": {
+                    "name": "dexterity",
                     "base": 6,
                     "bonus": 0,
                     "current": 6
                 },
                 "insight": {
+                    "name": "insight",
                     "base": 6,
                     "bonus": 0,
                     "current": 6
                 },
                 "might": {
+                    "name": "might",
                     "base": 6,
                     "bonus": 0,
                     "current": 6
                 },
                 "willpower": {
+                    "name": "willpower",
                     "base": 6,
                     "bonus": 0,
                     "current": 6

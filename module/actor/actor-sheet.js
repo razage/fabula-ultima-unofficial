@@ -1,3 +1,5 @@
+import { fabulaRoll } from "../roll/roll.js";
+
 export class FabulaUltimaActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
@@ -48,6 +50,15 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             const item = this.actor.items.get(parent.data("itemId"));
 
             item.sheet.render(true);
+        });
+
+        html.find(".test-roll").click(() => {
+            console.log(this.actor.system.attributes.dexterity);
+            fabulaRoll(
+                this.actor,
+                this.actor.system.attributes.dexterity,
+                this.actor.system.attributes.insight
+            );
         });
     }
 }
