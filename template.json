@@ -102,8 +102,14 @@
                 "quality": ""
             },
             "armorStats": {
-                "defense": 0,
-                "mDefense": 0,
+                "defense": {
+                    "value": 0,
+                    "useDex": true
+                },
+                "mDefense": {
+                    "value": 0,
+                    "useIns": true
+                },
                 "initiative": 0
             }
         },
@@ -121,7 +127,7 @@
         },
         "armor": {
             "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.01"
+            "schemaVersion": "1.02"
         },
         "class": {
             "schemaVersion": "1.0",
@@ -151,15 +157,13 @@
         },
         "weapon": {
             "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.02",
+            "schemaVersion": "1.04",
             "accuracy": {
                 "mainStat": "dexterity",
                 "secondaryStat": "dexterity",
                 "bonus": 0
             },
             "damage": {
-                "mainStat": "dexterity",
-                "secondaryStat": "dexterity",
                 "bonus": 0,
                 "type": "physical"
             },

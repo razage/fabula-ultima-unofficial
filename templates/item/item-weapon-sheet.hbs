@@ -5,84 +5,121 @@
 	</header>
 
 	<nav class="sheet-tabs tabs" data-group="primary">
-		<a class="item" data-tab="info"><i class="fas fa-solid fa-file-lines"></i>{{localize "FU.UI.basicInfo"}}</a>
-		<a class="item" data-tab="attack"><i class="fas fa-solid fa-skull-crossbones"></i> Attack</a>
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-file-lines"></i> {{localize "FU.UI.general"}}</a>
+		<a class="item" data-tab="attack"><i class="fas fa-solid fa-skull-crossbones"></i> {{localize
+			"FU.UI.attack"}}</a>
+		<a class="item" data-tab="defense"><i class="fas fa-solid fa-shield"></i> {{localize
+			"FU.Attributes.defense"}}</a>
 	</nav>
 
 	<section class="sheet-body">
 		<div class="tab info" data-group="primary" data-tab="info">
 			<div class="flexcol">
-				<h2>Martial Proficiencies</h2>
+				<div class="grid grid-2col">
+					<div class="flexrow">
+						<label for="system.cost">{{localize "FU.UI.cost"}}</label>
+						<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
+					</div>
+					<div class="flexrow">
+						<label for="system.quality">{{localize "FU.Quality.name"}}</label>
+						<input type="text" name="system.quality" value="{{item.system.quality}}" data-dtype="String" />
+					</div>
+				</div>
+				<h2>{{localize "FU.UI.requirements"}}</h2>
+				<div class="grid grid-2col">
+					<div class="flexrow">
+						<label for="system.twoHands">{{localize "FU.UI.twoHand"}}</label>
+						<input type="checkbox" name="system.twoHands" data-dtype="Boolean" {{#if item.system.twoHands}}
+							checked{{/if}} />
+					</div>
+					<div class="flexrow">
+						<label for="system.range">{{localize "FU.UI.range"}}</label>
+						<select name="system.range" data-dtype="String">
+							<option value="melee" {{#if_eq item.system.range "melee" }} selected{{/if_eq}}>{{localize
+								"FU.UI.melee"}}</option>
+							<option value="ranged" {{#if_eq item.system.range "ranged" }} selected{{/if_eq}}>{{localize
+								"FU.UI.ranged"}}</option>
+						</select>
+					</div>
+				</div>
+				<h3>{{localize "FU.Proficiencies.name"}}</h3>
 				<div class="grid grid-2col">
 					{{#each item.system.isMartial as |value prof|}}
 					<div class="flexrow">
-						<label for="system.martial.{{prof}}">{{prof}}</label>
+						<label for="system.martial.{{prof}}">{{localize (concat "FU.Proficiencies." prof)}}</label>
 						<input type="checkbox" name="system.isMartial.{{prof}}" data-dtype="Boolean" {{#if value}}
 							checked{{/if}} />
 					</div>
 					{{/each}}
 				</div>
 			</div>
-			<label for="system.cost">Cost</label>
-			<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
-			<label for="system.range">Range</label>
-			<select name="system.range" data-dtype="String">
-				<option value="melee" {{#if_eq item.system.range "melee" }} selected{{/if_eq}}>Melee</option>
-				<option value="ranged" {{#if_eq item.system.range "ranged" }} selected{{/if_eq}}>Ranged</option>
-			</select>
-			<label for="system.twoHands">Two-Handed</label>
-			<input type="checkbox" name="system.twoHands" data-dtype="Boolean" {{#if item.system.twoHands}}
-				checked{{/if}} />
-
 		</div>
 
 		<div class="tab attack" data-group="primary" data-tab="attack">
 			<div class="flexcol">
-				<h2>Accuracy</h2>
+				<h2>{{localize "FU.UI.accuracy"}}</h2>
 				<div class="grid grid-2col">
 					<div class="flexcol">
 						<div class="flexrow">
-							<label for="system.accuracy.mainStat">Main Stat</label>
+							<label for="system.accuracy.mainStat">{{localize "FU.Attributes.main"}}</label>
 							{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
 							selectName="system.accuracy.mainStat" current=item.system.accuracy.mainStat}}
 						</div>
 						<div class="flexrow">
-							<label for="system.accuracy.secondaryStat">Secondary Stat</label>
+							<label for="system.accuracy.secondaryStat">{{localize "FU.Attributes.secondary"}}</label>
 							{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
 							selectName="system.accuracy.secondaryStat" current=item.system.accuracy.secondaryStat}}
 						</div>
 						<div class="flexrow">
-							<label for="system.accuracy.bonus">Bonus</label>
+							<label for="system.accuracy.bonus">{{localize "FU.UI.bonus"}}</label>
 							<input type="text" name="system.accuracy.bonus" value="{{item.system.accuracy.bonus}}"
 								data-dtype="Number" />
 						</div>
 					</div>
 				</div>
-				<h2>Damage</h2>
+				<h2>{{localize "FU.UI.damage"}}</h2>
 				<div class="grid grid-2col">
 					<div class="flexcol">
 						<div class="flexrow">
-							<label for="system.damage.mainStat">Main Stat</label>
-							{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
-							selectName="system.damage.mainStat"
-							current=item.system.damage.mainStat}}
-						</div>
-						<div class="flexrow">
-							<label for="system.damage.secondaryStat">Secondary Stat</label>
-							{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
-							selectName="system.damage.secondaryStat"
-							current=item.system.damage.secondaryStat}}
-						</div>
-						<div class="flexrow">
-							<label for="system.damage.bonus">Bonus</label>
+							<label for="system.damage.bonus">{{localize "FU.UI.bonus"}}</label>
 							<input type="text" name="system.damage.bonus" value="{{item.system.damage.bonus}}"
 								data-dtype="Number" />
 						</div>
 						<div class="flexrow">
-							<label for="system.damage.type">Damage Type</label>
+							<label for="system.damage.type">{{localize "FU.UI.damageType"}}</label>
 							{{> "systems/fabulaultima/templates/item/partials/damage-type-dropdown.hbs"
 							selectName="system.damage.type" current=item.system.damage.type}}
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab defense" data-group="primary" data-tab="defense">
+			<div class="flexcol">
+				<div class="grid grid-4col">
+					<div class="flexrow">
+						<label for="system.defense">{{localize "FU.Attributes.defense"}}</label>
+						<input type="text" name="system.defense.value" value="{{item.system.defense.value}}"
+							data-dtype="Number" />
+						<label for="system.defense.useDex">{{localize "FU.UI.addDex"}}</label>
+						<input type="checkbox" name="system.defense.useDex" data-dtype="Boolean" {{#if
+							item.system.defense.useDex}} checked{{/if}} />
+					</div>
+					<div class="flexrow">
+						<label for="system.mDefense">{{localize "FU.Attributes.magicDefense"}}</label>
+						<input type="text" name="system.mDefense.value" value="{{item.system.mDefense.value}}"
+							data-dtype="Number" />
+						<label for="system.mDefense.useIns">{{localize "FU.UI.addIns"}}</label>
+						<input type="checkbox" name="system.mDefense.useIns" data-dtype="Boolean" {{#if
+							item.system.mDefense.useIns}} checked{{/if}} />
+					</div>
+				</div>
+				<div class="grid grid-2col">
+					<div class="flexrow">
+						<label for="system.initiative">{{localize "FU.Attributes.initiative"}}</label>
+						<input type="text" name="system.initiative" value="{{item.system.initiative}}"
+							data-dtype="number" />
 					</div>
 				</div>
 			</div>
