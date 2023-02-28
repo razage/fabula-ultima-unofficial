@@ -52,13 +52,13 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             item.sheet.render(true);
         });
 
-        html.find(".test-roll").click(() => {
-            console.log(this.actor.system.attributes.dexterity);
-            fabulaRoll(
-                this.actor,
-                this.actor.system.attributes.dexterity,
-                this.actor.system.attributes.insight
-            );
+        html.find(".item-roll").click((ev) => {
+            const parent = $(ev.currentTarget).parents(".item");
+            const item = this.actor.items.get(parent.data("itemId"));
+            const main = this.actor.system.attributes[item.system.accuracy.mainStat];
+            const sec = this.actor.system.attributes[item.system.accuracy.secondaryStat];
+
+            fabulaRoll(this.actor, main, sec, item.system.accuracy.bonus);
         });
     }
 }

@@ -1,29 +1,24 @@
-export async function fabulaRoll(
-    actor,
-    mainStat,
-    secondaryStat,
-    bonus = 0,
-    isHighRoll = false,
-    target
-) {
+export async function fabulaRoll(actor, mainStat, secondaryStat, bonus = 0, target) {
     let roll = new Roll(`d${mainStat.current}+d${secondaryStat.current}+${bonus}`, actor.system);
 
     await roll.evaluate({ async: true });
 
     let results = [];
-    let total = roll.total;
     let isCrit = false;
     let isFumble = false;
+    let highRoll = 0;
 
     roll.terms.forEach((r) => {
         // Ignore the OperatorTerm object(s)
         if (r.hasOwnProperty("results")) {
+            if (r.results[0].result > highRoll) highRoll = r.results[0].result;
             results.push(r.results[0].result);
         }
     });
     isFumble = isRollFumble(results);
     isCrit = isRollCrit(results);
-    await sendRollToChat(actor, mainStat, secondaryStat, roll, isCrit, isFumble);
+
+    await sendRollToChat(actor, mainStat, secondaryStat, roll, highRoll, isCrit, isFumble);
 }
 
 export async function sendRollToChat(
@@ -31,6 +26,7 @@ export async function sendRollToChat(
     mainStat,
     secondaryStat,
     rollObj,
+    highRoll,
     isCritical,
     isFumble
 ) {

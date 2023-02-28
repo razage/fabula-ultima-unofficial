@@ -2,30 +2,25 @@
     <header class="sheet-header flexcol">
         <div class="header-fields">
             <div class="flexrow">
-                <img
-                    class="profile-img"
-                    src="{{actor.img}}"
-                    data-edit="img"
-                    title="{{actor.name}}"
-                    height="250"
-                    width="200"
-                />
+                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="250"
+                    width="200" />
                 <label for="charname">{{localize "FU.Bio.nameLabel"}}</label>
                 <input name="name" type="text" data-dtype="String" value="{{actor.name}}" />
                 <label for="pronouns">{{localize "FU.Bio.pronouns"}}</label>
-                <input
-                    name="system.pronouns"
-                    type="text"
-                    data-dtype="String"
-                    value="{{actor.system.pronouns}}"
-                />
+                <input name="system.pronouns" type="text" data-dtype="String" value="{{actor.system.pronouns}}" />
             </div>
 
             <div class="resources grid grid-3col">
                 <div class="flexrow">
-                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize 'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max}}
-                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="mp" title=(localize 'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value" rValue=actor.system.mp.value rMax=actor.system.mp.max}}
-                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="ip" title=(localize 'FU.Resources.ip') icon="fas fa-solid fa-bag-shopping" inputName="system.ip.value" rValue=actor.system.ip.value rMax=actor.system.ip.max}}
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize
+                    'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis
+                    inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max}}
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="mp" title=(localize
+                    'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value"
+                    rValue=actor.system.mp.value rMax=actor.system.mp.max}}
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="ip" title=(localize
+                    'FU.Resources.ip') icon="fas fa-solid fa-bag-shopping" inputName="system.ip.value"
+                    rValue=actor.system.ip.value rMax=actor.system.ip.max}}
                 </div>
 
                 <div class="flexrow">
@@ -34,24 +29,16 @@
                             <i class="fas fa-solid fa-feather"></i>
                             FP:
                         </label>
-                        <input
-                            name="system.fabulaPoints"
-                            type="text"
-                            data-dtype="Number"
-                            value="{{actor.system.fabulaPoints}}"
-                        />
+                        <input name="system.fabulaPoints" type="text" data-dtype="Number"
+                            value="{{actor.system.fabulaPoints}}" />
                     </span>
                     <span class="experience">
                         <label for="system.experiencePoints" title="{{localize 'FU.Resources.xp'}}">
                             <i class="fas fa-solid fa-arrow-trend-up"></i>
                             XP:
                         </label>
-                        <input
-                            name="system.experiencePoints"
-                            type="text"
-                            data-dtype="Number"
-                            value="{{actor.system.experiencePoints}}"
-                        />
+                        <input name="system.experiencePoints" type="text" data-dtype="Number"
+                            value="{{actor.system.experiencePoints}}" />
                     </span>
                 </div>
             </div>
@@ -59,8 +46,6 @@
     </header>
 
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i>
-            {{localize "FU.Navigation.tabRolls"}}</a>
         <a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i>
             {{localize "FU.Attributes.name"}}</a>
         <a class="item" data-tab="classes"><i class="fas fa-solid fa-hat-wizard"></i>
@@ -74,10 +59,6 @@
     </nav>
 
     <section class="sheet-body">
-        <div class="tab rolls" data-group="primary" data-tab="rolls">
-            <button class="test-roll rollable">Test Roll</button>
-        </div>
-
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             <div class="grid grid-3-col">
                 <div class="flexrow">
@@ -92,22 +73,22 @@
             <div class="grid grid-4col">
                 <div class="flexrow">
                     {{#each actor.system.attributes as |attribute key|}}
-                        <label for="system.attributes.{{key}}.base">
-                            {{#if_eq key "dexterity"}}
-                                <i class="fas fa-solid fa-person-running"></i>
-                            {{/if_eq}}
-                            {{#if_eq key "insight"}}
-                                <i class="fas fa-solid fa-head-side-brain"></i>
-                            {{/if_eq}}
-                            {{#if_eq key "might"}}
-                                <i class="fas fa-solid fa-dumbbell"></i>
-                            {{/if_eq}}
-                            {{#if_eq key "willpower"}}
-                                <i class="fas fa-solid fa-people-group"></i>
-                            {{/if_eq}}
-                            {{localize (concat "FU.Attributes." key)}}
-                        </label>
-                        {{> "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs" stat=key obj=attribute}}
+                    <label for="system.attributes.{{key}}.base">
+                        {{#if_eq key "dexterity"}}
+                        <i class="fas fa-solid fa-person-running"></i>
+                        {{/if_eq}}
+                        {{#if_eq key "insight"}}
+                        <i class="fas fa-solid fa-head-side-brain"></i>
+                        {{/if_eq}}
+                        {{#if_eq key "might"}}
+                        <i class="fas fa-solid fa-dumbbell"></i>
+                        {{/if_eq}}
+                        {{#if_eq key "willpower"}}
+                        <i class="fas fa-solid fa-people-group"></i>
+                        {{/if_eq}}
+                        {{localize (concat "FU.Attributes." key)}}
+                    </label>
+                    {{> "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs" stat=key obj=attribute}}
                     {{/each}}
                 </div>
             </div>
@@ -117,27 +98,35 @@
             <h2 style="text-align: center">{{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}</h2>
             <div class="flexcol item-list">
                 {{#each actor.items as |item id|}}
-                    {{#if_eq item.type 'class'}}
-                        <div class="item" data-item-id="{{item.id}}">
-                            {{> "systems/fabulaultima/templates/actor/partials/class-card.hbs" class=item}}
-                        </div>
-                    {{/if_eq}}
+                {{#if_eq item.type 'class'}}
+                <div class="item" data-item-id="{{item.id}}">
+                    {{> "systems/fabulaultima/templates/actor/partials/class-card.hbs" class=item}}
+                </div>
+                {{/if_eq}}
                 {{/each}}
             </div>
-            </div>
+        </div>
         </div>
 
         <div class="tab backpack" data-group="primary" data-tab="backpack">
+            <div class="flexcol">
+                <h2>Weapons</h2>
+                <div class="item-list">
+                    {{#each actor.items as |item id|}}
+                    {{#if_eq item.type 'weapon'}}
+                    <div class="item" data-item-id="{{item.id}}">
+                        {{> "systems/fabulaultima/templates/actor/partials/weapon-card.hbs" weapon=item}}
+                    </div>
+                    {{/if_eq}}
+                    {{/each}}
+                </div>
+            </div>
+            <h2>Armor</h2>
+            <h2>Gear</h2>
             <span class="currency">
                 <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:
-                <input
-                    type="text"
-                    name="system.zenit"
-                    data-dtype="Number"
-                    value="{{actor.system.zenit}}"
-                />
+                <input type="text" name="system.zenit" data-dtype="Number" value="{{actor.system.zenit}}" />
             </span>
-            <p>Equipment goes here</p>
         </div>
 
         <div class="tab spells" data-group="primary" data-tab="spells">
@@ -151,27 +140,12 @@
                 <label for="origin">{{localize "FU.Traits.origin"}}</label>
             </div>
             <div class="flexrow">
-                <input
-                    class="identity"
-                    name="system.identity"
-                    type="text"
-                    data-dtype="String"
-                    value="{{actor.system.identity}}"
-                />
-                <input
-                    class="theme"
-                    name="system.theme"
-                    type="text"
-                    data-dtype="String"
-                    value="{{actor.system.theme}}"
-                />
-                <input
-                    class="origin"
-                    name="system.origin"
-                    type="text"
-                    data-dtype="String"
-                    value="{{actor.system.origin}}"
-                />
+                <input class="identity" name="system.identity" type="text" data-dtype="String"
+                    value="{{actor.system.identity}}" />
+                <input class="theme" name="system.theme" type="text" data-dtype="String"
+                    value="{{actor.system.theme}}" />
+                <input class="origin" name="system.origin" type="text" data-dtype="String"
+                    value="{{actor.system.origin}}" />
             </div>
             <h2>Bonds</h2>
             <div class="bonds">
