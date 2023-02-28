@@ -1,12 +1,16 @@
 # Fabula Ultima (Unofficial) for Foundry VTT
 
-This is a fan-made system for Foundry Virtual Tabletop to implement the ruleset for _Fabula Ultima_, a TTJRPG published by NEED GAMES!
+A fan-made system for Foundry Virtual Tabletop to implement the ruleset for _Fabula Ultima_, a TTJRPG published by NEED GAMES!
 
-ufabula-ultima is unaffiliated with the creators or the publisher. Details about the Fabula Ultima system and links to support the creators and purchase the rulebook are available on [their website](https://www.needgames.it/fabula-ultima-en/)
+This system is unaffiliated with the creators or the publisher. Details about the Fabula Ultima system and links to support the creators and purchase the rulebook are available on [their website.](https://www.needgames.it/fabula-ultima-en/)
 
 ## Status
 
-This project is in active development and may change significantly at any time. As of now, the project is basically non-functional.
+This project is in active development and may change significantly at any time. As of now, you can:
+
+-   Create a character with _most_ of their data available in a bad layout.
+-   Create and equip weapons and roll their associated accuracy check.
+-   Create and equip classes that modify HP/MP/IP and store a level that the player can edit.
 
 ## Installation
 
@@ -25,3 +29,9 @@ Fabula Ultima is a tabletop roleplaying game created by Emanuele Galletto and pu
 ## Foundry VTT License
 
 This code uses Foundry VTT and its API under the terms of the Limited License Agreement for Module Development. Foundry VTT is a Copyright of Foundry Gaming, LLC.
+
+## Icons
+
+https://game-icons.net/ https://creativecommons.org/licenses/by/3.0/
+
+-   Flame icon by Carl Olsen

@@ -1,33 +1,31 @@
 <div class="weapon-card">
-	<div class="grid grid-2col">
+	<div class="grid grid-4col">
 		<div class="flexrow">
-			<span>
-				<img class="profile-img" src="{{weapon.img}}" width="40" height="40" />
-				<p>{{weapon.name}} {{#if weapon.system.isMartial.melee}}<i class="fas fa-solid fa-sword martial"
+			<img class="profile-img" src="{{weapon.img}}" width="40" height="40" />
+			<div class="flexcol">
+				<p><b>{{weapon.name}}</b> {{#if weapon.system.isMartial.melee}}<i class="fas fa-solid fa-sword martial"
 						title="{{localize 'FU.Proficiencies.melee'}}"></i>{{/if}}{{#if weapon.system.isMartial.ranged
 					}}<i class="fas fa-solid fa-bow-arrow martial"
 						title="{{localize 'FU.Proficiencies.ranged'}}"></i>{{/if}}{{#if
 					weapon.system.isMartial.shield}}<i class="fas fa-solid fa-shield martial"
 						title="{{localize 'FU.Proficiencies.shield'}}"></i>{{/if}}</p>
-			</span>
-			<div class="flexcol">
 				<span>
 					{{localize "FU.UI.accuracy"}}: <b>[{{localize (concat "FU.Short."
 						weapon.system.accuracy.mainStat)}}+{{localize (concat "FU.Short."
 						weapon.system.accuracy.secondaryStat)}}]</b>
-					<i class="fas fa-solid fa-dice item-roll"></i>
 				</span>
-				<span>
-					<p>{{localize "FU.UI.damage"}}: <b>[{{localize
-							"FU.Short.highRoll"}}+{{weapon.system.damage.bonus}}]</b>
-					</p>
-				</span>
+				<p>{{localize "FU.UI.damage"}}: <b>[{{localize
+						"FU.Short.highRoll"}}+{{weapon.system.damage.bonus}}]</b>
+				</p>
 			</div>
+			<span>
+				<i class="fas fa-solid fa-dice item-roll"></i>
+				<p>Attack!</p>
+			</span>
+			<span class="flexcol" style="text-align: right">
+				<i class="fas fa-solid fa-pencil item-edit"></i> Edit
+				<i class="fas fa-solid fa-trash item-delete"></i> Delete
+			</span>
 		</div>
-
-		{{!-- <div class="grid grid-2col">
-
-			<i class="fas fa-solid fa-pencil item-edit"></i>
-		</div> --}}
 	</div>
 </div>

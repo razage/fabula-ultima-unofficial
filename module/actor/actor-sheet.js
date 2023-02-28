@@ -60,5 +60,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
             fabulaRoll(this.actor, main, sec, item.system.accuracy.bonus);
         });
+
+        html.find(".item-delete").click((ev) => {
+            const parent = $(ev.currentTarget).parents(".item");
+            let options = {};
+
+            this.actor.deleteEmbeddedDocuments("Item", [parent.data("itemId")], options);
+        });
     }
 }
