@@ -71,6 +71,9 @@ nav.sheet-tabs a.item.active {
 .tab.backpack .weapon-card i {
   font-size: 1rem;
 }
+.tab.backpack .weapon-card i.martial {
+  color: #ff0000;
+}
 .tab.backpack .weapon-card i.fa-dice {
   cursor: pointer;
 }

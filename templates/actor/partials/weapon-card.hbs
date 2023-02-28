@@ -3,7 +3,12 @@
 		<div class="flexrow">
 			<span>
 				<img class="profile-img" src="{{weapon.img}}" width="40" height="40" />
-				<p>{{weapon.name}}</p>
+				<p>{{weapon.name}} {{#if weapon.system.isMartial.melee}}<i class="fas fa-solid fa-sword martial"
+						title="{{localize 'FU.Proficiencies.melee'}}"></i>{{/if}}{{#if weapon.system.isMartial.ranged
+					}}<i class="fas fa-solid fa-bow-arrow martial"
+						title="{{localize 'FU.Proficiencies.ranged'}}"></i>{{/if}}{{#if
+					weapon.system.isMartial.shield}}<i class="fas fa-solid fa-shield martial"
+						title="{{localize 'FU.Proficiencies.shield'}}"></i>{{/if}}</p>
 			</span>
 			<div class="flexcol">
 				<span>
