@@ -40,6 +40,9 @@
                         <input name="system.experiencePoints" type="text" data-dtype="Number"
                             value="{{actor.system.experiencePoints}}" />
                     </span>
+                    <span class="initiative"><i class="fas fa-solid fa-person-running"></i>{{localize
+                        "FU.Attributes.initiative"}}:
+                        {{actor.system.initiativeMod}}</span>
                 </div>
             </div>
         </div>
@@ -60,36 +63,39 @@
 
     <section class="sheet-body">
         <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <div class="grid grid-3-col">
-                <div class="flexrow">
-                    <span class="defense">{{localize "FU.Attributes.defense"}}:
-                        {{system.defense}}</span>
-                    <span class="mdefense">{{localize "FU.Attributes.magicDefense"}}:
-                        {{system.magicDefense}}</span>
-                    <span class="initiative">{{localize "FU.Attributes.initiative"}}:
-                        {{system.initiativeMod}}</span>
+            <div class="flexcol">
+                <h2>Defenses</h2>
+                <div class="grid grid-2col">
+                    <div class="flexrow">
+                        <span class="defense">{{localize "FU.Attributes.defense"}}:
+                            {{actor.system.defense}}</span>
+                        <span class="mdefense">{{localize "FU.Attributes.magicDefense"}}:
+                            {{actor.system.magicDefense}}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="grid grid-4col">
-                <div class="flexrow">
-                    {{#each actor.system.attributes as |attribute key|}}
-                    <label for="system.attributes.{{key}}.base">
-                        {{#if_eq key "dexterity"}}
-                        <i class="fas fa-solid fa-person-running"></i>
-                        {{/if_eq}}
-                        {{#if_eq key "insight"}}
-                        <i class="fas fa-solid fa-head-side-brain"></i>
-                        {{/if_eq}}
-                        {{#if_eq key "might"}}
-                        <i class="fas fa-solid fa-dumbbell"></i>
-                        {{/if_eq}}
-                        {{#if_eq key "willpower"}}
-                        <i class="fas fa-solid fa-people-group"></i>
-                        {{/if_eq}}
-                        {{localize (concat "FU.Attributes." key)}}
-                    </label>
-                    {{> "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs" stat=key obj=attribute}}
-                    {{/each}}
+                <h2>Attributes</h2>
+                <div class="grid grid-4col">
+                    <div class="flexrow">
+                        {{#each actor.system.attributes as |attribute key|}}
+                        <label for="system.attributes.{{key}}.base">
+                            {{#if_eq key "dexterity"}}
+                            <i class="fas fa-solid fa-person-running"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "insight"}}
+                            <i class="fas fa-solid fa-head-side-brain"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "might"}}
+                            <i class="fas fa-solid fa-dumbbell"></i>
+                            {{/if_eq}}
+                            {{#if_eq key "willpower"}}
+                            <i class="fas fa-solid fa-people-group"></i>
+                            {{/if_eq}}
+                            {{localize (concat "FU.Attributes." key)}}
+                        </label>
+                        {{> "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs" stat=key
+                        obj=attribute}}
+                        {{/each}}
+                    </div>
                 </div>
             </div>
         </div>
