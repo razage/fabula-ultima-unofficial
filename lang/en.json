@@ -166,22 +166,10 @@
     "FU.UI.cost": "Cost",
     "FU.UI.damage": "Damage",
     "FU.UI.damageType": "Damage Type",
+    "FU.UI.defenses": "Defenses",
     "FU.UI.melee": "Melee",
     "FU.UI.range": "Range",
     "FU.UI.ranged": "Ranged",
     "FU.UI.requirements": "Requirements",
-    "FU.UI.twoHand": "Two-Handed",
-
-    "FU.Experience.exAuto": "At the end of each session, you automatically gain <b>5 XP</b>. Then:",
-    "FU.Experience.exFP": "Gain <b>XP</b> equal to <b>[Fabula Points spent by the group / number of Player Characters]</b>.",
-    "FU.Experience.exUP": "Gain <b>XP</b> equal to <b>[Ultima Points spent by Villians]</b>",
-    "FU.Experience.exLevel": "Finally, if you have <b>10 or more XP</b>, lose <b>10 XP</b> and gain <b>1 level</b>.",
-
-    "FU.Fabula.exNone": "<b>+1 Fabula Point</b> if you have none at the start of a session.",
-    "FU.Fabula.exVillian": "<b>+1 Fabula Point</b> when a <b>Villian</b> makes an entrance.",
-    "FU.Fabula.exFumble": "<b>+1 Fabula Point</b> when you <b>fumble</b> a <b>Check</b>.",
-    "FU.Fabula.exSurrender": "<b>+2 Fabula Points</b> if you <b>surrender</b> at zero HP.",
-    "FU.Fabula.exTrait": "Spend <b>1 Fabula Point</b> after performing a Check to <b>invoke a trait</b> to reroll <b>one or both</b> dice (not on a <b>fumble</b>).",
-    "FU.Fabula.exBond": "Spend <b>1 Fabula Point</b> after performing a Check to <b>invoke a bond</b> and add its <b>strength</b> to the result (once per Check).",
-    "FU.Fabula.exStory": "Spend <b>1 Fabula Point</b> to alter the story. If you alter an existing element, you need permissino from whoever introduced it."
+    "FU.UI.twoHand": "Two-Handed"
 }

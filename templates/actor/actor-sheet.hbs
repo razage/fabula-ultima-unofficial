@@ -64,7 +64,7 @@
     <section class="sheet-body">
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             <div class="flexcol">
-                <h2>Defenses</h2>
+                <h2>{{localize "FU.UI.defenses"}}</h2>
                 <div class="grid grid-2col">
                     <div class="flexrow">
                         <span class="defense">{{localize "FU.Attributes.defense"}}:
@@ -73,7 +73,7 @@
                             {{actor.system.magicDefense}}</span>
                     </div>
                 </div>
-                <h2>Attributes</h2>
+                <h2>{{localize "FU.Attributes.name"}}</h2>
                 <div class="grid grid-4col">
                     <div class="flexrow">
                         {{#each actor.system.attributes as |attribute key|}}
