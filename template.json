@@ -92,7 +92,12 @@
         ],
         "templates": {
             "itemCommon": {
-                "isMartial": false,
+                "isMartial": {
+                    "armor": false,
+                    "melee": false,
+                    "ranged": false,
+                    "shield": false
+                },
                 "cost": 0,
                 "quality": ""
             },
@@ -104,7 +109,7 @@
         },
         "accessory": {
             "templates": ["itemCommon"],
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.01",
             "quality": "rare"
         },
         "arcanum": {
@@ -116,7 +121,7 @@
         },
         "armor": {
             "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.0"
+            "schemaVersion": "1.01"
         },
         "class": {
             "schemaVersion": "1.0",
@@ -146,18 +151,20 @@
         },
         "weapon": {
             "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.02",
             "accuracy": {
-                "roll": "",
+                "mainStat": "dexterity",
+                "secondaryStat": "dexterity",
                 "bonus": 0
             },
             "damage": {
-                "roll": "",
+                "mainStat": "dexterity",
+                "secondaryStat": "dexterity",
                 "bonus": 0,
                 "type": "physical"
             },
-            "hands": 1,
-            "range": ""
+            "twoHands": false,
+            "range": "melee"
         }
     }
 }

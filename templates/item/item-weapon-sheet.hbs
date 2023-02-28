@@ -1,0 +1,91 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img class="item-img" src="{{item.img}}" data-edit="img" height="100" width="100" />
+		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-file-lines"></i>{{localize "FU.UI.basicInfo"}}</a>
+		<a class="item" data-tab="attack"><i class="fas fa-solid fa-skull-crossbones"></i> Attack</a>
+	</nav>
+
+	<section class="sheet-body">
+		<div class="tab info" data-group="primary" data-tab="info">
+			<div class="flexcol">
+				<h2>Martial Proficiencies</h2>
+				<div class="grid grid-2col">
+					{{#each item.system.isMartial as |value prof|}}
+					<div class="flexrow">
+						<label for="system.martial.{{prof}}">{{prof}}</label>
+						<input type="checkbox" name="system.isMartial.{{prof}}" data-dtype="Boolean" {{#if value}}
+							checked{{/if}} />
+					</div>
+					{{/each}}
+				</div>
+			</div>
+			<label for="system.cost">Cost</label>
+			<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
+			<label for="system.range">Range</label>
+			<select name="system.range" data-dtype="String">
+				<option value="melee" {{#if_eq item.system.range "melee" }} selected{{/if_eq}}>Melee</option>
+				<option value="ranged" {{#if_eq item.system.range "ranged" }} selected{{/if_eq}}>Ranged</option>
+			</select>
+			<label for="system.twoHands">Two-Handed</label>
+			<input type="checkbox" name="system.twoHands" data-dtype="Boolean" {{#if item.system.twoHands}}
+				checked{{/if}} />
+
+		</div>
+
+		<div class="tab attack" data-group="primary" data-tab="attack">
+			<div class="flexcol">
+				<h2>Accuracy</h2>
+				<div class="grid grid-2col">
+					<div class="flexcol">
+						<div class="flexrow">
+							<label for="system.accuracy.mainStat">Main Stat</label>
+							{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+							selectName="system.accuracy.mainStat" current=item.system.accuracy.mainStat}}
+						</div>
+						<div class="flexrow">
+							<label for="system.accuracy.secondaryStat">Secondary Stat</label>
+							{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+							selectName="system.accuracy.secondaryStat" current=item.system.accuracy.secondaryStat}}
+						</div>
+						<div class="flexrow">
+							<label for="system.accuracy.bonus">Bonus</label>
+							<input type="text" name="system.accuracy.bonus" value="{{item.system.accuracy.bonus}}"
+								data-dtype="Number" />
+						</div>
+					</div>
+				</div>
+				<h2>Damage</h2>
+				<div class="grid grid-2col">
+					<div class="flexcol">
+						<div class="flexrow">
+							<label for="system.damage.mainStat">Main Stat</label>
+							{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+							selectName="system.damage.mainStat"
+							current=item.system.damage.mainStat}}
+						</div>
+						<div class="flexrow">
+							<label for="system.damage.secondaryStat">Secondary Stat</label>
+							{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+							selectName="system.damage.secondaryStat"
+							current=item.system.damage.secondaryStat}}
+						</div>
+						<div class="flexrow">
+							<label for="system.damage.bonus">Bonus</label>
+							<input type="text" name="system.damage.bonus" value="{{item.system.damage.bonus}}"
+								data-dtype="Number" />
+						</div>
+						<div class="flexrow">
+							<label for="system.damage.type">Damage Type</label>
+							{{> "systems/fabulaultima/templates/item/partials/damage-type-dropdown.hbs"
+							selectName="system.damage.type" current=item.system.damage.type}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
