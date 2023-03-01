@@ -47,4 +47,43 @@ Hooks.once("init", async function () {
             return "";
         }
     });
+
+    Handlebars.registerHelper("getElementalIcon", function (element) {
+        let output = "systems/fabulaultima/assets/icons/";
+
+        switch (element) {
+            case "air":
+                output += "tornado.svg";
+                break;
+            case "bolt":
+                output += "lightning-branches.svg";
+                break;
+            case "dark":
+                output += "evil-moon.svg";
+                break;
+            case "earth":
+                output += "rock.svg";
+                break;
+            case "fire":
+                output += "flame.svg";
+                break;
+            case "ice":
+                output += "ice-bolt.svg";
+                break;
+            case "light":
+                output += "sun.svg";
+                break;
+            case "physical":
+                output += "punch-blast.svg";
+                break;
+            case "poison":
+                output += "poison-bottle.svg";
+                break;
+            default:
+                output += "";
+                break;
+        }
+
+        return output;
+    });
 });

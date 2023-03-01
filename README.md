@@ -34,4 +34,12 @@ This code uses Foundry VTT and its API under the terms of the Limited License Ag
 
 https://game-icons.net/ https://creativecommons.org/licenses/by/3.0/
 
+-   Evil moon icon by Lorc
 -   Flame icon by Carl Olsen
+-   Ice bolt icon by Lorc
+-   Lightning branches icon by Lorc
+-   Poison bottle icon by Lorc
+-   Punch blast icon by Lorc
+-   Rock icon by Lorc
+-   Sun icon by Lorc
+-   Tornado icon by Lorc
