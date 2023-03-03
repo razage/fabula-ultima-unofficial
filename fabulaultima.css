@@ -109,6 +109,12 @@ img.damage-type.physical {
 img.damage-type.poison {
   filter: invert(18%) sepia(94%) saturate(2915%) hue-rotate(284deg) brightness(93%) contrast(93%);
 }
+.dice-formula.critical {
+  color: #007e00;
+}
+.dice-formula.fumble {
+  color: #c40303;
+}
 html {
   margin: 0;
   padding: 0;

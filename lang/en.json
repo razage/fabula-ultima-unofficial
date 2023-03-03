@@ -148,6 +148,8 @@
     "FU.Chat.critical": "Critical Success!",
     "FU.Chat.fumble": "FUMBLE!!!",
     "FU.Chat.rolling": "Rolling",
+    "FU.Chat.attackingWith": "Attacking with",
+    "FU.Chat.using": "using",
 
     "FU.Navigation.tabGear": "Gear",
     "FU.Navigation.tabRolls": "Rolls",

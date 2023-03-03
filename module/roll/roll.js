@@ -1,11 +1,12 @@
-export async function fabulaRoll(actor, mainStat, secondaryStat, bonus = 0, target) {
-    let roll = new Roll(`d${mainStat.current}+d${secondaryStat.current}+${bonus}`, actor.system);
+export async function fabulaAttackRoll(actor, mainStat, secondaryStat, item) {
+    let roll = new Roll(
+        `d${mainStat.current}+d${secondaryStat.current}+${item.system.accuracy.bonus}`,
+        actor.system
+    );
 
     await roll.evaluate({ async: true });
 
     let results = [];
-    let isCrit = false;
-    let isFumble = false;
     let highRoll = 0;
 
     roll.terms.forEach((r) => {
@@ -15,36 +16,50 @@ export async function fabulaRoll(actor, mainStat, secondaryStat, bonus = 0, targ
             results.push(r.results[0].result);
         }
     });
-    isFumble = isRollFumble(results);
-    isCrit = isRollCrit(results);
 
-    await sendRollToChat(actor, mainStat, secondaryStat, roll, highRoll, isCrit, isFumble);
+    let data = {};
+    data.isFumble = isRollFumble(results);
+    data.isCrit = isRollCrit(results);
+    data.highRoll = highRoll;
+    data.item = item;
+
+    await sendRollToChat(actor, mainStat, secondaryStat, roll, "attack", data);
 }
 
-export async function sendRollToChat(
-    actor,
-    mainStat,
-    secondaryStat,
-    rollObj,
-    highRoll,
-    isCritical,
-    isFumble
-) {
+export async function sendRollToChat(actor, mainStat, secondaryStat, rollObj, rollType, data) {
     console.log(rollObj);
-    let result = await renderTemplate("systems/fabulaultima/templates/rolls/roll.hbs", {
-        roll: rollObj,
-        crit: isCritical,
-        fumble: isFumble,
-        mainStat: mainStat,
-        secondaryStat: secondaryStat,
-    });
+    let result = null;
+    let flavor = "";
+
+    switch (rollType) {
+        case "attack":
+            result = await renderTemplate("systems/fabulaultima/templates/rolls/attack-roll.hbs", {
+                roll: rollObj,
+                crit: data.isCrit,
+                fumble: data.isFumble,
+                mainStat: mainStat,
+                secondaryStat: secondaryStat,
+                damage: {
+                    type: data.item.system.damage.type,
+                    bonus: data.item.system.damage.bonus,
+                    total: data.highRoll + data.item.system.damage.bonus,
+                },
+                highRoll: data.highRoll,
+                itemName: data.item.name,
+            });
+
+            flavor = `${game.i18n.localize("FU.Chat.attackingWith")} <b>${
+                data.item.name
+            }</b> (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
+                "FU.Short." + mainStat.name
+            )} + ${game.i18n.localize("FU.Short." + secondaryStat.name)}</b>)`;
+            break;
+    }
 
     let messageData = {
         speaker: ChatMessage.getSpeaker({ actor: actor }),
         content: result,
-        flavor: `${game.i18n.localize("FU.Chat.rolling")} <b>${game.i18n.localize(
-            "FU.Short." + mainStat.name
-        )} + ${game.i18n.localize("FU.Short." + secondaryStat.name)}</b>`,
+        flavor: flavor,
         type: CONST.CHAT_MESSAGE_TYPES.ROLL,
         roll: rollObj,
     };

@@ -1,4 +1,4 @@
-import { fabulaRoll } from "../roll/roll.js";
+import { fabulaAttackRoll } from "../roll/roll.js";
 
 export class FabulaUltimaActorSheet extends ActorSheet {
     static get defaultOptions() {
@@ -58,7 +58,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             const main = this.actor.system.attributes[item.system.accuracy.mainStat];
             const sec = this.actor.system.attributes[item.system.accuracy.secondaryStat];
 
-            fabulaRoll(this.actor, main, sec, item.system.accuracy.bonus);
+            fabulaAttackRoll(this.actor, main, sec, item);
         });
 
         html.find(".item-delete").click((ev) => {

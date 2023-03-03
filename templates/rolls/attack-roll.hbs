@@ -1,0 +1,33 @@
+<div class="dice-roll">
+	<div class="dice-result">
+		{{#if fumble}}
+		<div class="dice-formula fumble">{{localize "FU.Chat.fumble"}}</div>
+		{{else if crit}}
+		<div class="dice-formula critical">{{localize "FU.Chat.critical"}}</div>
+		{{/if}}
+		{{#unless fumble}}
+		<div class="dice-tooltip">
+			<section class="tooltip-part">
+				<div class="dice">
+					<ol class="dice-rolls">
+						{{#each roll.terms as |r|}}
+						<li class="roll die d{{r.faces}}">{{r.results.0.result}}</li>
+						{{/each}}
+					</ol>
+					<p class="part-formula">{{localize "FU.UI.accuracy"}}: {{roll.formula}}</p>
+					<p class="part-formula">{{localize "FU.UI.damage"}}: {{highRoll}} ({{localize "FU.Short.highRoll"}})
+						+ {{damage.bonus}} ({{localize (concat 'FU.Elements.' damage.type)}})</p>
+				</div>
+			</section>
+		</div>
+		<h4 class="dice-total">
+			{{#unless crit}}
+			<i class="fas fa-solid fa-bullseye" title="To Hit"></i>
+			{{roll.total}},
+			{{/unless}}
+			<img src="{{getElementalIcon damage.type}}" title="{{localize (concat 'FU.Elements.' damage.type)}}"
+				class="damage-type {{damage.type}}" /> {{damage.total}}
+		</h4>
+		{{/unless}}
+	</div>
+</div>
