@@ -41,6 +41,17 @@
 								"FU.UI.ranged"}}</option>
 						</select>
 					</div>
+					<div class="flexrow">
+						<span>
+							<input class="multi-enabled" type="checkbox" name="system.multi.enabled"
+								data-dtype="Boolean" {{#if item.system.multi.enabled}} checked {{/if}} />
+							<label for="system.multi.value">Multi <i class="fas fa-solid fa-circle-question"
+									title="If enabled, attacks target this many enemies."></i></label>
+						</span>
+						<input id="multiValue" type="text" name="system.multi.value" data-dtype="Number"
+							value="{{item.system.multi.value}}" {{#unless item.system.multi.enabled}}
+							disabled{{/unless}} />
+					</div>
 				</div>
 				<h3>{{localize "FU.Proficiencies.name"}}</h3>
 				<div class="grid grid-2col">
