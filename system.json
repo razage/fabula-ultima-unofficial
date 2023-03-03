@@ -2,6 +2,7 @@
     "id": "fabulaultima",
     "title": "Fabula Ultima (Unofficial)",
     "description": "An unofficial implementation of the Fabula Ultima ruleset for Foundry VTT.",
+    "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
     "version": "0.0.10",
@@ -21,7 +22,7 @@
     ],
     "packs": [],
     "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
-    "download": "",
+    "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/master.zip",
     "primaryTokeAttribute": "hp",
     "secondaryTokenAttribute": "mp"
 }
