@@ -43,6 +43,8 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollObj, ro
                     type: data.item.system.damage.type,
                     bonus: data.item.system.damage.bonus,
                     total: data.highRoll + data.item.system.damage.bonus,
+                    multi: data.item.system.multi.enabled,
+                    multiValue: data.item.system.multi.value,
                 },
                 highRoll: data.highRoll,
                 itemName: data.item.name,

@@ -45,8 +45,9 @@
 						<span>
 							<input class="multi-enabled" type="checkbox" name="system.multi.enabled"
 								data-dtype="Boolean" {{#if item.system.multi.enabled}} checked {{/if}} />
-							<label for="system.multi.value">Multi <i class="fas fa-solid fa-circle-question"
-									title="If enabled, attacks target this many enemies."></i></label>
+							<label for="system.multi.value">{{localize "FU.UI.multi"}} <i
+									class="fas fa-solid fa-circle-question"
+									title="{{localize 'FU.UI.multiEx'}}"></i></label>
 						</span>
 						<input id="multiValue" type="text" name="system.multi.value" data-dtype="Number"
 							value="{{item.system.multi.value}}" {{#unless item.system.multi.enabled}}

@@ -88,6 +88,9 @@ img.damage-type {
 .dice-formula.fumble {
   color: #c40303;
 }
+h4.dice-total .multi {
+  font-size: 0.85rem;
+}
 html {
   margin: 0;
   padding: 0;

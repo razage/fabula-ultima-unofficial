@@ -170,8 +170,12 @@
     "FU.UI.damageType": "Damage Type",
     "FU.UI.defenses": "Defenses",
     "FU.UI.melee": "Melee",
+    "FU.UI.multi": "Multi",
+    "FU.UI.multiEx": "If enabled, attacks target this many enemies.",
     "FU.UI.range": "Range",
     "FU.UI.ranged": "Ranged",
     "FU.UI.requirements": "Requirements",
+    "FU.UI.target": "Target",
+    "FU.UI.targets": "Targets",
     "FU.UI.twoHand": "Two-Handed"
 }
