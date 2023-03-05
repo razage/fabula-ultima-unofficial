@@ -44,7 +44,7 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses"],
-            "schemaVersion": "1.11",
+            "schemaVersion": "1.12",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -78,7 +78,10 @@
                 "offHand": {}
             },
             "characterLevel": 0,
+            "accessories": [],
+            "armor": [],
             "classes": [],
+            "weapons": [],
             "spells": [],
             "heroicSkills": [],
             "rituals": [],

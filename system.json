@@ -5,7 +5,7 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "compatibility": {
         "minimum": "10",
         "verified": "10.291"

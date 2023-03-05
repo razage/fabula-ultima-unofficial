@@ -29,15 +29,36 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
     _prepareCharacterItems(sheetData) {
         const actorData = sheetData.actor;
-
+        const accessories = [];
+        const armor = [];
         const classes = [];
+        const spells = [];
+        const weapons = [];
 
         sheetData.items.forEach((item) => {
-            if (item.type === "class") classes.push(item);
+            switch (item.type) {
+                case "class": {
+                    classes.push(item);
+                    break;
+                }
+
+                case "weapon": {
+                    weapons.push(item);
+                    break;
+                }
+
+                default: {
+                    console.log("itemType ", item.type, " is not currently implemented.");
+                }
+            }
         });
 
         // This gets put into the actor object. For consistency, my data is stored in actor.system
+        actorData.system.accessories = accessories;
+        actorData.system.armor = armor;
         actorData.system.classes = classes;
+        actorData.system.spells = spells;
+        actorData.system.weapons = weapons;
     }
 
     activateListeners(html) {

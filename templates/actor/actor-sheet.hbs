@@ -62,6 +62,7 @@
     </nav>
 
     <section class="sheet-body">
+        {{!-- Attributes --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             <div class="flexcol">
                 <h2>{{localize "FU.UI.defenses"}}</h2>
@@ -102,30 +103,28 @@
             </div>
         </div>
 
+        {{!-- Classes --}}
         <div class="tab classes" data-group="primary" data-tab="classes">
             <h2 style="text-align: center">{{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}</h2>
             <div class="flexcol item-list">
-                {{#each actor.items as |item id|}}
-                {{#if_eq item.type 'class'}}
-                <div class="item" data-item-id="{{item.id}}">
+                {{#each actor.system.classes as |item|}}
+                <div class="item" data-item-id="{{item._id}}">
                     {{> "systems/fabulaultima/templates/actor/partials/class-card.hbs" class=item}}
                 </div>
-                {{/if_eq}}
                 {{/each}}
             </div>
         </div>
         </div>
 
+        {{!-- Equipment --}}
         <div class="tab backpack" data-group="primary" data-tab="backpack">
             <div class="flexcol">
                 <h2>Weapons</h2>
                 <div class="item-list">
-                    {{#each actor.items as |item id|}}
-                    {{#if_eq item.type 'weapon'}}
-                    <div class="item" data-item-id="{{item.id}}">
+                    {{#each actor.system.weapons as |item|}}
+                    <div class="item" data-item-id="{{item._id}}">
                         {{> "systems/fabulaultima/templates/actor/partials/weapon-card.hbs" weapon=item}}
                     </div>
-                    {{/if_eq}}
                     {{/each}}
                 </div>
             </div>
@@ -137,10 +136,12 @@
             </span>
         </div>
 
+        {{!-- Spells --}}
         <div class="tab spells" data-group="primary" data-tab="spells">
             <p>Spells go here</p>
         </div>
 
+        {{!-- Bio and Bonds --}}
         <div class="tab bio" data-group="primary" data-tab="bio">
             <div class="trait-labels flexrow">
                 <label for="identity">{{localize "FU.Traits.identity"}}</label>
