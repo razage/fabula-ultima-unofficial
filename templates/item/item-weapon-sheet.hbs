@@ -15,20 +15,18 @@
 	<section class="sheet-body">
 		<div class="tab info" data-group="primary" data-tab="info">
 			<div class="flexcol">
-				<div class="grid grid-2col">
-					<div class="flexrow">
-						<label for="system.cost">{{localize "FU.UI.cost"}}</label>
-						<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
-					</div>
-					<div class="flexrow">
-						<label for="system.quality">{{localize "FU.Quality.name"}}</label>
-						<input type="text" name="system.quality" value="{{item.system.quality}}" data-dtype="String" />
-					</div>
+				<h2>{{localize "FU.UI.properties"}}</h2>
+				<div class="flexrow">
+					<label for="system.cost">{{localize "FU.UI.cost"}}</label>
+					<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
 				</div>
-				<h2>{{localize "FU.UI.requirements"}}</h2>
+				<div class="flexrow">
+					<label for="system.quality">{{localize "FU.Quality.name"}}</label>
+					<input type="text" name="system.quality" value="{{item.system.quality}}" data-dtype="String" />
+				</div>
 				<div class="grid grid-2col">
 					<div class="flexrow">
-						<label for="system.twoHands">{{localize "FU.UI.twoHand"}}</label>
+						<label for="system.twoHands">{{localize "FU.Weapons.twoHand"}}</label>
 						<input type="checkbox" name="system.twoHands" data-dtype="Boolean" {{#if item.system.twoHands}}
 							checked{{/if}} />
 					</div>
@@ -43,15 +41,22 @@
 					</div>
 					<div class="flexrow">
 						<span>
-							<input class="multi-enabled" type="checkbox" name="system.multi.enabled"
-								data-dtype="Boolean" {{#if item.system.multi.enabled}} checked {{/if}} />
 							<label for="system.multi.value">{{localize "FU.UI.multi"}} <i
 									class="fas fa-solid fa-circle-question"
 									title="{{localize 'FU.UI.multiEx'}}"></i></label>
+							<input class="multi-enabled" type="checkbox" name="system.multi.enabled"
+								data-dtype="Boolean" {{#if item.system.multi.enabled}} checked {{/if}} />
 						</span>
 						<input id="multiValue" type="text" name="system.multi.value" data-dtype="Number"
 							value="{{item.system.multi.value}}" {{#unless item.system.multi.enabled}}
 							disabled{{/unless}} />
+					</div>
+					<div class="flexrow">
+						<label for="system.isDualWielding">{{localize "FU.Weapons.dualWield"}} <i
+								class="fas fa-solid fa-circle-question"
+								title="{{localize 'FU.Weapons.dualWieldEx'}}"></i></label>
+						<input class="dw-enabled" type="checkbox" name="system.isDualWielding" data-dtype="Boolean"
+							{{#if item.system.isDualWielding}} checked {{/if}} />
 					</div>
 				</div>
 				<h3>{{localize "FU.Proficiencies.name"}}</h3>

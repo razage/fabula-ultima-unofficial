@@ -14,6 +14,7 @@
 
     "FU.Short.dexterity": "DEX",
     "FU.Short.difficultyLevel": "DL",
+    "FU.Short.dualWielding": "DW",
     "FU.Short.highRoll": "HR",
     "FU.Short.insight": "INS",
     "FU.Short.might": "MIG",
@@ -172,10 +173,14 @@
     "FU.UI.melee": "Melee",
     "FU.UI.multi": "Multi",
     "FU.UI.multiEx": "If enabled, attacks target this many enemies.",
+    "FU.UI.properties": "Properties",
     "FU.UI.range": "Range",
     "FU.UI.ranged": "Ranged",
     "FU.UI.requirements": "Requirements",
     "FU.UI.target": "Target",
     "FU.UI.targets": "Targets",
-    "FU.UI.twoHand": "Two-Handed"
+
+    "FU.Weapons.dualWield": "Dual Wield",
+    "FU.Weapons.dualWieldEx": "If enabled, the HR defaults to 0 and the bonus damage is applied twice.",
+    "FU.Weapons.twoHand": "Two-Handed"
 }

@@ -15,8 +15,11 @@
 						{{/each}}
 					</ol>
 					<p class="part-formula">{{localize "FU.UI.accuracy"}}: {{roll.formula}}</p>
-					<p class="part-formula">{{localize "FU.UI.damage"}}: {{highRoll}} ({{localize "FU.Short.highRoll"}})
-						+ {{damage.bonus}} ({{localize (concat 'FU.Elements.' damage.type)}})</p>
+					<p class="part-formula">
+						{{localize "FU.UI.damage"}}: {{highRoll}} ({{localize "FU.Short.highRoll"}}) + {{damage.bonus}}
+						({{localize (concat 'FU.Elements.' damage.type)}}){{#if dw}} <i class="fas fa-solid fa-swords"
+							title="{{localize 'FU.Weapons.dualWield'}}"></i>{{/if}}
+					</p>
 				</div>
 			</section>
 		</div>
