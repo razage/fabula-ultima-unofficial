@@ -46,6 +46,7 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollObj, ro
                 mainStat: mainStat,
                 secondaryStat: secondaryStat,
                 damage: {
+                    bonus: data.item.system.damage.bonus,
                     type: data.item.system.damage.type,
                     multi: data.item.system.multi.enabled,
                     multiValue: data.item.system.multi.value,
@@ -53,13 +54,6 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollObj, ro
                 highRoll: data.highRoll,
                 itemName: data.item.name,
             };
-
-            // Double the bonus if dual-wielding
-            if (data.item.system.isDualWielding) {
-                obj.damage.bonus = data.item.system.damage.bonus * 2;
-            } else {
-                obj.damage.bonus = data.item.system.damage.bonus;
-            }
 
             // Calculate the total after all adjustments
             obj.damage.total = obj.highRoll + obj.damage.bonus;
