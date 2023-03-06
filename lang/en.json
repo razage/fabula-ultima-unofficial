@@ -179,6 +179,17 @@
     "FU.UI.target": "Target",
     "FU.UI.targets": "Targets",
 
+    "FU.Weapons.Categories.name": "Weapon Category",
+    "FU.Weapons.Categories.arcane": "Arcane",
+    "FU.Weapons.Categories.bow": "Bow",
+    "FU.Weapons.Categories.brawling": "Brawling",
+    "FU.Weapons.Categories.dagger": "Dagger",
+    "FU.Weapons.Categories.firearm": "Firearm",
+    "FU.Weapons.Categories.flail": "Flail",
+    "FU.Weapons.Categories.heavy": "Heavy",
+    "FU.Weapons.Categories.spear": "Spear",
+    "FU.Weapons.Categories.sword": "Sword",
+    "FU.Weapons.Categories.thrown": "Thrown",
     "FU.Weapons.dualWield": "Dual Wield",
     "FU.Weapons.dualWieldEx": "If enabled, the HR defaults to 0 and the bonus damage is applied twice.",
     "FU.Weapons.twoHand": "Two-Handed"

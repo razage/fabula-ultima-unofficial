@@ -166,7 +166,7 @@
         },
         "weapon": {
             "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.05",
+            "schemaVersion": "1.06",
             "accuracy": {
                 "mainStat": "dexterity",
                 "secondaryStat": "dexterity",
@@ -182,7 +182,8 @@
             },
             "isDualWielding": false,
             "twoHands": false,
-            "range": "melee"
+            "range": "melee",
+            "category": "arcane"
         }
     }
 }

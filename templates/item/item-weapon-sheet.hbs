@@ -17,6 +17,36 @@
 			<div class="flexcol">
 				<h2>{{localize "FU.UI.properties"}}</h2>
 				<div class="flexrow">
+					<label for="system.category">{{localize "FU.Weapons.Categories.name"}}</label>
+					<select name="system.category" data-dtype="String">
+						<option value="arcane" {{#if_eq item.system.category "arcane" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.arcane"}}
+						</option>
+						<option value="bow" {{#if_eq item.system.category "bow" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.bow"}}</option>
+						<option value="brawling" {{#if_eq item.system.category "brawling" }} selected{{/if_eq}}>
+							{{localize "FU.Weapons.Categories.brawling"}}
+						</option>
+						<option value="dagger" {{#if_eq item.system.category "dagger" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.dagger"}}
+						</option>
+						<option value="firearm" {{#if_eq item.system.category "firearm" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.firearm"}}
+						</option>
+						<option value="flail" {{#if_eq item.system.category "flail" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.flail"}}</option>
+						<option value="heavy" {{#if_eq item.system.category "heavy" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.heavy"}}</option>
+						<option value="spear" {{#if_eq item.system.category "spear" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.spear"}}</option>
+						<option value="sword" {{#if_eq item.system.category "sword" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.sword"}}</option>
+						<option value="thrown" {{#if_eq item.system.category "thrown" }} selected{{/if_eq}}>{{localize
+							"FU.Weapons.Categories.thrown"}}
+						</option>
+					</select>
+				</div>
+				<div class="flexrow">
 					<label for="system.cost">{{localize "FU.Items.cost"}}</label>
 					<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
 				</div>
