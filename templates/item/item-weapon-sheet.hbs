@@ -6,6 +6,7 @@
 
 	<nav class="sheet-tabs tabs" data-group="primary">
 		<a class="item" data-tab="info"><i class="fas fa-solid fa-file-lines"></i> {{localize "FU.UI.general"}}</a>
+		<a class="item" data-tab="quality"><i class="fas fas-solid fa-sparkles"></i> {{localize "FU.Quality.name"}}</a>
 		<a class="item" data-tab="attack"><i class="fas fa-solid fa-skull-crossbones"></i> {{localize
 			"FU.UI.attack"}}</a>
 		<a class="item" data-tab="defense"><i class="fas fa-solid fa-shield"></i> {{localize
@@ -49,15 +50,6 @@
 				<div class="flexrow">
 					<label for="system.cost">{{localize "FU.Items.cost"}}</label>
 					<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
-				</div>
-				<div class="flexrow">
-					<label for="system.quality">{{localize "FU.Quality.name"}}</label>
-					<div class="editor-host">
-						{{editor enrichedQuality target="system.quality" button=true owner=owner
-						editable=editable}}
-					</div>
-					{{!-- <input type="text" name="system.quality" value="{{item.system.quality}}"
-						data-dtype="String" /> --}}
 				</div>
 				<div class="grid grid-2col">
 					<div class="flexrow">
@@ -104,6 +96,13 @@
 					</div>
 					{{/each}}
 				</div>
+			</div>
+		</div>
+
+		<div class="tab quality" data-group="primary" data-tab="quality">
+			<div class="editor-host">
+				{{editor enrichedQuality target="system.quality" button=true owner=owner
+				editable=editable}}
 			</div>
 		</div>
 
