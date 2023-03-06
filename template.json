@@ -108,9 +108,10 @@
                     "shield": false
                 },
                 "cost": 0,
-                "quality": ""
+                "quality": "No Quality"
             },
             "armorStats": {
+                "isEquipped": false,
                 "defense": {
                     "value": 0,
                     "useDex": true
@@ -124,8 +125,7 @@
         },
         "accessory": {
             "templates": ["itemCommon"],
-            "schemaVersion": "1.01",
-            "quality": "rare"
+            "schemaVersion": "1.02"
         },
         "arcanum": {
             "schemaVersion": "1.0",
@@ -136,7 +136,7 @@
         },
         "armor": {
             "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.02"
+            "schemaVersion": "1.03"
         },
         "class": {
             "schemaVersion": "1.0",
@@ -166,7 +166,7 @@
         },
         "weapon": {
             "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.06",
+            "schemaVersion": "1.07",
             "accuracy": {
                 "mainStat": "dexterity",
                 "secondaryStat": "dexterity",

@@ -24,6 +24,10 @@ export class FabulaUltimaItemSheet extends ItemSheet {
     async getData() {
         const data = super.getData();
 
+        data.enrichedQuality = await TextEditor.enrichHTML(this.object.system.quality, {
+            async: true,
+        });
+
         return data;
     }
 

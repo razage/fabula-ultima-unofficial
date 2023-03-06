@@ -52,7 +52,12 @@
 				</div>
 				<div class="flexrow">
 					<label for="system.quality">{{localize "FU.Quality.name"}}</label>
-					<input type="text" name="system.quality" value="{{item.system.quality}}" data-dtype="String" />
+					<div class="editor-host">
+						{{editor enrichedQuality target="system.quality" button=true owner=owner
+						editable=editable}}
+					</div>
+					{{!-- <input type="text" name="system.quality" value="{{item.system.quality}}"
+						data-dtype="String" /> --}}
 				</div>
 				<div class="grid grid-2col">
 					<div class="flexrow">
