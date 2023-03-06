@@ -5,7 +5,7 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.0.12",
+    "version": "0.0.14",
     "compatibility": {
         "minimum": "10",
         "verified": "10.291"
@@ -20,7 +20,26 @@
             "flags": {}
         }
     ],
-    "packs": [],
+    "packs": [
+        {
+            "name": "rare-weapons",
+            "label": "Rare Weapons",
+            "system": "fabulaultima",
+            "path": "packs/rare-weapons.db",
+            "private": "false",
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "name": "weapons",
+            "label": "Weapons",
+            "system": "fabulaultima",
+            "path": "packs/weapons.db",
+            "private": false,
+            "type": "Item",
+            "flags": {}
+        }
+    ],
     "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
     "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/master.zip",
     "primaryTokeAttribute": "hp",
