@@ -80,8 +80,8 @@
 							<input id="multiValue" type="text" name="system.multi.value" data-dtype="Number"
 								value="{{item.system.multi.value}}" {{#unless item.system.multi.enabled}}
 								disabled{{/unless}} /></label>
-							<label for="system.isDualWielding">{{localize "FU.Weapons.dualWield"}} <i
-									class="fas fa-solid fa-circle-question"
+							<label for="system.isDualWielding" class="label-pad-left">{{localize
+								"FU.Weapons.dualWield"}} <i class="fas fa-solid fa-circle-question"
 									title="{{localize 'FU.Weapons.dualWieldEx'}}"></i> <input class="dw-enabled"
 									type="checkbox" name="system.isDualWielding" data-dtype="Boolean" {{#if
 									item.system.isDualWielding}} checked {{/if}} /></label>
@@ -155,15 +155,16 @@
 						<label for="system.defense">{{localize "FU.Attributes.defense"}}</label>
 						<input type="text" name="system.defense.value" value="{{item.system.defense.value}}"
 							data-dtype="Number" />
-						<label for="system.defense.useDex">{{localize "FU.UI.addDex"}}</label>
+						<label for="system.defense.useDex" class="label-pad-left">{{localize "FU.UI.addDex"}}</label>
 						<input type="checkbox" name="system.defense.useDex" data-dtype="Boolean" {{#if
 							item.system.defense.useDex}} checked{{/if}} />
 					</div>
 					<div class="flexrow">
-						<label for="system.mDefense">{{localize "FU.Attributes.magicDefense"}}</label>
+						<label for="system.mDefense">{{localize
+							"FU.Attributes.magicDefense"}}</label>
 						<input type="text" name="system.mDefense.value" value="{{item.system.mDefense.value}}"
 							data-dtype="Number" />
-						<label for="system.mDefense.useIns">{{localize "FU.UI.addIns"}}</label>
+						<label for="system.mDefense.useIns" class="label-pad-left">{{localize "FU.UI.addIns"}}</label>
 						<input type="checkbox" name="system.mDefense.useIns" data-dtype="Boolean" {{#if
 							item.system.mDefense.useIns}} checked{{/if}} />
 					</div>

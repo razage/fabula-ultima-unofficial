@@ -83,6 +83,9 @@ h3.equipped {
 .weapon-sheet .flexrow {
   padding: 2px;
 }
+label.label-pad-left {
+  padding-left: 8px;
+}
 .window-app .window-content {
   margin: 0;
   padding: 0;
@@ -91,22 +94,25 @@ h3.equipped {
   color: #fcfcfc;
 }
 .sheet nav.sheet-tabs {
+  background: #2021a0;
+  background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
+  border: 1px solid #fcfcfc;
   border-radius: 10px;
 }
 .sheet nav.sheet-tabs a.item {
   width: 100%;
-  background: #2021a0;
-  background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
   color: #fcfcfc;
+  border-radius: 10px;
 }
 .sheet nav.sheet-tabs a.item:hover {
-  text-shadow: 0 0 8px #242424;
-  text-decoration: underline;
-}
-.sheet nav.sheet-tabs a.item.active {
-  border: 1px solid #fcfcfc;
   text-decoration: underline;
   text-shadow: none;
+}
+.sheet nav.sheet-tabs a.item.active {
+  background: #3030f5;
+  background: linear-gradient(180deg, #3030f5 0%, #2021a0 100%);
+  text-decoration: underline;
+  text-shadow: 0 0 8px #010661;
 }
 .sheet nav.sheet-tabs a.item.active:hover {
   text-shadow: none;

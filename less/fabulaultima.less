@@ -11,23 +11,26 @@
 }
 
 .sheet nav.sheet-tabs {
+    background: rgb(32, 33, 160);
+    background: linear-gradient(180deg, rgba(32, 33, 160, 1) 0%, rgba(1, 6, 97, 1) 100%);
+    border: 1px solid #fcfcfc;
     border-radius: 10px;
 
     a.item {
         width: 100%;
-        background: rgb(32, 33, 160);
-        background: linear-gradient(180deg, rgba(32, 33, 160, 1) 0%, rgba(1, 6, 97, 1) 100%);
         color: #fcfcfc;
+        border-radius: 10px;
 
         &:hover {
-            text-shadow: 0 0 8px #242424;
             text-decoration: underline;
+            text-shadow: none;
         }
 
         &.active {
-            border: 1px solid #fcfcfc;
+            background: rgb(48, 48, 245);
+            background: linear-gradient(180deg, rgba(48, 48, 245, 1) 0%, rgba(32, 33, 160, 1) 100%);
             text-decoration: underline;
-            text-shadow: none;
+            text-shadow: 0 0 8px rgba(1, 6, 97, 1);
 
             &:hover {
                 text-shadow: none;
