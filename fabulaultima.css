@@ -47,8 +47,7 @@
   color: #ffff00;
 }
 .tab.backpack .weapon-card {
-  background: #ffddcc;
-  border: 1px solid #000000;
+  border: 1px solid #fcfcfc;
   margin-bottom: 8px;
 }
 .tab.backpack .weapon-card img {
@@ -78,22 +77,76 @@ img.damage-type {
 h4.dice-total .multi {
   font-size: 0.85rem;
 }
-html {
+h3.equipped {
+  text-align: right;
+}
+.weapon-sheet .flexrow {
+  padding: 2px;
+}
+.window-app .window-content {
   margin: 0;
   padding: 0;
+  background: #2021a0;
+  background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
+  color: #fcfcfc;
 }
-nav.sheet-tabs {
-  margin: 0;
-  background: #d7ffd7;
+.sheet nav.sheet-tabs {
+  border-radius: 10px;
 }
-nav.sheet-tabs a.item {
+.sheet nav.sheet-tabs a.item {
   width: 100%;
-  background: #fce3fc;
+  background: #2021a0;
+  background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
+  color: #fcfcfc;
 }
-nav.sheet-tabs a.item.active {
-  background: #c1c1f3;
+.sheet nav.sheet-tabs a.item:hover {
+  text-shadow: 0 0 8px #242424;
+  text-decoration: underline;
 }
-.editor-host .editor {
+.sheet nav.sheet-tabs a.item.active {
+  border: 1px solid #fcfcfc;
+  text-decoration: underline;
+  text-shadow: none;
+}
+.sheet nav.sheet-tabs a.item.active:hover {
+  text-shadow: none;
+}
+.sheet-header input[type="text"]:not(:disabled),
+.sheet-body input[type="text"]:not(:disabled) {
+  color: #fcfcfc;
+  border: 1px solid #fcfcfc;
+  border-radius: 5px;
+}
+.sheet-header input[type="text"]:not(:disabled):active,
+.sheet-body input[type="text"]:not(:disabled):active,
+.sheet-header input[type="text"]:not(:disabled):focus,
+.sheet-body input[type="text"]:not(:disabled):focus {
+  box-shadow: none;
+}
+.sheet-header select,
+.sheet-body select {
+  color: #000000;
+  background: #fcfcfc;
+}
+.sheet-header select:active,
+.sheet-body select:active,
+.sheet-header select:focus,
+.sheet-body select:focus {
+  text-shadow: none;
+  box-shadow: none;
+}
+.sheet-header input[type="text"]:active,
+.sheet-body input[type="text"]:active {
+  box-shadow: none;
+}
+.sheet-header h2,
+.sheet-body h2,
+.sheet-header h3,
+.sheet-body h3 {
+  border-bottom: 1px solid #fcfcfc;
+  padding-top: 8px;
+}
+.sheet-body .editor-host .editor {
   min-height: 50px;
   height: 100%;
   flex: auto;

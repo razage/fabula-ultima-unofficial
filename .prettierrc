@@ -15,8 +15,5 @@
     "tabWidth": 4,
     "trailingComma": "es5",
     "useTabs": false,
-    "overrides": [
-        { "files": "*.hbs", "options": { "parser": "glimmer" } },
-        { "files": ".prettierrc", "options": { "parser": "json5" } }
-    ]
+    "overrides": [{ "files": "*.hbs", "options": { "parser": "babel" } }]
 }

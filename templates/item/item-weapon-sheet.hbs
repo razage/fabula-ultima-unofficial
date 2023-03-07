@@ -2,7 +2,7 @@
 	<header class="sheet-header">
 		<img class="item-img" src="{{item.img}}" data-edit="img" height="100" width="100" />
 		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
-		<h3>{{localize "FU.Items.equipped"}}: <input type="checkbox" name="system.isEquipped" {{#if
+		<h3 class="equipped">{{localize "FU.Items.equipped"}}: <input type="checkbox" name="system.isEquipped" {{#if
 				item.system.isEquipped}} checked{{/if}} data-dtype="Boolean" /></h3>
 	</header>
 
@@ -15,7 +15,7 @@
 			"FU.Attributes.defense"}}</a>
 	</nav>
 
-	<section class="sheet-body">
+	<section class="sheet-body weapon-sheet">
 		<div class="tab info" data-group="primary" data-tab="info">
 			<div class="flexcol">
 				<h2>{{localize "FU.UI.properties"}}</h2>
@@ -68,24 +68,24 @@
 								"FU.UI.ranged"}}</option>
 						</select>
 					</div>
-					<div class="flexrow">
-						<span>
-							<label for="system.multi.value">{{localize "FU.UI.multi"}} <i
+					<div class="grid grid-5col">
+						<div class="flexrow">
+							<span>
+								<label for="system.multi.value">{{localize "FU.UI.multi"}} <i
+										class="fas fa-solid fa-circle-question"
+										title="{{localize 'FU.UI.multiEx'}}"></i> <input class="multi-enabled"
+										type="checkbox" name="system.multi.enabled" data-dtype="Boolean" {{#if
+										item.system.multi.enabled}} checked {{/if}} />
+							</span>
+							<input id="multiValue" type="text" name="system.multi.value" data-dtype="Number"
+								value="{{item.system.multi.value}}" {{#unless item.system.multi.enabled}}
+								disabled{{/unless}} /></label>
+							<label for="system.isDualWielding">{{localize "FU.Weapons.dualWield"}} <i
 									class="fas fa-solid fa-circle-question"
-									title="{{localize 'FU.UI.multiEx'}}"></i></label>
-							<input class="multi-enabled" type="checkbox" name="system.multi.enabled"
-								data-dtype="Boolean" {{#if item.system.multi.enabled}} checked {{/if}} />
-						</span>
-						<input id="multiValue" type="text" name="system.multi.value" data-dtype="Number"
-							value="{{item.system.multi.value}}" {{#unless item.system.multi.enabled}}
-							disabled{{/unless}} />
-					</div>
-					<div class="flexrow">
-						<label for="system.isDualWielding">{{localize "FU.Weapons.dualWield"}} <i
-								class="fas fa-solid fa-circle-question"
-								title="{{localize 'FU.Weapons.dualWieldEx'}}"></i></label>
-						<input class="dw-enabled" type="checkbox" name="system.isDualWielding" data-dtype="Boolean"
-							{{#if item.system.isDualWielding}} checked {{/if}} />
+									title="{{localize 'FU.Weapons.dualWieldEx'}}"></i> <input class="dw-enabled"
+									type="checkbox" name="system.isDualWielding" data-dtype="Boolean" {{#if
+									item.system.isDualWielding}} checked {{/if}} /></label>
+						</div>
 					</div>
 				</div>
 				<h3>{{localize "FU.Proficiencies.name"}}</h3>
