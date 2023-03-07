@@ -69,6 +69,7 @@
 
     "FU.Items.name": "Items",
     "FU.Items.cost": "Cost",
+    "FU.Items.equipped": "Equipped",
 
     "FU.Navigation.tabGear": "Gear",
 
@@ -192,5 +193,7 @@
     "FU.Weapons.Categories.thrown": "Thrown",
     "FU.Weapons.dualWield": "Dual Wield",
     "FU.Weapons.dualWieldEx": "If enabled, the HR defaults to 0 and the bonus damage is applied twice.",
+    "FU.Weapons.dualWielding": "Dual Wielding",
+    "FU.Weapons.oneHand": "One-Handed",
     "FU.Weapons.twoHand": "Two-Handed"
 }

@@ -1,19 +1,6 @@
 .trait-labels {
   text-align: center;
 }
-.sheet nav.sheet-tabs {
-  margin: 0;
-}
-nav.sheet-tabs {
-  background: #d7ffd7;
-}
-nav.sheet-tabs a.item {
-  width: 100%;
-  background: #fce3fc;
-}
-nav.sheet-tabs a.item.active {
-  background: #c1c1f3;
-}
 .item-edit {
   cursor: pointer;
 }
@@ -94,6 +81,17 @@ h4.dice-total .multi {
 html {
   margin: 0;
   padding: 0;
+}
+nav.sheet-tabs {
+  margin: 0;
+  background: #d7ffd7;
+}
+nav.sheet-tabs a.item {
+  width: 100%;
+  background: #fce3fc;
+}
+nav.sheet-tabs a.item.active {
+  background: #c1c1f3;
 }
 .editor-host .editor {
   min-height: 50px;

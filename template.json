@@ -44,7 +44,7 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses"],
-            "schemaVersion": "1.12",
+            "schemaVersion": "1.13",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -69,8 +69,18 @@
             "fabulaPoints": 3,
             "experiencePoints": 0,
             "initiativeMod": 0,
-            "defense": 6,
-            "magicDefense": 6,
+            "defenses": {
+                "physical": {
+                    "base": 6,
+                    "value": 0,
+                    "bonus": 0
+                },
+                "magic": {
+                    "base": 6,
+                    "value": 0,
+                    "bonus": 0
+                }
+            },
             "equipment": {
                 "accessory": {},
                 "armor": {},
@@ -116,11 +126,11 @@
                 "isEquipped": false,
                 "defense": {
                     "value": 0,
-                    "useDex": true
+                    "useDex": false
                 },
                 "mDefense": {
                     "value": 0,
-                    "useIns": true
+                    "useIns": false
                 },
                 "initiative": 0
             },
@@ -141,7 +151,7 @@
         },
         "armor": {
             "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
-            "schemaVersion": "1.04"
+            "schemaVersion": "1.05"
         },
         "class": {
             "schemaVersion": "1.0",
@@ -171,7 +181,7 @@
         },
         "weapon": {
             "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
-            "schemaVersion": "1.08",
+            "schemaVersion": "1.09",
             "accuracy": {
                 "mainStat": "dexterity",
                 "secondaryStat": "dexterity",

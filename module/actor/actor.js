@@ -16,10 +16,12 @@ export class FabulaUltimaActor extends Actor {
     _preparePlayerData(actorData) {
         const { system } = actorData;
 
-        //Reset bonuses in case a class was removed
+        //Reset bonuses in case an item was removed
         system.hp.bonus = 0;
         system.mp.bonus = 0;
         system.ip.bonus = 0;
+        system.defenses.physical.bonus = 0;
+        system.defenses.magic.bonus = 0;
 
         //Calculate statistics
         for (let [key, statistic] of Object.entries(system.attributes)) {
@@ -36,6 +38,13 @@ export class FabulaUltimaActor extends Actor {
                 system.ip.bonus += element.system.benefits.resource.ip;
 
                 _tempLevel += element.system.level;
+            }
+
+            if (element.type === "weapon") {
+                if (element.system.isEquipped) {
+                    system.defenses.physical.bonus += element.system.defense.value;
+                    system.defenses.magic.bonus += element.system.mDefense.value;
+                }
             }
         });
 
@@ -55,8 +64,11 @@ export class FabulaUltimaActor extends Actor {
         system.hp.crisis = Math.floor(system.hp.max / 2);
 
         // Calculate derived stats
-        system.defense = system.attributes.dexterity.base;
-        system.magicDefense = system.attributes.insight.base;
+        system.defenses.physical.base = system.attributes.dexterity.base;
+        system.defenses.physical.value =
+            system.defenses.physical.base + system.defenses.physical.bonus;
+        system.defenses.magic.base = system.attributes.insight.base;
+        system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
     }
 
     static async create(data, options = {}) {

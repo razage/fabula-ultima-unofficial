@@ -70,10 +70,10 @@
                     <div class="flexrow">
                         <span class="defense"><i class="fas fa-solid fa-shield"></i> {{localize
                             "FU.Attributes.defense"}}:
-                            {{actor.system.defense}}</span>
+                            {{actor.system.defenses.physical.value}}</span>
                         <span class="mdefense"><i class="fas fa-solid fa-circle-nodes"></i> {{localize
                             "FU.Attributes.magicDefense"}}:
-                            {{actor.system.magicDefense}}</span>
+                            {{actor.system.defenses.magic.value}}</span>
                     </div>
                 </div>
                 <h2>{{localize "FU.Attributes.name"}}</h2>
@@ -121,7 +121,7 @@
             <div class="flexcol">
                 <h2>Weapons</h2>
                 <div class="item-list">
-                    {{#each actor.system.weapons as |item|}}
+                    {{#each actor.system.weapons as |item ind|}}
                     <div class="item" data-item-id="{{item._id}}">
                         {{> "systems/fabulaultima/templates/actor/partials/weapon-card.hbs" weapon=item}}
                     </div>

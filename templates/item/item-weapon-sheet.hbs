@@ -2,6 +2,8 @@
 	<header class="sheet-header">
 		<img class="item-img" src="{{item.img}}" data-edit="img" height="100" width="100" />
 		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
+		<h3>{{localize "FU.Items.equipped"}}: <input type="checkbox" name="system.isEquipped" {{#if
+				item.system.isEquipped}} checked{{/if}} data-dtype="Boolean" /></h3>
 	</header>
 
 	<nav class="sheet-tabs tabs" data-group="primary">

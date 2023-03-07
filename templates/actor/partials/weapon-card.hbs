@@ -12,7 +12,7 @@
 				<span>
 					{{localize "FU.UI.accuracy"}}: <b>[{{localize (concat "FU.Short."
 						weapon.system.accuracy.mainStat)}}+{{localize (concat "FU.Short."
-						weapon.system.accuracy.secondaryStat)}}]</b>
+						weapon.system.accuracy.secondaryStat)}}]+{{weapon.system.accuracy.bonus}}</b>
 				</span>
 				<p>{{localize "FU.UI.damage"}}: <b>[{{localize
 						"FU.Short.highRoll"}}+{{weapon.system.damage.bonus}}]</b>
@@ -21,6 +21,18 @@
 			<span>
 				<i class="fas fa-solid fa-dice item-roll"></i>
 				<p>Attack!</p>
+			</span>
+			<span>
+				{{#if weapon.system.isEquipped}}
+				{{#if weapon.system.twoHands}}
+				<i class="fas fa-solid fa-handshake" title="{{localize 'FU.Weapons.twoHand'}}"></i>
+				{{else}}
+				<i class="fas fa-solid fa-hand" title="{{localize 'FU.Weapons.oneHand'}}"></i>
+				{{/if}}
+				{{#if weapon.system.isDualWielding}}
+				<i class="fas fa-solid fa-swords" title="{{localize 'FU.Weapons.dualWielding'}}"></i>
+				{{/if}}
+				{{/if}}
 			</span>
 			<span class="flexcol" style="text-align: right">
 				<i class="fas fa-solid fa-pencil item-edit"></i> Edit
