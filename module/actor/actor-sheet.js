@@ -74,6 +74,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         });
 
         html.find(".item-roll").click((ev) => {
+            ev.preventDefault();
+
             const parent = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(parent.data("itemId"));
             const main = this.actor.system.attributes[item.system.accuracy.mainStat];
