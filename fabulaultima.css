@@ -97,4 +97,6 @@ html {
 }
 .editor-host .editor {
   min-height: 50px;
+  height: 100%;
+  flex: auto;
 }

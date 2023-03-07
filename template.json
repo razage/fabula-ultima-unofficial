@@ -101,14 +101,16 @@
         ],
         "templates": {
             "itemCommon": {
+                "cost": 0,
+                "quality": "No Quality."
+            },
+            "martialProficiencies": {
                 "isMartial": {
                     "armor": false,
                     "melee": false,
                     "ranged": false,
                     "shield": false
-                },
-                "cost": 0,
-                "quality": "No Quality"
+                }
             },
             "armorStats": {
                 "isEquipped": false,
@@ -121,6 +123,9 @@
                     "useIns": true
                 },
                 "initiative": 0
+            },
+            "equippable": {
+                "isEquipped": false
             }
         },
         "accessory": {
@@ -135,8 +140,8 @@
             "dismiss": ""
         },
         "armor": {
-            "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.03"
+            "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
+            "schemaVersion": "1.04"
         },
         "class": {
             "schemaVersion": "1.0",
@@ -165,8 +170,8 @@
             "skills": []
         },
         "weapon": {
-            "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.07",
+            "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
+            "schemaVersion": "1.08",
             "accuracy": {
                 "mainStat": "dexterity",
                 "secondaryStat": "dexterity",
