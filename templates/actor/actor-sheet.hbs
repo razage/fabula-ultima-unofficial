@@ -2,12 +2,8 @@
     <header class="sheet-header flexcol">
         <div class="header-fields">
             <div class="flexrow">
-                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="250"
-                    width="200" />
-                <label for="charname">{{localize "FU.Bio.nameLabel"}}</label>
-                <input name="name" type="text" data-dtype="String" value="{{actor.name}}" />
-                <label for="pronouns">{{localize "FU.Bio.pronouns"}}</label>
-                <input name="system.pronouns" type="text" data-dtype="String" value="{{actor.system.pronouns}}" />
+                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+                <h1><input name="name" type="text" data-dtype="String" value="{{actor.name}}" /></h1>
             </div>
 
             <div class="resources grid grid-3col">
@@ -209,6 +205,10 @@
 
         {{!-- Bio and Bonds --}}
         <div class="tab bio" data-group="primary" data-tab="bio">
+            <div class="flexrow">
+                <label for="pronouns">{{localize "FU.Bio.pronouns"}}</label>
+                <input name="system.pronouns" type="text" data-dtype="String" value="{{actor.system.pronouns}}" />
+            </div>
             <div class="trait-labels flexrow">
                 <label for="identity">{{localize "FU.Traits.identity"}}</label>
                 <label for="theme">{{localize "FU.Traits.theme"}}</label>

@@ -1,3 +1,7 @@
+img.profile-img {
+  width: 64px;
+  border: none;
+}
 .trait-labels {
   text-align: center;
 }
