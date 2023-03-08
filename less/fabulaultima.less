@@ -1,34 +1,63 @@
+@import "globals";
 @import "actor-sheet";
 @import "chat";
 @import "weapon-sheet";
 
-.window-app .window-content {
+button.fabula-button {
+    background: @accent-fallback;
+    background: @highlight-gradient;
+    color: @font-color;
+    border: 1px solid @font-color;
+    border-radius: 10px;
+
+    &:active,
+    &:focus,
+    &:hover {
+        box-shadow: none;
+    }
+
+    &:hover {
+        border-color: darken(@font-color, 40%);
+        background: @main-fallback;
+        background: @darken-gradient;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background: @main-fallback;
+        background: @darken-gradient;
+    }
+}
+
+.fabulaultima.sheet section.window-content {
     margin: 0;
     padding: 0;
-    background: rgb(32, 33, 160);
-    background: linear-gradient(180deg, rgba(32, 33, 160, 1) 0%, rgba(1, 6, 97, 1) 100%);
-    color: #fcfcfc;
+    background: @main-fallback;
+    background: @main-gradient;
+    color: @font-color;
 }
 
 .sheet nav.sheet-tabs {
-    background: rgb(32, 33, 160);
-    background: linear-gradient(180deg, rgba(32, 33, 160, 1) 0%, rgba(1, 6, 97, 1) 100%);
-    border: 1px solid #fcfcfc;
+    background: @accent-fallback;
+    background: @main-gradient;
+    border: 1px solid @font-color;
     border-radius: 10px;
 
     a.item {
         width: 100%;
-        color: #fcfcfc;
+        color: @font-color;
         border-radius: 10px;
 
         &:hover {
+            background: @accent-fallback;
+            background: @darken-gradient;
             text-decoration: underline;
             text-shadow: none;
         }
 
         &.active {
-            background: rgb(48, 48, 245);
-            background: linear-gradient(180deg, rgba(48, 48, 245, 1) 0%, rgba(32, 33, 160, 1) 100%);
+            background: @main-fallback;
+            background: @highlight-gradient;
             text-decoration: underline;
             text-shadow: 0 0 8px rgba(1, 6, 97, 1);
 
@@ -42,8 +71,8 @@
 .sheet-header,
 .sheet-body {
     input[type="text"]:not(:disabled) {
-        color: #fcfcfc;
-        border: 1px solid #fcfcfc;
+        color: @font-color;
+        border: 1px solid @font-color;
         border-radius: 5px;
 
         &:active,
@@ -52,9 +81,13 @@
         }
     }
 
+    input[type="text"]:disabled {
+        cursor: not-allowed;
+    }
+
     select {
         color: #000000;
-        background: #fcfcfc;
+        background: @font-color;
 
         &:active,
         &:focus {
@@ -69,7 +102,7 @@
 
     h2,
     h3 {
-        border-bottom: 1px solid #fcfcfc;
+        border-bottom: 1px solid @font-color;
         padding-top: 8px;
     }
 }

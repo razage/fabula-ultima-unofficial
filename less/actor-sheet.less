@@ -60,24 +60,47 @@
         color: #ffff00;
     }
 
+    p.item-name {
+        font-weight: bold;
+        font-size: 1.35rem;
+    }
+
     .weapon-card {
-        border: 1px solid #fcfcfc;
+        border: 1px solid @font-color;
+        border-radius: 10px;
         margin-bottom: 8px;
 
-        img {
-            border: 0;
-            border-radius: 0;
+        .weapon-card-header {
+            padding-top: 4px;
+            padding-left: 8px;
+
+            img.profile-img {
+                width: 50px;
+                height: 50px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 4px;
+            }
         }
 
         i {
+            color: @font-color;
             font-size: 1rem;
 
             &.martial {
                 color: #ff0000;
             }
+        }
 
-            &.fa-dice {
-                cursor: pointer;
+        .button-holder {
+            margin-right: 4px;
+        }
+
+        button {
+            border-right: none;
+
+            &:nth-last-child {
+                border-bottom: none;
             }
         }
     }

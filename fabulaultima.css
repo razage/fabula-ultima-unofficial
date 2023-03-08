@@ -46,22 +46,41 @@
 .tab.backpack .currency {
   color: #ffff00;
 }
+.tab.backpack p.item-name {
+  font-weight: bold;
+  font-size: 1.35rem;
+}
 .tab.backpack .weapon-card {
-  border: 1px solid #fcfcfc;
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
   margin-bottom: 8px;
 }
-.tab.backpack .weapon-card img {
+.tab.backpack .weapon-card .weapon-card-header {
+  padding-top: 4px;
+  padding-left: 8px;
+}
+.tab.backpack .weapon-card .weapon-card-header img.profile-img {
+  width: 50px;
+  height: 50px;
   border: 0;
   border-radius: 0;
+  margin-bottom: 4px;
 }
 .tab.backpack .weapon-card i {
+  color: #f8f8f8;
   font-size: 1rem;
 }
 .tab.backpack .weapon-card i.martial {
   color: #ff0000;
 }
-.tab.backpack .weapon-card i.fa-dice {
-  cursor: pointer;
+.tab.backpack .weapon-card .button-holder {
+  margin-right: 4px;
+}
+.tab.backpack .weapon-card button {
+  border-right: none;
+}
+.tab.backpack .weapon-card button:nth-last-child {
+  border-bottom: none;
 }
 img.damage-type {
   border: 0;
@@ -86,31 +105,55 @@ h3.equipped {
 label.label-pad-left {
   padding-left: 8px;
 }
-.window-app .window-content {
+button.fabula-button {
+  background: #010661;
+  background: linear-gradient(180deg, #292aca 0%, #020993 100%);
+  color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+}
+button.fabula-button:active,
+button.fabula-button:focus,
+button.fabula-button:hover {
+  box-shadow: none;
+}
+button.fabula-button:hover {
+  border-color: #929292;
+  background: #2021a0;
+  background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
+}
+button.fabula-button:disabled {
+  cursor: not-allowed;
+  background: #2021a0;
+  background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
+}
+.fabulaultima.sheet section.window-content {
   margin: 0;
   padding: 0;
   background: #2021a0;
   background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
-  color: #fcfcfc;
+  color: #f8f8f8;
 }
 .sheet nav.sheet-tabs {
-  background: #2021a0;
+  background: #010661;
   background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
-  border: 1px solid #fcfcfc;
+  border: 1px solid #f8f8f8;
   border-radius: 10px;
 }
 .sheet nav.sheet-tabs a.item {
   width: 100%;
-  color: #fcfcfc;
+  color: #f8f8f8;
   border-radius: 10px;
 }
 .sheet nav.sheet-tabs a.item:hover {
+  background: #010661;
+  background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
   text-decoration: underline;
   text-shadow: none;
 }
 .sheet nav.sheet-tabs a.item.active {
-  background: #3030f5;
-  background: linear-gradient(180deg, #3030f5 0%, #2021a0 100%);
+  background: #2021a0;
+  background: linear-gradient(180deg, #292aca 0%, #020993 100%);
   text-decoration: underline;
   text-shadow: 0 0 8px #010661;
 }
@@ -119,8 +162,8 @@ label.label-pad-left {
 }
 .sheet-header input[type="text"]:not(:disabled),
 .sheet-body input[type="text"]:not(:disabled) {
-  color: #fcfcfc;
-  border: 1px solid #fcfcfc;
+  color: #f8f8f8;
+  border: 1px solid #f8f8f8;
   border-radius: 5px;
 }
 .sheet-header input[type="text"]:not(:disabled):active,
@@ -129,10 +172,14 @@ label.label-pad-left {
 .sheet-body input[type="text"]:not(:disabled):focus {
   box-shadow: none;
 }
+.sheet-header input[type="text"]:disabled,
+.sheet-body input[type="text"]:disabled {
+  cursor: not-allowed;
+}
 .sheet-header select,
 .sheet-body select {
   color: #000000;
-  background: #fcfcfc;
+  background: #f8f8f8;
 }
 .sheet-header select:active,
 .sheet-body select:active,
@@ -149,7 +196,7 @@ label.label-pad-left {
 .sheet-body h2,
 .sheet-header h3,
 .sheet-body h3 {
-  border-bottom: 1px solid #fcfcfc;
+  border-bottom: 1px solid #f8f8f8;
   padding-top: 8px;
 }
 .sheet-body .editor-host .editor {
