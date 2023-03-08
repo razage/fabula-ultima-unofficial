@@ -40,11 +40,24 @@
                     "poisoned": false,
                     "crisis": false
                 }
+            },
+            "resistances": {
+                "resistances": {
+                    "air": "neutral",
+                    "bolt": "neutral",
+                    "dark": "neutral",
+                    "earth": "neutral",
+                    "fire": "neutral",
+                    "ice": "neutral",
+                    "light": "neutral",
+                    "physical": "neutral",
+                    "poison": "neutral"
+                }
             }
         },
         "player": {
-            "templates": ["charAttributes", "charStatuses"],
-            "schemaVersion": "1.14",
+            "templates": ["charAttributes", "charStatuses", "resistances"],
+            "schemaVersion": "1.15",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -81,12 +94,6 @@
                     "value": 0,
                     "bonus": 0
                 }
-            },
-            "equipment": {
-                "accessory": {},
-                "armor": {},
-                "mainHand": {},
-                "offHand": {}
             },
             "characterLevel": 0,
             "accessories": [],

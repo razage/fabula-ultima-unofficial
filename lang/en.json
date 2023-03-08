@@ -81,6 +81,12 @@
 
     "FU.Quality.name": "Quality",
 
+    "FU.Resistances.immune": "Immune",
+    "FU.Resistances.name": "Resistances",
+    "FU.Resistances.neutral": "Neutral",
+    "FU.Resistances.resistant": "Resistant",
+    "FU.Resistances.vulnerable": "Vulnerable",
+
     "FU.Resources.name": "Resources",
     "FU.Resources.hp": "Hit Points",
     "FU.Resources.mp": "Mind Points",
