@@ -31,12 +31,18 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const actorData = sheetData.actor;
         const accessories = [];
         const armor = [];
+        const bonds = [];
         const classes = [];
         const spells = [];
         const weapons = [];
 
         sheetData.items.forEach((item) => {
             switch (item.type) {
+                case "bond": {
+                    bonds.push(item);
+                    break;
+                }
+
                 case "class": {
                     classes.push(item);
                     break;
@@ -56,6 +62,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         // This gets put into the actor object. For consistency, my data is stored in actor.system
         actorData.system.accessories = accessories;
         actorData.system.armor = armor;
+        actorData.system.bonds = bonds;
         actorData.system.classes = classes;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;

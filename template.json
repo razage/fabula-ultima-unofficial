@@ -115,7 +115,8 @@
             "arcanum",
             "class",
             "spells",
-            "skills"
+            "skills",
+            "bond"
         ],
         "templates": {
             "itemCommon": {
@@ -160,6 +161,13 @@
         "armor": {
             "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
             "schemaVersion": "1.05"
+        },
+        "bond": {
+            "schemaVersion": "1.0",
+            "emotionOne": "",
+            "emotionTwo": "",
+            "emotionThree": "",
+            "strength": 0
         },
         "class": {
             "schemaVersion": "1.0",

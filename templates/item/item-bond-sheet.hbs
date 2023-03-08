@@ -1,0 +1,41 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
+	</header>
+	<section class="sheet-body bond-sheet">
+		<div class="grid grid-3col">
+			<div class="flexrow">
+				<select name="system.emotionOne" data-dtype="String">
+					<option value="" {{#if_eq item.system.emotionOne "" }} selected{{/if_eq}}></option>
+					<option value="{{localize 'FU.Emotions.admiration'}}" {{#if_eq item.system.emotionOne
+						(localize 'FU.Emotions.admiration' )}} selected{{/if_eq}}>{{localize "FU.Emotions.admiration"}}
+					</option>
+					<option value="{{localize 'FU.Emotions.inferiority'}}" {{#if_eq item.system.emotionOne
+						(localize 'FU.Emotions.inferiority' )}} selected{{/if_eq}}>{{localize
+						"FU.Emotions.inferiority"}}
+					</option>
+				</select>
+				<select name="system.emotionTwo" data-dtype="String">
+					<option value="" {{#if_eq item.system.emotionTwo "" }} selected{{/if_eq}}></option>
+					<option value="{{localize 'FU.Emotions.loyalty'}}" {{#if_eq item.system.emotionTwo
+						(localize 'FU.Emotions.loyalty' )}} selected{{/if_eq}}>{{localize "FU.Emotions.loyalty"}}
+					</option>
+					<option value="{{localize 'FU.Emotions.mistrust'}}" {{#if_eq item.system.emotionTwo
+						(localize 'FU.Emotions.mistrust' )}} selected{{/if_eq}}>{{localize
+						"FU.Emotions.mistrust"}}
+					</option>
+				</select>
+				<select name="system.emotionThree" data-dtype="String">
+					<option value="" {{#if_eq item.system.emotionThree "" }} selected{{/if_eq}}></option>
+					<option value="{{localize 'FU.Emotions.affection'}}" {{#if_eq item.system.emotionThree
+						(localize 'FU.Emotions.affection' )}} selected{{/if_eq}}>{{localize "FU.Emotions.affection"}}
+					</option>
+					<option value="{{localize 'FU.Emotions.hatred'}}" {{#if_eq item.system.emotionThree
+						(localize 'FU.Emotions.hatred' )}} selected{{/if_eq}}>{{localize
+						"FU.Emotions.hatred"}}
+					</option>
+				</select>
+			</div>
+		</div>
+	</section>
+</form>
