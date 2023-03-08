@@ -44,12 +44,13 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses"],
-            "schemaVersion": "1.13",
+            "schemaVersion": "1.14",
             "pronouns": "",
             "identity": "",
             "theme": "",
             "origin": "",
             "bonds": [],
+            "isLeader": false,
             "hp": {
                 "value": 35,
                 "max": 35,
