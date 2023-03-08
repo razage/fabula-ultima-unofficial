@@ -44,10 +44,11 @@
 			</div>
 			<div class="flexcol button-holder">
 				<button class="item-roll fabula-button" {{#unless weapon.system.isEquipped}} disabled{{/unless}}><i
-						class="fas fa-solid fa-dice"></i> Attack!</button>
-				<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> Edit</button>
-				<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash item-delete"></i>
-					Delete</button>
+						class="fas fa-solid fa-dice"></i> {{localize "FU.UI.attack"}}</button>
+				<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
+					"FU.UI.edit"}}</button>
+				<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash"></i> {{localize
+					"FU.UI.delete"}}</button>
 			</div>
 		</div>
 	</div>

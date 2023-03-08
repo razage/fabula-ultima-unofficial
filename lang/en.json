@@ -176,6 +176,8 @@
     "FU.UI.damage": "Damage",
     "FU.UI.damageType": "Damage Type",
     "FU.UI.defenses": "Defenses",
+    "FU.UI.delete": "Delete",
+    "FU.UI.edit": "Edit",
     "FU.UI.melee": "Melee",
     "FU.UI.multi": "Multi",
     "FU.UI.multiEx": "If enabled, attacks target this many enemies.",
