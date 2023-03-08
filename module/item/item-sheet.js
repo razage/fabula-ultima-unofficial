@@ -2,8 +2,8 @@ export class FabulaUltimaItemSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["fabulaultima", "sheet", "item"],
-            width: 520,
-            height: 480,
+            width: 560,
+            height: 500,
             tabs: [
                 {
                     navSelector: ".sheet-tabs",
@@ -24,6 +24,20 @@ export class FabulaUltimaItemSheet extends ItemSheet {
     async getData() {
         const data = super.getData();
 
+        data.enrichedQuality = await TextEditor.enrichHTML(this.object.system.quality, {
+            async: true,
+        });
+
         return data;
+    }
+
+    activateListeners(html) {
+        super.activateListeners(html);
+
+        if (!this.options.editable) return;
+
+        html.find(".multi-enabled").click((ev) => {
+            $("#multiValue").prop("disabled", (i, v) => !v);
+        });
     }
 }

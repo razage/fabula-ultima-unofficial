@@ -20,8 +20,13 @@ export async function fabulaAttackRoll(actor, mainStat, secondaryStat, item) {
     let data = {};
     data.isFumble = isRollFumble(results);
     data.isCrit = isRollCrit(results);
-    data.highRoll = highRoll;
     data.item = item;
+
+    if (item.system.isDualWielding) {
+        data.highRoll = 0;
+    } else {
+        data.highRoll = highRoll;
+    }
 
     await sendRollToChat(actor, mainStat, secondaryStat, roll, "attack", data);
 }
@@ -33,20 +38,30 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollObj, ro
 
     switch (rollType) {
         case "attack":
-            result = await renderTemplate("systems/fabulaultima/templates/rolls/attack-roll.hbs", {
+            let obj = {
                 roll: rollObj,
                 crit: data.isCrit,
                 fumble: data.isFumble,
+                dw: data.item.system.isDualWielding,
                 mainStat: mainStat,
                 secondaryStat: secondaryStat,
                 damage: {
-                    type: data.item.system.damage.type,
                     bonus: data.item.system.damage.bonus,
-                    total: data.highRoll + data.item.system.damage.bonus,
+                    type: data.item.system.damage.type,
+                    multi: data.item.system.multi.enabled,
+                    multiValue: data.item.system.multi.value,
                 },
                 highRoll: data.highRoll,
                 itemName: data.item.name,
-            });
+            };
+
+            // Calculate the total after all adjustments
+            obj.damage.total = obj.highRoll + obj.damage.bonus;
+
+            result = await renderTemplate(
+                "systems/fabulaultima/templates/rolls/attack-roll.hbs",
+                obj
+            );
 
             flavor = `${game.i18n.localize("FU.Chat.attackingWith")} <b>${
                 data.item.name

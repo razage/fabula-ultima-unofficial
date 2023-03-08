@@ -1,90 +1,107 @@
 .trait-labels {
-	text-align: center;
-}
-
-.sheet nav.sheet-tabs {
-	margin: 0;
-}
-
-nav.sheet-tabs {
-	background: #d7ffd7;
-
-	a.item {
-		width: 100%;
-		background: #fce3fc;
-
-		&.active {
-			background: #c1c1f3;
-		}
-	}
+    text-align: center;
 }
 
 .item-edit {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .resources {
-	input {
-		width: 2rem;
-	}
+    input {
+        width: 2rem;
+    }
 
-	label[for="system.hp.value"], input[name="system.hp.value"], input[name="system.hp.max"], label[for="crisis"], p.crisis, .hp {
-		color: #ff0000;
-	}
+    label[for="system.hp.value"],
+    input[name="system.hp.value"],
+    input[name="system.hp.max"],
+    label[for="crisis"],
+    p.crisis,
+    .hp {
+        color: #ff0000;
+    }
 
-	label[for="system.mp.value"], input[name="system.mp.value"], input[name="system.mp.max"], .mp {
-		color: #0000ff;
-	}
+    label[for="system.mp.value"],
+    input[name="system.mp.value"],
+    input[name="system.mp.max"],
+    .mp {
+        color: #0000ff;
+    }
 
-	label[for="system.ip.value"], input[name="system.ip.value"], input[name="system.ip.max"], .ip {
-		color: #00ff00;
-	}
+    label[for="system.ip.value"],
+    input[name="system.ip.value"],
+    input[name="system.ip.max"],
+    .ip {
+        color: #00ff00;
+    }
 
-	i {
-		font-size: 1.5rem;
-		padding-right: 8px;
-	}
+    i {
+        font-size: 1.5rem;
+        padding-right: 8px;
+    }
 }
 
 .class-card {
-	background: #fcfaf4;
-	border: 1px solid #000000;
+    background: #fcfaf4;
+    border: 1px solid #000000;
 }
 
 .tab.backpack {
-	i {
-		font-size: 1.5rem;
-		padding-right: 8px;
-	}
+    i {
+        font-size: 1.5rem;
+        padding-right: 8px;
+    }
 
-	input {
-		width: 6rem;
-	}
+    input {
+        width: 6rem;
+    }
 
-	input[name="system.zenit"], .currency {
-		color: #ffff00;
-	}
+    input[name="system.zenit"],
+    .currency {
+        color: #ffff00;
+    }
 
-	.weapon-card {
-		background: #ffddcc;
-		border: 1px solid #000000;
-		margin-bottom: 8px;
+    p.item-name {
+        font-weight: bold;
+        font-size: 1.35rem;
+    }
 
-		img {
-			border: 0;
-			border-radius: 0;
-		}
+    .weapon-card {
+        border: 1px solid @font-color;
+        border-radius: 10px;
+        margin-bottom: 8px;
 
-		i {
-			font-size: 1rem;
+        .weapon-card-header {
+            padding-top: 4px;
+            padding-left: 8px;
 
-			&.martial {
-				color: #ff0000;
-			}
+            img.profile-img {
+                width: 50px;
+                height: 50px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 4px;
+            }
+        }
 
-			&.fa-dice {
-				cursor: pointer;
-			}
-		}
-	}
+        i {
+            color: @font-color;
+            font-size: 1rem;
+
+            &.martial {
+                color: #ff0000;
+            }
+        }
+
+        .button-holder {
+            margin-right: 4px;
+        }
+
+        button {
+            border-right: none;
+
+            &:nth-last-child {
+                border-bottom: none;
+            }
+        }
+    }
 }

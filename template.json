@@ -1,48 +1,54 @@
 {
     "Actor": {
         "types": ["player", "enemy", "group", "world"],
-        "templates": {},
+        "templates": {
+            "charAttributes": {
+                "attributes": {
+                    "dexterity": {
+                        "name": "dexterity",
+                        "base": 6,
+                        "bonus": 0,
+                        "current": 6
+                    },
+                    "insight": {
+                        "name": "insight",
+                        "base": 6,
+                        "bonus": 0,
+                        "current": 6
+                    },
+                    "might": {
+                        "name": "might",
+                        "base": 6,
+                        "bonus": 0,
+                        "current": 6
+                    },
+                    "willpower": {
+                        "name": "willpower",
+                        "base": 6,
+                        "bonus": 0,
+                        "current": 6
+                    }
+                }
+            },
+            "charStatuses": {
+                "statuses": {
+                    "slowed": false,
+                    "dazed": false,
+                    "weakened": false,
+                    "shaken": false,
+                    "enraged": false,
+                    "poisoned": false,
+                    "crisis": false
+                }
+            }
+        },
         "player": {
-            "schemaVersion": "1.1",
+            "templates": ["charAttributes", "charStatuses"],
+            "schemaVersion": "1.13",
             "pronouns": "",
             "identity": "",
             "theme": "",
             "origin": "",
-            "attributes": {
-                "dexterity": {
-                    "name": "dexterity",
-                    "base": 6,
-                    "bonus": 0,
-                    "current": 6
-                },
-                "insight": {
-                    "name": "insight",
-                    "base": 6,
-                    "bonus": 0,
-                    "current": 6
-                },
-                "might": {
-                    "name": "might",
-                    "base": 6,
-                    "bonus": 0,
-                    "current": 6
-                },
-                "willpower": {
-                    "name": "willpower",
-                    "base": 6,
-                    "bonus": 0,
-                    "current": 6
-                }
-            },
-            "statuses": {
-                "slowed": false,
-                "dazed": false,
-                "weakened": false,
-                "shaken": false,
-                "enraged": false,
-                "poisoned": false,
-                "crisis": false
-            },
             "bonds": [],
             "hp": {
                 "value": 35,
@@ -63,8 +69,18 @@
             "fabulaPoints": 3,
             "experiencePoints": 0,
             "initiativeMod": 0,
-            "defense": 6,
-            "magicDefense": 6,
+            "defenses": {
+                "physical": {
+                    "base": 6,
+                    "value": 0,
+                    "bonus": 0
+                },
+                "magic": {
+                    "base": 6,
+                    "value": 0,
+                    "bonus": 0
+                }
+            },
             "equipment": {
                 "accessory": {},
                 "armor": {},
@@ -72,7 +88,10 @@
                 "offHand": {}
             },
             "characterLevel": 0,
+            "accessories": [],
+            "armor": [],
             "classes": [],
+            "weapons": [],
             "spells": [],
             "heroicSkills": [],
             "rituals": [],
@@ -92,31 +111,36 @@
         ],
         "templates": {
             "itemCommon": {
+                "cost": 0,
+                "quality": "No Quality."
+            },
+            "martialProficiencies": {
                 "isMartial": {
                     "armor": false,
                     "melee": false,
                     "ranged": false,
                     "shield": false
-                },
-                "cost": 0,
-                "quality": ""
+                }
             },
             "armorStats": {
+                "isEquipped": false,
                 "defense": {
                     "value": 0,
-                    "useDex": true
+                    "useDex": false
                 },
                 "mDefense": {
                     "value": 0,
-                    "useIns": true
+                    "useIns": false
                 },
                 "initiative": 0
+            },
+            "equippable": {
+                "isEquipped": false
             }
         },
         "accessory": {
             "templates": ["itemCommon"],
-            "schemaVersion": "1.01",
-            "quality": "rare"
+            "schemaVersion": "1.02"
         },
         "arcanum": {
             "schemaVersion": "1.0",
@@ -126,8 +150,8 @@
             "dismiss": ""
         },
         "armor": {
-            "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.02"
+            "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
+            "schemaVersion": "1.05"
         },
         "class": {
             "schemaVersion": "1.0",
@@ -156,8 +180,8 @@
             "skills": []
         },
         "weapon": {
-            "templates": ["itemCommon", "armorStats"],
-            "schemaVersion": "1.04",
+            "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
+            "schemaVersion": "1.09",
             "accuracy": {
                 "mainStat": "dexterity",
                 "secondaryStat": "dexterity",
@@ -167,8 +191,14 @@
                 "bonus": 0,
                 "type": "physical"
             },
+            "multi": {
+                "enabled": false,
+                "value": 0
+            },
+            "isDualWielding": false,
             "twoHands": false,
-            "range": "melee"
+            "range": "melee",
+            "category": "arcane"
         }
     }
 }

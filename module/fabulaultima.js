@@ -49,7 +49,7 @@ Hooks.once("init", async function () {
     });
 
     Handlebars.registerHelper("getElementalIcon", function (element) {
-        let output = "systems/fabulaultima/assets/icons/";
+        let output = "systems/fabulaultima/assets/ui/";
 
         switch (element) {
             case "air":

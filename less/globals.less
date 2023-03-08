@@ -1,0 +1,17 @@
+// Colors
+@font-color: #f8f8f8;
+@main-fallback: rgba(32, 33, 160, 1);
+@accent-fallback: rgba(1, 6, 97, 1);
+
+// Gradients
+@main-gradient: linear-gradient(180deg, @main-fallback 0%, @accent-fallback 100%);
+@highlight-gradient: linear-gradient(
+    180deg,
+    lighten(@main-fallback, 10%) 0%,
+    lighten(@accent-fallback, 10%) 100%
+);
+@darken-gradient: linear-gradient(
+    180deg,
+    darken(@main-fallback, 5%) 0%,
+    darken(@accent-fallback, 5%) 100%
+);

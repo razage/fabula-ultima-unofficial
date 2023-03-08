@@ -32,14 +32,125 @@ This code uses Foundry VTT and its API under the terms of the Limited License Ag
 
 ## Icons
 
-https://game-icons.net/ https://creativecommons.org/licenses/by/3.0/
+All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license](https://creativecommons.org/licenses/by/3.0/), unless noted otherwise. I've included many icons that are not in use by compendium items. These are to help you create your own custom items without needing to search for additional icons.
 
+-   3D Hammer icon by Delapouite
+-   Andromeda chain icon by Lorc
+-   Armor punch icon by Delapouite
+-   Arrowhead icon by Lorc
+-   Barbed Spear icon by Lorc
+-   Battered Axe icon by Lorc
+-   Battle axe icon by Lorc
+-   Black book icon by Wildabeast
+-   Bone knife icon by Delapouite
+-   Bone mace icon by Delapouite
+-   Book cover icon by Lorc
+-   Bookmark icon by Lorc
+-   Bordered shield icon by Lorc
+-   Bow arrow icon by Delapouite
+-   Bowie knife icon by Lorc
+-   Broad dagger icon by Lorc
+-   Broadhead arrow icon by Lorc
+-   Broadsword icon by Lorc
+-   Butterfly knife icon by Delapouite
+-   C96 icon by Skoll
+-   Caduceus icon by Delapouite
+-   Cat icon by Lorc
+-   Claw hammer icon by Lorc
+-   Colt M1911 icon by Skoll
+-   Crab claw icon by Lorc
+-   Crescent staff icon by Delapouite
+-   Cross shield icon by Delapouite
+-   Crossbow icon by Carl Olsen
+-   Crystal wand icon by Lorc
+-   Curvy knife icon by Lorc
+-   CZ Skorpion icon by Skoll
+-   Daggers icon by Lorc
+-   Death note icon by Lorc
+-   Desert Eagle icon by Skoll
+-   Dragon shield icon by Delapouite
+-   Dripping Knife icon by Lorc
+-   Edged Shield icon by Lorc
+-   Electric whip icon by Lorc
+-   Evil book icon by Lorc
+-   Evil hand icon by Lorc
 -   Evil moon icon by Lorc
+-   Eye shield icon by Lorc
+-   Fire axe icon by Lorc
+-   Fire punch icon by Lorc
+-   Fist icon by Lorc
+-   Flail icon by Delapouite
 -   Flame icon by Carl Olsen
+-   Flanged mace icon by Delapouite
+-   Flat Hammer icon by Lorc
+-   Gavel icon by Lorc
+-   Gladius icon by Skoll
+-   Glock icon by Skoll
+-   Glowing hands icon by Lorc
+-   Halberd icon by Lorc
+-   Hand bandage icon by Delapouite
+-   Hand of god icon by Delapouite
+-   Hatchet icon by Delapouite
 -   Ice bolt icon by Lorc
+-   Ice spear icon by Lorc
+-   Katana icon by Delapouite
+-   Kusarigama icon by DarkZaitzev
+-   Layered armor icon by Lorc
 -   Lightning branches icon by Lorc
+-   Log icon by Delapouite
+-   Lunar wand icon by Delapouite
+-   Magic axe icon by Delapouite
+-   Magic shield icon by Lorc
+-   Mailed fist icon by Lorc
+-   Meat cleaver icon by Lorc
+-   Musket icon by Skoll
+-   Nunchaku icon by Delapouite
+-   Panzerfaust icon by Delapouite
+-   Paw icon by Lorc
+-   Pistol gun by John Colburn
+-   Plain dagger icon by Lorc
 -   Poison bottle icon by Lorc
 -   Punch blast icon by Lorc
+-   Relic blade icon by Lorc
+-   Revolver icon by Delapouite
 -   Rock icon by Lorc
+-   Roman shield icon by Delapouite
+-   Round shield icon by Wildabeast
+-   Rune sword icon by Lorc
+-   Sai icon by Delapouite
+-   Sawed-off shotgun icon by Delapouite
+-   Scythe icon by Lorc
+-   Shard sword icon by Lorc
+-   Sharp axe icon by Delapouite
+-   Sharp haldberd icon by Delapouite
+-   Shuriken icon by Lorc
+-   Shut rose icon by Lorc
+-   Skull staff icon by Delapouite
+-   Sparkling sabre icon by Lorc
+-   Spear feather icon by Delapouite
+-   Spear hook icon by Lorc
+-   Spiked mace icon by Lorc
+-   Spkiked shield icon by Delapouite
+-   Spine arrow icon by Lorc
+-   Stiletto icon by Lorc
+-   Stiletto icon by Skoll
+-   Stone axe icon by Lorc
+-   Stone spear icon by Lorc
 -   Sun icon by Lorc
+-   Thor fist icon by Lorc
+-   Thor hammer icon by Delapouite
+-   Tomahawk icon by Delapouite
 -   Tornado icon by Lorc
+-   Trident shield icon by Delapouite
+-   Two handed sword icon by Delapouite
+-   Viking shield icon by Delapouite
+-   Walther PPK icon by Skoll
+-   War axe icon by Delapouite
+-   Warhammer icon by Delapouite
+-   Whip icon by Lorc
+-   White book icon by Wildabeast
+-   Winchester rifle icon by Skoll
+-   Winged scepter icon by Delapouite
+-   Winter gloves icon by Delapouite
+-   Wizard staff icon by Lorc
+-   Wood axe icon by Lorc
