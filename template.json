@@ -163,11 +163,12 @@
             "schemaVersion": "1.05"
         },
         "bond": {
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.01",
             "emotionOne": "",
             "emotionTwo": "",
             "emotionThree": "",
-            "strength": 0
+            "strength": 0,
+            "notes": ""
         },
         "class": {
             "schemaVersion": "1.0",

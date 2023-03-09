@@ -28,6 +28,8 @@ export class FabulaUltimaItemSheet extends ItemSheet {
             async: true,
         });
 
+        data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, { async: true });
+
         return data;
     }
 

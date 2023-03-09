@@ -11,6 +11,11 @@ img.profile-img {
 .resources input {
   width: 2rem;
 }
+.resources .fabula,
+.resources .experience,
+.resources .initiative {
+  text-align: center;
+}
 .resources label[for="system.hp.value"],
 .resources input[name="system.hp.value"],
 .resources input[name="system.hp.max"],
@@ -60,10 +65,6 @@ img.profile-img {
 }
 .resistances .flexcol.element-resistance {
   padding: 0 4px;
-}
-.bond-card {
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
 }
 .class-card {
   background: #f8f8f8;
@@ -116,6 +117,25 @@ img.profile-img {
 .tab.backpack .weapon-card button:nth-last-child {
   border-bottom: none;
 }
+.bond-card {
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.bond-card p.bond-name {
+  padding-left: 8px;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+.bond-card .emotions ul {
+  list-style-type: none;
+}
+.bond-card .emotions ul li {
+  text-align: center;
+}
+.bond-card p.bond-strength {
+  text-align: center;
+}
 img.damage-type {
   border: 0;
   width: 25px;
@@ -165,7 +185,12 @@ button.fabula-button.item-create {
   background: #2ba020;
   background: linear-gradient(180deg, #2ba020 0%, #016101 100%);
   border-radius: 25px;
-  margin: 0 20%;
+  height: 30px;
+  width: 50px;
+}
+button.fabula-button.item-create:hover {
+  background: #258b1c;
+  background: linear-gradient(180deg, #258b1c 0%, #014801 100%);
 }
 .fabulaultima.sheet section.window-content {
   margin: 0;
@@ -243,4 +268,7 @@ button.fabula-button.item-create {
   min-height: 50px;
   height: 100%;
   flex: auto;
+}
+.sheet-body .editor-host .editor .tox .tox-edit-area__iframe {
+  background: #f8f8f8;
 }

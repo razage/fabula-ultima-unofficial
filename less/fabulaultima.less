@@ -1,5 +1,6 @@
 @import "globals";
 @import "actor-sheet";
+@import "cards/bond-card";
 @import "chat";
 @import "weapon-sheet";
 
@@ -29,10 +30,20 @@ button.fabula-button {
     }
 
     &.item-create {
-        background: rgba(43, 160, 32, 1);
-        background: linear-gradient(180deg, rgba(43, 160, 32, 1) 0%, rgba(1, 97, 1, 1) 100%);
+        background: @green-fallback;
+        background: @green-gradient;
         border-radius: 25px;
-        margin: 0 20%;
+        height: 30px;
+        width: 50px;
+
+        &:hover {
+            background: darken(@green-fallback, 5%);
+            background: linear-gradient(
+                180deg,
+                darken(@green-fallback, 5%) 0%,
+                darken(@green-accent, 5%) 100%
+            );
+        }
     }
 }
 
@@ -120,6 +131,12 @@ button.fabula-button {
             min-height: 50px;
             height: 100%;
             flex: auto;
+
+            // If this isn't done, the blue background makes the black text in the editor
+            // impossible to read. Changing the font color here seems to have no effect.
+            .tox .tox-edit-area__iframe {
+                background: @font-color;
+            }
         }
     }
 }

@@ -223,12 +223,11 @@
                     value="{{actor.system.origin}}" />
             </div>
             {{!-- Bonds --}}
-            <h2>{{localize "FU.Bonds.name"}}</h2>
+            <h2>
+                {{localize "FU.Bonds.name"}}
+                <button class="fabula-button item-create" data-type="bond"><i class="fas fa-solid fa-plus"></i></button>
+            </h2>
             <div class="item-list bonds">
-                <div class="flexrow">
-                    <button class="fabula-button item-create" data-type="bond"><i
-                            class="fas fa-solid fa-plus"></i></button>
-                </div>
                 {{#each actor.system.bonds as |item ind|}}
                 <div class="item" data-item-id="{{item._id}}">
                     {{> "systems/fabulaultima/templates/actor/partials/bond-card.hbs" bond=item}}

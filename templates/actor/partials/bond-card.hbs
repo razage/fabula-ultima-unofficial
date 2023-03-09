@@ -4,18 +4,20 @@
 			<p class="bond-name">{{bond.name}}</p>
 			<div class="emotions">
 				<div class="flexcol">
-					{{#if_not_eq bond.system.emotionOne ""}}
-					<p class="emotion-one">{{bond.system.emotionOne}}</p>
-					{{/if_not_eq}}
-					{{#if_not_eq bond.system.emotionTwo ""}}
-					<p class="emotion-two">{{bond.system.emotionTwo}}</p>
-					{{/if_not_eq}}
-					{{#if_not_eq bond.system.emotionThree ""}}
-					<p class="emotion-three">{{bond.system.emotionThree}}</p>
-					{{/if_not_eq}}
+					<ul>
+						{{#if_not_eq bond.system.emotionOne ""}}
+						<li class="emotion-one">{{bond.system.emotionOne}}</li>
+						{{/if_not_eq}}
+						{{#if_not_eq bond.system.emotionTwo ""}}
+						<li class="emotion-two">{{bond.system.emotionTwo}}</li>
+						{{/if_not_eq}}
+						{{#if_not_eq bond.system.emotionThree ""}}
+						<li class="emotion-three">{{bond.system.emotionThree}}</li>
+						{{/if_not_eq}}
+					</ul>
 				</div>
 			</div>
-			<p class="bond-strength">{{bond.system.strength}}</p>
+			<p class="bond-strength">{{localize "FU.Bonds.strength"}}: {{bond.system.strength}} / 3</p>
 			<div class="item-controls">
 				<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
 					"FU.UI.edit"}}</button>

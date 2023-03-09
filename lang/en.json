@@ -17,7 +17,7 @@
     "FU.Bio.pronouns": "Pronouns",
 
     "FU.Bonds.name": "Bonds",
-    "FU.Bonds.placeholder": "Bond Name",
+    "FU.Bonds.strength": "Strength",
 
     "FU.Chat.critical": "Critical Success!",
     "FU.Chat.fumble": "FUMBLE!!!",
@@ -60,6 +60,7 @@
     "FU.Emotions.mistrust": "Mistrust",
     "FU.Emotions.affection": "Affection",
     "FU.Emotions.hatred": "Hatred",
+    "FU.Emotions.name": "Emotions",
 
     "FU.Equipment.name": "Equipment",
     "FU.Equipment.accessory": "Accessory",

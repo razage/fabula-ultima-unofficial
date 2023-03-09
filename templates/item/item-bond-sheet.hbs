@@ -3,8 +3,9 @@
 		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
 	</header>
 	<section class="sheet-body bond-sheet">
+		<h2>{{localize "FU.Emotions.name"}}</h2>
 		<div class="grid grid-3col">
-			<div class="flexrow">
+			<div class="flexrow emotions">
 				<select name="system.emotionOne" data-dtype="String">
 					<option value="" {{#if_eq item.system.emotionOne "" }} selected{{/if_eq}}></option>
 					<option value="{{localize 'FU.Emotions.admiration'}}" {{#if_eq item.system.emotionOne
@@ -35,6 +36,13 @@
 						"FU.Emotions.hatred"}}
 					</option>
 				</select>
+			</div>
+			<h3>Notes</h3>
+			<div class="flexrow">
+				<div class="editor-host">
+					{{editor enrichedNotes target="system.notes" button=true owner=owner
+					editable=editable}}
+				</div>
 			</div>
 		</div>
 	</section>
