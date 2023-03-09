@@ -73,6 +73,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
         if (!this.options.editable) return;
 
+        // Edit items
         html.find(".item-edit").click((ev) => {
             const parent = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(parent.data("itemId"));
@@ -80,6 +81,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             item.sheet.render(true);
         });
 
+        // Make a roll based on an item's stats
         html.find(".item-roll").click((ev) => {
             ev.preventDefault();
 
@@ -91,6 +93,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             fabulaAttackRoll(this.actor, main, sec, item);
         });
 
+        // Delete an item
         html.find(".item-delete").click((ev) => {
             const parent = $(ev.currentTarget).parents(".item");
             let options = {};
@@ -98,7 +101,15 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             this.actor.deleteEmbeddedDocuments("Item", [parent.data("itemId")], options);
         });
 
+        // Create an item
         html.find(".item-create").click(this._onItemCreate.bind(this));
+
+        // Update the equipped status for an item
+        html.find(".equipped").click((ev) => {
+            ev.preventDefault();
+
+            this._onItemEquippedStatusChange(ev);
+        });
     }
 
     _onItemCreate(event) {
@@ -117,5 +128,23 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         };
 
         return this.actor.createEmbeddedDocuments("Item", [itemData]);
+    }
+
+    _onItemEquippedStatusChange(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        console.log(element);
+        const dataset = element.dataset;
+
+        try {
+            const item = this.actor.items.get(dataset.id);
+            console.log(item);
+            var isEquipped = item.system.isEquipped;
+
+            isEquipped = !isEquipped;
+            item.update({ data: { isEquipped: isEquipped } });
+        } catch (ex) {
+            console.log(ex);
+        }
     }
 }

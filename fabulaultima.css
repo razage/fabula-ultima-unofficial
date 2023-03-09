@@ -71,7 +71,6 @@ img.profile-img {
   border: 1px solid #000000;
 }
 .tab.backpack i {
-  font-size: 1.5rem;
   padding-right: 8px;
 }
 .tab.backpack input {
@@ -83,39 +82,7 @@ img.profile-img {
 }
 .tab.backpack p.item-name {
   font-weight: bold;
-  font-size: 1.35rem;
-}
-.tab.backpack .weapon-card {
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
-  margin-bottom: 8px;
-}
-.tab.backpack .weapon-card .weapon-card-header {
-  padding-top: 4px;
-  padding-left: 8px;
-}
-.tab.backpack .weapon-card .weapon-card-header img.profile-img {
-  width: 50px;
-  height: 50px;
-  border: 0;
-  border-radius: 0;
-  margin-bottom: 4px;
-}
-.tab.backpack .weapon-card i {
-  color: #f8f8f8;
   font-size: 1rem;
-}
-.tab.backpack .weapon-card i.martial {
-  color: #ff0000;
-}
-.tab.backpack .weapon-card .button-holder {
-  margin-right: 4px;
-}
-.tab.backpack .weapon-card button {
-  border-right: none;
-}
-.tab.backpack .weapon-card button:nth-last-child {
-  border-bottom: none;
 }
 .bond-card {
   border: 1px solid #f8f8f8;
@@ -135,6 +102,41 @@ img.profile-img {
 }
 .bond-card p.bond-strength {
   text-align: center;
+}
+.weapon-card {
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.weapon-card .weapon-card-header {
+  padding-top: 4px;
+  padding-left: 8px;
+}
+.weapon-card .weapon-card-header img.profile-img {
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 4px;
+}
+.weapon-card i {
+  color: #f8f8f8;
+  font-size: 1rem;
+}
+.weapon-card i.martial {
+  color: #ff0000;
+}
+.weapon-card .button-holder {
+  margin-right: 4px;
+}
+.weapon-card button.fabula-button {
+  border-right: none;
+}
+.weapon-card button.fabula-button:nth-last-child {
+  border-bottom: none;
+}
+.weapon-card button.fabula-button.equipped {
+  border-right: 1px solid #f8f8f8;
 }
 img.damage-type {
   border: 0;

@@ -41,13 +41,22 @@
 						"FU.Short.highRoll"}}+{{weapon.system.damage.bonus}}]</b>
 				</p>
 			</div>
-			<div class="flexcol button-holder">
-				<button class="item-roll fabula-button" {{#unless weapon.system.isEquipped}} disabled{{/unless}}><i
-						class="fas fa-solid fa-dice"></i> {{localize "FU.UI.attack"}}</button>
-				<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
-					"FU.UI.edit"}}</button>
-				<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash"></i> {{localize
-					"FU.UI.delete"}}</button>
+
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					<button class="fabula-button equipped" data-id="{{weapon._id}}">{{#if
+						weapon.system.isEquipped}}<i class="fas fa-solid fa-check"></i> {{/if}}{{localize
+						"FU.Items.equipped"}}</button>
+					<div class="flexcol button-holder">
+						<button class="item-roll fabula-button" {{#unless weapon.system.isEquipped}}
+							disabled{{/unless}}><i class="fas fa-solid fa-dice"></i> {{localize
+							"FU.UI.attack"}}</button>
+						<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
+							"FU.UI.edit"}}</button>
+						<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash"></i> {{localize
+							"FU.UI.delete"}}</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
