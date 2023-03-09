@@ -203,7 +203,7 @@
             <p>Spells go here</p>
         </div>
 
-        {{!-- Bio and Bonds --}}
+        {{!-- Bio --}}
         <div class="tab bio" data-group="primary" data-tab="bio">
             <div class="flexrow">
                 <label for="pronouns">{{localize "FU.Bio.pronouns"}}</label>
@@ -222,9 +222,18 @@
                 <input class="origin" name="system.origin" type="text" data-dtype="String"
                     value="{{actor.system.origin}}" />
             </div>
-            <h2>Bonds</h2>
-            <div class="bonds">
-                <p>Bonds go here</p>
+            {{!-- Bonds --}}
+            <h2>{{localize "FU.Bonds.name"}}</h2>
+            <div class="item-list bonds">
+                <div class="flexrow">
+                    <button class="fabula-button item-create" data-type="bond"><i
+                            class="fas fa-solid fa-plus"></i></button>
+                </div>
+                {{#each actor.system.bonds as |item ind|}}
+                <div class="item" data-item-id="{{item._id}}">
+                    {{> "systems/fabulaultima/templates/actor/partials/bond-card.hbs" bond=item}}
+                </div>
+                {{/each}}
             </div>
         </div>
     </section>

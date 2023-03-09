@@ -70,6 +70,13 @@
     "FU.Items.name": "Items",
     "FU.Items.cost": "Cost",
     "FU.Items.equipped": "Equipped",
+    "FU.Items.Types.accessory": "Accessory",
+    "FU.Items.Types.arcanum": "Arcanum",
+    "FU.Items.Types.armor": "Armor",
+    "FU.Items.Types.bond": "Bond",
+    "FU.Items.Types.class": "Class",
+    "FU.Items.Types.new": "New",
+    "FU.Items.Types.weapon": "Weapon",
 
     "FU.Navigation.tabGear": "Gear",
 

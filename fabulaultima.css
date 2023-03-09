@@ -61,8 +61,12 @@ img.profile-img {
 .resistances .flexcol.element-resistance {
   padding: 0 4px;
 }
+.bond-card {
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+}
 .class-card {
-  background: #fcfaf4;
+  background: #f8f8f8;
   border: 1px solid #000000;
 }
 .tab.backpack i {
@@ -156,6 +160,12 @@ button.fabula-button:disabled {
   cursor: not-allowed;
   background: #2021a0;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
+}
+button.fabula-button.item-create {
+  background: #2ba020;
+  background: linear-gradient(180deg, #2ba020 0%, #016101 100%);
+  border-radius: 25px;
+  margin: 0 20%;
 }
 .fabulaultima.sheet section.window-content {
   margin: 0;

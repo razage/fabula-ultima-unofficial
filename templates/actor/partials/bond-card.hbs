@@ -1,0 +1,27 @@
+<div class="bond-card">
+	<div class="grid grid-4col">
+		<div class="flexrow">
+			<p class="bond-name">{{bond.name}}</p>
+			<div class="emotions">
+				<div class="flexcol">
+					{{#if_not_eq bond.system.emotionOne ""}}
+					<p class="emotion-one">{{bond.system.emotionOne}}</p>
+					{{/if_not_eq}}
+					{{#if_not_eq bond.system.emotionTwo ""}}
+					<p class="emotion-two">{{bond.system.emotionTwo}}</p>
+					{{/if_not_eq}}
+					{{#if_not_eq bond.system.emotionThree ""}}
+					<p class="emotion-three">{{bond.system.emotionThree}}</p>
+					{{/if_not_eq}}
+				</div>
+			</div>
+			<p class="bond-strength">{{bond.system.strength}}</p>
+			<div class="item-controls">
+				<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
+					"FU.UI.edit"}}</button>
+				<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash"></i> {{localize
+					"FU.UI.delete"}}</button>
+			</div>
+		</div>
+	</div>
+</div>

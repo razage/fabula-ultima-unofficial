@@ -97,5 +97,25 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
             this.actor.deleteEmbeddedDocuments("Item", [parent.data("itemId")], options);
         });
+
+        html.find(".item-create").click(this._onItemCreate.bind(this));
+    }
+
+    _onItemCreate(event) {
+        event.preventDefault();
+
+        const header = event.currentTarget;
+        const type = header.dataset.type;
+        const name = `${game.i18n.localize("FU.Items.Types.new")} ${game.i18n.localize(
+            "FU.Items.Types." + type
+        )}`;
+
+        const itemData = {
+            name: name,
+            type: type,
+            system: {},
+        };
+
+        return this.actor.createEmbeddedDocuments("Item", [itemData]);
     }
 }
