@@ -43,6 +43,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Barbed Spear icon by Lorc
 -   Battered Axe icon by Lorc
 -   Battle axe icon by Lorc
+-   Bayonet icon by Skoll
 -   Beast eye icon by Lorc
 -   Black book icon by Wildabeast
 -   Bone knife icon by Delapouite
@@ -93,6 +94,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Galaxy icon by Delapouite
 -   Gavel icon by Lorc
 -   Gladius icon by Skoll
+-   Glaive icon by Delapouite
 -   Glock icon by Skoll
 -   Glowing hands icon by Lorc
 -   Halberd icon by Lorc
@@ -102,6 +104,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Ice bolt icon by Lorc
 -   Ice spear icon by Lorc
 -   Katana icon by Delapouite
+-   Knife thrust icon by Lorc
 -   Kusarigama icon by DarkZaitzev
 -   Layered armor icon by Lorc
 -   Lightning branches icon by Lorc
@@ -122,6 +125,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Pope crown icon by Delepouite
 -   Public speaker icon by Delapouite
 -   Punch blast icon by Lorc
+-   Rake icon by Delapouite
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite
@@ -153,6 +157,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Thor hammer icon by Delapouite
 -   Tomahawk icon by Delapouite
 -   Tornado icon by Lorc
+-   Trident icon by Lorc
 -   Trident shield icon by Delapouite
 -   Two handed sword icon by Delapouite
 -   Viking shield icon by Delapouite
