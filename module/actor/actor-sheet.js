@@ -127,24 +127,24 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
                 case "weapons":
                     dialog = new Dialog({
-                        title: "Select Compendium",
+                        title: game.i18n.localize("FU.UI.selectCompendium"),
                         buttons: {
                             arcane: {
-                                label: "Arcane",
+                                label: game.i18n.localize("FU.Weapons.Categories.arcane"),
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-arcane")
                                         .render(true),
                             },
                             bows: {
-                                label: "Bows",
+                                label: game.i18n.localize("FU.Weapons.Categories.bow"),
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-bows")
                                         .render(true),
                             },
                             brawling: {
-                                label: "Brawling",
+                                label: game.i18n.localize("FU.Weapons.Categories.brawling"),
                                 callback: () =>
                                     game.packs
                                         .find(
@@ -153,7 +153,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                                         .render(true),
                             },
                             daggers: {
-                                label: "Daggers",
+                                label: game.i18n.localize("FU.Weapons.Categories.dagger"),
                                 callback: () =>
                                     game.packs
                                         .find(
@@ -162,7 +162,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                                         .render(true),
                             },
                             firearms: {
-                                label: "Firearms",
+                                label: game.i18n.localize("FU.Weapons.Categories.firearm"),
                                 callback: () =>
                                     game.packs
                                         .find(
@@ -171,35 +171,35 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                                         .render(true),
                             },
                             flails: {
-                                label: "Flails",
+                                label: game.i18n.localize("FU.Weapons.Categories.flail"),
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-flails")
                                         .render(true),
                             },
                             heavy: {
-                                label: "Heavy",
+                                label: game.i18n.localize("FU.Weapons.Categories.heavy"),
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-heavy")
                                         .render(true),
                             },
                             spears: {
-                                label: "Spears",
+                                label: game.i18n.localize("FU.Weapons.Categories.spear"),
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-spears")
                                         .render(true),
                             },
                             swords: {
-                                label: "Swords",
+                                label: game.i18n.localize("FU.Weapons.Categories.sword"),
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-swords")
                                         .render(true),
                             },
                             thrown: {
-                                label: "Thrown",
+                                label: game.i18n.localize("FU.Weapons.Categories.thrown"),
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-thrown")
