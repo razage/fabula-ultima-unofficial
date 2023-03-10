@@ -97,8 +97,13 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         html.find(".item-delete").click((ev) => {
             const parent = $(ev.currentTarget).parents(".item");
             let options = {};
-
-            this.actor.deleteEmbeddedDocuments("Item", [parent.data("itemId")], options);
+            const dialog = Dialog.confirm({
+                title: game.i18n.localize("FU.UI.areYouSure"),
+                yes: () =>
+                    this.actor.deleteEmbeddedDocuments("Item", [parent.data("itemId")], options),
+                no: () => close,
+                defaultYes: false,
+            });
         });
 
         // Create an item
