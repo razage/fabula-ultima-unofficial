@@ -110,10 +110,112 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         html.find(".item-create").click(this._onItemCreate.bind(this));
 
         // Update the equipped status for an item
-        html.find(".equipped").click((ev) => {
+        html.find(".equipped").click(this._onItemEquippedStatusChange.bind(this));
+
+        // Open compendium
+        html.find(".open-compendium").click((ev) => {
             ev.preventDefault();
 
-            this._onItemEquippedStatusChange(ev);
+            let dataset = ev.currentTarget.dataset;
+            let dialog;
+
+            switch (dataset.compendium) {
+                case "classes":
+                    game.packs
+                        .find((k) => k.collection === "fabulaultima.character-classes")
+                        .render(true);
+                    break;
+                case "weapons":
+                    dialog = new Dialog({
+                        title: "Select Compendium",
+                        buttons: {
+                            arcane: {
+                                label: "Arcane",
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.weapons-arcane")
+                                        .render(true),
+                            },
+                            bows: {
+                                label: "Bows",
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.weapons-bows")
+                                        .render(true),
+                            },
+                            brawling: {
+                                label: "Brawling",
+                                callback: () =>
+                                    game.packs
+                                        .find(
+                                            (k) => k.collection === "fabulaultima.weapons-brawling"
+                                        )
+                                        .render(true),
+                            },
+                            daggers: {
+                                label: "Daggers",
+                                callback: () =>
+                                    game.packs
+                                        .find(
+                                            (k) => k.collection === "fabulaultima.weapons-daggers"
+                                        )
+                                        .render(true),
+                            },
+                            firearms: {
+                                label: "Firearms",
+                                callback: () =>
+                                    game.packs
+                                        .find(
+                                            (k) => k.collection === "fabulaultima.weapons-firearms"
+                                        )
+                                        .render(true),
+                            },
+                            flails: {
+                                label: "Flails",
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.weapons-flails")
+                                        .render(true),
+                            },
+                            heavy: {
+                                label: "Heavy",
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.weapons-heavy")
+                                        .render(true),
+                            },
+                            spears: {
+                                label: "Spears",
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.weapons-spears")
+                                        .render(true),
+                            },
+                            swords: {
+                                label: "Swords",
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.weapons-swords")
+                                        .render(true),
+                            },
+                            thrown: {
+                                label: "Thrown",
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.weapons-thrown")
+                                        .render(true),
+                            },
+                        },
+                    });
+                    dialog.render(true);
+                    break;
+                default:
+                    console.log(
+                        "Compendium ",
+                        dataset.compendium,
+                        " is not currently implemented."
+                    );
+            }
         });
     }
 
@@ -138,12 +240,10 @@ export class FabulaUltimaActorSheet extends ActorSheet {
     _onItemEquippedStatusChange(event) {
         event.preventDefault();
         const element = event.currentTarget;
-        console.log(element);
         const dataset = element.dataset;
 
         try {
             const item = this.actor.items.get(dataset.id);
-            console.log(item);
             var isEquipped = item.system.isEquipped;
 
             isEquipped = !isEquipped;

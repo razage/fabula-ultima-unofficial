@@ -244,6 +244,17 @@ button.fabula-button.item-create:hover {
   background: #258b1c;
   background: linear-gradient(180deg, #258b1c 0%, #014801 100%);
 }
+button.fabula-button.open-compendium {
+  background: #5b29cf;
+  background: linear-gradient(180deg, #5b29cf 0%, #350286 100%);
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+}
+button.fabula-button.open-compendium:hover {
+  background: #5225ba;
+  background: linear-gradient(180deg, #5225ba 0%, #2b026d 100%);
+}
 .fabulaultima.sheet section.window-content {
   margin: 0;
   padding: 0;

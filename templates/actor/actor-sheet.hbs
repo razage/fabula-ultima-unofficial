@@ -169,7 +169,11 @@
 
         {{!-- Classes --}}
         <div class="tab classes" data-group="primary" data-tab="classes">
-            <h2>{{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}</h2>
+            <h2>
+                {{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}
+                <button class="fabula-button open-compendium" title="Open Compendium" data-compendium="classes"><i
+                        class="fas fa-solid fa-book"></i></button>
+            </h2>
             <div class="flexcol item-list">
                 {{#each actor.system.classes as |item|}}
                 <div class="item" data-item-id="{{item._id}}">
@@ -182,8 +186,12 @@
 
         {{!-- Equipment --}}
         <div class="tab backpack" data-group="primary" data-tab="backpack">
+            <h2>
+                Weapons
+                <button class="fabula-button open-compendium" title="Open Compendium" data-compendium="weapons"><i
+                        class="fas fa-solid fa-book"></i></button>
+            </h2>
             <div class="flexcol">
-                <h2>Weapons</h2>
                 <div class="item-list">
                     {{#each actor.system.weapons as |item|}}
                     <div class="item" data-item-id="{{item._id}}">

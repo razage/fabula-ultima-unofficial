@@ -66,6 +66,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Crab claw icon by Lorc
 -   Crescent staff icon by Delapouite
 -   Cross shield icon by Delapouite
+-   Crossed axes icon by Lorc
 -   Crossbow icon by Carl Olsen
 -   Crystal wand icon by Lorc
 -   Curvy knife icon by Lorc
@@ -89,6 +90,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Flame icon by Carl Olsen
 -   Flanged mace icon by Delapouite
 -   Flat Hammer icon by Lorc
+-   Galaxy icon by Delapouite
 -   Gavel icon by Lorc
 -   Gladius icon by Skoll
 -   Glock icon by Skoll
