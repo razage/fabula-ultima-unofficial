@@ -5,9 +5,6 @@ img.profile-img {
 .trait-labels {
   text-align: center;
 }
-.item-edit {
-  cursor: pointer;
-}
 .resources input {
   width: 2rem;
 }
@@ -66,10 +63,6 @@ img.profile-img {
 .resistances .flexcol.element-resistance {
   padding: 0 4px;
 }
-.class-card {
-  background: #f8f8f8;
-  border: 1px solid #000000;
-}
 .tab.backpack i {
   padding-right: 8px;
 }
@@ -102,6 +95,19 @@ img.profile-img {
 }
 .bond-card p.bond-strength {
   text-align: center;
+}
+.class-card {
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+}
+.class-card img.class-image {
+  width: 60px;
+  height: 60px;
+  border: none;
+}
+.class-card p.class-name {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 .weapon-card {
   border: 1px solid #f8f8f8;

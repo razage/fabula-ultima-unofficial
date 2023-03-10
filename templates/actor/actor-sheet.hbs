@@ -167,7 +167,7 @@
 
         {{!-- Classes --}}
         <div class="tab classes" data-group="primary" data-tab="classes">
-            <h2 style="text-align: center">{{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}</h2>
+            <h2>{{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}</h2>
             <div class="flexcol item-list">
                 {{#each actor.system.classes as |item|}}
                 <div class="item" data-item-id="{{item._id}}">
@@ -183,7 +183,7 @@
             <div class="flexcol">
                 <h2>Weapons</h2>
                 <div class="item-list">
-                    {{#each actor.system.weapons as |item ind|}}
+                    {{#each actor.system.weapons as |item|}}
                     <div class="item" data-item-id="{{item._id}}">
                         {{> "systems/fabulaultima/templates/actor/partials/weapon-card.hbs" weapon=item}}
                     </div>
