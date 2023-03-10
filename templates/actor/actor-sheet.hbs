@@ -1,12 +1,14 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}} character-sheet" autocomplete="off">
     <header class="sheet-header flexcol">
         <div class="header-fields">
             <div class="flexrow">
                 <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
-                <h1><input name="name" type="text" data-dtype="String" value="{{actor.name}}" /></h1>
+                <h1 class="character-name"><input name="name" type="text" data-dtype="String" value="{{actor.name}}" />
+                </h1>
             </div>
 
-            <div class="resources grid grid-3col">
+            {{!-- Resources --}}
+            <div class="grid grid-3col">
                 <div class="flexrow">
                     {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize
                     'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis

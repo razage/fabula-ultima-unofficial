@@ -1,10 +1,11 @@
 @import "globals";
-@import "actor-sheet";
 @import "cards/bond-card";
 @import "cards/class-card";
+@import "cards/resource-card";
 @import "cards/weapon-card";
 @import "chat";
-@import "weapon-sheet";
+@import "sheets/actor-sheet";
+@import "sheets/weapon-sheet";
 @import "ui";
 
 button.fabula-button {
@@ -92,7 +93,6 @@ button.fabula-button {
 .sheet-header,
 .sheet-body {
     input[type="text"]:not(:disabled) {
-        color: @font-color;
         border: 1px solid @font-color;
         border-radius: 5px;
 

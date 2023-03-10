@@ -1,82 +1,3 @@
-img.profile-img {
-  width: 64px;
-  border: none;
-}
-.trait-labels {
-  text-align: center;
-}
-.resources input {
-  width: 2rem;
-}
-.resources .fabula,
-.resources .experience,
-.resources .initiative {
-  text-align: center;
-}
-.resources label[for="system.hp.value"],
-.resources input[name="system.hp.value"],
-.resources input[name="system.hp.max"],
-.resources label[for="crisis"],
-.resources p.crisis,
-.resources .hp {
-  color: #ff0000;
-}
-.resources label[for="system.mp.value"],
-.resources input[name="system.mp.value"],
-.resources input[name="system.mp.max"],
-.resources .mp {
-  color: #0000ff;
-}
-.resources label[for="system.ip.value"],
-.resources input[name="system.ip.value"],
-.resources input[name="system.ip.max"],
-.resources .ip {
-  color: #00ff00;
-}
-.resources i {
-  font-size: 1.5rem;
-  padding-right: 8px;
-}
-.attributes label,
-.defenses label,
-.resistances label,
-.attributes p.defense,
-.defenses p.defense,
-.resistances p.defense,
-.attributes p.mdefense,
-.defenses p.mdefense,
-.resistances p.mdefense {
-  text-align: center;
-}
-.attributes .attr select {
-  margin: 4px 8px;
-}
-.resistances {
-  width: 100%;
-  margin: 0 auto;
-}
-.resistances img {
-  width: 30px;
-  height: 30px;
-  border: none;
-}
-.resistances .flexcol.element-resistance {
-  padding: 0 4px;
-}
-.tab.backpack i {
-  padding-right: 8px;
-}
-.tab.backpack input {
-  width: 6rem;
-}
-.tab.backpack input[name="system.zenit"],
-.tab.backpack .currency {
-  color: #ffff00;
-}
-.tab.backpack p.item-name {
-  font-weight: bold;
-  font-size: 1rem;
-}
 .bond-card {
   border: 1px solid #f8f8f8;
   border-radius: 10px;
@@ -108,6 +29,51 @@ img.profile-img {
 .class-card p.class-name {
   font-size: 1.25rem;
   font-weight: bold;
+}
+.resource-card {
+  margin: 8px 0;
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.resource-card .hp,
+.resource-card .mp,
+.resource-card .ip {
+  margin: 0 auto;
+  text-align: center;
+}
+.resource-card .hp label,
+.resource-card .mp label,
+.resource-card .ip label {
+  margin-bottom: 8px;
+}
+.resource-card .hp input,
+.resource-card .mp input,
+.resource-card .ip input {
+  margin: 0 auto;
+  width: 6rem;
+}
+.resource-card .hp label,
+.resource-card .crisis label,
+.resource-card .hp input[type="text"],
+.resource-card .crisis input[type="text"],
+.resource-card .hp p,
+.resource-card .crisis p {
+  color: #fa9090;
+}
+.resource-card .mp label,
+.resource-card .mp input,
+.resource-card .mp p {
+  color: #90befa;
+}
+.resource-card .ip label,
+.resource-card .ip input,
+.resource-card .ip p {
+  color: #90fa90;
+}
+.resource-card i {
+  font-size: 1.5rem;
+  padding-right: 8px;
 }
 .weapon-card {
   border: 1px solid #f8f8f8;
@@ -158,14 +124,73 @@ img.damage-type {
 h4.dice-total .multi {
   font-size: 0.85rem;
 }
-h3.equipped {
-  text-align: right;
+.character-sheet img.profile-img {
+  width: 64px;
+  border: none;
 }
-.weapon-sheet .flexrow {
+.character-sheet h1.character-name input[type="text"] {
+  color: #f8f8f8;
+}
+.character-sheet .fabula,
+.character-sheet .experience,
+.character-sheet .initiative,
+.character-sheet .trait-labels {
+  text-align: center;
+}
+.character-sheet .fabula input,
+.character-sheet .experience input,
+.character-sheet .initiative input {
+  color: #f8f8f8;
+  width: 2rem;
+}
+.character-sheet .attributes label,
+.character-sheet .defenses label,
+.character-sheet .resistances label,
+.character-sheet .attributes p.defense,
+.character-sheet .defenses p.defense,
+.character-sheet .resistances p.defense,
+.character-sheet .attributes p.mdefense,
+.character-sheet .defenses p.mdefense,
+.character-sheet .resistances p.mdefense {
+  text-align: center;
+}
+.character-sheet .attributes .attr select {
+  margin: 4px 8px;
+}
+.character-sheet .resistances {
+  width: 100%;
+  margin: 0 auto;
+}
+.character-sheet .resistances img {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.character-sheet .resistances .element-resistance {
+  padding: 4px;
+}
+.character-sheet .tab.backpack i {
+  padding-right: 8px;
+}
+.character-sheet .tab.backpack input {
+  width: 6rem;
+}
+.character-sheet .tab.backpack input[name="system.zenit"],
+.character-sheet .tab.backpack .currency {
+  color: #ffff00;
+}
+.character-sheet .tab.backpack p.item-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.weapon-sheet > .flexrow {
   padding: 2px;
 }
-label.label-pad-left {
+.weapon-sheet label.label-pad-left {
   padding-left: 8px;
+}
+.weapon-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
 }
 .dialog section.window-content {
   background: #2021a0;
@@ -254,7 +279,6 @@ button.fabula-button.item-create:hover {
 }
 .sheet-header input[type="text"]:not(:disabled),
 .sheet-body input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
   border: 1px solid #f8f8f8;
   border-radius: 5px;
 }

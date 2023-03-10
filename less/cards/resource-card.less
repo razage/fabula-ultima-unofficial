@@ -1,0 +1,52 @@
+.resource-card {
+    margin: 8px 0;
+    border: 1px solid @font-color;
+    border-radius: 10px;
+    font-size: 1rem;
+
+    .hp,
+    .mp,
+    .ip {
+        margin: 0 auto;
+        text-align: center;
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            margin: 0 auto;
+            width: 6rem;
+        }
+    }
+
+    .hp,
+    .crisis {
+        label,
+        input[type="text"],
+        p {
+            color: #fa9090;
+        }
+    }
+
+    .mp {
+        label,
+        input,
+        p {
+            color: #90befa;
+        }
+    }
+
+    .ip {
+        label,
+        input,
+        p {
+            color: #90fa90;
+        }
+    }
+
+    i {
+        font-size: 1.5rem;
+        padding-right: 8px;
+    }
+}
