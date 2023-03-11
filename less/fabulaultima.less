@@ -125,8 +125,11 @@ button.fabula-button {
     }
 
     select {
-        color: #000000;
-        background: @font-color;
+        color: @font-color;
+
+        option {
+            background: @accent-fallback;
+        }
 
         &:active,
         &:focus {

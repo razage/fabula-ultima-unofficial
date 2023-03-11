@@ -209,6 +209,19 @@ h4.dice-total .multi {
   background: #2021a0;
   background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
 }
+.dialog section.window-content .dialog-content form .form-group label {
+  color: #f8f8f8;
+}
+.dialog section.window-content .dialog-content form .form-group input[type="text"],
+.dialog section.window-content .dialog-content form .form-group input::placeholder {
+  color: #f8f8f8;
+}
+.dialog section.window-content .dialog-content form .form-group select {
+  color: #f8f8f8;
+}
+.dialog section.window-content .dialog-content form .form-group select option {
+  background: #010661;
+}
 .dialog section.window-content .dialog-buttons button {
   color: #f8f8f8;
   border: 1px solid #f8f8f8;
@@ -318,8 +331,11 @@ button.fabula-button.open-compendium:hover {
 }
 .sheet-header select,
 .sheet-body select {
-  color: #000000;
-  background: #f8f8f8;
+  color: #f8f8f8;
+}
+.sheet-header select option,
+.sheet-body select option {
+  background: #010661;
 }
 .sheet-header select:active,
 .sheet-body select:active,
