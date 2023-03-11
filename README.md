@@ -107,6 +107,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Knife thrust icon by Lorc
 -   Kusarigama icon by DarkZaitzev
 -   Layered armor icon by Lorc
+-   Leather armor icon by Delapouite
 -   Lightning branches icon by Lorc
 -   Log icon by Delapouite
 -   Lunar wand icon by Delapouite
@@ -129,6 +130,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite
+-   Robe icon by Lorc
 -   Rock icon by Lorc
 -   Roman shield icon by Delapouite
 -   Round shield icon by Wildabeast
