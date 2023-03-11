@@ -53,7 +53,7 @@
         }
     }
 
-    .tab.backpack {
+    .backpack {
         i {
             padding-right: 8px;
         }
@@ -70,6 +70,23 @@
         p.item-name {
             font-weight: bold;
             font-size: 1rem;
+        }
+    }
+
+    .bio {
+        input[type="text"]:not(:disabled) {
+            color: @font-color;
+        }
+
+        .bonds-start {
+            margin-top: 8px;
+        }
+
+        .pronouns {
+            input[type="text"] {
+                width: 30%;
+                margin: 0 auto 10px auto;
+            }
         }
     }
 }

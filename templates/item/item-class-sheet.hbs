@@ -1,12 +1,6 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}} class-sheet" autocomplete="off">
     <header class="sheet-header">
-        <img
-            class="item-img"
-            src="{{item.img}}"
-            data-edit="img"
-            height="100"
-            width="100"
-        />
+        <img class="item-img" src="{{item.img}}" data-edit="img" height="100" width="100" />
         <h1>{{item.name}}</h1>
         <label for="system.level">{{localize "FU.UI.classLevel"}}: </label>
         <input type="text" data-dtype="Number" name="system.level" value="{{item.system.level}}" />
@@ -14,7 +8,8 @@
 
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="bonuses"><i class="fas fa-solid fa-gifts"></i> {{localize "FU.UI.benefits"}}</a>
-        <a class="item" data-tab="rituals"><i class="fas fa-solid fa-circle-nodes"></i> {{localize "FU.Rituals.name"}}</a>
+        <a class="item" data-tab="rituals"><i class="fas fa-solid fa-circle-nodes"></i> {{localize
+            "FU.Rituals.name"}}</a>
     </nav>
 
     <section class="sheet-body">
@@ -25,62 +20,55 @@
                     <label for="system.benefits.resource.hp" title="{{localize 'FU.Resources.hp'}}">
                         <i class="fas fa-solid fa-heart"></i> HP
                     </label>
-                    <input
-                        type="text"
-                        data-dtype="Number"
-                        name="system.benefits.resource.hp"
-                        title="{{localize 'FU.Resources.hp'}}"
-                        value="{{item.system.benefits.resource.hp}}"
-                    />
+                    <input type="text" data-dtype="Number" name="system.benefits.resource.hp"
+                        title="{{localize 'FU.Resources.hp'}}" value="{{item.system.benefits.resource.hp}}" />
                 </div>
 
                 <div class="flexrow">
                     <label for="system.benefits.resource.mp" title="{{localize 'FU.Resources.mp'}}">
                         <i class="fas fa-solid fa-sparkles"></i> MP
                     </label>
-                    <input
-                        type="text"
-                        data-dtype="Number"
-                        name="system.benefits.resource.mp"
-                        title="{{localize 'FU.Resources.mp'}}"
-                        value="{{item.system.benefits.resource.mp}}"
-                    />
+                    <input type="text" data-dtype="Number" name="system.benefits.resource.mp"
+                        title="{{localize 'FU.Resources.mp'}}" value="{{item.system.benefits.resource.mp}}" />
                 </div>
 
                 <div class="flexrow">
                     <label for="system.benefits.resource.ip" title="{{localize 'FU.Resources.ip'}}">
                         <i class="fas fa-solid fa-bag-shopping"></i> IP
                     </label>
-                    <input
-                        type="text"
-                        data-dtype="Number"
-                        name="system.benefits.resource.ip"
-                        title="{{localize 'FU.Resources.ip'}}"
-                        value="{{item.system.benefits.resource.ip}}"
-                    />
+                    <input type="text" data-dtype="Number" name="system.benefits.resource.ip"
+                        title="{{localize 'FU.Resources.ip'}}" value="{{item.system.benefits.resource.ip}}" />
                 </div>
             </div>
 
             <h2>{{localize "FU.Proficiencies.name"}}</h2>
             <div class="grid grid-4col">
                 <div class="flexrow">
-                    <label for="system.benefits.martial.melee"><i class="fas fa-solid fa-sword"></i> {{localize "FU.Proficiencies.melee"}}</label>
-                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.melee" {{#if item.system.benefits.martial.melee}}checked{{/if}}/>
-					<label for="system.benefits.martial.ranged"><i class="fas fa-solid fa-bow-arrow"></i> {{localize "FU.Proficiencies.ranged"}}</label>
-                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.ranged" {{#if item.system.benefits.martial.ranged}}checked{{/if}}/>
+                    <label for="system.benefits.martial.melee"><i class="fas fa-solid fa-sword"></i> {{localize
+                        "FU.Proficiencies.melee"}}</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.melee" {{#if
+                        item.system.benefits.martial.melee}}checked{{/if}} />
+                    <label for="system.benefits.martial.ranged"><i class="fas fa-solid fa-bow-arrow"></i> {{localize
+                        "FU.Proficiencies.ranged"}}</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.ranged" {{#if
+                        item.system.benefits.martial.ranged}}checked{{/if}} />
                 </div>
-				<div class="flexrow">
-                    <label for="system.benefits.martial.armor"><i class="fas fa-solid fa-helmet-battle"></i> {{localize "FU.Proficiencies.armor"}}</label>
-                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.armor" {{#if item.system.benefits.martial.armor}}checked{{/if}}/>
-					<label for="system.benefits.martial.shields"><i class="fas fa-solid fa-shield"></i> {{localize "FU.Proficiencies.shield"}}</label>
-                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.shields" {{#if item.system.benefits.martial.shields}}checked{{/if}}/>
+                <div class="flexrow">
+                    <label for="system.benefits.martial.armor"><i class="fas fa-solid fa-helmet-battle"></i> {{localize
+                        "FU.Proficiencies.armor"}}</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.armor" {{#if
+                        item.system.benefits.martial.armor}}checked{{/if}} />
+                    <label for="system.benefits.martial.shields"><i class="fas fa-solid fa-shield"></i> {{localize
+                        "FU.Proficiencies.shield"}}</label>
+                    <input type="checkbox" data-dtype="Boolean" name="system.benefits.martial.shields" {{#if
+                        item.system.benefits.martial.shields}}checked{{/if}} />
                 </div>
             </div>
         </div>
 
         <div class="tab rituals" data-group="primary" data-tab="rituals">
             {{#each item.system.benefits.rituals as |ritual key|}}
-                {{> "systems/fabulaultima/templates/item/partials/ritual-row.hbs" name=key ritual=ritual}}
+            {{> "systems/fabulaultima/templates/item/partials/ritual-row.hbs" name=key ritual=ritual}}
             {{/each}}
         </div>
     </section>

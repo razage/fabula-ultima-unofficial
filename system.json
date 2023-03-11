@@ -5,7 +5,7 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "compatibility": {
         "minimum": "10",
         "verified": "10.291"
@@ -27,15 +27,6 @@
             "system": "fabulaultima",
             "path": "packs/character-classes.db",
             "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "rare-weapons",
-            "label": "Rare Weapons",
-            "system": "fabulaultima",
-            "path": "packs/rare-weapons.db",
-            "private": "false",
             "type": "Item",
             "flags": {}
         },

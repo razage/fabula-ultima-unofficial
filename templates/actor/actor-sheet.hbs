@@ -215,8 +215,8 @@
 
         {{!-- Bio --}}
         <div class="tab bio" data-group="primary" data-tab="bio">
-            <div class="flexrow">
-                <label for="pronouns">{{localize "FU.Bio.pronouns"}}</label>
+            <div class="flexcol pronouns">
+                <label for="pronouns" class="trait-labels">{{localize "FU.Bio.pronouns"}}</label>
                 <input name="system.pronouns" type="text" data-dtype="String" value="{{actor.system.pronouns}}" />
             </div>
             <div class="trait-labels flexrow">
@@ -233,7 +233,7 @@
                     value="{{actor.system.origin}}" />
             </div>
             {{!-- Bonds --}}
-            <h2>
+            <h2 class="bonds-start">
                 {{localize "FU.Bonds.name"}}
                 <button class="fabula-button item-create" data-type="bond"><i class="fas fa-solid fa-plus"></i></button>
             </h2>

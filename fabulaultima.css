@@ -169,19 +169,32 @@ h4.dice-total .multi {
 .character-sheet .resistances .element-resistance {
   padding: 4px;
 }
-.character-sheet .tab.backpack i {
+.character-sheet .backpack i {
   padding-right: 8px;
 }
-.character-sheet .tab.backpack input {
+.character-sheet .backpack input {
   width: 6rem;
 }
-.character-sheet .tab.backpack input[name="system.zenit"],
-.character-sheet .tab.backpack .currency {
+.character-sheet .backpack input[name="system.zenit"],
+.character-sheet .backpack .currency {
   color: #ffff00;
 }
-.character-sheet .tab.backpack p.item-name {
+.character-sheet .backpack p.item-name {
   font-weight: bold;
   font-size: 1rem;
+}
+.character-sheet .bio input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
+}
+.character-sheet .bio .bonds-start {
+  margin-top: 8px;
+}
+.character-sheet .bio .pronouns input[type="text"] {
+  width: 30%;
+  margin: 0 auto 10px auto;
+}
+.class-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
 }
 .weapon-sheet > .flexrow {
   padding: 2px;
