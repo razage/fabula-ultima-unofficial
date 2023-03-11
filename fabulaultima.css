@@ -203,6 +203,9 @@ h4.dice-total .multi {
   width: 30%;
   margin: 0 auto 10px auto;
 }
+.bond-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
+}
 .class-sheet input[type="text"]:not(:disabled) {
   color: #f8f8f8;
 }

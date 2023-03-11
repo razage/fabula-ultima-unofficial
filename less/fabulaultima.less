@@ -5,6 +5,7 @@
 @import "cards/weapon-card";
 @import "chat";
 @import "sheets/actor-sheet";
+@import "sheets/bond-sheet";
 @import "sheets/class-sheet";
 @import "sheets/weapon-sheet";
 @import "ui";
@@ -43,11 +44,9 @@ button.fabula-button {
 
         &:hover {
             background: darken(@green-fallback, 5%);
-            background: linear-gradient(
-                180deg,
-                darken(@green-fallback, 5%) 0%,
-                darken(@green-accent, 5%) 100%
-            );
+            background: linear-gradient(180deg,
+                    darken(@green-fallback, 5%) 0%,
+                    darken(@green-accent, 5%) 100%);
         }
     }
 
@@ -60,11 +59,9 @@ button.fabula-button {
 
         &:hover {
             background: darken(@purple-fallback, 5%);
-            background: linear-gradient(
-                180deg,
-                darken(@purple-fallback, 5%) 0%,
-                darken(@purple-accent, 5%) 100%
-            );
+            background: linear-gradient(180deg,
+                    darken(@purple-fallback, 5%) 0%,
+                    darken(@purple-accent, 5%) 100%);
         }
     }
 }
