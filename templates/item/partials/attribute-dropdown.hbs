@@ -1,6 +1,9 @@
-<select name="{{selectName}}" data-dtype="String">
-    <option value="dexterity" {{#if_eq current "dexterity"}} selected{{/if_eq}}>{{localize "FU.Attributes.dexterity"}}</option>
-    <option value="might" {{#if_eq current "might"}} selected{{/if_eq}}>{{localize "FU.Attributes.might"}}</option>
-    <option value="insight" {{#if_eq current "insight"}} selected{{/if_eq}}>{{localize "FU.Attributes.insight"}}</option>
-    <option value="willpower" {{#if_eq current "willpower"}} selected{{/if_eq}}>{{localize "FU.Attributes.willpower"}}</option>
+<select name="{{selectName}}" class="{{className}}" data-dtype="String">
+    <option value="dexterity" {{#if_eq current "dexterity" }} selected{{/if_eq}}>{{localize "FU.Attributes.dexterity"}}
+    </option>
+    <option value="might" {{#if_eq current "might" }} selected{{/if_eq}}>{{localize "FU.Attributes.might"}}</option>
+    <option value="insight" {{#if_eq current "insight" }} selected{{/if_eq}}>{{localize "FU.Attributes.insight"}}
+    </option>
+    <option value="willpower" {{#if_eq current "willpower" }} selected{{/if_eq}}>{{localize "FU.Attributes.willpower"}}
+    </option>
 </select>

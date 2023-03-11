@@ -40,16 +40,30 @@
                     "poisoned": false,
                     "crisis": false
                 }
+            },
+            "resistances": {
+                "resistances": {
+                    "air": "neutral",
+                    "bolt": "neutral",
+                    "dark": "neutral",
+                    "earth": "neutral",
+                    "fire": "neutral",
+                    "ice": "neutral",
+                    "light": "neutral",
+                    "physical": "neutral",
+                    "poison": "neutral"
+                }
             }
         },
         "player": {
-            "templates": ["charAttributes", "charStatuses"],
-            "schemaVersion": "1.13",
+            "templates": ["charAttributes", "charStatuses", "resistances"],
+            "schemaVersion": "1.15",
             "pronouns": "",
             "identity": "",
             "theme": "",
             "origin": "",
             "bonds": [],
+            "isLeader": false,
             "hp": {
                 "value": 35,
                 "max": 35,
@@ -81,12 +95,6 @@
                     "bonus": 0
                 }
             },
-            "equipment": {
-                "accessory": {},
-                "armor": {},
-                "mainHand": {},
-                "offHand": {}
-            },
             "characterLevel": 0,
             "accessories": [],
             "armor": [],
@@ -107,7 +115,8 @@
             "arcanum",
             "class",
             "spells",
-            "skills"
+            "skills",
+            "bond"
         ],
         "templates": {
             "itemCommon": {
@@ -152,6 +161,14 @@
         "armor": {
             "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
             "schemaVersion": "1.05"
+        },
+        "bond": {
+            "schemaVersion": "1.01",
+            "emotionOne": "",
+            "emotionTwo": "",
+            "emotionThree": "",
+            "strength": 0,
+            "notes": ""
         },
         "class": {
             "schemaVersion": "1.0",

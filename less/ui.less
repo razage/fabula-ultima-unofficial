@@ -1,0 +1,47 @@
+.dialog {
+    section.window-content {
+        background: @main-fallback;
+        background: @main-gradient;
+
+        .dialog-content {
+            form {
+                .form-group {
+                    label {
+                        color: @font-color;
+                    }
+
+                    input[type="text"],
+                    input::placeholder {
+                        color: @font-color;
+                    }
+
+                    select {
+                        color: @font-color;
+
+                        option {
+                            background: @accent-fallback;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dialog-buttons button {
+            color: @font-color;
+            border: 1px solid @font-color;
+            border-radius: 10px;
+
+            &:hover,
+            &:active,
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:hover {
+                background: @accent-fallback;
+                background: @darken-gradient;
+                border: 1px solid darken(@font-color, 40%);
+            }
+        }
+    }
+}

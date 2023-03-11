@@ -1,86 +1,114 @@
-.trait-labels {
-  text-align: center;
-}
-.item-edit {
-  cursor: pointer;
-}
-.resources input {
-  width: 2rem;
-}
-.resources label[for="system.hp.value"],
-.resources input[name="system.hp.value"],
-.resources input[name="system.hp.max"],
-.resources label[for="crisis"],
-.resources p.crisis,
-.resources .hp {
-  color: #ff0000;
-}
-.resources label[for="system.mp.value"],
-.resources input[name="system.mp.value"],
-.resources input[name="system.mp.max"],
-.resources .mp {
-  color: #0000ff;
-}
-.resources label[for="system.ip.value"],
-.resources input[name="system.ip.value"],
-.resources input[name="system.ip.max"],
-.resources .ip {
-  color: #00ff00;
-}
-.resources i {
-  font-size: 1.5rem;
-  padding-right: 8px;
-}
-.class-card {
-  background: #fcfaf4;
-  border: 1px solid #000000;
-}
-.tab.backpack i {
-  font-size: 1.5rem;
-  padding-right: 8px;
-}
-.tab.backpack input {
-  width: 6rem;
-}
-.tab.backpack input[name="system.zenit"],
-.tab.backpack .currency {
-  color: #ffff00;
-}
-.tab.backpack p.item-name {
-  font-weight: bold;
-  font-size: 1.35rem;
-}
-.tab.backpack .weapon-card {
+.bond-card {
   border: 1px solid #f8f8f8;
   border-radius: 10px;
   margin-bottom: 8px;
 }
-.tab.backpack .weapon-card .weapon-card-header {
+.bond-card p.bond-name {
+  padding-left: 8px;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+.bond-card .emotions ul {
+  list-style-type: none;
+}
+.bond-card .emotions ul li {
+  text-align: center;
+}
+.bond-card p.bond-strength {
+  text-align: center;
+}
+.class-card {
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+}
+.class-card img.class-image {
+  width: 60px;
+  height: 60px;
+  border: none;
+}
+.class-card p.class-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.resource-card {
+  margin: 8px 0;
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.resource-card .hp,
+.resource-card .mp,
+.resource-card .ip {
+  margin: 0 auto;
+  text-align: center;
+}
+.resource-card .hp label,
+.resource-card .mp label,
+.resource-card .ip label {
+  margin-bottom: 8px;
+}
+.resource-card .hp input,
+.resource-card .mp input,
+.resource-card .ip input {
+  margin: 0 auto;
+  width: 6rem;
+}
+.resource-card .hp label,
+.resource-card .crisis label,
+.resource-card .hp input[type="text"],
+.resource-card .crisis input[type="text"],
+.resource-card .hp p,
+.resource-card .crisis p {
+  color: #fa9090;
+}
+.resource-card .mp label,
+.resource-card .mp input,
+.resource-card .mp p {
+  color: #90befa;
+}
+.resource-card .ip label,
+.resource-card .ip input,
+.resource-card .ip p {
+  color: #90fa90;
+}
+.resource-card i {
+  font-size: 1.5rem;
+  padding-right: 8px;
+}
+.weapon-card {
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.weapon-card .weapon-card-header {
   padding-top: 4px;
   padding-left: 8px;
 }
-.tab.backpack .weapon-card .weapon-card-header img.profile-img {
+.weapon-card .weapon-card-header img.profile-img {
   width: 50px;
   height: 50px;
   border: 0;
   border-radius: 0;
   margin-bottom: 4px;
 }
-.tab.backpack .weapon-card i {
+.weapon-card i {
   color: #f8f8f8;
   font-size: 1rem;
 }
-.tab.backpack .weapon-card i.martial {
+.weapon-card i.martial {
   color: #ff0000;
 }
-.tab.backpack .weapon-card .button-holder {
+.weapon-card .button-holder {
   margin-right: 4px;
 }
-.tab.backpack .weapon-card button {
+.weapon-card button.fabula-button {
   border-right: none;
 }
-.tab.backpack .weapon-card button:nth-last-child {
+.weapon-card button.fabula-button:nth-last-child {
   border-bottom: none;
+}
+.weapon-card button.fabula-button.equipped {
+  border-right: 1px solid #f8f8f8;
 }
 img.damage-type {
   border: 0;
@@ -96,14 +124,128 @@ img.damage-type {
 h4.dice-total .multi {
   font-size: 0.85rem;
 }
-h3.equipped {
-  text-align: right;
+.character-sheet img.profile-img {
+  width: 64px;
+  border: none;
 }
-.weapon-sheet .flexrow {
+.character-sheet h1.character-name input[type="text"] {
+  color: #f8f8f8;
+}
+.character-sheet .fabula,
+.character-sheet .experience,
+.character-sheet .initiative,
+.character-sheet .trait-labels {
+  text-align: center;
+}
+.character-sheet .fabula input,
+.character-sheet .experience input,
+.character-sheet .initiative input {
+  color: #f8f8f8;
+  width: 2rem;
+}
+.character-sheet .attributes label,
+.character-sheet .defenses label,
+.character-sheet .resistances label,
+.character-sheet .attributes p.defense,
+.character-sheet .defenses p.defense,
+.character-sheet .resistances p.defense,
+.character-sheet .attributes p.mdefense,
+.character-sheet .defenses p.mdefense,
+.character-sheet .resistances p.mdefense {
+  text-align: center;
+}
+.character-sheet .rolls label {
+  text-align: center;
+}
+.character-sheet .rolls input,
+.character-sheet .rolls select {
+  margin-top: 4px;
+}
+.character-sheet .rolls input[type="text"] {
+  color: #f8f8f8;
+}
+.character-sheet .attributes .attr select {
+  margin: 4px 8px;
+}
+.character-sheet .attributes .resistances {
+  width: 100%;
+  margin: 0 auto;
+}
+.character-sheet .attributes .resistances img {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.character-sheet .attributes .resistances .element-resistance {
+  padding: 4px;
+}
+.character-sheet .backpack i {
+  padding-right: 8px;
+}
+.character-sheet .backpack input {
+  width: 6rem;
+}
+.character-sheet .backpack input[name="system.zenit"],
+.character-sheet .backpack .currency {
+  color: #ffff00;
+}
+.character-sheet .backpack p.item-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.character-sheet .bio input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
+}
+.character-sheet .bio .bonds-start {
+  margin-top: 8px;
+}
+.character-sheet .bio .pronouns input[type="text"] {
+  width: 30%;
+  margin: 0 auto 10px auto;
+}
+.class-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
+}
+.weapon-sheet > .flexrow {
   padding: 2px;
 }
-label.label-pad-left {
+.weapon-sheet label.label-pad-left {
   padding-left: 8px;
+}
+.weapon-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
+}
+.dialog section.window-content {
+  background: #2021a0;
+  background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
+}
+.dialog section.window-content .dialog-content form .form-group label {
+  color: #f8f8f8;
+}
+.dialog section.window-content .dialog-content form .form-group input[type="text"],
+.dialog section.window-content .dialog-content form .form-group input::placeholder {
+  color: #f8f8f8;
+}
+.dialog section.window-content .dialog-content form .form-group select {
+  color: #f8f8f8;
+}
+.dialog section.window-content .dialog-content form .form-group select option {
+  background: #010661;
+}
+.dialog section.window-content .dialog-buttons button {
+  color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+}
+.dialog section.window-content .dialog-buttons button:hover,
+.dialog section.window-content .dialog-buttons button:active,
+.dialog section.window-content .dialog-buttons button:focus {
+  box-shadow: none;
+}
+.dialog section.window-content .dialog-buttons button:hover {
+  background: #010661;
+  background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
+  border: 1px solid #929292;
 }
 button.fabula-button {
   background: #010661;
@@ -126,6 +268,28 @@ button.fabula-button:disabled {
   cursor: not-allowed;
   background: #2021a0;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
+}
+button.fabula-button.item-create {
+  background: #2ba020;
+  background: linear-gradient(180deg, #2ba020 0%, #016101 100%);
+  border-radius: 25px;
+  height: 30px;
+  width: 50px;
+}
+button.fabula-button.item-create:hover {
+  background: #258b1c;
+  background: linear-gradient(180deg, #258b1c 0%, #014801 100%);
+}
+button.fabula-button.open-compendium {
+  background: #5b29cf;
+  background: linear-gradient(180deg, #5b29cf 0%, #350286 100%);
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+}
+button.fabula-button.open-compendium:hover {
+  background: #5225ba;
+  background: linear-gradient(180deg, #5225ba 0%, #2b026d 100%);
 }
 .fabulaultima.sheet section.window-content {
   margin: 0;
@@ -162,7 +326,6 @@ button.fabula-button:disabled {
 }
 .sheet-header input[type="text"]:not(:disabled),
 .sheet-body input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
   border: 1px solid #f8f8f8;
   border-radius: 5px;
 }
@@ -178,8 +341,11 @@ button.fabula-button:disabled {
 }
 .sheet-header select,
 .sheet-body select {
-  color: #000000;
-  background: #f8f8f8;
+  color: #f8f8f8;
+}
+.sheet-header select option,
+.sheet-body select option {
+  background: #010661;
 }
 .sheet-header select:active,
 .sheet-body select:active,
@@ -203,4 +369,7 @@ button.fabula-button:disabled {
   min-height: 50px;
   height: 100%;
   flex: auto;
+}
+.sheet-body .editor-host .editor .tox .tox-edit-area__iframe {
+  background: #f8f8f8;
 }

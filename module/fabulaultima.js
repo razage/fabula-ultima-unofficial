@@ -40,6 +40,13 @@ Hooks.once("init", async function () {
         }
     });
 
+    Handlebars.registerHelper("if_not_eq", function (a, b, opts) {
+        if (a != b) {
+            return opts.fn(this);
+        }
+        return opts.inverse(this);
+    });
+
     Handlebars.registerHelper("toUpperCase", function (str) {
         try {
             return str.toUpperCase();

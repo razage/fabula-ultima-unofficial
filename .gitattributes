@@ -1,0 +1,11 @@
+* text=auto
+
+*.css text eol=lf
+*.db binary
+*.hbs text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.less text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+*.txt text eol=lf

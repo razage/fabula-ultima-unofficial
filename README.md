@@ -36,11 +36,15 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 
 -   3D Hammer icon by Delapouite
 -   Andromeda chain icon by Lorc
+-   Archer icon by Delapouite
 -   Armor punch icon by Delapouite
 -   Arrowhead icon by Lorc
+-   Auto repair icon by Lorc
 -   Barbed Spear icon by Lorc
 -   Battered Axe icon by Lorc
 -   Battle axe icon by Lorc
+-   Bayonet icon by Skoll
+-   Beast eye icon by Lorc
 -   Black book icon by Wildabeast
 -   Bone knife icon by Delapouite
 -   Bone mace icon by Delapouite
@@ -57,10 +61,13 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Caduceus icon by Delapouite
 -   Cat icon by Lorc
 -   Claw hammer icon by Lorc
+-   Cloak and Dagger icon by Lorc
 -   Colt M1911 icon by Skoll
+-   Conqueror icon by Delapouite
 -   Crab claw icon by Lorc
 -   Crescent staff icon by Delapouite
 -   Cross shield icon by Delapouite
+-   Crossed axes icon by Lorc
 -   Crossbow icon by Carl Olsen
 -   Crystal wand icon by Lorc
 -   Curvy knife icon by Lorc
@@ -76,6 +83,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Evil hand icon by Lorc
 -   Evil moon icon by Lorc
 -   Eye shield icon by Lorc
+-   Fireball icon by Lorc
 -   Fire axe icon by Lorc
 -   Fire punch icon by Lorc
 -   Fist icon by Lorc
@@ -83,8 +91,10 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Flame icon by Carl Olsen
 -   Flanged mace icon by Delapouite
 -   Flat Hammer icon by Lorc
+-   Galaxy icon by Delapouite
 -   Gavel icon by Lorc
 -   Gladius icon by Skoll
+-   Glaive icon by Delapouite
 -   Glock icon by Skoll
 -   Glowing hands icon by Lorc
 -   Halberd icon by Lorc
@@ -94,6 +104,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Ice bolt icon by Lorc
 -   Ice spear icon by Lorc
 -   Katana icon by Delapouite
+-   Knife thrust icon by Lorc
 -   Kusarigama icon by DarkZaitzev
 -   Layered armor icon by Lorc
 -   Lightning branches icon by Lorc
@@ -107,10 +118,15 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Nunchaku icon by Delapouite
 -   Panzerfaust icon by Delapouite
 -   Paw icon by Lorc
+-   Pentacle icon by Skoll
 -   Pistol gun by John Colburn
 -   Plain dagger icon by Lorc
 -   Poison bottle icon by Lorc
+-   Pope crown icon by Delepouite
+-   Public speaker icon by Delapouite
 -   Punch blast icon by Lorc
+-   Rake icon by Delapouite
+-   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite
 -   Rock icon by Lorc
@@ -141,6 +157,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Thor hammer icon by Delapouite
 -   Tomahawk icon by Delapouite
 -   Tornado icon by Lorc
+-   Trident icon by Lorc
 -   Trident shield icon by Delapouite
 -   Two handed sword icon by Delapouite
 -   Viking shield icon by Delapouite

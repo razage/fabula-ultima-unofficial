@@ -1,0 +1,110 @@
+.character-sheet {
+    img.profile-img {
+        width: 64px;
+        border: none;
+    }
+
+    h1.character-name {
+        input[type="text"] {
+            color: @font-color;
+        }
+    }
+
+    .fabula,
+    .experience,
+    .initiative,
+    .trait-labels {
+        text-align: center;
+    }
+
+    .fabula input,
+    .experience input,
+    .initiative input {
+        color: @font-color;
+        width: 2rem;
+    }
+
+    .attributes,
+    .defenses,
+    .resistances {
+
+        label,
+        p.defense,
+        p.mdefense {
+            text-align: center;
+        }
+    }
+
+    .rolls {
+        label {
+            text-align: center;
+        }
+
+        input,
+        select {
+            margin-top: 4px;
+        }
+
+        input[type="text"] {
+            color: @font-color;
+        }
+    }
+
+    .attributes {
+        .attr select {
+            margin: 4px 8px;
+        }
+
+        .resistances {
+            width: 100%;
+            margin: 0 auto;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border: none;
+            }
+
+            .element-resistance {
+                padding: 4px;
+            }
+        }
+    }
+
+    .backpack {
+        i {
+            padding-right: 8px;
+        }
+
+        input {
+            width: 6rem;
+        }
+
+        input[name="system.zenit"],
+        .currency {
+            color: #ffff00;
+        }
+
+        p.item-name {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
+
+    .bio {
+        input[type="text"]:not(:disabled) {
+            color: @font-color;
+        }
+
+        .bonds-start {
+            margin-top: 8px;
+        }
+
+        .pronouns {
+            input[type="text"] {
+                width: 30%;
+                margin: 0 auto 10px auto;
+            }
+        }
+    }
+}

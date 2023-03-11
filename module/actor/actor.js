@@ -32,6 +32,21 @@ export class FabulaUltimaActor extends Actor {
         let _tempLevel = 0;
 
         actorData.items.forEach((element) => {
+            if (element.type === "bond") {
+                let emotions = [
+                    element.system.emotionOne,
+                    element.system.emotionTwo,
+                    element.system.emotionThree,
+                ];
+                let strength = 0;
+
+                emotions.forEach((e) => {
+                    if (e !== "") strength++;
+                });
+
+                element.system.strength = strength;
+            }
+
             if (element.type === "class") {
                 system.hp.bonus += element.system.benefits.resource.hp;
                 system.mp.bonus += element.system.benefits.resource.mp;
