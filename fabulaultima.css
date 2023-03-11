@@ -203,11 +203,27 @@ h4.dice-total .multi {
   width: 30%;
   margin: 0 auto 10px auto;
 }
+.armor-sheet img.item-img {
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+.armor-sheet label.label-pad-left {
+  padding-left: 8px;
+}
+.armor-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
+}
 .bond-sheet input[type="text"]:not(:disabled) {
   color: #f8f8f8;
 }
 .class-sheet input[type="text"]:not(:disabled) {
   color: #f8f8f8;
+}
+.weapon-sheet img.item-img {
+  border: none;
+  width: 100px;
+  height: 100px;
 }
 .weapon-sheet > .flexrow {
   padding: 2px;
