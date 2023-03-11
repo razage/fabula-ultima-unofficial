@@ -1,4 +1,4 @@
-import { fabulaAttackRoll } from "../roll/roll.js";
+import { fabulaAttackRoll, fabulaSkillRoll } from "../roll/roll.js";
 
 export class FabulaUltimaActorSheet extends ActorSheet {
     static get defaultOptions() {
@@ -216,6 +216,23 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                         " is not currently implemented."
                     );
             }
+        });
+
+        // Make a skill roll
+        html.find(".skill-roll").click((ev) => {
+            ev.preventDefault();
+
+            const parent = $(ev.currentTarget).parents(".skill-roll-container");
+            const main = this.actor.system.attributes[parent.children(".attributeOne")[0].value];
+            const sec = this.actor.system.attributes[parent.children(".attributeTwo")[0].value];
+            let bonus = parent.children("#skill-bonus")[0].value;
+
+            // Basic error  checking
+            if (isNaN(bonus)) {
+                bonus = 0;
+            }
+
+            fabulaSkillRoll(this.actor, main, sec, bonus);
         });
     }
 

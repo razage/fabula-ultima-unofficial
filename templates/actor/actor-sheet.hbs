@@ -47,6 +47,7 @@
     </header>
 
     <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i> {{localize "FU.UI.roll"}}</a>
         <a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i>
             {{localize "FU.Attributes.name"}}</a>
         <a class="item" data-tab="classes"><i class="fas fa-solid fa-hat-wizard"></i>
@@ -60,6 +61,27 @@
     </nav>
 
     <section class="sheet-body">
+        {{!-- Rolls --}}
+        <div class="tab rolls" data-group="primary" data-tab="rolls">
+            <div class="grid grid-4col">
+                <div class="flexrow">
+                    <label for="attributeOne">Main Stat</label>
+                    <label for="attributeTwo">Secondary Stat</label>
+                    <label for="skill-bonus">Bonus</label>
+                    <span></span>
+                </div>
+                <div class="flexrow skill-roll-container">
+                    {{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+                    className="attributeOne" selectName="attributeOne"}}
+                    {{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+                    className="attributeTwo" selectName="attributeTwo"}}
+                    <input id="skill-bonus" type="text" data-dtype="Number" />
+                    <button class="fabula-button skill-roll"><i class="fas fa-solid fa-dice"></i> {{localize
+                        "FU.UI.roll"}}</button>
+                </div>
+            </div>
+        </div>
+
         {{!-- Attributes --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             <div class="flexcol attributes">

@@ -154,19 +154,29 @@ h4.dice-total .multi {
 .character-sheet .resistances p.mdefense {
   text-align: center;
 }
+.character-sheet .rolls label {
+  text-align: center;
+}
+.character-sheet .rolls input,
+.character-sheet .rolls select {
+  margin-top: 4px;
+}
+.character-sheet .rolls input[type="text"] {
+  color: #f8f8f8;
+}
 .character-sheet .attributes .attr select {
   margin: 4px 8px;
 }
-.character-sheet .resistances {
+.character-sheet .attributes .resistances {
   width: 100%;
   margin: 0 auto;
 }
-.character-sheet .resistances img {
+.character-sheet .attributes .resistances img {
   width: 30px;
   height: 30px;
   border: none;
 }
-.character-sheet .resistances .element-resistance {
+.character-sheet .attributes .resistances .element-resistance {
   padding: 4px;
 }
 .character-sheet .backpack i {

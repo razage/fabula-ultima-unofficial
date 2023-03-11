@@ -21,8 +21,8 @@
 
     "FU.Chat.critical": "Critical Success!",
     "FU.Chat.fumble": "FUMBLE!!!",
-    "FU.Chat.rolling": "Rolling",
     "FU.Chat.attackingWith": "Attacking with",
+    "FU.Chat.rollingSkillCheck": "Rolling a skill check",
     "FU.Chat.using": "using",
 
     "FU.Classes.name": "Class",
@@ -195,6 +195,7 @@
     "FU.UI.range": "Range",
     "FU.UI.ranged": "Ranged",
     "FU.UI.requirements": "Requirements",
+    "FU.UI.roll": "Roll",
     "FU.UI.selectCompendium": "Select Compendium",
     "FU.UI.target": "Target",
     "FU.UI.targets": "Targets",
