@@ -53,6 +53,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Bordered shield icon by Lorc
 -   Bow arrow icon by Delapouite
 -   Bowie knife icon by Lorc
+-   Breastplate icon by Lorc
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc
@@ -60,6 +61,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   C96 icon by Skoll
 -   Caduceus icon by Delapouite
 -   Cat icon by Lorc
+-   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
 -   Cloak and Dagger icon by Lorc
 -   Colt M1911 icon by Skoll
@@ -101,6 +103,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Hand bandage icon by Delapouite
 -   Hand of god icon by Delapouite
 -   Hatchet icon by Delapouite
+-   Heart armor icon by Delapouite
 -   Ice bolt icon by Lorc
 -   Ice spear icon by Lorc
 -   Katana icon by Delapouite
@@ -122,6 +125,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Pentacle icon by Skoll
 -   Pistol gun by John Colburn
 -   Plain dagger icon by Lorc
+-   Plastron icon by Lorc
 -   Poison bottle icon by Lorc
 -   Pope crown icon by Delepouite
 -   Public speaker icon by Delapouite
@@ -141,6 +145,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shard sword icon by Lorc
 -   Sharp axe icon by Delapouite
 -   Sharp haldberd icon by Delapouite
+-   Shirt icon by Lucas
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
 -   Skull staff icon by Delapouite
