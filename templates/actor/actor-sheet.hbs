@@ -38,7 +38,7 @@
                         <input name="system.experiencePoints" type="text" data-dtype="Number"
                             value="{{actor.system.experiencePoints}}" />
                     </span>
-                    <span class="initiative"><i class="fas fa-solid fa-person-running"></i>{{localize
+                    <span class="initiative"><i class="fas fa-solid fa-person-running"></i> {{localize
                         "FU.Attributes.initiative"}}:
                         {{actor.system.initiativeMod}}</span>
                 </div>
@@ -234,14 +234,14 @@
                     <div class="grid grid-6col">
                         <div class="flexrow item-header">
                             <span></span>
-                            <p>{{localize "FU.Short.defense"}}</p>
-                            <p>{{localize "FU.Short.magicDefense"}}</p>
-                            <p>{{localize "FU.Short.initiative"}}</p>
+                            <p><i class="fas fa-solid fa-shield"></i> {{localize "FU.Short.defense"}}</p>
+                            <p><i class="fas fa-solid fa-circle-nodes"></i> {{localize "FU.Short.magicDefense"}}</p>
+                            <p><i class="fas fa-solid fa-person-running"></i> {{localize "FU.Short.initiative"}}</p>
                             <p>{{localize "FU.Items.equipped"}}</p>
                             <span></span>
                         </div>
                         {{#each actor.system.armor as |item|}}
-                        <div class="item" data-item-id="{{item._id}}">
+                        <div class="flexrow armor-card item" data-item-id="{{item._id}}">
                             {{> "systems/fabulaultima/templates/actor/partials/armor-card.hbs" armor=item}}
                         </div>
                         {{/each}}
