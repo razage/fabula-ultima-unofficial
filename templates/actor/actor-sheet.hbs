@@ -65,9 +65,9 @@
         <div class="tab rolls" data-group="primary" data-tab="rolls">
             <div class="grid grid-4col">
                 <div class="flexrow">
-                    <label for="attributeOne">Main Stat</label>
-                    <label for="attributeTwo">Secondary Stat</label>
-                    <label for="skill-bonus">Bonus</label>
+                    <label for="attributeOne">{{localize "FU.Attributes.main"}}</label>
+                    <label for="attributeTwo">{{localize "FU.Attributes.secondary"}}</label>
+                    <label for="skill-bonus">{{localize "FU.UI.Bonus"}}</label>
                     <span></span>
                 </div>
                 <div class="flexrow skill-roll-container">
@@ -193,8 +193,8 @@
         <div class="tab classes" data-group="primary" data-tab="classes">
             <h2>
                 {{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}
-                <button class="fabula-button open-compendium" title="Open Compendium" data-compendium="classes"><i
-                        class="fas fa-solid fa-book"></i></button>
+                <button class="fabula-button open-compendium" title="{{localize 'FU.UI.openCompendium'}}"
+                    data-compendium="classes"><i class="fas fa-solid fa-book"></i></button>
             </h2>
             <div class="flexcol item-list">
                 {{#each actor.system.classes as |item|}}
@@ -209,9 +209,9 @@
         {{!-- Equipment --}}
         <div class="tab backpack" data-group="primary" data-tab="backpack">
             <h2>
-                Weapons
-                <button class="fabula-button open-compendium" title="Open Compendium" data-compendium="weapons"><i
-                        class="fas fa-solid fa-book"></i></button>
+                {{localize "FU.Items.Types.weapon"}}
+                <button class="fabula-button open-compendium" title="{{localize 'FU.UI.openCompendium'}}"
+                    data-compendium="weapons"><i class="fas fa-solid fa-book"></i></button>
             </h2>
             <div class="flexcol">
                 <div class="item-list">
@@ -222,8 +222,12 @@
                     {{/each}}
                 </div>
             </div>
-            <h2>Armor</h2>
-            <h2>Gear</h2>
+            <h2>
+                {{localize "FU.Items.Types.armor"}}
+                <button class="fabula-button open-compendium" title="{{localize 'FU.UI.openCompendium'}}"
+                    data-compendium="armor"><i class="fas fa-solid fa-book"></i></button>
+            </h2>
+            <h2>{{localize "FU.Items.name"}}</h2>
             <span class="currency">
                 <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:
                 <input type="text" name="system.zenit" data-dtype="Number" value="{{actor.system.zenit}}" />
