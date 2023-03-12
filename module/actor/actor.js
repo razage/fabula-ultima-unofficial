@@ -32,6 +32,23 @@ export class FabulaUltimaActor extends Actor {
         let _tempLevel = 0;
 
         actorData.items.forEach((element) => {
+            if (element.type === "armor") {
+                if (element.system.isEquipped) {
+                    system.defenses.physical.bonus += element.system.defense.value;
+                    system.defenses.magic.bonus += element.system.mDefense.value;
+                    system.initiativeMod += element.system.initiative;
+
+                    // If the armor uses a static value for the defense, subtract the attribute from the total
+                    if (!element.system.defense.useDex) {
+                        system.defenses.physical.bonus -= system.attributes.dexterity.current;
+                    }
+
+                    if (!element.system.mDefense.useIns) {
+                        system.defenses.magic.bonus -= system.attributes.insight.current;
+                    }
+                }
+            }
+
             if (element.type === "bond") {
                 let emotions = [
                     element.system.emotionOne,
