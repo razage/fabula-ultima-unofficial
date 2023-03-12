@@ -125,6 +125,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             let dialog;
 
             switch (dataset.compendium) {
+                case "armor":
+                    game.packs.find((k) => k.collection === "fabulaultima.armor").render(true);
+                    break;
                 case "classes":
                     game.packs
                         .find((k) => k.collection === "fabulaultima.character-classes")

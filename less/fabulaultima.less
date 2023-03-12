@@ -1,4 +1,5 @@
 @import "globals";
+@import "cards/armor-card";
 @import "cards/bond-card";
 @import "cards/class-card";
 @import "cards/resource-card";
@@ -48,21 +49,6 @@ button.fabula-button {
             background: linear-gradient(180deg,
                     darken(@green-fallback, 5%) 0%,
                     darken(@green-accent, 5%) 100%);
-        }
-    }
-
-    &.open-compendium {
-        background: @purple-fallback;
-        background: @purple-gradient;
-        border-radius: 10px;
-        width: 30px;
-        height: 30px;
-
-        &:hover {
-            background: darken(@purple-fallback, 5%);
-            background: linear-gradient(180deg,
-                    darken(@purple-fallback, 5%) 0%,
-                    darken(@purple-accent, 5%) 100%);
         }
     }
 }

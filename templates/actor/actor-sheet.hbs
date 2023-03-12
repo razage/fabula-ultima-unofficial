@@ -193,8 +193,8 @@
         <div class="tab classes" data-group="primary" data-tab="classes">
             <h2>
                 {{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}
-                <button class="fabula-button open-compendium" title="{{localize 'FU.UI.openCompendium'}}"
-                    data-compendium="classes"><i class="fas fa-solid fa-book"></i></button>
+                <i class="fas fa-solid fa-book open-compendium" data-compendium="classes"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol item-list">
                 {{#each actor.system.classes as |item|}}
@@ -208,10 +208,11 @@
 
         {{!-- Equipment --}}
         <div class="tab backpack" data-group="primary" data-tab="backpack">
+            {{!-- Weapons --}}
             <h2>
                 {{localize "FU.Items.Types.weapon"}}
-                <button class="fabula-button open-compendium" title="{{localize 'FU.UI.openCompendium'}}"
-                    data-compendium="weapons"><i class="fas fa-solid fa-book"></i></button>
+                <i class="fas fa-solid fa-book open-compendium" data-compendium="weapons"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol">
                 <div class="item-list">
@@ -222,11 +223,32 @@
                     {{/each}}
                 </div>
             </div>
+            {{!-- Armor --}}
             <h2>
                 {{localize "FU.Items.Types.armor"}}
-                <button class="fabula-button open-compendium" title="{{localize 'FU.UI.openCompendium'}}"
-                    data-compendium="armor"><i class="fas fa-solid fa-book"></i></button>
+                <i class="fas fa-solid fa-book open-compendium" data-compendium="armor"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
+            <div class="flexcol armor">
+                <div class="item-list">
+                    <div class="grid grid-6col">
+                        <div class="flexrow item-header">
+                            <span></span>
+                            <p>{{localize "FU.Short.defense"}}</p>
+                            <p>{{localize "FU.Short.magicDefense"}}</p>
+                            <p>{{localize "FU.Short.initiative"}}</p>
+                            <p>{{localize "FU.Items.equipped"}}</p>
+                            <span></span>
+                        </div>
+                        {{#each actor.system.armor as |item|}}
+                        <div class="item" data-item-id="{{item._id}}">
+                            {{> "systems/fabulaultima/templates/actor/partials/armor-card.hbs" armor=item}}
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{!-- Items --}}
             <h2>{{localize "FU.Items.name"}}</h2>
             <span class="currency">
                 <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:

@@ -1,0 +1,32 @@
+<div class="armor-card">
+	<div class="grid grid-6col">
+		<div class="flexrow">
+			<p>{{armor.name}}</p>
+			{{#if armor.system.defense.useDex}}
+			{{#if_eq armor.system.defense.value 0}}
+			<p>{{localize "FU.Short.dexterity"}}</p>
+			{{else}}
+			<p>{{localize "FU.Short.dexterity"}}+{{armor.system.defense.value}}</p>
+			{{/if_eq}}
+			{{else}}
+			<p>{{armor.system.defense.value}}</p>
+			{{/if}}
+			{{#if armor.system.mDefense.useIns}}
+			{{#if_eq armor.system.mDefense.value 0}}
+			<p>{{localize "FU.Short.insight"}}</p>
+			{{else}}
+			<p>{{localize "FU.Short.insight"}}+{{armor.system.mDefense.value}}</p>
+			{{/if_eq}}
+			{{else}}
+			<p>{{armor.system.mDefense.value}}</p>
+			{{/if}}
+			<p>{{armor.system.initiative}}</p>
+			<input name="equipped" class="equipped" type="checkbox" {{#if armor.system.isEquipped}} checked{{/if}}
+				data-id="{{armor._id}}" />
+			<div>
+				<i class="fas fa-solid fa-pencil item-edit"></i>
+				<i class="fas fa-solid fa-trash item-delete"></i>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,3 +1,11 @@
+.armor-card p {
+  text-align: center;
+}
+.armor-card i.item-edit:hover,
+.armor-card i.item-delete:hover {
+  cursor: pointer;
+  font-size: 1.15rem;
+}
 .bond-card {
   border: 1px solid #f8f8f8;
   border-radius: 10px;
@@ -124,6 +132,16 @@ img.damage-type {
 h4.dice-total .multi {
   font-size: 0.85rem;
 }
+.character-sheet i.open-compendium {
+  color: #5b29cf;
+  color: linear-gradient(180deg, #5b29cf 0%, #350286 100%);
+}
+.character-sheet i.open-compendium:hover {
+  cursor: pointer;
+  font-size: 1.15rem;
+  color: #5225ba;
+  color: linear-gradient(180deg, #5225ba 0%, #2b026d 100%);
+}
 .character-sheet img.profile-img {
   width: 64px;
   border: none;
@@ -192,6 +210,9 @@ h4.dice-total .multi {
 .character-sheet .backpack p.item-name {
   font-weight: bold;
   font-size: 1rem;
+}
+.character-sheet .backpack .armor .item-header {
+  text-align: center;
 }
 .character-sheet .bio input[type="text"]:not(:disabled) {
   color: #f8f8f8;
@@ -302,17 +323,6 @@ button.fabula-button.item-create {
 button.fabula-button.item-create:hover {
   background: #258b1c;
   background: linear-gradient(180deg, #258b1c 0%, #014801 100%);
-}
-button.fabula-button.open-compendium {
-  background: #5b29cf;
-  background: linear-gradient(180deg, #5b29cf 0%, #350286 100%);
-  border-radius: 10px;
-  width: 30px;
-  height: 30px;
-}
-button.fabula-button.open-compendium:hover {
-  background: #5225ba;
-  background: linear-gradient(180deg, #5225ba 0%, #2b026d 100%);
 }
 .fabulaultima.sheet section.window-content {
   margin: 0;
