@@ -258,12 +258,13 @@
                     data-compendium="consumables" title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol">
-                <div class="grid grid-3col">
+                <div class="grid grid-4col">
                     {{#each actor.system.consumables as |item|}}
                     <div class="flexrow consumable-card" data-item-id="{{item._id}}">
                         <img src="{{item.img}}" class="item-img">
                         <p>{{item.name}}</p>
                         <p>{{item.system.ipCost}} IP</p>
+                        <p>{{localize (concat "FU.Items.Blurbs." item.system.internalName)}}</p>
                     </div>
                     {{/each}}
                 </div>
