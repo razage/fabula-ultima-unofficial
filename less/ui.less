@@ -51,3 +51,19 @@
         }
     }
 }
+
+.sheet-body {
+    .editor-host {
+        .editor {
+            min-height: 50px;
+            height: 100%;
+            flex: auto;
+
+            // If this isn't done, the blue background makes the black text in the editor
+            // impossible to read. Changing the font color here seems to have no effect.
+            .tox .tox-edit-area__iframe {
+                background: @font-color;
+            }
+        }
+    }
+}

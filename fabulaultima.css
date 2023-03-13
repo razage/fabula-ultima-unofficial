@@ -243,44 +243,8 @@ h4.dice-total .multi {
   width: 30%;
   margin: 0 auto 10px auto;
 }
-.armor-sheet img.item-img {
-  border: none;
-  width: 100px;
-  height: 100px;
-}
-.armor-sheet label.label-pad-left {
-  padding-left: 8px;
-}
-.armor-sheet input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
-}
-.bond-sheet input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
-}
-.consumable-sheet img.item-img {
-  border: none;
-  width: 100px;
-  height: 100px;
-}
-.consumable-sheet input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
-}
-.class-sheet input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
-}
-.weapon-sheet img.item-img {
-  border: none;
-  width: 100px;
-  height: 100px;
-}
 .weapon-sheet > .flexrow {
   padding: 2px;
-}
-.weapon-sheet label.label-pad-left {
-  padding-left: 8px;
-}
-.weapon-sheet input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
 }
 .dialog section.window-content {
   background: #2021a0;
@@ -317,6 +281,14 @@ h4.dice-total .multi {
   background: #010661;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
   border: 1px solid #929292;
+}
+.sheet-body .editor-host .editor {
+  min-height: 50px;
+  height: 100%;
+  flex: auto;
+}
+.sheet-body .editor-host .editor .tox .tox-edit-area__iframe {
+  background: #f8f8f8;
 }
 button.fabula-button {
   background: #010661;
@@ -425,11 +397,32 @@ button.fabula-button.item-create:hover {
   border-bottom: 1px solid #f8f8f8;
   padding-top: 8px;
 }
-.sheet-body .editor-host .editor {
-  min-height: 50px;
-  height: 100%;
-  flex: auto;
+.accessory-sheet input[type="text"]:not(:disabled),
+.actor-sheet input[type="text"]:not(:disabled),
+.armor-sheet input[type="text"]:not(:disabled),
+.bond-sheet input[type="text"]:not(:disabled),
+.class-sheet input[type="text"]:not(:disabled),
+.consumable-sheet input[type="text"]:not(:disabled),
+.weapon-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
 }
-.sheet-body .editor-host .editor .tox .tox-edit-area__iframe {
-  background: #f8f8f8;
+.accessory-sheet img.item-img,
+.actor-sheet img.item-img,
+.armor-sheet img.item-img,
+.bond-sheet img.item-img,
+.class-sheet img.item-img,
+.consumable-sheet img.item-img,
+.weapon-sheet img.item-img {
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+.accessory-sheet label.label-pad-left,
+.actor-sheet label.label-pad-left,
+.armor-sheet label.label-pad-left,
+.bond-sheet label.label-pad-left,
+.class-sheet label.label-pad-left,
+.consumable-sheet label.label-pad-left,
+.weapon-sheet label.label-pad-left {
+  padding-left: 8px;
 }

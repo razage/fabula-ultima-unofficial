@@ -149,8 +149,8 @@
             }
         },
         "accessory": {
-            "templates": ["itemCommon"],
-            "schemaVersion": "1.02"
+            "templates": ["itemCommon", "armorStats", "isEquipped"],
+            "schemaVersion": "1.03"
         },
         "arcanum": {
             "schemaVersion": "1.0",
