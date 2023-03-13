@@ -39,6 +39,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
         sheetData.items.forEach((item) => {
             switch (item.type) {
+                case "accessory":
+                    accessories.push(item);
+                    break;
                 case "armor": {
                     armor.push(item);
                     break;

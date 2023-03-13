@@ -45,6 +45,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Battle axe icon by Lorc
 -   Bayonet icon by Skoll
 -   Beast eye icon by Lorc
+-   Belt icon by Lucas
+-   Black belt icon by Delapouite
 -   Black book icon by Wildabeast
 -   Bone knife icon by Delapouite
 -   Bone mace icon by Delapouite
