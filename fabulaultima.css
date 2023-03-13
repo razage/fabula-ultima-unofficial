@@ -51,6 +51,11 @@
   font-size: 1.25rem;
   font-weight: bold;
 }
+.consumable-card img.item-img {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
 .resource-card {
   margin: 8px 0;
   border: 1px solid #f8f8f8;
@@ -219,6 +224,7 @@ h4.dice-total .multi {
 .character-sheet .backpack input[name="system.zenit"],
 .character-sheet .backpack .currency {
   color: #ffff00;
+  margin: 4px 0;
 }
 .character-sheet .backpack p.item-name {
   font-weight: bold;

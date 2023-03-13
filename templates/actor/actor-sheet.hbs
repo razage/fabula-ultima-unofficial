@@ -208,6 +208,10 @@
 
         {{!-- Equipment --}}
         <div class="tab backpack" data-group="primary" data-tab="backpack">
+            <span class="currency">
+                <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:
+                <input type="text" name="system.zenit" data-dtype="Number" value="{{actor.system.zenit}}" />
+            </span>
             {{!-- Weapons --}}
             <h2>
                 {{localize "FU.Items.Types.weapon"}}
@@ -253,10 +257,17 @@
                 {{localize "FU.Items.name"}} <i class="fas fa-solid fa-book open-compendium"
                     data-compendium="consumables" title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
-            <span class="currency">
-                <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:
-                <input type="text" name="system.zenit" data-dtype="Number" value="{{actor.system.zenit}}" />
-            </span>
+            <div class="flexcol">
+                <div class="grid grid-3col">
+                    {{#each actor.system.consumables as |item|}}
+                    <div class="flexrow consumable-card" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" class="item-img">
+                        <p>{{item.name}}</p>
+                        <p>{{item.system.ipCost}} IP</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
         </div>
 
         {{!-- Spells --}}

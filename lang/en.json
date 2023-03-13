@@ -99,7 +99,7 @@
     "FU.Resources.name": "Resources",
     "FU.Resources.hp": "Hit Points",
     "FU.Resources.mp": "Mind Points",
-    "FU.Resources.ip": "Item Points",
+    "FU.Resources.ip": "Inventory Points",
     "FU.Resources.fp": "Fabula Points",
     "FU.Resources.xp": "Experience Points",
     "FU.Resources.currency": "Zenit",
