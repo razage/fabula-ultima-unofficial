@@ -94,3 +94,16 @@ Hooks.once("init", async function () {
         return output;
     });
 });
+
+// This event is fired on all connected clients
+Hooks.on("createActor", async function (actor, options, userId) {
+    if (userId != game.user.id) {
+        return;
+    }
+
+    if (actor.type != null) {
+        if (actor.type === "player") {
+            actor.addDefaultItems();
+        }
+    }
+});

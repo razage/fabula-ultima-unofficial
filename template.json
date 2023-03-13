@@ -57,7 +57,7 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.15",
+            "schemaVersion": "1.16",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -99,6 +99,7 @@
             "accessories": [],
             "armor": [],
             "classes": [],
+            "consumables": [],
             "weapons": [],
             "spells": [],
             "heroicSkills": [],

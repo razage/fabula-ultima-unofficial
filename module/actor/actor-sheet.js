@@ -33,6 +33,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const armor = [];
         const bonds = [];
         const classes = [];
+        const consumables = [];
         const spells = [];
         const weapons = [];
 
@@ -53,6 +54,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
                 }
 
+                case "consumable": {
+                    consumables.push(item);
+                    break;
+                }
+
                 case "weapon": {
                     weapons.push(item);
                     break;
@@ -69,6 +75,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.armor = armor;
         actorData.system.bonds = bonds;
         actorData.system.classes = classes;
+        actorData.system.consumables = consumables;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
     }

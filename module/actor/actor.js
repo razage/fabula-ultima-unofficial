@@ -120,4 +120,36 @@ export class FabulaUltimaActor extends Actor {
 
         return super.create(data, options);
     }
+
+    async addDefaultItems() {
+        try {
+            let consumable = {};
+            let brawlingWeapons = {};
+            consumable.pack = await game.packs.get("fabulaultima.consumables");
+            consumable.index = await consumable.pack.getIndex();
+            brawlingWeapons.pack = await game.packs.get("fabulaultima.weapons-brawling");
+            brawlingWeapons.index = await brawlingWeapons.pack.getIndex();
+            let toAdd = [];
+
+            // Add every item from the consumables compendium
+            for (let idx of consumable.index) {
+                let _temp = await consumable.pack.getDocument(idx._id);
+                toAdd.push(_temp);
+            }
+
+            // Add the unarmed strike "weapon"
+            for (let idx of brawlingWeapons.index) {
+                let _temp = await brawlingWeapons.pack.getDocument(idx._id);
+
+                if (_temp.name === "Unarmed Strike") {
+                    toAdd.push(_temp);
+                }
+            }
+
+            await this.createEmbeddedDocuments("Item", toAdd);
+        } catch (ex) {
+            console.log("Error adding default items to Actor.");
+            console.log(ex);
+        }
+    }
 }
