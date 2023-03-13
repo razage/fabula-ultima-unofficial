@@ -5,9 +5,14 @@
 	</header>
 
 	<section class="sheet-body">
-		<label for="system.ipCost">IP Cost</label>
-		<input name="system.ipCost" type="text" value="{{item.system.ipCost}}" data-dtype="Number" />
-		<h3>Effect</h3>
+		<div class="grid grid-2col">
+			<div class="flexrow">
+				<label for="system.ipCost">{{localize "FU.Items.ipCost"}}</label>
+				<input name="system.ipCost" type="text" value="{{item.system.ipCost}}" data-dtype="Number" />
+			</div>
+		</div>
+		<br />
+		<h3>{{localize "FU.Quality.name"}}</h3>
 		<div class="flexrow">
 			<div class="editor-host">
 				{{editor enrichedQuality target="system.quality" button=true owner=owner

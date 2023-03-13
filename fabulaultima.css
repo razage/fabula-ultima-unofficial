@@ -251,6 +251,11 @@ h4.dice-total .multi {
 .bond-sheet input[type="text"]:not(:disabled) {
   color: #f8f8f8;
 }
+.consumable-sheet img.item-img {
+  border: none;
+  width: 100px;
+  height: 100px;
+}
 .consumable-sheet input[type="text"]:not(:disabled) {
   color: #f8f8f8;
 }

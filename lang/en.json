@@ -71,6 +71,7 @@
     "FU.Items.name": "Items",
     "FU.Items.cost": "Cost",
     "FU.Items.equipped": "Equipped",
+    "FU.Items.ipCost": "IP Cost",
     "FU.Items.Types.accessory": "Accessory",
     "FU.Items.Types.arcanum": "Arcanum",
     "FU.Items.Types.armor": "Armor",
