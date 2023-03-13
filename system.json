@@ -40,6 +40,15 @@
             "flags": {}
         },
         {
+            "name": "consumables",
+            "label": "Consumables",
+            "system": "fabulaultima",
+            "path": "packs/consumables.db",
+            "private": false,
+            "type": "Item",
+            "flags": {}
+        },
+        {
             "name": "weapons-arcane",
             "label": "Weapons - Arcane",
             "system": "fabulaultima",

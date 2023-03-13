@@ -80,17 +80,17 @@
 .resource-card .crisis input[type="text"],
 .resource-card .hp p,
 .resource-card .crisis p {
-  color: #A55959;
+  color: #BF3F3F;
 }
 .resource-card .mp label,
 .resource-card .mp input,
 .resource-card .mp p {
-  color: #597FA5;
+  color: #3FBFBF;
 }
 .resource-card .ip label,
 .resource-card .ip input,
 .resource-card .ip p {
-  color: #59A559;
+  color: #3FBF3F;
 }
 .resource-card i {
   font-size: 1.5rem;
