@@ -140,6 +140,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                         .find((k) => k.collection === "fabulaultima.character-classes")
                         .render(true);
                     break;
+                case "consumables":
+                    game.packs
+                        .find((k) => k.collection === "fabulaultima.consumables")
+                        .render(true);
+                    break;
                 case "weapons":
                     dialog = new Dialog({
                         title: game.i18n.localize("FU.UI.selectCompendium"),
@@ -197,6 +202,15 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-heavy")
+                                        .render(true),
+                            },
+                            shields: {
+                                label: game.i18n.localize("FU.Weapons.Categories.shield"),
+                                callback: () =>
+                                    game.packs
+                                        .find(
+                                            (k) => k.collection === "fabulaultima.weapons-shields"
+                                        )
                                         .render(true),
                             },
                             spears: {
