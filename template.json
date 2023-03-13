@@ -160,10 +160,9 @@
         },
         "accessory": {
             "templates": ["itemCommon", "armorStats", "isEquipped"],
-            "schemaVersion": "1.04",
+            "schemaVersion": "1.05",
             "hpBonus": 0,
             "mpBonus": 0,
-            "initiativeBonus": 0,
             "accuracyBonus": {
                 "physical": 0,
                 "magic": 0
