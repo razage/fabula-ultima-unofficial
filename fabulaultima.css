@@ -80,17 +80,17 @@
 .resource-card .crisis input[type="text"],
 .resource-card .hp p,
 .resource-card .crisis p {
-  color: #fa9090;
+  color: #A55959;
 }
 .resource-card .mp label,
 .resource-card .mp input,
 .resource-card .mp p {
-  color: #90befa;
+  color: #597FA5;
 }
 .resource-card .ip label,
 .resource-card .ip input,
 .resource-card .ip p {
-  color: #90fa90;
+  color: #59A559;
 }
 .resource-card i {
   font-size: 1.5rem;
@@ -249,6 +249,9 @@ h4.dice-total .multi {
   color: #f8f8f8;
 }
 .bond-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
+}
+.consumable-sheet input[type="text"]:not(:disabled) {
   color: #f8f8f8;
 }
 .class-sheet input[type="text"]:not(:disabled) {

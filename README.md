@@ -60,6 +60,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Butterfly knife icon by Delapouite
 -   C96 icon by Skoll
 -   Caduceus icon by Delapouite
+-   Camping tent icon by Delapouite
 -   Cat icon by Lorc
 -   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
@@ -81,6 +82,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Dripping Knife icon by Lorc
 -   Edged Shield icon by Lorc
 -   Electric whip icon by Lorc
+-   Erlenmeyer icon by Lorc
 -   Evil book icon by Lorc
 -   Evil hand icon by Lorc
 -   Evil moon icon by Lorc
@@ -103,6 +105,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Hand bandage icon by Delapouite
 -   Hand of god icon by Delapouite
 -   Hatchet icon by Delapouite
+-   Health potion icon by Delapouite
 -   Heart armor icon by Delapouite
 -   Ice bolt icon by Lorc
 -   Ice spear icon by Lorc
@@ -118,6 +121,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Magic shield icon by Lorc
 -   Mailed fist icon by Lorc
 -   Meat cleaver icon by Lorc
+-   Minerals icon by Faithtoken
 -   Musket icon by Skoll
 -   Nunchaku icon by Delapouite
 -   Panzerfaust icon by Delapouite
@@ -128,6 +132,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Plastron icon by Lorc
 -   Poison bottle icon by Lorc
 -   Pope crown icon by Delepouite
+-   Potion ball icon by Lorc
 -   Public speaker icon by Delapouite
 -   Punch blast icon by Lorc
 -   Rake icon by Delapouite
