@@ -1,26 +1,31 @@
 <p>{{#if armor.system.isMartial.armor}}<i class="fas fa-solid fa-helmet-battle martial"></i> {{/if}}{{armor.name}}</p>
 {{#if armor.system.defense.useDex}}
 {{#if_eq armor.system.defense.value 0}}
-<p> {{localize "FU.Short.dexterity"}}</p>
+<p title="{{localize 'FU.Short.defense'}}"><i class="fas fa-solid fa-shield"></i>{{localize "FU.Short.dexterity"}}</p>
 {{else}}
-<p>{{localize "FU.Short.dexterity"}}+{{armor.system.defense.value}}</p>
+<p title="{{localize 'FU.Short.defense'}}"><i class="fas fa-solid fa-shield"></i>{{localize
+	"FU.Short.dexterity"}}+{{armor.system.defense.value}}</p>
 {{/if_eq}}
 {{else}}
-<p>{{armor.system.defense.value}}</p>
+<p title="{{localize 'FU.Short.defense'}}"><i class="fas fa-solid fa-shield"></i>{{armor.system.defense.value}}</p>
 {{/if}}
 {{#if armor.system.mDefense.useIns}}
 {{#if_eq armor.system.mDefense.value 0}}
-<p> {{localize "FU.Short.insight"}}</p>
+<p title="{{localize 'FU.Short.magicDefense'}}"><i class="fas fa-solid fa-circle-nodes"></i>{{localize
+	"FU.Short.insight"}}</p>
 {{else}}
-<p>{{localize "FU.Short.insight"}}+{{armor.system.mDefense.value}}</p>
+<p title="{{localize 'FU.Short.magicDefense'}}"><i class="fas fa-solid fa-circle-nodes"></i>{{localize
+	"FU.Short.insight"}}+{{armor.system.mDefense.value}}</p>
 {{/if_eq}}
 {{else}}
-<p>{{armor.system.mDefense.value}}</p>
+<p title="{{localize 'FU.Short.magicDefense'}}"><i class="fas fa-solid fa-circle-nodes">
+	</i>{{armor.system.mDefense.value}}</p>
 {{/if}}
-<p>{{armor.system.initiative}}</p>
-<span>
-	<input name="equipped" class="equipped" type="checkbox" {{#if armor.system.isEquipped}} checked{{/if}}
-		data-id="{{armor._id}}" />
+<p title="{{localize 'FU.Short.initiative'}}"><i class="fas fa-solid fa-person-running"></i>{{armor.system.initiative}}
+</p>
+<span title="{{localize 'FU.Items.equipped'}}">
+	<input name="equipped" class="equipped" type="checkbox" data-id="{{armor._id}}" {{#if armor.system.isEquipped}}
+		checked{{/if}} />
 </span>
 <div class="item-controls">
 	<i class="fas fa-solid fa-pencil item-edit"></i>

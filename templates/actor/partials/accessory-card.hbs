@@ -1,0 +1,8 @@
+<img class="item-icon" src="{{acc.img}}" />
+<p>{{acc.name}}</p>
+<span><input name="isEquipped" class="equipped" type="checkbox" title="{{localize 'FU.Items.equipped'}}"
+		data-id="{{acc._id}}" {{#if acc.system.isEquipped}} checked{{/if}} /></span>
+<span class="item-controls">
+	<i class="fas fa-solid fa-pencil item-edit" title="{{localize 'FU.UI.edit'}}"></i>
+	<i class="fas fa-solid fa-trash item-delete" title="{{localize 'FU.UI.delete'}}"></i>
+</span>

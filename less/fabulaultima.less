@@ -2,7 +2,6 @@
 @import "cards/armor-card";
 @import "cards/bond-card";
 @import "cards/class-card";
-@import "cards/consumable-card";
 @import "cards/resource-card";
 @import "cards/weapon-card";
 @import "chat";
@@ -151,5 +150,38 @@ button.fabula-button {
 
     label.label-pad-left {
         padding-left: 8px;
+    }
+}
+
+// Common styling for cards
+.accessory-card,
+.armor-card,
+.bond-card,
+.class-card,
+.consumable-card,
+.resource-card,
+.weapon-card {
+    border: 1px solid @font-color;
+    border-radius: 10px;
+
+    img.item-icon {
+        width: 30px;
+        height: 30px;
+        border: none;
+    }
+}
+
+// Changes to a select group of cards
+.accessory-card,
+.armor-card,
+.consumable-card {
+    border: none !important;
+
+    i.item-edit,
+    i.item-delete {
+        &:hover {
+            cursor: pointer;
+            font-size: 1.15rem;
+        }
     }
 }

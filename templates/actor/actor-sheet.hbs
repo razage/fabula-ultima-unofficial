@@ -236,17 +236,26 @@
             <div class="flexcol armor">
                 <div class="item-list">
                     <div class="grid grid-6col">
-                        <div class="flexrow item-header">
-                            <span></span>
-                            <p><i class="fas fa-solid fa-shield"></i> {{localize "FU.Short.defense"}}</p>
-                            <p><i class="fas fa-solid fa-circle-nodes"></i> {{localize "FU.Short.magicDefense"}}</p>
-                            <p><i class="fas fa-solid fa-person-running"></i> {{localize "FU.Short.initiative"}}</p>
-                            <p>{{localize "FU.Items.equipped"}}</p>
-                            <span></span>
-                        </div>
                         {{#each actor.system.armor as |item|}}
                         <div class="flexrow armor-card item" data-item-id="{{item._id}}">
                             {{> "systems/fabulaultima/templates/actor/partials/armor-card.hbs" armor=item}}
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{!-- Accessories --}}
+            <h3>
+                {{localize "FU.Plural.accessory"}}
+                <i class="fas fa-solid fa-book open-compendium" data-compendium="accessory"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h3>
+            <div class="flexcol accessories">
+                <div class="itemlist">
+                    <div class="grid grid-4col">
+                        {{#each actor.system.accessories as |item|}}
+                        <div class="flexrow accessory-card item" data-item-id="{{item._id}}">
+                            {{> "systems/fabulaultima/templates/actor/partials/accessory-card.hbs" acc=item}}
                         </div>
                         {{/each}}
                     </div>
@@ -261,7 +270,7 @@
                 <div class="grid grid-4col">
                     {{#each actor.system.consumables as |item|}}
                     <div class="flexrow consumable-card" data-item-id="{{item._id}}">
-                        <img src="{{item.img}}" class="item-img">
+                        <img src="{{item.img}}" class="item-icon">
                         <p>{{item.name}}</p>
                         <p>{{item.system.ipCost}} IP</p>
                         <p>{{localize (concat "FU.Items.Blurbs." item.system.internalName)}}</p>

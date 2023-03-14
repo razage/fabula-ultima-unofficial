@@ -63,8 +63,6 @@
     "FU.Emotions.name": "Emotions",
 
     "FU.Equipment.name": "Equipment",
-    "FU.Equipment.accessory": "Accessory",
-    "FU.Equipment.armor": "Armor",
     "FU.Equipment.mainHand": "Main-Hand",
     "FU.Equipment.offHand": "Off-Hand",
 
@@ -88,6 +86,8 @@
     "FU.Items.Types.weapon": "Weapon",
 
     "FU.Navigation.tabGear": "Gear",
+
+    "FU.Plural.accessory": "Accessories",
 
     "FU.Proficiencies.name": "Equipment Proficiencies",
     "FU.Proficiencies.armor": "Martial Armors",

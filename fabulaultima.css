@@ -1,27 +1,25 @@
-.armor-card:hover {
+.armor-card:hover,
+.accessory-card:hover {
   background: #292aca;
   background: linear-gradient(180deg, #292aca 0%, #020993 100%);
 }
-.armor-card p {
+.armor-card p,
+.accessory-card p {
   text-align: center;
 }
-.armor-card i.martial {
+.armor-card i.martial,
+.accessory-card i.martial {
   color: #ff0000;
 }
-.armor-card i.item-edit:hover,
-.armor-card i.item-delete:hover {
-  cursor: pointer;
-  font-size: 1.15rem;
-}
-.armor-card input.equipped {
+.armor-card input.equipped,
+.accessory-card input.equipped {
   margin: 0 auto;
 }
-.armor-card .item-controls {
+.armor-card .item-controls,
+.accessory-card .item-controls {
   text-align: center;
 }
 .bond-card {
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
   margin-bottom: 8px;
 }
 .bond-card p.bond-name {
@@ -38,10 +36,6 @@
 .bond-card p.bond-strength {
   text-align: center;
 }
-.class-card {
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
-}
 .class-card img.class-image {
   width: 60px;
   height: 60px;
@@ -51,15 +45,8 @@
   font-size: 1.25rem;
   font-weight: bold;
 }
-.consumable-card img.item-img {
-  width: 30px;
-  height: 30px;
-  border: none;
-}
 .resource-card {
   margin: 8px 0;
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
   font-size: 1rem;
 }
 .resource-card .hp,
@@ -102,8 +89,6 @@
   padding-right: 8px;
 }
 .weapon-card {
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
   margin-bottom: 8px;
 }
 .weapon-card .weapon-card-header {
@@ -425,4 +410,39 @@ button.fabula-button.item-create:hover {
 .consumable-sheet label.label-pad-left,
 .weapon-sheet label.label-pad-left {
   padding-left: 8px;
+}
+.accessory-card,
+.armor-card,
+.bond-card,
+.class-card,
+.consumable-card,
+.resource-card,
+.weapon-card {
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+}
+.accessory-card img.item-icon,
+.armor-card img.item-icon,
+.bond-card img.item-icon,
+.class-card img.item-icon,
+.consumable-card img.item-icon,
+.resource-card img.item-icon,
+.weapon-card img.item-icon {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.accessory-card,
+.armor-card,
+.consumable-card {
+  border: none !important;
+}
+.accessory-card i.item-edit:hover,
+.armor-card i.item-edit:hover,
+.consumable-card i.item-edit:hover,
+.accessory-card i.item-delete:hover,
+.armor-card i.item-delete:hover,
+.consumable-card i.item-delete:hover {
+  cursor: pointer;
+  font-size: 1.15rem;
 }

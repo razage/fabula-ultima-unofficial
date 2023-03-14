@@ -1,4 +1,5 @@
-.armor-card {
+.armor-card,
+.accessory-card {
 	&:hover {
 		background: lighten(@main-fallback, 10%);
 		background: @highlight-gradient;
@@ -10,14 +11,6 @@
 
 	i.martial {
 		color: @martial;
-	}
-
-	i.item-edit,
-	i.item-delete {
-		&:hover {
-			cursor: pointer;
-			font-size: 1.15rem;
-		}
 	}
 
 	input.equipped {
