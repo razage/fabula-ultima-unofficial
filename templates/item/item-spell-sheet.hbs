@@ -1,0 +1,88 @@
+<form class="{{cssClass}} spell-sheet" autocomplete="off">
+	<header class="sheet-header">
+		<img class="item-img" src="{{item.img}}" data-edit="img" />
+		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-file-lines"></i> {{localize "FU.UI.general"}}</a>
+		<a class="item" data-tab="description"><i class="fas fa-solid fa-book-bookmark"></i> {{localize
+			"FU.UI.description"}}</a>
+		<a class="item" data-tab="attack"><i class="fas fa-solid fa-skull-crossbones"></i> {{localize
+			"FU.UI.attack"}}</a>
+	</nav>
+
+	<section class="sheet-body">
+		<div class="tab info" data-group="primary" data-tab="info">
+			<div class="grid grid-4col">
+				<div class="flexrow">
+					<label for="system.class">{{localize "FU.Classes.name"}} <i class="fas fa-solid fa-question-circle"
+							title="The class associated with this spell."></i></label>
+					<input name="system.class" type="text" value="{{item.system.class}}" data-dtype="String" />
+					<label class="label-pad-left" for="system.manaCost">{{localize "FU.Spells.mpCost"}}</label>
+					<input name="system.manaCost" type="text" value="{{item.system.manaCost}}" data-dtype="Number" />
+				</div>
+			</div>
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					<label for="system.target">{{localize "FU.UI.target"}}</label>
+					<input name="system.target" type="text" value="{{item.system.target}}" data-dtype="String" />
+				</div>
+				<div class="flexrow">
+					<label for="system.offensiveSpell">{{localize "FU.Spells.offensive"}}</label>
+					<input name="system.offensiveSpell" type="checkbox" data-dtype="Boolean" {{#if
+						item.system.offensiveSpell}} checked{{/if}} />
+				</div>
+				<div class="flexrow">
+					<label for="system.duration">{{localize "FU.Spells.Durations.name"}}</label>
+					<select name="system.duration" data-dtype="String">
+						<option value="instantaneous" {{#if_eq item.system.duration "instantaneous" }}
+							selected{{/if_eq}}>{{localize "FU.Spells.Durations.instantaneous"}}</option>
+						<option value="scene" {{#if_eq item.system.duration "scene" }} selected{{/if_eq}}>{{localize
+							"FU.Spells.Durations.scene"}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab description" data-group="primary" data-tab="description">
+			<div class="editor-host">
+				{{editor enrichedNotes target="system.notes" button=true owner=owner
+				editable=editable}}
+			</div>
+			<h3>Opportunity</h3>
+			<div class="editor-host">
+				{{editor enrichedOpportunity target="system.opportunity.quality" button=true owner=owner
+				editable=editable}}
+			</div>
+		</div>
+
+		<div class="tab attack" data-group="primary" data-tab="attack">
+			<h2>{{localize "FU.UI.accuracy"}}</h2>
+			<div class="grid grid-4col">
+				<div class="flexrow">
+					<label for="system.accuracy.mainStat">{{localize "FU.Attributes.main"}}</label>
+					{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+					selectName="system.accuracy.mainStat" current=item.system.accuracy.mainStat}}
+					<label class="label-pad-left" for="system.accuracy.secondaryStat">{{localize
+						"FU.Attributes.secondary"}}</label>
+					{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+					selectName="system.accuracy.secondaryStat" current=item.system.accuracy.secondaryStat}}
+				</div>
+			</div>
+			<h2>{{localize "FU.UI.damage"}}</h2>
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					<label for="system.damage.bonus">{{localize "FU.UI.bonus"}}</label>
+					<input name="system.damage.bonus" type="text" value="{{item.system.damage.bonus}}"
+						data-dtype="Number" />
+				</div>
+				<div class="flexrow">
+					<label for="system.damage.type">{{localize "FU.UI.damageType"}}</label>
+					{{> "systems/fabulaultima/templates/item/partials/damage-type-dropdown.hbs"
+					selectName="system.damage.type" current=item.system.damage.type}}
+				</div>
+			</div>
+		</div>
+	</section>
+</form>

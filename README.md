@@ -160,8 +160,9 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Spear feather icon by Delapouite
 -   Spear hook icon by Lorc
 -   Spiked mace icon by Lorc
--   Spkiked shield icon by Delapouite
+-   Spiked shield icon by Delapouite
 -   Spine arrow icon by Lorc
+-   Static waves icon by Lorc
 -   Stiletto icon by Lorc
 -   Stiletto icon by Skoll
 -   Stone axe icon by Lorc

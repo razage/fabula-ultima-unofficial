@@ -125,8 +125,8 @@
             "consumable",
             "arcanum",
             "class",
-            "spells",
-            "skills",
+            "spell",
+            "skill",
             "bond"
         ],
         "templates": {
@@ -156,6 +156,25 @@
             },
             "equippable": {
                 "isEquipped": false
+            },
+            "multiEnabled": {
+                "multi": {
+                    "enabled": false,
+                    "value": 0
+                }
+            },
+            "usesAccuracy": {
+                "accuracy": {
+                    "mainStat": "dexterity",
+                    "secondaryStat": "dexterity",
+                    "bonus": 0
+                }
+            },
+            "dealsDamage": {
+                "damage": {
+                    "bonus": 0,
+                    "type": "physical"
+                }
             }
         },
         "accessory": {
@@ -219,22 +238,31 @@
             "ipCost": 0,
             "quality": "No Quality."
         },
-        "weapon": {
-            "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],
-            "schemaVersion": "1.09",
-            "accuracy": {
-                "mainStat": "dexterity",
-                "secondaryStat": "dexterity",
-                "bonus": 0
-            },
-            "damage": {
-                "bonus": 0,
-                "type": "physical"
-            },
-            "multi": {
+        "spell": {
+            "templates": ["dealsDamage", "usesAccuracy"],
+            "schemaVersion": "1.0",
+            "class": "",
+            "manaCost": 0,
+            "offensiveSpell": false,
+            "target": "self",
+            "duration": "instantaneous",
+            "notes": "",
+            "opportunity": {
                 "enabled": false,
-                "value": 0
-            },
+                "quality": ""
+            }
+        },
+        "weapon": {
+            "templates": [
+                "itemCommon",
+                "armorStats",
+                "martialProficiencies",
+                "equippable",
+                "multiEnabled",
+                "usesAccuracy",
+                "dealsDamage"
+            ],
+            "schemaVersion": "1.10",
             "isDualWielding": false,
             "twoHands": false,
             "range": "melee",

@@ -388,6 +388,7 @@ button.fabula-button.item-create:hover {
 .bond-sheet input[type="text"]:not(:disabled),
 .class-sheet input[type="text"]:not(:disabled),
 .consumable-sheet input[type="text"]:not(:disabled),
+.spell-sheet input[type="text"]:not(:disabled),
 .weapon-sheet input[type="text"]:not(:disabled) {
   color: #f8f8f8;
 }
@@ -397,6 +398,7 @@ button.fabula-button.item-create:hover {
 .bond-sheet img.item-img,
 .class-sheet img.item-img,
 .consumable-sheet img.item-img,
+.spell-sheet img.item-img,
 .weapon-sheet img.item-img {
   border: none;
   width: 100px;
@@ -408,6 +410,7 @@ button.fabula-button.item-create:hover {
 .bond-sheet label.label-pad-left,
 .class-sheet label.label-pad-left,
 .consumable-sheet label.label-pad-left,
+.spell-sheet label.label-pad-left,
 .weapon-sheet label.label-pad-left {
   padding-left: 8px;
 }
