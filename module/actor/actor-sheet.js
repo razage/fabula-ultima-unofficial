@@ -107,11 +107,19 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             ev.preventDefault();
 
             const parent = $(ev.currentTarget).parents(".item");
+            const attackType = ev.currentTarget.dataset.attackType;
             const item = this.actor.items.get(parent.data("itemId"));
             const main = this.actor.system.attributes[item.system.accuracy.mainStat];
             const sec = this.actor.system.attributes[item.system.accuracy.secondaryStat];
 
-            fabulaAttackRoll(this.actor, main, sec, item);
+            switch (attackType) {
+                case "weapon":
+                    fabulaAttackRoll(this.actor, main, sec, item, "weapon");
+                    break;
+                case "spell":
+                    fabulaAttackRoll(this.actor, main, sec, item, "spell");
+                    break;
+            }
         });
 
         // Delete an item
