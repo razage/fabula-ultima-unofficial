@@ -34,6 +34,15 @@
 				{{/if}}
 			</div>
 
+			<div class="flexcol">
+				<span></span>
+				<p{{#if spell.system.multipleTargets}} title="{{localize 'FU.Spells.mpCostTargets'}}" {{/if}}>
+					<i class="fas fa-solid fa-sparkles" title="{{localize 'FU.Spells.mpCost'}}"></i>
+					{{spell.system.manaCost}}{{#if spell.system.multipleTargets}} x T{{/if}}
+					</p>
+					<span></span>
+			</div>
+
 			<div class="grid grid-2col">
 				<div class="flexrow">
 					<div class="flexcol button-holder">

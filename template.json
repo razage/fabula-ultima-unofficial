@@ -240,11 +240,12 @@
         },
         "spell": {
             "templates": ["dealsDamage", "usesAccuracy"],
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.01",
             "class": "",
             "manaCost": 0,
             "offensiveSpell": false,
             "target": "Self",
+            "multipleTargets": false,
             "duration": "instantaneous",
             "notes": "",
             "opportunity": {

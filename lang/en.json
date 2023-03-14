@@ -142,7 +142,10 @@
     "FU.Spells.Durations.name": "Duration",
     "FU.Spells.Durations.scene": "Scene",
     "FU.Spells.mpCost": "MP Cost",
+    "FU.Spells.mpCostTargets": "MP Cost per Target",
+    "FU.Spells.multiEx": "If checked, this spell can hit more than one target.",
     "FU.Spells.offensive": "Offensive Spell",
+    "FU.Spells.opportunity": "Opportunity",
 
     "FU.Status.name": "Status Effects",
     "FU.Status.slow": "Slow",

@@ -88,6 +88,12 @@
   font-size: 1.5rem;
   padding-right: 8px;
 }
+.spell-card {
+  margin-bottom: 4px;
+}
+.spell-card i.fa-sparkles {
+  color: #3FBFBF;
+}
 .weapon-card {
   margin-bottom: 8px;
 }

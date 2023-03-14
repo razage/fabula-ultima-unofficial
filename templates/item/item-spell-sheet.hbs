@@ -17,17 +17,23 @@
 			<div class="grid grid-4col">
 				<div class="flexrow">
 					<label for="system.class">{{localize "FU.Classes.name"}} <i class="fas fa-solid fa-question-circle"
-							title="{{localize 'FU.Spells.classEx'}}"></i></label>
+							title="{{localize 'FU.Spells.classEx'}}"></i>
+					</label>
 					<input name="system.class" type="text" value="{{item.system.class}}" data-dtype="String" />
 					<label class="label-pad-left" for="system.manaCost">{{localize "FU.Spells.mpCost"}}</label>
 					<input name="system.manaCost" type="text" value="{{item.system.manaCost}}" data-dtype="Number" />
 				</div>
-			</div>
-			<div class="grid grid-2col">
 				<div class="flexrow">
 					<label for="system.target">{{localize "FU.UI.target"}}</label>
 					<input name="system.target" type="text" value="{{item.system.target}}" data-dtype="String" />
+					<label class="label-pad-left" for="system.multipleTargets">{{localize "FU.UI.multi"}} <i
+							class="fas fa-solid fa-question-circle" title="{{localize 'FU.Spells.multiEx'}}"></i>
+					</label>
+					<input name="system.multipleTargets" type="checkbox" data-dtype="Boolean" {{#if
+						item.system.multipleTargets}} checked{{/if}} />
 				</div>
+			</div>
+			<div class="grid grid-2col">
 				<div class="flexrow">
 					<label for="system.offensiveSpell">{{localize "FU.Spells.offensive"}}</label>
 					<input name="system.offensiveSpell" type="checkbox" data-dtype="Boolean" {{#if
@@ -46,11 +52,12 @@
 		</div>
 
 		<div class="tab description" data-group="primary" data-tab="description">
+			<h2>{{localize "FU.UI.description"}}</h2>
 			<div class="editor-host">
 				{{editor enrichedNotes target="system.notes" button=true owner=owner
 				editable=editable}}
 			</div>
-			<h3>Opportunity</h3>
+			<h3>{{localize "FU.Spells.opportunity"}}</h3>
 			<div class="editor-host">
 				{{editor enrichedOpportunity target="system.opportunity.quality" button=true owner=owner
 				editable=editable}}
