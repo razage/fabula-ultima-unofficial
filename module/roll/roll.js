@@ -96,11 +96,11 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
                 obj
             );
 
-            flavor = `Casting <b>${data.item.name}</b> (${game.i18n.localize(
-                "FU.Chat.using"
-            )} <b>${game.i18n.localize("FU.Short." + mainStat.name)} + ${game.i18n.localize(
-                "FU.Short." + secondaryStat.name
-            )}</b>)`;
+            flavor = `${game.i18n.localize("FU.Spells.casting")} <b>${
+                data.item.name
+            }</b> (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
+                "FU.Short." + mainStat.name
+            )} + ${game.i18n.localize("FU.Short." + secondaryStat.name)}</b>)`;
             break;
     }
 

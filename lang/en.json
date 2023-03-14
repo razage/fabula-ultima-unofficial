@@ -137,6 +137,7 @@
     "FU.Short.zenit": "z",
 
     "FU.Spells.name": "Spells",
+    "FU.Spells.casting": "Casting",
     "FU.Spells.classEx": "The class associated with this spell.",
     "FU.Spells.Durations.instantaneous": "Instantaneous",
     "FU.Spells.Durations.name": "Duration",
