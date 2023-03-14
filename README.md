@@ -146,6 +146,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Roman shield icon by Delapouite
 -   Round shield icon by Wildabeast
 -   Rune sword icon by Lorc
+-   Saber slash icon by Lorc
 -   Sai icon by Delapouite
 -   Sawed-off shotgun icon by Delapouite
 -   Scythe icon by Lorc
@@ -156,6 +157,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
 -   Skull staff icon by Delapouite
+-   Snowflake 2 icon by Lorc
 -   Sparkling sabre icon by Lorc
 -   Spear feather icon by Delapouite
 -   Spear hook icon by Lorc

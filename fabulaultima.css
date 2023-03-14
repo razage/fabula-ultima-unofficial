@@ -381,6 +381,24 @@ button.fabula-button.item-create:hover {
   border-bottom: 1px solid #f8f8f8;
   padding-top: 8px;
 }
+.accessory-sheet input[type="text"],
+.actor-sheet input[type="text"],
+.armor-sheet input[type="text"],
+.bond-sheet input[type="text"],
+.class-sheet input[type="text"],
+.consumable-sheet input[type="text"],
+.spell-sheet input[type="text"],
+.weapon-sheet input[type="text"],
+.accessory-sheet select,
+.actor-sheet select,
+.armor-sheet select,
+.bond-sheet select,
+.class-sheet select,
+.consumable-sheet select,
+.spell-sheet select,
+.weapon-sheet select {
+  margin-bottom: 8px;
+}
 .accessory-sheet input[type="text"]:not(:disabled),
 .actor-sheet input[type="text"]:not(:disabled),
 .armor-sheet input[type="text"]:not(:disabled),
