@@ -102,13 +102,6 @@
   border-radius: 0;
   margin-bottom: 4px;
 }
-.weapon-card i {
-  color: #f8f8f8;
-  font-size: 1rem;
-}
-.weapon-card i.martial {
-  color: #ff0000;
-}
 .weapon-card .button-holder {
   margin-right: 4px;
 }
@@ -420,6 +413,7 @@ button.fabula-button.item-create:hover {
 .class-card,
 .consumable-card,
 .resource-card,
+.spell-card,
 .weapon-card {
   border: 1px solid #f8f8f8;
   border-radius: 10px;
@@ -430,10 +424,20 @@ button.fabula-button.item-create:hover {
 .class-card img.item-icon,
 .consumable-card img.item-icon,
 .resource-card img.item-icon,
+.spell-card img.item-icon,
 .weapon-card img.item-icon {
   width: 30px;
   height: 30px;
   border: none;
+}
+.weapon-card i,
+.spell-card i {
+  color: #f8f8f8;
+  font-size: 1rem;
+}
+.weapon-card i.martial,
+.spell-card i.martial {
+  color: #ff0000;
 }
 .accessory-card,
 .armor-card,

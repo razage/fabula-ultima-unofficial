@@ -1,0 +1,53 @@
+<div class="spell-card">
+	<div class="grid grid-3col">
+		<div class="flexrow">
+			<div class="flexcol spell-card-header">
+				<img class="profile-img" src="{{spell.img}}" />
+			</div>
+
+			<div class="flexcol">
+				<p class="item-name">
+					{{spell.name}} {{#if spell.system.offensiveSpell}}<i class="fas fa-solid fa-bolt martial"
+						title="{{localize 'FU.Proficiencies.melee'}}"></i>{{/if}}
+				</p>
+				{{#if spell.system.offensiveSpell}}
+				<span>
+					{{#if_eq spell.system.accuracy.bonus 0}}
+					{{localize "FU.UI.accuracy"}}: <b>[{{localize (concat "FU.Short."
+						spell.system.accuracy.mainStat)}}+{{localize (concat "FU.Short."
+						spell.system.accuracy.secondaryStat)}}]</b>
+					{{else}}
+					{{localize "FU.UI.accuracy"}}: <b>[{{localize (concat "FU.Short."
+						spell.system.accuracy.mainStat)}}+{{localize (concat "FU.Short."
+						spell.system.accuracy.secondaryStat)}}]+{{spell.system.accuracy.bonus}}</b>
+					{{/if_eq}}
+				</span>
+				<p>
+					{{#if_eq spell.system.damage.bonus 0}}
+					{{localize "FU.UI.damage"}}: <b>[{{localize
+						"FU.Short.highRoll"}}]</b>
+					{{else}}
+					{{localize "FU.UI.damage"}}: <b>[{{localize
+						"FU.Short.highRoll"}}+{{spell.system.damage.bonus}}]</b>
+					{{/if_eq}}
+				</p>
+				{{/if}}
+			</div>
+
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					<div class="flexcol button-holder">
+						{{#if spell.system.offensiveSpell}}
+						<button class="item-roll fabula-button"><i class="fas fa-solid fa-dice"></i> {{localize
+							"FU.UI.attack"}}</button>
+						{{/if}}
+						<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
+							"FU.UI.edit"}}</button>
+						<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash"></i> {{localize
+							"FU.UI.delete"}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -251,7 +251,7 @@
                     title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h3>
             <div class="flexcol accessories">
-                <div class="itemlist">
+                <div class="item-list">
                     <div class="grid grid-4col">
                         {{#each actor.system.accessories as |item|}}
                         <div class="flexrow accessory-card item" data-item-id="{{item._id}}">
@@ -282,7 +282,15 @@
 
         {{!-- Spells --}}
         <div class="tab spells" data-group="primary" data-tab="spells">
-            <p>Spells go here</p>
+            <div class="flexcol spells">
+                <div class="item-list">
+                    {{#each actor.system.spells as |item|}}
+                    <div class="item" data-item-id="{{item._id}}">
+                        {{> "systems/fabulaultima/templates/actor/partials/spell-card.hbs" spell=item}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
         </div>
 
         {{!-- Bio --}}

@@ -30,10 +30,12 @@ export class FabulaUltimaItemSheet extends ItemSheet {
 
         data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, { async: true });
 
-        data.enrichedOpportunity = await TextEditor.enrichHTML(
-            this.object.system.opportunity.quality,
-            { async: true }
-        );
+        if (this.object.system.hasOwnProperty("opportunity")) {
+            data.enrichedOpportunity = await TextEditor.enrichHTML(
+                this.object.system.opportunity.quality,
+                { async: true }
+            );
+        }
 
         return data;
     }

@@ -244,7 +244,7 @@
             "class": "",
             "manaCost": 0,
             "offensiveSpell": false,
-            "target": "self",
+            "target": "Self",
             "duration": "instantaneous",
             "notes": "",
             "opportunity": {

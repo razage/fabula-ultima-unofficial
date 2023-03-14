@@ -42,6 +42,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 case "accessory":
                     accessories.push(item);
                     break;
+
                 case "armor": {
                     armor.push(item);
                     break;
@@ -59,6 +60,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
                 case "consumable": {
                     consumables.push(item);
+                    break;
+                }
+
+                case "spell": {
+                    spells.push(item);
                     break;
                 }
 
