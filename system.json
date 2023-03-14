@@ -5,7 +5,7 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "compatibility": {
         "minimum": "10",
         "verified": "10.291"
@@ -21,6 +21,15 @@
         }
     ],
     "packs": [
+        {
+            "name": "accessories",
+            "label": "Accessories",
+            "system": "fabulaultima",
+            "path": "packs/accessories.db",
+            "private": false,
+            "type": "Item",
+            "flags": {}
+        },
         {
             "name": "armor",
             "label": "Armor",
@@ -44,6 +53,15 @@
             "label": "Consumables",
             "system": "fabulaultima",
             "path": "packs/consumables.db",
+            "private": false,
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "name": "spells",
+            "label": "Spells",
+            "system": "fabulaultima",
+            "path": "packs/spells.db",
             "private": false,
             "type": "Item",
             "flags": {}
