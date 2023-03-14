@@ -97,8 +97,9 @@
 
     "FU.Quality.name": "Quality",
 
-    "FU.Resistances.immune": "Immune",
     "FU.Resistances.name": "Resistances",
+    "FU.Resistances.absorb": "Absorb",
+    "FU.Resistances.immune": "Immune",
     "FU.Resistances.neutral": "Neutral",
     "FU.Resistances.resistant": "Resistant",
     "FU.Resistances.vulnerable": "Vulnerable",
