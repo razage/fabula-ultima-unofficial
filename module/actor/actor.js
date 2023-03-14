@@ -20,6 +20,8 @@ export class FabulaUltimaActor extends Actor {
         system.hp.bonus = 0;
         system.mp.bonus = 0;
         system.ip.bonus = 0;
+        system.bonuses.accuracy.physical = 0;
+        system.bonuses.accuracy.magic = 0;
         system.defenses.physical.bonus = 0;
         system.defenses.magic.bonus = 0;
 
@@ -32,6 +34,34 @@ export class FabulaUltimaActor extends Actor {
         let _tempLevel = 0;
 
         actorData.items.forEach((element) => {
+            if (element.type === "accessory") {
+                if (element.system.isEquipped) {
+                    system.hp.bonus += element.system.hpBonus;
+                    system.mp.bonus += element.system.mpBonus;
+                    system.defenses.physical.bonus += element.system.defense.value;
+                    system.defenses.magic.bonus += element.system.mDefense.value;
+                    system.initiativeMod += element.system.initiative;
+                    system.bonuses.accuracy.physical += element.system.accuracyBonus.physical;
+                    system.bonuses.accuracy.magic += element.system.accuracyBonus.magic;
+                }
+            }
+            if (element.type === "armor") {
+                if (element.system.isEquipped) {
+                    system.defenses.physical.bonus += element.system.defense.value;
+                    system.defenses.magic.bonus += element.system.mDefense.value;
+                    system.initiativeMod += element.system.initiative;
+
+                    // If the armor uses a static value for the defense, subtract the attribute from the total
+                    if (!element.system.defense.useDex) {
+                        system.defenses.physical.bonus -= system.attributes.dexterity.current;
+                    }
+
+                    if (!element.system.mDefense.useIns) {
+                        system.defenses.magic.bonus -= system.attributes.insight.current;
+                    }
+                }
+            }
+
             if (element.type === "bond") {
                 let emotions = [
                     element.system.emotionOne,
@@ -102,5 +132,37 @@ export class FabulaUltimaActor extends Actor {
         }
 
         return super.create(data, options);
+    }
+
+    async addDefaultItems() {
+        try {
+            let consumable = {};
+            let brawlingWeapons = {};
+            consumable.pack = await game.packs.get("fabulaultima.consumables");
+            consumable.index = await consumable.pack.getIndex();
+            brawlingWeapons.pack = await game.packs.get("fabulaultima.weapons-brawling");
+            brawlingWeapons.index = await brawlingWeapons.pack.getIndex();
+            let toAdd = [];
+
+            // Add every item from the consumables compendium
+            for (let idx of consumable.index) {
+                let _temp = await consumable.pack.getDocument(idx._id);
+                toAdd.push(_temp);
+            }
+
+            // Add the unarmed strike "weapon"
+            for (let idx of brawlingWeapons.index) {
+                let _temp = await brawlingWeapons.pack.getDocument(idx._id);
+
+                if (_temp.name === "Unarmed Strike") {
+                    toAdd.push(_temp);
+                }
+            }
+
+            await this.createEmbeddedDocuments("Item", toAdd);
+        } catch (ex) {
+            console.log("Error adding default items to Actor.");
+            console.log(ex);
+        }
     }
 }

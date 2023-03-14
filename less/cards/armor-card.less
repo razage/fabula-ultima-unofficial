@@ -1,0 +1,23 @@
+.armor-card,
+.accessory-card {
+	&:hover {
+		background: lighten(@main-fallback, 10%);
+		background: @highlight-gradient;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	i.martial {
+		color: @martial;
+	}
+
+	input.equipped {
+		margin: 0 auto;
+	}
+
+	.item-controls {
+		text-align: center;
+	}
+}

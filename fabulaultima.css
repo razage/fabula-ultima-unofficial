@@ -1,6 +1,25 @@
+.armor-card:hover,
+.accessory-card:hover {
+  background: #292aca;
+  background: linear-gradient(180deg, #292aca 0%, #020993 100%);
+}
+.armor-card p,
+.accessory-card p {
+  text-align: center;
+}
+.armor-card i.martial,
+.accessory-card i.martial {
+  color: #ff0000;
+}
+.armor-card input.equipped,
+.accessory-card input.equipped {
+  margin: 0 auto;
+}
+.armor-card .item-controls,
+.accessory-card .item-controls {
+  text-align: center;
+}
 .bond-card {
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
   margin-bottom: 8px;
 }
 .bond-card p.bond-name {
@@ -17,10 +36,6 @@
 .bond-card p.bond-strength {
   text-align: center;
 }
-.class-card {
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
-}
 .class-card img.class-image {
   width: 60px;
   height: 60px;
@@ -32,8 +47,6 @@
 }
 .resource-card {
   margin: 8px 0;
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
   font-size: 1rem;
 }
 .resource-card .hp,
@@ -59,25 +72,23 @@
 .resource-card .crisis input[type="text"],
 .resource-card .hp p,
 .resource-card .crisis p {
-  color: #fa9090;
+  color: #BF3F3F;
 }
 .resource-card .mp label,
 .resource-card .mp input,
 .resource-card .mp p {
-  color: #90befa;
+  color: #3FBFBF;
 }
 .resource-card .ip label,
 .resource-card .ip input,
 .resource-card .ip p {
-  color: #90fa90;
+  color: #3FBF3F;
 }
 .resource-card i {
   font-size: 1.5rem;
   padding-right: 8px;
 }
 .weapon-card {
-  border: 1px solid #f8f8f8;
-  border-radius: 10px;
   margin-bottom: 8px;
 }
 .weapon-card .weapon-card-header {
@@ -123,6 +134,16 @@ img.damage-type {
 }
 h4.dice-total .multi {
   font-size: 0.85rem;
+}
+.character-sheet i.open-compendium {
+  color: #5b29cf;
+  color: linear-gradient(180deg, #5b29cf 0%, #350286 100%);
+}
+.character-sheet i.open-compendium:hover {
+  cursor: pointer;
+  font-size: 1.15rem;
+  color: #5225ba;
+  color: linear-gradient(180deg, #5225ba 0%, #2b026d 100%);
 }
 .character-sheet img.profile-img {
   width: 64px;
@@ -188,10 +209,14 @@ h4.dice-total .multi {
 .character-sheet .backpack input[name="system.zenit"],
 .character-sheet .backpack .currency {
   color: #ffff00;
+  margin: 4px 0;
 }
 .character-sheet .backpack p.item-name {
   font-weight: bold;
   font-size: 1rem;
+}
+.character-sheet .backpack .armor .item-header {
+  text-align: center;
 }
 .character-sheet .bio input[type="text"]:not(:disabled) {
   color: #f8f8f8;
@@ -203,21 +228,16 @@ h4.dice-total .multi {
   width: 30%;
   margin: 0 auto 10px auto;
 }
-.class-sheet input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
-}
 .weapon-sheet > .flexrow {
   padding: 2px;
-}
-.weapon-sheet label.label-pad-left {
-  padding-left: 8px;
-}
-.weapon-sheet input[type="text"]:not(:disabled) {
-  color: #f8f8f8;
 }
 .dialog section.window-content {
   background: #2021a0;
   background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
+}
+.dialog section.window-content .dialog-content p,
+.dialog section.window-content .dialog-content h4 {
+  color: #f8f8f8;
 }
 .dialog section.window-content .dialog-content form .form-group label {
   color: #f8f8f8;
@@ -246,6 +266,14 @@ h4.dice-total .multi {
   background: #010661;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
   border: 1px solid #929292;
+}
+.sheet-body .editor-host .editor {
+  min-height: 50px;
+  height: 100%;
+  flex: auto;
+}
+.sheet-body .editor-host .editor .tox .tox-edit-area__iframe {
+  background: #f8f8f8;
 }
 button.fabula-button {
   background: #010661;
@@ -279,17 +307,6 @@ button.fabula-button.item-create {
 button.fabula-button.item-create:hover {
   background: #258b1c;
   background: linear-gradient(180deg, #258b1c 0%, #014801 100%);
-}
-button.fabula-button.open-compendium {
-  background: #5b29cf;
-  background: linear-gradient(180deg, #5b29cf 0%, #350286 100%);
-  border-radius: 10px;
-  width: 30px;
-  height: 30px;
-}
-button.fabula-button.open-compendium:hover {
-  background: #5225ba;
-  background: linear-gradient(180deg, #5225ba 0%, #2b026d 100%);
 }
 .fabulaultima.sheet section.window-content {
   margin: 0;
@@ -365,11 +382,67 @@ button.fabula-button.open-compendium:hover {
   border-bottom: 1px solid #f8f8f8;
   padding-top: 8px;
 }
-.sheet-body .editor-host .editor {
-  min-height: 50px;
-  height: 100%;
-  flex: auto;
+.accessory-sheet input[type="text"]:not(:disabled),
+.actor-sheet input[type="text"]:not(:disabled),
+.armor-sheet input[type="text"]:not(:disabled),
+.bond-sheet input[type="text"]:not(:disabled),
+.class-sheet input[type="text"]:not(:disabled),
+.consumable-sheet input[type="text"]:not(:disabled),
+.weapon-sheet input[type="text"]:not(:disabled) {
+  color: #f8f8f8;
 }
-.sheet-body .editor-host .editor .tox .tox-edit-area__iframe {
-  background: #f8f8f8;
+.accessory-sheet img.item-img,
+.actor-sheet img.item-img,
+.armor-sheet img.item-img,
+.bond-sheet img.item-img,
+.class-sheet img.item-img,
+.consumable-sheet img.item-img,
+.weapon-sheet img.item-img {
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+.accessory-sheet label.label-pad-left,
+.actor-sheet label.label-pad-left,
+.armor-sheet label.label-pad-left,
+.bond-sheet label.label-pad-left,
+.class-sheet label.label-pad-left,
+.consumable-sheet label.label-pad-left,
+.weapon-sheet label.label-pad-left {
+  padding-left: 8px;
+}
+.accessory-card,
+.armor-card,
+.bond-card,
+.class-card,
+.consumable-card,
+.resource-card,
+.weapon-card {
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+}
+.accessory-card img.item-icon,
+.armor-card img.item-icon,
+.bond-card img.item-icon,
+.class-card img.item-icon,
+.consumable-card img.item-icon,
+.resource-card img.item-icon,
+.weapon-card img.item-icon {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.accessory-card,
+.armor-card,
+.consumable-card {
+  border: none !important;
+}
+.accessory-card i.item-edit:hover,
+.armor-card i.item-edit:hover,
+.consumable-card i.item-edit:hover,
+.accessory-card i.item-delete:hover,
+.armor-card i.item-delete:hover,
+.consumable-card i.item-delete:hover {
+  cursor: pointer;
+  font-size: 1.15rem;
 }

@@ -38,7 +38,7 @@
                         <input name="system.experiencePoints" type="text" data-dtype="Number"
                             value="{{actor.system.experiencePoints}}" />
                     </span>
-                    <span class="initiative"><i class="fas fa-solid fa-person-running"></i>{{localize
+                    <span class="initiative"><i class="fas fa-solid fa-person-running"></i> {{localize
                         "FU.Attributes.initiative"}}:
                         {{actor.system.initiativeMod}}</span>
                 </div>
@@ -65,9 +65,9 @@
         <div class="tab rolls" data-group="primary" data-tab="rolls">
             <div class="grid grid-4col">
                 <div class="flexrow">
-                    <label for="attributeOne">Main Stat</label>
-                    <label for="attributeTwo">Secondary Stat</label>
-                    <label for="skill-bonus">Bonus</label>
+                    <label for="attributeOne">{{localize "FU.Attributes.main"}}</label>
+                    <label for="attributeTwo">{{localize "FU.Attributes.secondary"}}</label>
+                    <label for="skill-bonus">{{localize "FU.UI.bonus"}}</label>
                     <span></span>
                 </div>
                 <div class="flexrow skill-roll-container">
@@ -193,8 +193,8 @@
         <div class="tab classes" data-group="primary" data-tab="classes">
             <h2>
                 {{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}
-                <button class="fabula-button open-compendium" title="Open Compendium" data-compendium="classes"><i
-                        class="fas fa-solid fa-book"></i></button>
+                <i class="fas fa-solid fa-book open-compendium" data-compendium="classes"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol item-list">
                 {{#each actor.system.classes as |item|}}
@@ -208,10 +208,15 @@
 
         {{!-- Equipment --}}
         <div class="tab backpack" data-group="primary" data-tab="backpack">
+            <span class="currency">
+                <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:
+                <input type="text" name="system.zenit" data-dtype="Number" value="{{actor.system.zenit}}" />
+            </span>
+            {{!-- Weapons --}}
             <h2>
-                Weapons
-                <button class="fabula-button open-compendium" title="Open Compendium" data-compendium="weapons"><i
-                        class="fas fa-solid fa-book"></i></button>
+                {{localize "FU.Items.Types.weapon"}}
+                <i class="fas fa-solid fa-book open-compendium" data-compendium="weapons"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol">
                 <div class="item-list">
@@ -222,12 +227,57 @@
                     {{/each}}
                 </div>
             </div>
-            <h2>Armor</h2>
-            <h2>Gear</h2>
-            <span class="currency">
-                <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:
-                <input type="text" name="system.zenit" data-dtype="Number" value="{{actor.system.zenit}}" />
-            </span>
+            {{!-- Armor --}}
+            <h2>
+                {{localize "FU.Items.Types.armor"}}
+                <i class="fas fa-solid fa-book open-compendium" data-compendium="armor"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h2>
+            <div class="flexcol armor">
+                <div class="item-list">
+                    <div class="grid grid-6col">
+                        {{#each actor.system.armor as |item|}}
+                        <div class="flexrow armor-card item" data-item-id="{{item._id}}">
+                            {{> "systems/fabulaultima/templates/actor/partials/armor-card.hbs" armor=item}}
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{!-- Accessories --}}
+            <h3>
+                {{localize "FU.Plural.accessory"}}
+                <i class="fas fa-solid fa-book open-compendium" data-compendium="accessory"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h3>
+            <div class="flexcol accessories">
+                <div class="itemlist">
+                    <div class="grid grid-4col">
+                        {{#each actor.system.accessories as |item|}}
+                        <div class="flexrow accessory-card item" data-item-id="{{item._id}}">
+                            {{> "systems/fabulaultima/templates/actor/partials/accessory-card.hbs" acc=item}}
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{!-- Items --}}
+            <h2>
+                {{localize "FU.Items.name"}} <i class="fas fa-solid fa-book open-compendium"
+                    data-compendium="consumables" title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h2>
+            <div class="flexcol">
+                <div class="grid grid-4col">
+                    {{#each actor.system.consumables as |item|}}
+                    <div class="flexrow consumable-card" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" class="item-icon">
+                        <p>{{item.name}}</p>
+                        <p>{{item.system.ipCost}} IP</p>
+                        <p>{{localize (concat "FU.Items.Blurbs." item.system.internalName)}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
         </div>
 
         {{!-- Spells --}}

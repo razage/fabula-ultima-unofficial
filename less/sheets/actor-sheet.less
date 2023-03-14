@@ -1,4 +1,18 @@
 .character-sheet {
+    i.open-compendium {
+        color: @purple-fallback;
+        color: @purple-gradient;
+
+        &:hover {
+            cursor: pointer;
+            font-size: 1.15rem;
+            color: darken(@purple-fallback, 5%);
+            color: linear-gradient(180deg,
+                    darken(@purple-fallback, 5%) 0%,
+                    darken(@purple-accent, 5%) 100%);
+        }
+    }
+
     img.profile-img {
         width: 64px;
         border: none;
@@ -83,11 +97,18 @@
         input[name="system.zenit"],
         .currency {
             color: #ffff00;
+            margin: 4px 0;
         }
 
         p.item-name {
             font-weight: bold;
             font-size: 1rem;
+        }
+
+        .armor {
+            .item-header {
+                text-align: center;
+            }
         }
     }
 

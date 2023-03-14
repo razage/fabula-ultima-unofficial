@@ -1,11 +1,11 @@
 @import "globals";
+@import "cards/armor-card";
 @import "cards/bond-card";
 @import "cards/class-card";
 @import "cards/resource-card";
 @import "cards/weapon-card";
 @import "chat";
 @import "sheets/actor-sheet";
-@import "sheets/class-sheet";
 @import "sheets/weapon-sheet";
 @import "ui";
 
@@ -43,28 +43,9 @@ button.fabula-button {
 
         &:hover {
             background: darken(@green-fallback, 5%);
-            background: linear-gradient(
-                180deg,
-                darken(@green-fallback, 5%) 0%,
-                darken(@green-accent, 5%) 100%
-            );
-        }
-    }
-
-    &.open-compendium {
-        background: @purple-fallback;
-        background: @purple-gradient;
-        border-radius: 10px;
-        width: 30px;
-        height: 30px;
-
-        &:hover {
-            background: darken(@purple-fallback, 5%);
-            background: linear-gradient(
-                180deg,
-                darken(@purple-fallback, 5%) 0%,
-                darken(@purple-accent, 5%) 100%
-            );
+            background: linear-gradient(180deg,
+                    darken(@green-fallback, 5%) 0%,
+                    darken(@green-accent, 5%) 100%);
         }
     }
 }
@@ -149,18 +130,58 @@ button.fabula-button {
     }
 }
 
-.sheet-body {
-    .editor-host {
-        .editor {
-            min-height: 50px;
-            height: 100%;
-            flex: auto;
+// Common styling for sheets
+.accessory-sheet,
+.actor-sheet,
+.armor-sheet,
+.bond-sheet,
+.class-sheet,
+.consumable-sheet,
+.weapon-sheet {
+    input[type="text"]:not(:disabled) {
+        color: @font-color;
+    }
 
-            // If this isn't done, the blue background makes the black text in the editor
-            // impossible to read. Changing the font color here seems to have no effect.
-            .tox .tox-edit-area__iframe {
-                background: @font-color;
-            }
+    img.item-img {
+        border: none;
+        width: 100px;
+        height: 100px;
+    }
+
+    label.label-pad-left {
+        padding-left: 8px;
+    }
+}
+
+// Common styling for cards
+.accessory-card,
+.armor-card,
+.bond-card,
+.class-card,
+.consumable-card,
+.resource-card,
+.weapon-card {
+    border: 1px solid @font-color;
+    border-radius: 10px;
+
+    img.item-icon {
+        width: 30px;
+        height: 30px;
+        border: none;
+    }
+}
+
+// Changes to a select group of cards
+.accessory-card,
+.armor-card,
+.consumable-card {
+    border: none !important;
+
+    i.item-edit,
+    i.item-delete {
+        &:hover {
+            cursor: pointer;
+            font-size: 1.15rem;
         }
     }
 }

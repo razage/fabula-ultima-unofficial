@@ -45,6 +45,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Battle axe icon by Lorc
 -   Bayonet icon by Skoll
 -   Beast eye icon by Lorc
+-   Belt icon by Lucas
+-   Black belt icon by Delapouite
 -   Black book icon by Wildabeast
 -   Bone knife icon by Delapouite
 -   Bone mace icon by Delapouite
@@ -53,13 +55,16 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Bordered shield icon by Lorc
 -   Bow arrow icon by Delapouite
 -   Bowie knife icon by Lorc
+-   Breastplate icon by Lorc
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc
 -   Butterfly knife icon by Delapouite
 -   C96 icon by Skoll
 -   Caduceus icon by Delapouite
+-   Camping tent icon by Delapouite
 -   Cat icon by Lorc
+-   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
 -   Cloak and Dagger icon by Lorc
 -   Colt M1911 icon by Skoll
@@ -79,6 +84,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Dripping Knife icon by Lorc
 -   Edged Shield icon by Lorc
 -   Electric whip icon by Lorc
+-   Erlenmeyer icon by Lorc
 -   Evil book icon by Lorc
 -   Evil hand icon by Lorc
 -   Evil moon icon by Lorc
@@ -101,12 +107,15 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Hand bandage icon by Delapouite
 -   Hand of god icon by Delapouite
 -   Hatchet icon by Delapouite
+-   Health potion icon by Delapouite
+-   Heart armor icon by Delapouite
 -   Ice bolt icon by Lorc
 -   Ice spear icon by Lorc
 -   Katana icon by Delapouite
 -   Knife thrust icon by Lorc
 -   Kusarigama icon by DarkZaitzev
 -   Layered armor icon by Lorc
+-   Leather armor icon by Delapouite
 -   Lightning branches icon by Lorc
 -   Log icon by Delapouite
 -   Lunar wand icon by Delapouite
@@ -114,6 +123,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Magic shield icon by Lorc
 -   Mailed fist icon by Lorc
 -   Meat cleaver icon by Lorc
+-   Minerals icon by Faithtoken
 -   Musket icon by Skoll
 -   Nunchaku icon by Delapouite
 -   Panzerfaust icon by Delapouite
@@ -121,14 +131,17 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Pentacle icon by Skoll
 -   Pistol gun by John Colburn
 -   Plain dagger icon by Lorc
+-   Plastron icon by Lorc
 -   Poison bottle icon by Lorc
 -   Pope crown icon by Delepouite
+-   Potion ball icon by Lorc
 -   Public speaker icon by Delapouite
 -   Punch blast icon by Lorc
 -   Rake icon by Delapouite
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite
+-   Robe icon by Lorc
 -   Rock icon by Lorc
 -   Roman shield icon by Delapouite
 -   Round shield icon by Wildabeast
@@ -139,6 +152,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shard sword icon by Lorc
 -   Sharp axe icon by Delapouite
 -   Sharp haldberd icon by Delapouite
+-   Shirt icon by Lucas
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
 -   Skull staff icon by Delapouite

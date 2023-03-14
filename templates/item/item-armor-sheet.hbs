@@ -1,0 +1,74 @@
+<form class="{{cssClass}} armor-sheet" autocomplete="off">
+	<header class="sheet-header">
+		<img class="item-img" src="{{item.img}}" data-edit="img" />
+		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-file-lines"></i> {{localize "FU.UI.general"}}</a>
+		<a class="item" data-tab="defense"><i class="fas fa-solid fa-shield"></i> {{localize
+			"FU.Attributes.defense"}}</a>
+		<a class="item" data-tab="quality"><i class="fas fas-solid fa-sparkles"></i> {{localize "FU.Quality.name"}}</a>
+	</nav>
+
+	<section class="sheet-body">
+		<div class="tab info" data-group="primary" data-tab="info">
+			<div class="flexcol">
+				<h2>{{localize "FU.UI.properties"}}</h2>
+				<div class="flexrow">
+					<label for="system.cost">{{localize "FU.Items.cost"}}</label>
+					<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
+				</div>
+			</div>
+			<h3>{{localize "FU.Proficiencies.name"}}</h3>
+			<div class="grid grid-2col">
+				{{#each item.system.isMartial as |value prof|}}
+				<div class="flexrow">
+					<label for="system.martial.{{prof}}">{{localize (concat "FU.Proficiencies." prof)}}</label>
+					<input type="checkbox" name="system.isMartial.{{prof}}" data-dtype="Boolean" {{#if value}}
+						checked{{/if}} />
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="tab defense" data-group="primary" data-tab="defense">
+			<div class="flexcol">
+				<div class="grid grid-4col">
+					<div class="flexrow">
+						<label for="system.defense">{{localize "FU.Attributes.defense"}}</label>
+						<input type="text" name="system.defense.value" value="{{item.system.defense.value}}"
+							data-dtype="Number" />
+						<label for="system.defense.useDex" class="label-pad-left">{{localize "FU.UI.addDex"}}</label>
+						<input type="checkbox" name="system.defense.useDex" data-dtype="Boolean" {{#if
+							item.system.defense.useDex}} checked{{/if}} />
+					</div>
+					<div class="flexrow">
+						<label for="system.mDefense">{{localize
+							"FU.Attributes.magicDefense"}}</label>
+						<input type="text" name="system.mDefense.value" value="{{item.system.mDefense.value}}"
+							data-dtype="Number" />
+						<label for="system.mDefense.useIns" class="label-pad-left">{{localize "FU.UI.addIns"}}</label>
+						<input type="checkbox" name="system.mDefense.useIns" data-dtype="Boolean" {{#if
+							item.system.mDefense.useIns}} checked{{/if}} />
+					</div>
+				</div>
+				<div class="grid grid-2col">
+					<div class="flexrow">
+						<label for="system.initiative">{{localize "FU.Attributes.initiative"}}</label>
+						<input type="text" name="system.initiative" value="{{item.system.initiative}}"
+							data-dtype="Number" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab quality" data-group="primary" data-tab="quality">
+			<div class="editor-host">
+				{{editor enrichedQuality target="system.quality" button=true owner=owner
+				editable=editable}}
+			</div>
+		</div>
+
+	</section>
+</form>

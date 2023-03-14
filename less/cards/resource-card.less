@@ -1,7 +1,5 @@
 .resource-card {
     margin: 8px 0;
-    border: 1px solid @font-color;
-    border-radius: 10px;
     font-size: 1rem;
 
     .hp,
@@ -22,26 +20,29 @@
 
     .hp,
     .crisis {
+
         label,
         input[type="text"],
         p {
-            color: #fa9090;
+            color: @health;
         }
     }
 
     .mp {
+
         label,
         input,
         p {
-            color: #90befa;
+            color: @mana;
         }
     }
 
     .ip {
+
         label,
         input,
         p {
-            color: #90fa90;
+            color: #3FBF3F;
         }
     }
 

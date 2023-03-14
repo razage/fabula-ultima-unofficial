@@ -57,7 +57,7 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.15",
+            "schemaVersion": "1.17",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -83,6 +83,16 @@
             "fabulaPoints": 3,
             "experiencePoints": 0,
             "initiativeMod": 0,
+            "bonuses": {
+                "accuracy": {
+                    "physical": 0,
+                    "magic": 0
+                },
+                "damage": {
+                    "physical": 0,
+                    "magic": 0
+                }
+            },
             "defenses": {
                 "physical": {
                     "base": 6,
@@ -99,6 +109,7 @@
             "accessories": [],
             "armor": [],
             "classes": [],
+            "consumables": [],
             "weapons": [],
             "spells": [],
             "heroicSkills": [],
@@ -148,8 +159,14 @@
             }
         },
         "accessory": {
-            "templates": ["itemCommon"],
-            "schemaVersion": "1.02"
+            "templates": ["itemCommon", "armorStats", "isEquipped"],
+            "schemaVersion": "1.05",
+            "hpBonus": 0,
+            "mpBonus": 0,
+            "accuracyBonus": {
+                "physical": 0,
+                "magic": 0
+            }
         },
         "arcanum": {
             "schemaVersion": "1.0",
@@ -195,6 +212,12 @@
                 }
             },
             "skills": []
+        },
+        "consumable": {
+            "schemaVersion": "1.01",
+            "internalName": "",
+            "ipCost": 0,
+            "quality": "No Quality."
         },
         "weapon": {
             "templates": ["itemCommon", "armorStats", "martialProficiencies", "equippable"],

@@ -1,0 +1,30 @@
+<form class="{{cssClass}} consumable-sheet" autocomplete="off">
+	<header class="sheet-header">
+		<img class="item-img" src="{{item.img}}" data-edit="img" />
+		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
+	</header>
+
+	<section class="sheet-body">
+		<div class="grid grid-2col">
+			<div class="flexrow">
+				<label for="system.ipCost">{{localize "FU.Items.ipCost"}}</label>
+				<input name="system.ipCost" type="text" value="{{item.system.ipCost}}" data-dtype="Number" />
+			</div>
+			<div class="flexrow">
+				<label for="system.internalName">{{localize "FU.Items.internalName"}} <i
+						class="fas fa-solid fa-question-circle"
+						title="{{localize 'FU.Items.internalNameEx'}}"></i></label>
+				<input name="system.internalName" type="text" value="{{item.system.internalName}}"
+					data-dtype="String" />
+			</div>
+		</div>
+		<br />
+		<h3>{{localize "FU.Quality.name"}}</h3>
+		<div class="flexrow">
+			<div class="editor-host">
+				{{editor enrichedQuality target="system.quality" button=true owner=owner
+				editable=editable}}
+			</div>
+		</div>
+	</section>
+</form>

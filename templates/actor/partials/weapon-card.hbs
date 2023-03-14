@@ -33,12 +33,24 @@
 						title="{{localize 'FU.Proficiencies.shield'}}"></i>{{/if}}
 				</p>
 				<span>
+					{{#if_eq weapon.system.accuracy.bonus 0}}
+					{{localize "FU.UI.accuracy"}}: <b>[{{localize (concat "FU.Short."
+						weapon.system.accuracy.mainStat)}}+{{localize (concat "FU.Short."
+						weapon.system.accuracy.secondaryStat)}}]</b>
+					{{else}}
 					{{localize "FU.UI.accuracy"}}: <b>[{{localize (concat "FU.Short."
 						weapon.system.accuracy.mainStat)}}+{{localize (concat "FU.Short."
 						weapon.system.accuracy.secondaryStat)}}]+{{weapon.system.accuracy.bonus}}</b>
+					{{/if_eq}}
 				</span>
-				<p>{{localize "FU.UI.damage"}}: <b>[{{localize
+				<p>
+					{{#if_eq weapon.system.damage.bonus 0}}
+					{{localize "FU.UI.damage"}}: <b>[{{localize
+						"FU.Short.highRoll"}}]</b>
+					{{else}}
+					{{localize "FU.UI.damage"}}: <b>[{{localize
 						"FU.Short.highRoll"}}+{{weapon.system.damage.bonus}}]</b>
+					{{/if_eq}}
 				</p>
 			</div>
 

@@ -1,0 +1,86 @@
+<form class="{{cssClass}} accessory-sheet" autocomplete="off">
+	<header class="sheet-header">
+		<img class="item-img" src="{{item.img}}" data-edit="img" />
+		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-file-lines"></i> {{localize "FU.UI.general"}}</a>
+		<a class="item" data-tab="attributes"><i class="fas fa-solid fa-gift"></i> {{localize "FU.UI.bonusStats"}}</a>
+		<a class="item" data-tab="defense"><i class="fas fa-solid fa-shield"></i> {{localize
+			"FU.Attributes.defense"}}</a>
+	</nav>
+
+	<section class="sheet-body">
+		<div class="tab info" data-group="primary" data-tab="info">
+			<div class="flexcol">
+				<div class="flexrow">
+					<label for="system.cost">{{localize "FU.Items.cost"}}</label>
+					<input type="text" name="system.cost" value={{item.system.cost}} data-dtype="Number" />
+				</div>
+				<h3>{{localize "FU.Quality.name"}}</h3>
+				<div class="flexrow">
+					<div class="editor-host">
+						{{editor enrichedQuality target="system.quality" button=true owner=owner
+						editable=editable}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab attributes" data-group="primary" data-tab="attributes">
+			<div class="flexcol">
+				<div class="flexrow">
+					<label for="system.hpBonus">{{localize "FU.Short.hitPoints"}}</label>
+					<input name="system.hpBonus" type="text" value="{{item.system.hpBonus}}" data-dtype="Number" />
+				</div>
+				<div class="flexrow">
+					<label for="system.mpBonus">{{localize "FU.Short.mindPoints"}}</label>
+					<input name="system.mpBonus" type="text" value="{{item.system.mpBonus}}" data-dtype="Number" />
+				</div>
+				<h3>{{localize "FU.UI.checkBonuses"}}</h3>
+				<div class="flexrow">
+					<label for="system.accuracyBonus.physical">{{localize "FU.UI.accuracy"}}</label>
+					<input name="system.accuracyBonus.physical" type="text"
+						value="{{item.system.accuracyBonus.physical}}" data-dtype="Number" />
+				</div>
+				<div class="flexrow">
+					<label for="system.accuracyBonus.magic">{{localize "FU.UI.magic"}}</label>
+					<input name="system.accuracyBonus.magic" type="text" value="{{item.system.accuracyBonus.magic}}"
+						data-dtype="Number" />
+				</div>
+			</div>
+		</div>
+
+		<div class="tab defense" data-group="primary" data-tab="defense">
+			<div class="flexcol">
+				<div class="grid grid-4col">
+					<div class="flexrow">
+						<label for="system.defense">{{localize "FU.Attributes.defense"}}</label>
+						<input type="text" name="system.defense.value" value="{{item.system.defense.value}}"
+							data-dtype="Number" />
+						<label for="system.defense.useDex" class="label-pad-left">{{localize "FU.UI.addDex"}}</label>
+						<input type="checkbox" name="system.defense.useDex" data-dtype="Boolean" {{#if
+							item.system.defense.useDex}} checked{{/if}} />
+					</div>
+					<div class="flexrow">
+						<label for="system.mDefense">{{localize
+							"FU.Attributes.magicDefense"}}</label>
+						<input type="text" name="system.mDefense.value" value="{{item.system.mDefense.value}}"
+							data-dtype="Number" />
+						<label for="system.mDefense.useIns" class="label-pad-left">{{localize "FU.UI.addIns"}}</label>
+						<input type="checkbox" name="system.mDefense.useIns" data-dtype="Boolean" {{#if
+							item.system.mDefense.useIns}} checked{{/if}} />
+					</div>
+				</div>
+				<div class="grid grid-2col">
+					<div class="flexrow">
+						<label for="system.initiative">{{localize "FU.Attributes.initiative"}}</label>
+						<input type="text" name="system.initiative" value="{{item.system.initiative}}"
+							data-dtype="Number" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>

@@ -33,11 +33,20 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const armor = [];
         const bonds = [];
         const classes = [];
+        const consumables = [];
         const spells = [];
         const weapons = [];
 
         sheetData.items.forEach((item) => {
             switch (item.type) {
+                case "accessory":
+                    accessories.push(item);
+                    break;
+                case "armor": {
+                    armor.push(item);
+                    break;
+                }
+
                 case "bond": {
                     bonds.push(item);
                     break;
@@ -45,6 +54,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
                 case "class": {
                     classes.push(item);
+                    break;
+                }
+
+                case "consumable": {
+                    consumables.push(item);
                     break;
                 }
 
@@ -64,6 +78,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.armor = armor;
         actorData.system.bonds = bonds;
         actorData.system.classes = classes;
+        actorData.system.consumables = consumables;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
     }
@@ -120,9 +135,17 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             let dialog;
 
             switch (dataset.compendium) {
+                case "armor":
+                    game.packs.find((k) => k.collection === "fabulaultima.armor").render(true);
+                    break;
                 case "classes":
                     game.packs
                         .find((k) => k.collection === "fabulaultima.character-classes")
+                        .render(true);
+                    break;
+                case "consumables":
+                    game.packs
+                        .find((k) => k.collection === "fabulaultima.consumables")
                         .render(true);
                     break;
                 case "weapons":
@@ -182,6 +205,15 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                                 callback: () =>
                                     game.packs
                                         .find((k) => k.collection === "fabulaultima.weapons-heavy")
+                                        .render(true),
+                            },
+                            shields: {
+                                label: game.i18n.localize("FU.Weapons.Categories.shield"),
+                                callback: () =>
+                                    game.packs
+                                        .find(
+                                            (k) => k.collection === "fabulaultima.weapons-shields"
+                                        )
                                         .render(true),
                             },
                             spears: {

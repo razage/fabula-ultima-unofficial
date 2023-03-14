@@ -9,5 +9,7 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/fabulaultima/templates/actor/partials/weapon-card.hbs",
         "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs",
         "systems/fabulaultima/templates/actor/partials/bond-card.hbs",
+        "systems/fabulaultima/templates/actor/partials/armor-card.hbs",
+        "systems/fabulaultima/templates/actor/partials/accessory-card.hbs",
     ]);
 };
