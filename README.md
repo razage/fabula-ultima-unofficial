@@ -56,6 +56,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Bow arrow icon by Delapouite
 -   Bowie knife icon by Lorc
 -   Breastplate icon by Lorc
+-   Bright explosion icon by Lorc
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc

@@ -1,0 +1,43 @@
+<form class="{{cssClass}} skill-sheet" autocomplete="off">
+	<header class="sheet-header">
+		<img class="item-img" src="{{item.img}}" data-edit="img" />
+		<h1><input type="text" name="name" value="{{item.name}}" data-dtype="String" /></h1>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-file-lines"></i> {{localize "FU.UI.general"}}</a>
+		<a class="item" data-tab="description"><i class="fas fa-solid fa-book-bookmark"></i> {{localize
+			"FU.UI.description"}}</a>
+	</nav>
+
+	<section class="sheet-body">
+		<div class="tab info" data-group="primary" data-tab="info">
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					<label for="system.class">Class</label>
+					<input name="system.class" type="text" value="{{item.system.class}}" data-dtype="String" />
+				</div>
+				<div class="flexrow">
+					<label for="system.hasLevels">Has Skill Levels</label>
+					<input name="system.hasLevels" type="checkbox" data-dtype="Boolean" {{#if item.system.hasLevels }}
+						checked{{/if}} />
+				</div>
+			</div>
+			<h3>Skill Levels</h3>
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					<label for="system.skillLevel.max">Max Level</label>
+					<input name="system.skillLevel.max" type="text" value="{{item.system.skillLevel.max}}"
+						data-dtype="Number" {{#unless item.system.hasLevels}}disabled{{/unless}} />
+				</div>
+			</div>
+		</div>
+
+		<div class="tab description" data-group="primary" data-tab="description">
+			<div class="editor-host">
+				{{editor enrichedNotes target="system.notes" button=true owner=owner
+				editable=editable}}
+			</div>
+		</div>
+	</section>
+</form>
