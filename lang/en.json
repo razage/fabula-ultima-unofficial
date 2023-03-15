@@ -139,6 +139,8 @@
 
     "FU.Skills.name": "Skill",
     "FU.Skills.hasLevels": "Has Skill Levels",
+    "FU.Skills.heroic": "Heroic Skill",
+    "FU.Skills.heroicEx": "Heroic Skills are gained when you reach level 10 with a class.",
     "FU.Skills.level": "Skill Level",
     "FU.Skills.levelMax": "Max Skill Level",
 

@@ -243,13 +243,14 @@
         },
         "skill": {
             "templates": ["hasClass"],
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.01",
             "notes": "",
             "hasLevels": false,
             "skillLevel": {
                 "value": 0,
                 "max": 0
-            }
+            },
+            "isHeroic": false
         },
         "spell": {
             "templates": ["dealsDamage", "usesAccuracy", "hasClass"],

@@ -18,6 +18,13 @@
 					<input name="system.class" type="text" value="{{item.system.class}}" data-dtype="String" />
 				</div>
 				<div class="flexrow">
+					<label for="system.isHeroic">{{localize "FU.Skills.heroic"}} <i
+							class="fas fa-solid fa-question-circle"
+							title="{{localize 'FU.Skills.heroicEx'}}"></i></label>
+					<input name="system.isHeroic" type="checkbox" data-dtype="Boolean" {{#if item.system.isHeroic }}
+						checked{{/if}} />
+				</div>
+				<div class="flexrow">
 					<label for="system.hasLevels">{{localize "FU.Skills.hasLevels"}}</label>
 					<input name="system.hasLevels" type="checkbox" data-dtype="Boolean" {{#if item.system.hasLevels }}
 						checked{{/if}} />
