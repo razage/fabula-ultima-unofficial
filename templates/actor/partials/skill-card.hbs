@@ -1,0 +1,27 @@
+<div class="skill-card">
+	<div class="grid grid-3col">
+		<div class="flexrow">
+			<div class="flexcol spell-card-header">
+				<img class="profile-img" src="{{skill.img}}" />
+			</div>
+
+			<div class="flexcol">
+				<p class="item-name">{{skill.name}}</p>
+				{{#if skill.system.hasLevels}}
+				<span>
+					<i class="fas fa-solid fa-star-of-life"></i>&nbsp;
+					{{skill.system.skillLevel.value}} /
+					{{skill.system.skillLevel.max}}
+				</span>
+				{{/if}}
+			</div>
+
+			<div class="flexcol button-holder">
+				<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
+					"FU.UI.edit"}}</button>
+				<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash"></i> {{localize
+					"FU.UI.delete"}}</button>
+			</div>
+		</div>
+	</div>
+</div>

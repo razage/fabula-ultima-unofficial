@@ -54,6 +54,7 @@
             {{localize "FU.Classes.plural"}}</a>
         <a class="item" data-tab="backpack"><i class="fas fa-solid fa-backpack"></i>
             {{localize "FU.Navigation.tabGear"}}</a>
+        <a class="item" data-tab="skills"><i class="fas fa-solid fa-paintbrush"></i> {{localize "FU.Plural.skill"}}</a>
         <a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i>
             {{localize "FU.Spells.name"}}</a>
         <a class="item" data-tab="bio"><i class="fas fa-solid fa-message"></i>
@@ -193,7 +194,7 @@
         <div class="tab classes" data-group="primary" data-tab="classes">
             <h2>
                 {{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}
-                <i class="fas fa-solid fa-book open-compendium" data-compendium="classes"
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="classes"
                     title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol item-list">
@@ -215,7 +216,7 @@
             {{!-- Weapons --}}
             <h2>
                 {{localize "FU.Items.Types.weapon"}}
-                <i class="fas fa-solid fa-book open-compendium" data-compendium="weapons"
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="weapons"
                     title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol">
@@ -230,7 +231,7 @@
             {{!-- Armor --}}
             <h2>
                 {{localize "FU.Items.Types.armor"}}
-                <i class="fas fa-solid fa-book open-compendium" data-compendium="armor"
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="armor"
                     title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol armor">
@@ -247,11 +248,11 @@
             {{!-- Accessories --}}
             <h3>
                 {{localize "FU.Plural.accessory"}}
-                <i class="fas fa-solid fa-book open-compendium" data-compendium="accessory"
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="accessory"
                     title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h3>
             <div class="flexcol accessories">
-                <div class="itemlist">
+                <div class="item-list">
                     <div class="grid grid-4col">
                         {{#each actor.system.accessories as |item|}}
                         <div class="flexrow accessory-card item" data-item-id="{{item._id}}">
@@ -263,7 +264,7 @@
             </div>
             {{!-- Items --}}
             <h2>
-                {{localize "FU.Items.name"}} <i class="fas fa-solid fa-book open-compendium"
+                {{localize "FU.Items.name"}} <i class="fas fa-solid fa-book-atlas open-compendium"
                     data-compendium="consumables" title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol">
@@ -280,9 +281,29 @@
             </div>
         </div>
 
+        <div class="tab skills" data-group="primary" data-tab="skills">
+            <div class="flexcol skills">
+                <div class="item-list">
+                    {{#each actor.system.skills as |item|}}
+                    <div class="item" data-item-id="{{item._id}}">
+                        {{> "systems/fabulaultima/templates/actor/partials/skill-card.hbs" skill=item}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
         {{!-- Spells --}}
         <div class="tab spells" data-group="primary" data-tab="spells">
-            <p>Spells go here</p>
+            <div class="flexcol spells">
+                <div class="item-list">
+                    {{#each actor.system.spells as |item|}}
+                    <div class="item" data-item-id="{{item._id}}">
+                        {{> "systems/fabulaultima/templates/actor/partials/spell-card.hbs" spell=item}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
         </div>
 
         {{!-- Bio --}}

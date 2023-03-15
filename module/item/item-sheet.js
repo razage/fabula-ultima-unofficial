@@ -30,6 +30,13 @@ export class FabulaUltimaItemSheet extends ItemSheet {
 
         data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, { async: true });
 
+        if (this.object.system.hasOwnProperty("opportunity")) {
+            data.enrichedOpportunity = await TextEditor.enrichHTML(
+                this.object.system.opportunity.quality,
+                { async: true }
+            );
+        }
+
         return data;
     }
 
@@ -37,9 +44,5 @@ export class FabulaUltimaItemSheet extends ItemSheet {
         super.activateListeners(html);
 
         if (!this.options.editable) return;
-
-        html.find(".multi-enabled").click((ev) => {
-            $("#multiValue").prop("disabled", (i, v) => !v);
-        });
     }
 }

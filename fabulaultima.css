@@ -88,6 +88,9 @@
   font-size: 1.5rem;
   padding-right: 8px;
 }
+.spell-card i.fa-sparkles {
+  color: #3FBFBF;
+}
 .weapon-card {
   margin-bottom: 8px;
 }
@@ -101,13 +104,6 @@
   border: 0;
   border-radius: 0;
   margin-bottom: 4px;
-}
-.weapon-card i {
-  color: #f8f8f8;
-  font-size: 1rem;
-}
-.weapon-card i.martial {
-  color: #ff0000;
 }
 .weapon-card .button-holder {
   margin-right: 4px;
@@ -382,12 +378,34 @@ button.fabula-button.item-create:hover {
   border-bottom: 1px solid #f8f8f8;
   padding-top: 8px;
 }
+.accessory-sheet input[type="text"],
+.actor-sheet input[type="text"],
+.armor-sheet input[type="text"],
+.bond-sheet input[type="text"],
+.class-sheet input[type="text"],
+.consumable-sheet input[type="text"],
+.skill-sheet input[type="text"],
+.spell-sheet input[type="text"],
+.weapon-sheet input[type="text"],
+.accessory-sheet select,
+.actor-sheet select,
+.armor-sheet select,
+.bond-sheet select,
+.class-sheet select,
+.consumable-sheet select,
+.skill-sheet select,
+.spell-sheet select,
+.weapon-sheet select {
+  margin-bottom: 8px;
+}
 .accessory-sheet input[type="text"]:not(:disabled),
 .actor-sheet input[type="text"]:not(:disabled),
 .armor-sheet input[type="text"]:not(:disabled),
 .bond-sheet input[type="text"]:not(:disabled),
 .class-sheet input[type="text"]:not(:disabled),
 .consumable-sheet input[type="text"]:not(:disabled),
+.skill-sheet input[type="text"]:not(:disabled),
+.spell-sheet input[type="text"]:not(:disabled),
 .weapon-sheet input[type="text"]:not(:disabled) {
   color: #f8f8f8;
 }
@@ -397,6 +415,8 @@ button.fabula-button.item-create:hover {
 .bond-sheet img.item-img,
 .class-sheet img.item-img,
 .consumable-sheet img.item-img,
+.skill-sheet img.item-img,
+.spell-sheet img.item-img,
 .weapon-sheet img.item-img {
   border: none;
   width: 100px;
@@ -408,6 +428,8 @@ button.fabula-button.item-create:hover {
 .bond-sheet label.label-pad-left,
 .class-sheet label.label-pad-left,
 .consumable-sheet label.label-pad-left,
+.skill-sheet label.label-pad-left,
+.spell-sheet label.label-pad-left,
 .weapon-sheet label.label-pad-left {
   padding-left: 8px;
 }
@@ -417,6 +439,8 @@ button.fabula-button.item-create:hover {
 .class-card,
 .consumable-card,
 .resource-card,
+.skill-card,
+.spell-card,
 .weapon-card {
   border: 1px solid #f8f8f8;
   border-radius: 10px;
@@ -427,10 +451,28 @@ button.fabula-button.item-create:hover {
 .class-card img.item-icon,
 .consumable-card img.item-icon,
 .resource-card img.item-icon,
+.skill-card img.item-icon,
+.spell-card img.item-icon,
 .weapon-card img.item-icon {
   width: 30px;
   height: 30px;
   border: none;
+}
+.skill-card input {
+  color: #f8f8f8;
+}
+.skill-card,
+.spell-card {
+  margin-bottom: 4px;
+}
+.weapon-card i,
+.spell-card i {
+  color: #f8f8f8;
+  font-size: 1rem;
+}
+.weapon-card i.martial,
+.spell-card i.martial {
+  color: #ff0000;
 }
 .accessory-card,
 .armor-card,

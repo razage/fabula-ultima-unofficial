@@ -56,6 +56,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Bow arrow icon by Delapouite
 -   Bowie knife icon by Lorc
 -   Breastplate icon by Lorc
+-   Bright explosion icon by Lorc
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc
@@ -146,6 +147,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Roman shield icon by Delapouite
 -   Round shield icon by Wildabeast
 -   Rune sword icon by Lorc
+-   Saber slash icon by Lorc
 -   Sai icon by Delapouite
 -   Sawed-off shotgun icon by Delapouite
 -   Scythe icon by Lorc
@@ -156,12 +158,14 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
 -   Skull staff icon by Delapouite
+-   Snowflake 2 icon by Lorc
 -   Sparkling sabre icon by Lorc
 -   Spear feather icon by Delapouite
 -   Spear hook icon by Lorc
 -   Spiked mace icon by Lorc
--   Spkiked shield icon by Delapouite
+-   Spiked shield icon by Delapouite
 -   Spine arrow icon by Lorc
+-   Static waves icon by Lorc
 -   Stiletto icon by Lorc
 -   Stiletto icon by Skoll
 -   Stone axe icon by Lorc

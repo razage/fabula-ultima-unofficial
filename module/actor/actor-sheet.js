@@ -34,6 +34,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const bonds = [];
         const classes = [];
         const consumables = [];
+        const skills = [];
         const spells = [];
         const weapons = [];
 
@@ -42,6 +43,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 case "accessory":
                     accessories.push(item);
                     break;
+
                 case "armor": {
                     armor.push(item);
                     break;
@@ -62,6 +64,16 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
                 }
 
+                case "skill": {
+                    skills.push(item);
+                    break;
+                }
+
+                case "spell": {
+                    spells.push(item);
+                    break;
+                }
+
                 case "weapon": {
                     weapons.push(item);
                     break;
@@ -79,6 +91,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.bonds = bonds;
         actorData.system.classes = classes;
         actorData.system.consumables = consumables;
+        actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
     }
@@ -101,11 +114,19 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             ev.preventDefault();
 
             const parent = $(ev.currentTarget).parents(".item");
+            const attackType = ev.currentTarget.dataset.attackType;
             const item = this.actor.items.get(parent.data("itemId"));
             const main = this.actor.system.attributes[item.system.accuracy.mainStat];
             const sec = this.actor.system.attributes[item.system.accuracy.secondaryStat];
 
-            fabulaAttackRoll(this.actor, main, sec, item);
+            switch (attackType) {
+                case "weapon":
+                    fabulaAttackRoll(this.actor, main, sec, item, "weapon");
+                    break;
+                case "spell":
+                    fabulaAttackRoll(this.actor, main, sec, item, "spell");
+                    break;
+            }
         });
 
         // Delete an item
@@ -135,6 +156,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             let dialog;
 
             switch (dataset.compendium) {
+                case "accessory": {
+                    game.packs
+                        .find((k) => k.collection === "fabulaultima.accessories")
+                        .render(true);
+                    break;
+                }
                 case "armor":
                     game.packs.find((k) => k.collection === "fabulaultima.armor").render(true);
                     break;
@@ -148,6 +175,14 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                         .find((k) => k.collection === "fabulaultima.consumables")
                         .render(true);
                     break;
+                case "skill": {
+                    game.packs.find((k) => k.collection === "fabulaultima.skills").render(true);
+                    break;
+                }
+                case "spell": {
+                    game.packs.find((k) => k.collection === "fabulaultima.spells").render(true);
+                    break;
+                }
                 case "weapons":
                     dialog = new Dialog({
                         title: game.i18n.localize("FU.UI.selectCompendium"),

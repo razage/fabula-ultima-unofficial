@@ -3,6 +3,7 @@
 @import "cards/bond-card";
 @import "cards/class-card";
 @import "cards/resource-card";
+@import "cards/spell-card";
 @import "cards/weapon-card";
 @import "chat";
 @import "sheets/actor-sheet";
@@ -137,7 +138,15 @@ button.fabula-button {
 .bond-sheet,
 .class-sheet,
 .consumable-sheet,
+.skill-sheet,
+.spell-sheet,
 .weapon-sheet {
+
+    input[type="text"],
+    select {
+        margin-bottom: 8px;
+    }
+
     input[type="text"]:not(:disabled) {
         color: @font-color;
     }
@@ -160,6 +169,8 @@ button.fabula-button {
 .class-card,
 .consumable-card,
 .resource-card,
+.skill-card,
+.spell-card,
 .weapon-card {
     border: 1px solid @font-color;
     border-radius: 10px;
@@ -172,6 +183,29 @@ button.fabula-button {
 }
 
 // Changes to a select group of cards
+.skill-card {
+    input {
+        color: @font-color;
+    }
+}
+
+.skill-card,
+.spell-card {
+    margin-bottom: 4px;
+}
+
+.weapon-card,
+.spell-card {
+    i {
+        color: @font-color;
+        font-size: 1rem;
+
+        &.martial {
+            color: @martial;
+        }
+    }
+}
+
 .accessory-card,
 .armor-card,
 .consumable-card {

@@ -1,13 +1,20 @@
-export async function fabulaAttackRoll(actor, mainStat, secondaryStat, item) {
+export async function fabulaAttackRoll(actor, mainStat, secondaryStat, item, attackType) {
     let data = await _fabulaRollCommon(actor, mainStat, secondaryStat, item.system.accuracy.bonus);
     data.item = item;
 
-    // Dual wielding sets the HR to 0
-    if (item.system.isDualWielding) {
-        data.highRoll = 0;
-    }
+    switch (attackType) {
+        case "weapon":
+            // Dual wielding sets the HR to 0
+            if (item.system.isDualWielding) {
+                data.highRoll = 0;
+            }
 
-    await sendRollToChat(actor, mainStat, secondaryStat, "attack", data);
+            await sendRollToChat(actor, mainStat, secondaryStat, "attack", data);
+            break;
+        case "spell":
+            await sendRollToChat(actor, mainStat, secondaryStat, "spell", data);
+            break;
+    }
 }
 
 export async function fabulaSkillRoll(actor, mainStat, secondaryStat, bonus = 0) {
@@ -70,6 +77,31 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
                 "FU.Short." + secondaryStat.name
             )}</b>)`;
             break;
+        case "spell":
+            obj.roll = data.rollObj;
+            obj.crit = data.isCrit;
+            obj.fumble = data.isFumble;
+            obj.mainStat = mainStat;
+            obj.secondaryStat = secondaryStat;
+            obj.damage = {
+                bonus: data.item.system.damage.bonus,
+                type: data.item.system.damage.type,
+            };
+            obj.highRoll = data.highRoll;
+            obj.itemName = data.item.name;
+            obj.damage.total = obj.highRoll + obj.damage.bonus;
+
+            result = await renderTemplate(
+                "systems/fabulaultima/templates/rolls/attack-roll.hbs",
+                obj
+            );
+
+            flavor = `${game.i18n.localize("FU.Spells.casting")} <b>${
+                data.item.name
+            }</b> (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
+                "FU.Short." + mainStat.name
+            )} + ${game.i18n.localize("FU.Short." + secondaryStat.name)}</b>)`;
+            break;
     }
 
     let messageData = {
@@ -111,12 +143,12 @@ async function _fabulaRollCommon(actor, mainStat, secondaryStat, bonus = 0) {
     return data;
 }
 
-export function isRollFumble(rollResults) {
+function isRollFumble(rollResults) {
     if (rollResults[0] === 1 && rollResults[1] === 1) return true;
     else return false;
 }
 
-export function isRollCrit(rollResults) {
+function isRollCrit(rollResults) {
     // If the numbers match and they're both 6 or above
     if (rollResults[0] === rollResults[1] && rollResults[0] >= 6 && rollResults[1] >= 6)
         return true;
