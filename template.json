@@ -175,6 +175,9 @@
                     "bonus": 0,
                     "type": "physical"
                 }
+            },
+            "hasClass": {
+                "class": ""
             }
         },
         "accessory": {
@@ -238,10 +241,19 @@
             "ipCost": 0,
             "quality": "No Quality."
         },
+        "skill": {
+            "templates": ["hasClass"],
+            "schemaVersion": "1.0",
+            "notes": "",
+            "hasLevels": false,
+            "skillLevel": {
+                "value": 0,
+                "max": 0
+            }
+        },
         "spell": {
-            "templates": ["dealsDamage", "usesAccuracy"],
-            "schemaVersion": "1.01",
-            "class": "",
+            "templates": ["dealsDamage", "usesAccuracy", "hasClass"],
+            "schemaVersion": "1.02",
             "manaCost": 0,
             "offensiveSpell": false,
             "target": "Self",
