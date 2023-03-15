@@ -88,6 +88,7 @@
     "FU.Navigation.tabGear": "Gear",
 
     "FU.Plural.accessory": "Accessories",
+    "FU.Plural.skill": "Skills",
 
     "FU.Proficiencies.name": "Equipment Proficiencies",
     "FU.Proficiencies.armor": "Martial Armors",
@@ -135,6 +136,11 @@
     "FU.Short.skillLevel": "SL",
     "FU.Short.willpower": "WLP",
     "FU.Short.zenit": "z",
+
+    "FU.Skills.name": "Skill",
+    "FU.Skills.hasLevels": "Has Skill Levels",
+    "FU.Skills.level": "Skill Level",
+    "FU.Skills.levelMax": "Max Skill Level",
 
     "FU.Spells.name": "Spells",
     "FU.Spells.casting": "Casting",
