@@ -57,12 +57,11 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.17",
+            "schemaVersion": "1.18",
             "pronouns": "",
             "identity": "",
             "theme": "",
             "origin": "",
-            "bonds": [],
             "isLeader": false,
             "hp": {
                 "value": 35,
@@ -108,12 +107,13 @@
             "characterLevel": 0,
             "accessories": [],
             "armor": [],
+            "bonds": [],
             "classes": [],
             "consumables": [],
-            "weapons": [],
-            "spells": [],
-            "heroicSkills": [],
             "rituals": [],
+            "skills": [],
+            "spells": [],
+            "weapons": [],
             "zenit": 500
         }
     },

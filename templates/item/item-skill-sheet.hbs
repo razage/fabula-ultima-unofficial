@@ -26,6 +26,11 @@
 			<h3>{{localize "FU.Skills.level"}}</h3>
 			<div class="grid grid-2col">
 				<div class="flexrow">
+					<label for="system.skillLevel.value">{{localize "FU.Skills.level"}}</label>
+					<input name="system.skillLevel.value" type="text" value="{{item.system.skillLevel.value}}"
+						data-dtype="Number" {{#unless item.system.hasLevels}}disabled{{/unless}} />
+				</div>
+				<div class="flexrow">
 					<label for="system.skillLevel.max">{{localize "FU.Skills.levelMax"}}</label>
 					<input name="system.skillLevel.max" type="text" value="{{item.system.skillLevel.max}}"
 						data-dtype="Number" {{#unless item.system.hasLevels}}disabled{{/unless}} />

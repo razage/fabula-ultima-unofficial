@@ -88,9 +88,6 @@
   font-size: 1.5rem;
   padding-right: 8px;
 }
-.spell-card {
-  margin-bottom: 4px;
-}
 .spell-card i.fa-sparkles {
   color: #3FBFBF;
 }
@@ -442,6 +439,7 @@ button.fabula-button.item-create:hover {
 .class-card,
 .consumable-card,
 .resource-card,
+.skill-card,
 .spell-card,
 .weapon-card {
   border: 1px solid #f8f8f8;
@@ -453,11 +451,19 @@ button.fabula-button.item-create:hover {
 .class-card img.item-icon,
 .consumable-card img.item-icon,
 .resource-card img.item-icon,
+.skill-card img.item-icon,
 .spell-card img.item-icon,
 .weapon-card img.item-icon {
   width: 30px;
   height: 30px;
   border: none;
+}
+.skill-card input {
+  color: #f8f8f8;
+}
+.skill-card,
+.spell-card {
+  margin-bottom: 4px;
 }
 .weapon-card i,
 .spell-card i {

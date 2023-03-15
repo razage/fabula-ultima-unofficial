@@ -44,9 +44,5 @@ export class FabulaUltimaItemSheet extends ItemSheet {
         super.activateListeners(html);
 
         if (!this.options.editable) return;
-
-        html.find(".multi-enabled").click((ev) => {
-            $("#multiValue").prop("disabled", (i, v) => !v);
-        });
     }
 }

@@ -54,6 +54,7 @@
             {{localize "FU.Classes.plural"}}</a>
         <a class="item" data-tab="backpack"><i class="fas fa-solid fa-backpack"></i>
             {{localize "FU.Navigation.tabGear"}}</a>
+        <a class="item" data-tab="skills"><i class="fas fa-solid fa-paintbrush"></i> {{localize "FU.Plural.skill"}}</a>
         <a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i>
             {{localize "FU.Spells.name"}}</a>
         <a class="item" data-tab="bio"><i class="fas fa-solid fa-message"></i>
@@ -274,6 +275,18 @@
                         <p>{{item.name}}</p>
                         <p>{{item.system.ipCost}} IP</p>
                         <p>{{localize (concat "FU.Items.Blurbs." item.system.internalName)}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="tab skills" data-group="primary" data-tab="skills">
+            <div class="flexcol skills">
+                <div class="item-list">
+                    {{#each actor.system.skills as |item|}}
+                    <div class="item" data-item-id="{{item._id}}">
+                        {{> "systems/fabulaultima/templates/actor/partials/skill-card.hbs" skill=item}}
                     </div>
                     {{/each}}
                 </div>

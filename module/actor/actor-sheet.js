@@ -34,6 +34,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const bonds = [];
         const classes = [];
         const consumables = [];
+        const skills = [];
         const spells = [];
         const weapons = [];
 
@@ -63,6 +64,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
                 }
 
+                case "skill": {
+                    skills.push(item);
+                    break;
+                }
+
                 case "spell": {
                     spells.push(item);
                     break;
@@ -85,6 +91,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.bonds = bonds;
         actorData.system.classes = classes;
         actorData.system.consumables = consumables;
+        actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
     }
@@ -149,6 +156,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             let dialog;
 
             switch (dataset.compendium) {
+                case "accessory": {
+                    game.packs
+                        .find((k) => k.collection === "fabulaultima.accessories")
+                        .render(true);
+                    break;
+                }
                 case "armor":
                     game.packs.find((k) => k.collection === "fabulaultima.armor").render(true);
                     break;
@@ -162,6 +175,14 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                         .find((k) => k.collection === "fabulaultima.consumables")
                         .render(true);
                     break;
+                case "skill": {
+                    game.packs.find((k) => k.collection === "fabulaultima.skills").render(true);
+                    break;
+                }
+                case "spell": {
+                    game.packs.find((k) => k.collection === "fabulaultima.spells").render(true);
+                    break;
+                }
                 case "weapons":
                     dialog = new Dialog({
                         title: game.i18n.localize("FU.UI.selectCompendium"),
