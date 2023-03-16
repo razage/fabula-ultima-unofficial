@@ -9,7 +9,7 @@
 }
 .armor-card i.martial,
 .accessory-card i.martial {
-  color: #ff0000;
+  color: #c40101;
 }
 .armor-card input.equipped,
 .accessory-card input.equipped {
@@ -170,6 +170,24 @@ h4.dice-total .multi {
 .character-sheet .defenses p.mdefense,
 .character-sheet .resistances p.mdefense {
   text-align: center;
+}
+.character-sheet .conditions {
+  padding-top: 8px;
+}
+.character-sheet .conditions img.condition-icon {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  height: 45px;
+  opacity: 0.5;
+}
+.character-sheet .conditions img.condition-icon.active {
+  opacity: 1;
+}
+.character-sheet .conditions img.condition-icon:hover {
+  cursor: pointer;
+  height: 48px;
+  opacity: 0.55;
 }
 .character-sheet .rolls label {
   text-align: center;
@@ -472,7 +490,7 @@ button.fabula-button.item-create:hover {
 }
 .weapon-card i.martial,
 .spell-card i.martial {
-  color: #ff0000;
+  color: #c40101;
 }
 .accessory-card,
 .armor-card,

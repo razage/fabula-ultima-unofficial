@@ -43,6 +43,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Armor punch icon by Delapouite
 -   Arrowhead icon by Lorc
 -   Auto repair icon by Lorc
+-   Back pain icon by Lorc
 -   Barbed Spear icon by Lorc
 -   Battered Axe icon by Lorc
 -   Battle axe icon by Lorc
@@ -88,6 +89,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Dripping Knife icon by Lorc
 -   Edged Shield icon by Lorc
 -   Electric whip icon by Lorc
+-   Enrage icon by Delapouite
 -   Erlenmeyer icon by Lorc
 -   Evil book icon by Lorc
 -   Evil hand icon by Lorc
@@ -117,6 +119,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Ice spear icon by Lorc
 -   Katana icon by Delapouite
 -   Knife thrust icon by Lorc
+-   Knocked out stars icon by Delapouite
 -   Kusarigama icon by DarkZaitzev
 -   Layered armor icon by Lorc
 -   Leather armor icon by Delapouite
@@ -174,10 +177,12 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Stone axe icon by Lorc
 -   Stone spear icon by Lorc
 -   Sun icon by Lorc
+-   Terror icon by Lorc
 -   Thor fist icon by Lorc
 -   Thor hammer icon by Delapouite
 -   Tomahawk icon by Delapouite
 -   Tornado icon by Lorc
+-   Tortoise icon by Delapouite
 -   Trident icon by Lorc
 -   Trident shield icon by Delapouite
 -   Two handed sword icon by Delapouite
