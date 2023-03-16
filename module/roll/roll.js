@@ -53,11 +53,16 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
                 obj
             );
 
-            flavor = `${game.i18n.localize("FU.Chat.attackingWith")} <b>${
-                data.item.name
-            }</b> (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
+            flavor = `${game.i18n.localize("FU.Chat.attackingWith")} <b>${data.item.name}</b>`;
+
+            if (data.item.system.isDualWielding) {
+                flavor += " x 2";
+            }
+
+            flavor += ` (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
                 "FU.Short." + mainStat.name
             )} + ${game.i18n.localize("FU.Short." + secondaryStat.name)}</b>)`;
+
             break;
         case "skill":
             obj.roll = data.rollObj;
