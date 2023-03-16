@@ -321,7 +321,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         return this.actor.createEmbeddedDocuments("Item", [itemData]);
     }
 
-    _onItemEquippedStatusChange(event) {
+    async _onItemEquippedStatusChange(event) {
         event.preventDefault();
         const element = event.currentTarget;
         const dataset = element.dataset;

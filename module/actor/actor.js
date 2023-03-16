@@ -16,15 +16,6 @@ export class FabulaUltimaActor extends Actor {
     _preparePlayerData(actorData) {
         const { system } = actorData;
 
-        //Reset bonuses in case an item was removed
-        system.hp.bonus = 0;
-        system.mp.bonus = 0;
-        system.ip.bonus = 0;
-        system.bonuses.accuracy.physical = 0;
-        system.bonuses.accuracy.magic = 0;
-        system.defenses.physical.bonus = 0;
-        system.defenses.magic.bonus = 0;
-
         //Calculate statistics
         for (let [key, statistic] of Object.entries(system.attributes)) {
             statistic.current = clamp(statistic.base + statistic.bonus, 6, 12);

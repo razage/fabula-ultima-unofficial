@@ -8,9 +8,12 @@ This system is unaffiliated with the creators or the publisher. Details about th
 
 This project is in active development and may change significantly at any time. As of now, you can:
 
--   Create a character with _most_ of their data available in a bad layout.
+-   Create a character with _most_ of their data available.
 -   Create and equip weapons and roll their associated accuracy check.
+-   Create and cast spells, including the damage and accuracy rolls associated.
 -   Create and equip classes that modify HP/MP/IP and store a level that the player can edit.
+-   Create and equip skills. These don't modify your stats, but they track the skill's level if applicable.
+-   Make generic rolls using the roll tab.
 
 ## Installation
 

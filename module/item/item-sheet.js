@@ -24,12 +24,14 @@ export class FabulaUltimaItemSheet extends ItemSheet {
     async getData() {
         const data = super.getData();
 
+        // Get ActiveEffects
+        data.effects = data.item.getEmbeddedCollection("ActiveEffect").contents;
+
+        // Enriched Text from editors
         data.enrichedQuality = await TextEditor.enrichHTML(this.object.system.quality, {
             async: true,
         });
-
         data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, { async: true });
-
         if (this.object.system.hasOwnProperty("opportunity")) {
             data.enrichedOpportunity = await TextEditor.enrichHTML(
                 this.object.system.opportunity.quality,
@@ -37,6 +39,7 @@ export class FabulaUltimaItemSheet extends ItemSheet {
             );
         }
 
+        console.log(data);
         return data;
     }
 
@@ -44,5 +47,35 @@ export class FabulaUltimaItemSheet extends ItemSheet {
         super.activateListeners(html);
 
         if (!this.options.editable) return;
+        // html.find(".effect-control").click(this._onEffectControl.bind(this));
     }
+
+    // _onEffectControl(event) {
+    //     event.preventDefault();
+    //     const owner = this.item;
+    //     const a = event.currentTarget;
+    //     const li = a.closest("li");
+    //     const effect = li?.dataset.effectId ? owner.effects.get(li.dataset.effectId) : null;
+
+    //     switch (a.dataset.action) {
+    //         case "create":
+    //             if (this.item.isEmbedded) {
+    //                 return ui.notifications.error(
+    //                     "Managing embedded Documents which are not direct descendants of a primary Document is un-supported at this time."
+    //                 );
+    //             }
+    //             return owner.createEmbeddedDocuments("ActiveEffect", [
+    //                 {
+    //                     label: "New Effect",
+    //                     icon: "icons/svg/aura.svg",
+    //                     origin: owner.uuid,
+    //                     disabled: true,
+    //                 },
+    //             ]);
+    //         case "edit":
+    //             return effect.sheet.render(true);
+    //         case "delete":
+    //             return effect.delete();
+    //     }
+    // }
 }
