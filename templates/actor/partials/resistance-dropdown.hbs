@@ -1,10 +1,10 @@
-<select name="{{selectName}}" data-dtype="String">
-	<option value="vulnerable" {{#if_eq current "vulnerable" }} selected{{/if_eq}}>{{localize
+<select name="{{selectName}}" data-dtype="Number">
+	<option value="-1" {{#if_eq current -1 }} selected{{/if_eq}}>{{localize
 		"FU.Resistances.vulnerable"}}</option>
-	<option value="neutral" {{#if_eq current "neutral" }} selected{{/if_eq}}>{{localize "FU.Resistances.neutral"}}
+	<option value="0" {{#if_eq current 0 }} selected{{/if_eq}}>{{localize "FU.Resistances.neutral"}}
 	</option>
-	<option value="resistant" {{#if_eq current "resistant" }} selected{{/if_eq}}>{{localize "FU.Resistances.resistant"}}
+	<option value="1" {{#if_eq current 1 }} selected{{/if_eq}}>{{localize "FU.Resistances.resistant"}}
 	</option>
-	<option value="immune" {{#if_eq current "immune" }} selected{{/if_eq}}>{{localize "FU.Resistances.immune"}}</option>
-	<option value="absorb" {{#if_eq current "absorb" }} selected{{/if_eq}}>{{localize "FU.Resistances.absorb"}}</option>
+	<option value="2" {{#if_eq current 2 }} selected{{/if_eq}}>{{localize "FU.Resistances.immune"}}</option>
+	<option value="3" {{#if_eq current 3 }} selected{{/if_eq}}>{{localize "FU.Resistances.absorb"}}</option>
 </select>

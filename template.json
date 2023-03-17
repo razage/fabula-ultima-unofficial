@@ -43,21 +43,21 @@
             },
             "resistances": {
                 "resistances": {
-                    "air": "neutral",
-                    "bolt": "neutral",
-                    "dark": "neutral",
-                    "earth": "neutral",
-                    "fire": "neutral",
-                    "ice": "neutral",
-                    "light": "neutral",
-                    "physical": "neutral",
-                    "poison": "neutral"
+                    "air": 0,
+                    "bolt": 0,
+                    "dark": 0,
+                    "earth": 0,
+                    "fire": 0,
+                    "ice": 0,
+                    "light": 0,
+                    "physical": 0,
+                    "poison": 0
                 }
             }
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.20",
+            "schemaVersion": "1.21",
             "pronouns": "",
             "identity": "",
             "theme": "",
