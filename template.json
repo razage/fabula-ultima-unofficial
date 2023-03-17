@@ -57,7 +57,7 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.18",
+            "schemaVersion": "1.19",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -114,7 +114,8 @@
             "skills": [],
             "spells": [],
             "weapons": [],
-            "zenit": 500
+            "zenit": 500,
+            "canSummon": false
         }
     },
     "Item": {

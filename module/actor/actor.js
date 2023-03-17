@@ -74,6 +74,8 @@ export class FabulaUltimaActor extends Actor {
                 system.ip.bonus += element.system.benefits.resource.ip;
 
                 _tempLevel += element.system.level;
+
+                if (element.name === "Arcanist" && !system.canSummon) system.canSummon = true;
             }
 
             if (element.type === "weapon") {

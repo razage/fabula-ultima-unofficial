@@ -15,7 +15,7 @@
 
 	<nav class="sheet-tabs tabs" data-group="primary">
 		<a class="item" data-tab="merge"><i class="fas fa-solid fa-shuffle"></i> Merge</a>
-		<a class="item" data-tab="dismiss"><i class="fas fa-solid fa-circle-nodes"></i> Dismiss</a>
+		<a class="item" data-tab="dismiss"><i class="fas fa-solid fa-eject"></i> Dismiss</a>
 		<a class="item" data-tab="effects"><i class="fas fa-solid fa-wand-magic-sparkles"></i> Effects</a>
 	</nav>
 
@@ -35,9 +35,10 @@
 		</div>
 
 		<div class="tab effects" data-group="primary" data-tab="effects">
-			<div class="effects-list">
-				{{> "systems/fabulaultima/templates/item/partials/item-effect-sheet.hbs" effects=effects}}
-			</div>
+			<p>The effect system is for advanced users only. Changing stats requires knowledge of the structure of the
+				data. Please look at some items in the compendium and/or consult the documentation before creating your
+				own effects.</p>
+			{{> "systems/fabulaultima/templates/item/partials/item-effect-sheet.hbs" effects=effects}}
 		</div>
 	</section>
 </form>
