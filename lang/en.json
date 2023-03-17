@@ -73,6 +73,7 @@
     "FU.Items.Blurbs.remedy": "+50 HP to target.",
     "FU.Items.Blurbs.tonic": "Removes one status effect.",
     "FU.Items.cost": "Cost",
+    "FU.Items.effects": "Effects",
     "FU.Items.equipped": "Equipped",
     "FU.Items.internalName": "Internal Name",
     "FU.Items.internalNameEx": "A name with no spaces used for localization.",

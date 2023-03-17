@@ -29,8 +29,9 @@
 			{{roll.total}},
 			{{/unless}}
 			<img src="{{getElementalIcon damage.type}}" title="{{localize (concat 'FU.Elements.' damage.type)}}"
-				class="damage-type {{damage.type}}" /> {{damage.total}} {{#unless dw}}{{#if damage.multi}} <span
-				class="multi">({{damage.multiValue}} {{localize "FU.UI.targets"}})</span>{{/if}}{{/unless}}
+				class="damage-type {{damage.type}}" /> {{damage.total}} {{#unless dw}}{{#if
+			damage.multi}} <span class="multi">({{damage.multiValue}} {{localize
+				"FU.UI.targets"}})</span>{{/if}}{{/unless}}
 		</h4>
 		{{/unless}}
 	</div>

@@ -20,6 +20,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
     async getData() {
         const data = super.getData();
 
+        data.effects = data.actor.getEmbeddedCollection("ActiveEffect").contents;
+
         if (this.actor.type === "player") {
             this._prepareCharacterItems(data);
         }
@@ -301,6 +303,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
             fabulaSkillRoll(this.actor, main, sec, bonus);
         });
+
+        // Apply a condition
+        html.find(".condition-icon").click(this._onConditionStatusChange.bind(this));
     }
 
     _onItemCreate(event) {
@@ -321,7 +326,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         return this.actor.createEmbeddedDocuments("Item", [itemData]);
     }
 
-    _onItemEquippedStatusChange(event) {
+    async _onItemEquippedStatusChange(event) {
         event.preventDefault();
         const element = event.currentTarget;
         const dataset = element.dataset;
@@ -335,5 +340,99 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         } catch (ex) {
             console.log(ex);
         }
+    }
+
+    async _onConditionStatusChange(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+        const condition = this.actor.system.statuses[dataset.condition];
+        const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
+        const relevantEffect = effects.filter((ef) => ef.label === dataset.condition);
+
+        let newValue = !condition;
+        let actorProp = { system: { statuses: {} } };
+        actorProp.system.statuses[dataset.condition] = newValue;
+
+        if (relevantEffect.length > 0) {
+            let effect = relevantEffect[0];
+            await effect.update({ disabled: condition });
+        } else {
+            let data = {
+                label: dataset.condition,
+                icon: "icons/svg/aura.svg",
+                origin: this.actor.uuid,
+                disabled: condition,
+            };
+
+            switch (dataset.condition) {
+                case "dazed":
+                    data.changes = [
+                        {
+                            key: "system.attributes.insight.bonus",
+                            mode: 2,
+                            value: -2,
+                        },
+                    ];
+                    break;
+                case "enraged":
+                    data.changes = [
+                        {
+                            key: "system.attributes.dexterity.bonus",
+                            mode: 2,
+                            value: -2,
+                        },
+                        {
+                            key: "system.attributes.insight.bonus",
+                            mode: 2,
+                            value: -2,
+                        },
+                    ];
+                    break;
+                case "poisoned":
+                    data.changes = [
+                        {
+                            key: "system.attributes.might.bonus",
+                            mode: 2,
+                            value: -2,
+                        },
+                        {
+                            key: "system.attributes.willpower.bonus",
+                            mode: 2,
+                            value: -2,
+                        },
+                    ];
+                    break;
+                case "shaken":
+                    data.changes = [
+                        {
+                            key: "system.attributes.willpower.bonus",
+                            mode: 2,
+                            value: -2,
+                        },
+                    ];
+                    break;
+                case "slow":
+                    data.changes = [
+                        {
+                            key: "system.attributes.dexterity.bonus",
+                            mode: 2,
+                            value: -2,
+                        },
+                    ];
+                    break;
+                case "weak":
+                    data.changes = [
+                        {
+                            key: "system.attributes.might.bonus",
+                            mode: 2,
+                            value: -2,
+                        },
+                    ];
+                    break;
+            }
+            await this.actor.createEmbeddedDocuments("ActiveEffect", [data]);
+        }
+        await this.actor.update(actorProp);
     }
 }

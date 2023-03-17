@@ -8,9 +8,12 @@ This system is unaffiliated with the creators or the publisher. Details about th
 
 This project is in active development and may change significantly at any time. As of now, you can:
 
--   Create a character with _most_ of their data available in a bad layout.
+-   Create a character with _most_ of their data available.
 -   Create and equip weapons and roll their associated accuracy check.
+-   Create and cast spells, including the damage and accuracy rolls associated.
 -   Create and equip classes that modify HP/MP/IP and store a level that the player can edit.
+-   Create and equip skills. These don't modify your stats, but they track the skill's level if applicable.
+-   Make generic rolls using the roll tab.
 
 ## Installation
 
@@ -40,6 +43,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Armor punch icon by Delapouite
 -   Arrowhead icon by Lorc
 -   Auto repair icon by Lorc
+-   Back pain icon by Lorc
 -   Barbed Spear icon by Lorc
 -   Battered Axe icon by Lorc
 -   Battle axe icon by Lorc
@@ -85,6 +89,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Dripping Knife icon by Lorc
 -   Edged Shield icon by Lorc
 -   Electric whip icon by Lorc
+-   Enrage icon by Delapouite
 -   Erlenmeyer icon by Lorc
 -   Evil book icon by Lorc
 -   Evil hand icon by Lorc
@@ -114,6 +119,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Ice spear icon by Lorc
 -   Katana icon by Delapouite
 -   Knife thrust icon by Lorc
+-   Knocked out stars icon by Delapouite
 -   Kusarigama icon by DarkZaitzev
 -   Layered armor icon by Lorc
 -   Leather armor icon by Delapouite
@@ -142,6 +148,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite
+-   Robber hand icon by DarkZaitzev
 -   Robe icon by Lorc
 -   Rock icon by Lorc
 -   Roman shield icon by Delapouite
@@ -171,10 +178,13 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Stone axe icon by Lorc
 -   Stone spear icon by Lorc
 -   Sun icon by Lorc
+-   Swords power icon by Delapouite
+-   Terror icon by Lorc
 -   Thor fist icon by Lorc
 -   Thor hammer icon by Delapouite
 -   Tomahawk icon by Delapouite
 -   Tornado icon by Lorc
+-   Tortoise icon by Delapouite
 -   Trident icon by Lorc
 -   Trident shield icon by Delapouite
 -   Two handed sword icon by Delapouite
@@ -186,6 +196,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   White book icon by Wildabeast
 -   Winchester rifle icon by Skoll
 -   Winged scepter icon by Delapouite
+-   Winged sword icon by Lorc
 -   Winter gloves icon by Delapouite
 -   Wizard staff icon by Lorc
 -   Wood axe icon by Lorc

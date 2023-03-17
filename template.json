@@ -32,9 +32,9 @@
             },
             "charStatuses": {
                 "statuses": {
-                    "slowed": false,
+                    "slow": false,
                     "dazed": false,
-                    "weakened": false,
+                    "weak": false,
                     "shaken": false,
                     "enraged": false,
                     "poisoned": false,

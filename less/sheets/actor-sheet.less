@@ -49,6 +49,34 @@
         }
     }
 
+    .conditions {
+        padding-top: 8px;
+
+        img.condition-icon {
+            display: block;
+            margin: 0 auto;
+            border: none;
+            height: 40px;
+            opacity: 0.35;
+
+            &.active {
+                height: 50px;
+                opacity: 1;
+
+                &:hover {
+                    height: 48px;
+                    opacity: 1;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                height: 48px;
+                opacity: 0.55;
+            }
+        }
+    }
+
     .rolls {
         label {
             text-align: center;

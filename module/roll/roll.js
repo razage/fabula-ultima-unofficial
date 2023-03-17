@@ -58,6 +58,7 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             }</b> (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
                 "FU.Short." + mainStat.name
             )} + ${game.i18n.localize("FU.Short." + secondaryStat.name)}</b>)`;
+
             break;
         case "skill":
             obj.roll = data.rollObj;
