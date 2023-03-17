@@ -1,5 +1,6 @@
 export const preloadHandlebarsTemplates = async function () {
     return loadTemplates([
+        "systems/fabulaultima/templates/item/partials/item-effect-sheet.hbs",
         "systems/fabulaultima/templates/actor/partials/class-card.hbs",
         "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs",
         "systems/fabulaultima/templates/actor/partials/resource-card.hbs",

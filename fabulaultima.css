@@ -247,6 +247,11 @@ h4.dice-total .multi {
   width: 30%;
   margin: 0 auto 10px auto;
 }
+.domains label {
+  text-align: right;
+  font-size: 1.25rem;
+  padding-right: 4px;
+}
 .weapon-sheet > .flexrow {
   padding: 2px;
 }
@@ -290,6 +295,9 @@ h4.dice-total .multi {
   min-height: 50px;
   height: 100%;
   flex: auto;
+}
+.sheet-body .editor-host .editor .tox.tox-tinymce {
+  height: 200px !important;
 }
 .sheet-body .editor-host .editor .tox .tox-edit-area__iframe {
   background: #f8f8f8;
@@ -403,6 +411,7 @@ button.fabula-button.item-create:hover {
 }
 .accessory-sheet input[type="text"],
 .actor-sheet input[type="text"],
+.arcanum-sheet input[type="text"],
 .armor-sheet input[type="text"],
 .bond-sheet input[type="text"],
 .class-sheet input[type="text"],
@@ -412,6 +421,7 @@ button.fabula-button.item-create:hover {
 .weapon-sheet input[type="text"],
 .accessory-sheet select,
 .actor-sheet select,
+.arcanum-sheet select,
 .armor-sheet select,
 .bond-sheet select,
 .class-sheet select,
@@ -423,6 +433,7 @@ button.fabula-button.item-create:hover {
 }
 .accessory-sheet input[type="text"]:not(:disabled),
 .actor-sheet input[type="text"]:not(:disabled),
+.arcanum-sheet input[type="text"]:not(:disabled),
 .armor-sheet input[type="text"]:not(:disabled),
 .bond-sheet input[type="text"]:not(:disabled),
 .class-sheet input[type="text"]:not(:disabled),
@@ -434,6 +445,7 @@ button.fabula-button.item-create:hover {
 }
 .accessory-sheet img.item-img,
 .actor-sheet img.item-img,
+.arcanum-sheet img.item-img,
 .armor-sheet img.item-img,
 .bond-sheet img.item-img,
 .class-sheet img.item-img,
@@ -447,6 +459,7 @@ button.fabula-button.item-create:hover {
 }
 .accessory-sheet label.label-pad-left,
 .actor-sheet label.label-pad-left,
+.arcanum-sheet label.label-pad-left,
 .armor-sheet label.label-pad-left,
 .bond-sheet label.label-pad-left,
 .class-sheet label.label-pad-left,

@@ -39,6 +39,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 
 -   3D Hammer icon by Delapouite
 -   Andromeda chain icon by Lorc
+-   Anvil icon by Lorc
 -   Archer icon by Delapouite
 -   Armor punch icon by Delapouite
 -   Arrowhead icon by Lorc
@@ -165,6 +166,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
 -   Skull staff icon by Delapouite
+-   Snowflake 1 icon by Lorc
 -   Snowflake 2 icon by Lorc
 -   Sparkling sabre icon by Lorc
 -   Spear feather icon by Delapouite

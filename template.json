@@ -191,10 +191,10 @@
             }
         },
         "arcanum": {
-            "schemaVersion": "1.0",
+            "templates": ["isEquipped"],
+            "schemaVersion": "1.01",
             "domains": "",
             "merge": "",
-            "isMerged": false,
             "dismiss": ""
         },
         "armor": {
