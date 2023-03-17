@@ -305,6 +305,7 @@
             </div>
         </div>
 
+        {{!-- Skills --}}
         <div class="tab skills" data-group="primary" data-tab="skills">
             <div class="flexcol skills">
                 <div class="item-list">
@@ -328,6 +329,22 @@
                     {{/each}}
                 </div>
             </div>
+            {{#if actor.system.canSummon}}
+            <div class="flexcol arcanum">
+                <h2>{{localize "FU.Items.Types.arcanum"}}</h2>
+                <div class="item-list">
+                    {{#each actor.system.arcanum as |item|}}
+                    <div class="item arcana-card" data-item-id="{{item._id}}">
+                        <div class="grid grid-4col">
+                            <div class="flexrow">
+                                {{> "systems/fabulaultima/templates/actor/partials/arcana-card.hbs" arcana=item}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/if}}
         </div>
 
         {{!-- Bio --}}

@@ -32,6 +32,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
     _prepareCharacterItems(sheetData) {
         const actorData = sheetData.actor;
         const accessories = [];
+        const arcanum = [];
         const armor = [];
         const bonds = [];
         const classes = [];
@@ -46,49 +47,46 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     accessories.push(item);
                     break;
 
-                case "armor": {
+                case "arcanum":
+                    arcanum.push(item);
+                    break;
+
+                case "armor":
                     armor.push(item);
                     break;
-                }
 
-                case "bond": {
+                case "bond":
                     bonds.push(item);
                     break;
-                }
 
-                case "class": {
+                case "class":
                     classes.push(item);
                     break;
-                }
 
-                case "consumable": {
+                case "consumable":
                     consumables.push(item);
                     break;
-                }
 
-                case "skill": {
+                case "skill":
                     skills.push(item);
                     break;
-                }
 
-                case "spell": {
+                case "spell":
                     spells.push(item);
                     break;
-                }
 
-                case "weapon": {
+                case "weapon":
                     weapons.push(item);
                     break;
-                }
 
-                default: {
+                default:
                     console.log("itemType ", item.type, " is not currently implemented.");
-                }
             }
         });
 
         // This gets put into the actor object. For consistency, my data is stored in actor.system
         actorData.system.accessories = accessories;
+        actorData.system.arcanum = arcanum;
         actorData.system.armor = armor;
         actorData.system.bonds = bonds;
         actorData.system.classes = classes;
@@ -330,12 +328,16 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         event.preventDefault();
         const element = event.currentTarget;
         const dataset = element.dataset;
+        const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
+        const relevantEffects = effects.filter((effect) => effect.origin.endsWith(dataset.id));
 
         try {
             const item = this.actor.items.get(dataset.id);
-            var isEquipped = item.system.isEquipped;
+            const isEquipped = !item.system.isEquipped;
 
-            isEquipped = !isEquipped;
+            // Assumes only 1 ActiveEffect per item
+            const effect = relevantEffects[0];
+            await effect.update({ disabled: !isEquipped });
             item.update({ data: { isEquipped: isEquipped } });
         } catch (ex) {
             console.log(ex);

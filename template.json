@@ -57,7 +57,7 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.19",
+            "schemaVersion": "1.20",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -106,6 +106,7 @@
             },
             "characterLevel": 0,
             "accessories": [],
+            "arcanum": [],
             "armor": [],
             "bonds": [],
             "classes": [],

@@ -470,6 +470,7 @@ button.fabula-button.item-create:hover {
   padding-left: 8px;
 }
 .accessory-card,
+.arcana-card,
 .armor-card,
 .bond-card,
 .class-card,
@@ -482,6 +483,7 @@ button.fabula-button.item-create:hover {
   border-radius: 10px;
 }
 .accessory-card img.item-icon,
+.arcana-card img.item-icon,
 .armor-card img.item-icon,
 .bond-card img.item-icon,
 .class-card img.item-icon,
@@ -511,14 +513,17 @@ button.fabula-button.item-create:hover {
   color: #c40101;
 }
 .accessory-card,
+.arcana-card,
 .armor-card,
 .consumable-card {
   border: none !important;
 }
 .accessory-card i.item-edit:hover,
+.arcana-card i.item-edit:hover,
 .armor-card i.item-edit:hover,
 .consumable-card i.item-edit:hover,
 .accessory-card i.item-delete:hover,
+.arcana-card i.item-delete:hover,
 .armor-card i.item-delete:hover,
 .consumable-card i.item-delete:hover {
   cursor: pointer;
