@@ -148,6 +148,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite
+-   Robber hand icon by DarkZaitzev
 -   Robe icon by Lorc
 -   Rock icon by Lorc
 -   Roman shield icon by Delapouite
@@ -177,6 +178,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Stone axe icon by Lorc
 -   Stone spear icon by Lorc
 -   Sun icon by Lorc
+-   Swords power icon by Delapouite
 -   Terror icon by Lorc
 -   Thor fist icon by Lorc
 -   Thor hammer icon by Delapouite
@@ -194,6 +196,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   White book icon by Wildabeast
 -   Winchester rifle icon by Skoll
 -   Winged scepter icon by Delapouite
+-   Winged sword icon by Lorc
 -   Winter gloves icon by Delapouite
 -   Wizard staff icon by Lorc
 -   Wood axe icon by Lorc

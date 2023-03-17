@@ -178,8 +178,8 @@ h4.dice-total .multi {
   display: block;
   margin: 0 auto;
   border: none;
-  height: 45px;
-  opacity: 0.4;
+  height: 40px;
+  opacity: 0.35;
 }
 .character-sheet .conditions img.condition-icon.active {
   height: 50px;
