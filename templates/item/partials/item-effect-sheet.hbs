@@ -1,24 +1,29 @@
-<div class="effects-list">
-	<h2>{{localize "FU.Items.effects"}}
-		<a class="effect-control" data-action="create">
-			<i class="fas fa-solid fa-circle-plus"></i>
-		</a>
-	</h2>
-	<ol>
-		{{#each effects as |effect|}}
-		<li class="item effect" data-effect-id="{{effect.id}}">
-			<div class="item-name effect-name">
-				<h4>{{effect.label}}</h4>
-			</div>
-			<div class="effect-controls">
-				<a class="effect-control" data-action="edit" title="{{localize 'FU.UI.edit'}}">
-					<i class="fas fa-solid fa-edit"></i>
-				</a>
-				<a class="effect-control" data-action="delete" title="{{localize 'FU.UI.delete'}}">
-					<i class="fas fa-solid fa-trash"></i>
-				</a>
-			</div>
-		</li>
-		{{/each}}
-	</ol>
+<div class="tab effects" data-group="primary" data-tab="effects">
+	<p>The effect system is for advanced users only. Changing stats requires knowledge of the structure of the
+		data. Please look at some items in the compendium and/or consult the documentation before creating your
+		own effects.</p>
+	<div class="effects-list">
+		<h2>{{localize "FU.Items.effects"}}
+			<a class="effect-control" data-action="create">
+				<i class="fas fa-solid fa-circle-plus"></i>
+			</a>
+		</h2>
+		<ol>
+			{{#each effects as |effect|}}
+			<li class="item effect" data-effect-id="{{effect.id}}">
+				<div class="item-name effect-name">
+					<h4>{{effect.label}}</h4>
+				</div>
+				<div class="effect-controls">
+					<a class="effect-control" data-action="edit" title="{{localize 'FU.UI.edit'}}">
+						<i class="fas fa-solid fa-edit"></i>
+					</a>
+					<a class="effect-control" data-action="delete" title="{{localize 'FU.UI.delete'}}">
+						<i class="fas fa-solid fa-trash"></i>
+					</a>
+				</div>
+			</li>
+			{{/each}}
+		</ol>
+	</div>
 </div>

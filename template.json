@@ -32,12 +32,30 @@
             },
             "charStatuses": {
                 "statuses": {
-                    "slow": false,
-                    "dazed": false,
-                    "weak": false,
-                    "shaken": false,
-                    "enraged": false,
-                    "poisoned": false,
+                    "slow": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "dazed": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "weak": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "shaken": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "enraged": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "poisoned": {
+                        "active": false,
+                        "immune": false
+                    },
                     "crisis": false
                 }
             },
@@ -57,7 +75,7 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.21",
+            "schemaVersion": "1.23",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -104,6 +122,14 @@
                     "bonus": 0
                 }
             },
+            "rituals": {
+                "arcanism": false,
+                "chimerism": false,
+                "elementalism": false,
+                "entropism": false,
+                "ritualism": false,
+                "spiritism": false
+            },
             "characterLevel": 0,
             "accessories": [],
             "arcanum": [],
@@ -111,7 +137,6 @@
             "bonds": [],
             "classes": [],
             "consumables": [],
-            "rituals": [],
             "skills": [],
             "spells": [],
             "weapons": [],

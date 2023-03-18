@@ -40,6 +40,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
+        const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
             switch (item.type) {
@@ -60,6 +61,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
 
                 case "class":
+                    this._applyUnequippableActiveEffect(effects, item);
                     classes.push(item);
                     break;
 
@@ -68,6 +70,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
 
                 case "skill":
+                    this._applyUnequippableActiveEffect(effects, item);
                     skills.push(item);
                     break;
 
@@ -352,19 +355,28 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
         const relevantEffect = effects.filter((ef) => ef.label === dataset.condition);
 
-        let newValue = !condition;
+        let newValue = !condition.active;
         let actorProp = { system: { statuses: {} } };
-        actorProp.system.statuses[dataset.condition] = newValue;
+        actorProp.system.statuses[dataset.condition] = {
+            active: this.actor.system.statuses[dataset.condition].active,
+            immune: this.actor.system.statuses[dataset.condition].immune,
+        };
+        actorProp.system.statuses[dataset.condition].active = newValue;
+
+        // If they are immune to this condition, skip everything
+        if (condition.immune) {
+            return;
+        }
 
         if (relevantEffect.length > 0) {
             let effect = relevantEffect[0];
-            await effect.update({ disabled: condition });
+            await effect.update({ disabled: condition.active });
         } else {
             let data = {
                 label: dataset.condition,
                 icon: "icons/svg/aura.svg",
                 origin: this.actor.uuid,
-                disabled: condition,
+                disabled: condition.active,
             };
 
             switch (dataset.condition) {
@@ -436,5 +448,14 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             await this.actor.createEmbeddedDocuments("ActiveEffect", [data]);
         }
         await this.actor.update(actorProp);
+    }
+
+    _applyUnequippableActiveEffect(effects, item) {
+        let relevantEffects = effects.filter((effect) => effect.origin.endsWith(item._id));
+        let effect = relevantEffects[0];
+
+        if (relevantEffects.length === 0) return;
+
+        effect.update({ disabled: false });
     }
 }

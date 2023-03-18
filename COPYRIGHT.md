@@ -46,6 +46,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   C96 icon by Skoll
 -   Caduceus icon by Delapouite
 -   Camping tent icon by Delapouite
+-   Candles icon by Delapouite
 -   Cat icon by Lorc
 -   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
@@ -93,6 +94,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Hatchet icon by Delapouite
 -   Health potion icon by Delapouite
 -   Heart armor icon by Delapouite
+-   Holy oak icon by Cathelineau
 -   Ice bolt icon by Lorc
 -   Ice spear icon by Lorc
 -   Katana icon by Delapouite
@@ -102,6 +104,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Layered armor icon by Lorc
 -   Leather armor icon by Delapouite
 -   Lightning branches icon by Lorc
+-   Lightning storm icon by Lorc
 -   Log icon by Delapouite
 -   Lunar wand icon by Delapouite
 -   Magic axe icon by Delapouite
@@ -143,6 +146,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shirt icon by Lucas
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
+-   Siren icon by Skoll
 -   Skull staff icon by Delapouite
 -   Snowflake 1 icon by Lorc
 -   Snowflake 2 icon by Lorc

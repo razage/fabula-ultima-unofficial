@@ -11,6 +11,9 @@ export class FabulaUltimaActor extends Actor {
         // Make separate methods for each Actor type (character, npc, etc.) to keep
         // things organized.
         if (actorData.type === "player") this._preparePlayerData(actorData);
+
+        this._determineImmunities(actorData);
+        console.log(actorData);
     }
 
     _preparePlayerData(actorData) {
@@ -74,8 +77,6 @@ export class FabulaUltimaActor extends Actor {
                 system.ip.bonus += element.system.benefits.resource.ip;
 
                 _tempLevel += element.system.level;
-
-                if (element.name === "Arcanist" && !system.canSummon) system.canSummon = true;
             }
 
             if (element.type === "weapon") {
@@ -107,6 +108,23 @@ export class FabulaUltimaActor extends Actor {
             system.defenses.physical.base + system.defenses.physical.bonus;
         system.defenses.magic.base = system.attributes.insight.base;
         system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
+    }
+
+    _determineImmunities(actorData) {
+        for (const [key, value] of Object.entries(actorData.system.statuses)) {
+            // If the condition is active and the user is immune
+            if (value.immune && value.active) {
+                const effects = actorData.getEmbeddedCollection("ActiveEffect").contents;
+                const relevantEffects = effects.filter((k) => k.label === key);
+
+                if (relevantEffects.length === 0) continue;
+
+                let actorProp = { system: { statuses: {} } };
+                actorProp.system.statuses[key] = { active: false };
+                actorData.update(actorProp);
+                actorData.deleteEmbeddedDocuments("ActiveEffect", [relevantEffects[0]._id], {});
+            }
+        }
     }
 
     static async create(data, options = {}) {

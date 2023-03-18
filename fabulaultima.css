@@ -194,6 +194,13 @@ h4.dice-total .multi {
   height: 48px;
   opacity: 0.55;
 }
+.character-sheet .conditions img.condition-icon.immune {
+  opacity: 0.1;
+}
+.character-sheet .conditions img.condition-icon.immune:hover {
+  height: 40px;
+  cursor: not-allowed;
+}
 .character-sheet .rolls label {
   text-align: center;
 }

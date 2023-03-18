@@ -1,6 +1,10 @@
 {
     "FU.systemName": "Fabula Ultima",
 
+    "FU.Arcanum.dismiss": "Dismiss",
+    "FU.Arcanum.domains": "Domains",
+    "FU.Arcanum.merge": "Merge",
+
     "FU.Attributes.name": "Attributes",
     "FU.Attributes.dexterity": "Dexterity",
     "FU.Attributes.insight": "Insight",

@@ -9,14 +9,15 @@
 	</header>
 
 	<div class="flexrow domains">
-		<label for="system.domains">Domains:</label>
+		<label for="system.domains">{{localize "FU.Arcanum.domains"}}:</label>
 		<input type="text" data-dtype="String" name="system.domains" value="{{item.system.domains}}" />
 	</div>
 
 	<nav class="sheet-tabs tabs" data-group="primary">
-		<a class="item" data-tab="merge"><i class="fas fa-solid fa-shuffle"></i> Merge</a>
-		<a class="item" data-tab="dismiss"><i class="fas fa-solid fa-eject"></i> Dismiss</a>
-		<a class="item" data-tab="effects"><i class="fas fa-solid fa-wand-magic-sparkles"></i> Effects</a>
+		<a class="item" data-tab="merge"><i class="fas fa-solid fa-shuffle"></i> {{localize "FU.Arcanum.merge"}}</a>
+		<a class="item" data-tab="dismiss"><i class="fas fa-solid fa-eject"></i> {{localize "FU.Arcanum.dismiss"}}</a>
+		<a class="item" data-tab="effects"><i class="fas fa-solid fa-wand-magic-sparkles"></i> {{localize
+			"FU.Items.effects"}}</a>
 	</nav>
 
 	<section class="sheet-body">
@@ -34,11 +35,6 @@
 			</div>
 		</div>
 
-		<div class="tab effects" data-group="primary" data-tab="effects">
-			<p>The effect system is for advanced users only. Changing stats requires knowledge of the structure of the
-				data. Please look at some items in the compendium and/or consult the documentation before creating your
-				own effects.</p>
-			{{> "systems/fabulaultima/templates/item/partials/item-effect-sheet.hbs" effects=effects}}
-		</div>
+		{{> "systems/fabulaultima/templates/item/partials/item-effect-sheet.hbs" effects=effects}}
 	</section>
 </form>
