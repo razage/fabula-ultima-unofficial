@@ -17,12 +17,14 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   3D Hammer icon by Delapouite
 -   Ancient sword icon by Delapouite
 -   Andromeda chain icon by Lorc
+-   Angel outfit icon by Lorc
 -   Anvil icon by Lorc
 -   Archer icon by Delapouite
 -   Armor punch icon by Delapouite
 -   Arrowhead icon by Lorc
 -   Auto repair icon by Lorc
 -   Back pain icon by Lorc
+-   Ballista icon by Skoll
 -   Barbed Spear icon by Lorc
 -   Battered Axe icon by Lorc
 -   Battle axe icon by Lorc
@@ -43,11 +45,14 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc
+-   Burning book icon by Lorc
+-   Burning meteor icon by Lorc
 -   Butterfly knife icon by Delapouite
 -   C96 icon by Skoll
 -   Caduceus icon by Delapouite
 -   Camping tent icon by Delapouite
 -   Candles icon by Delapouite
+-   Carnival mask icon by Delapouite
 -   Cartwheel icon by Lorc
 -   Cat icon by Lorc
 -   Chest armor icon by Lorc
@@ -90,6 +95,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Glaive icon by Delapouite
 -   Glock icon by Skoll
 -   Glowing hands icon by Lorc
+-   Gluttonous smile icon by Lorc
 -   Halberd icon by Lorc
 -   Hand bandage icon by Delapouite
 -   Hand of god icon by Delapouite
@@ -106,7 +112,9 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Layered armor icon by Lorc
 -   Leather armor icon by Delapouite
 -   Lightning branches icon by Lorc
+-   Lightning saber icon by Lorc
 -   Lightning storm icon by Lorc
+-   Lion icon by Lorc
 -   Log icon by Delapouite
 -   Lunar wand icon by Delapouite
 -   Magic axe icon by Delapouite
@@ -176,6 +184,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Trident shield icon by Delapouite
 -   Two handed sword icon by Delapouite
 -   Viking shield icon by Delapouite
+-   Virus icon by Lorc
+-   Volcano icon by Lorc
 -   Walther PPK icon by Skoll
 -   War axe icon by Delapouite
 -   Warhammer icon by Delapouite
