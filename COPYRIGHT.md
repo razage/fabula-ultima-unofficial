@@ -15,6 +15,7 @@ This code uses Foundry VTT and its API under the terms of the Limited License Ag
 All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license](https://creativecommons.org/licenses/by/3.0/), unless noted otherwise. I've included many icons that are not in use by compendium items. These are to help you create your own custom items without needing to search for additional icons.
 
 -   3D Hammer icon by Delapouite
+-   Ancient sword icon by Delapouite
 -   Andromeda chain icon by Lorc
 -   Anvil icon by Lorc
 -   Archer icon by Delapouite
@@ -47,6 +48,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Caduceus icon by Delapouite
 -   Camping tent icon by Delapouite
 -   Candles icon by Delapouite
+-   Cartwheel icon by Lorc
 -   Cat icon by Lorc
 -   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
@@ -161,6 +163,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Stiletto icon by Skoll
 -   Stone axe icon by Lorc
 -   Stone spear icon by Lorc
+-   Stone tower icon by Lorc
 -   Sun icon by Lorc
 -   Swords power icon by Delapouite
 -   Terror icon by Lorc
