@@ -13,7 +13,6 @@ export class FabulaUltimaActor extends Actor {
         if (actorData.type === "player") this._preparePlayerData(actorData);
 
         this._determineImmunities(actorData);
-        console.log(actorData);
     }
 
     _preparePlayerData(actorData) {
@@ -39,6 +38,7 @@ export class FabulaUltimaActor extends Actor {
                     system.bonuses.accuracy.magic += element.system.accuracyBonus.magic;
                 }
             }
+
             if (element.type === "armor") {
                 if (element.system.isEquipped) {
                     system.defenses.physical.bonus += element.system.defense.value;
@@ -77,6 +77,19 @@ export class FabulaUltimaActor extends Actor {
                 system.ip.bonus += element.system.benefits.resource.ip;
 
                 _tempLevel += element.system.level;
+
+                // Adjust rituals and proficiencies
+                for (const [key, value] of Object.entries(element.system.benefits.rituals)) {
+                    if (value) {
+                        system.rituals[key] = value;
+                    }
+                }
+
+                for (const [key, value] of Object.entries(element.system.benefits.martial)) {
+                    if (value) {
+                        system.martial[key] = value;
+                    }
+                }
             }
 
             if (element.type === "weapon") {

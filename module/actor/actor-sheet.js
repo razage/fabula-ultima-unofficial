@@ -23,6 +23,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         data.effects = data.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         if (this.actor.type === "player") {
+            data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
+                async: true,
+            });
             this._prepareCharacterItems(data);
         }
 

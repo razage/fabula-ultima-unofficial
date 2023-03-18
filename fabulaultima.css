@@ -172,7 +172,7 @@ h4.dice-total .multi {
   text-align: center;
 }
 .character-sheet .conditions {
-  padding-top: 8px;
+  padding: 8px 0;
 }
 .character-sheet .conditions img.condition-icon {
   display: block;
@@ -225,6 +225,25 @@ h4.dice-total .multi {
 }
 .character-sheet .attributes .resistances .element-resistance {
   padding: 4px;
+}
+.character-sheet .classes .martial-proficiencies,
+.character-sheet .classes .rituals {
+  margin-bottom: 8px;
+  text-align: center;
+}
+.character-sheet .classes .martial-proficiencies i,
+.character-sheet .classes .rituals i {
+  opacity: 0.4;
+}
+.character-sheet .classes .martial-proficiencies i.martial,
+.character-sheet .classes .rituals i.martial,
+.character-sheet .classes .martial-proficiencies i.active,
+.character-sheet .classes .rituals i.active {
+  opacity: 1;
+}
+.character-sheet .classes .martial-proficiencies i.martial,
+.character-sheet .classes .rituals i.martial {
+  color: #c40101;
 }
 .character-sheet .backpack i {
   padding-right: 8px;

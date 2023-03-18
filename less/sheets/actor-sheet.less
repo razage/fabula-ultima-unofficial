@@ -50,7 +50,7 @@
     }
 
     .conditions {
-        padding-top: 8px;
+        padding: 8px 0;
 
         img.condition-icon {
             display: block;
@@ -118,6 +118,28 @@
 
             .element-resistance {
                 padding: 4px;
+            }
+        }
+    }
+
+    .classes {
+
+        .martial-proficiencies,
+        .rituals {
+            margin-bottom: 8px;
+            text-align: center;
+
+            i {
+                opacity: 0.4;
+
+                &.martial,
+                &.active {
+                    opacity: 1;
+                }
+
+                &.martial {
+                    color: @martial;
+                }
             }
         }
     }

@@ -75,7 +75,7 @@
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.23",
+            "schemaVersion": "1.24",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -130,6 +130,12 @@
                 "ritualism": false,
                 "spiritism": false
             },
+            "martial": {
+                "melee": false,
+                "ranged": false,
+                "armor": false,
+                "shields": false
+            },
             "characterLevel": 0,
             "accessories": [],
             "arcanum": [],
@@ -141,7 +147,8 @@
             "spells": [],
             "weapons": [],
             "zenit": 500,
-            "canSummon": false
+            "canSummon": false,
+            "notes": ""
         }
     },
     "Item": {

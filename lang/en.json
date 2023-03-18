@@ -93,9 +93,10 @@
     "FU.Navigation.tabGear": "Gear",
 
     "FU.Plural.accessory": "Accessories",
+    "FU.Plural.arcanum": "Arcana",
     "FU.Plural.skill": "Skills",
 
-    "FU.Proficiencies.name": "Equipment Proficiencies",
+    "FU.Proficiencies.name": "Proficiencies",
     "FU.Proficiencies.armor": "Martial Armors",
     "FU.Proficiencies.melee": "Martial Melee Weapons",
     "FU.Proficiencies.ranged": "Martial Ranged Weapons",
@@ -197,6 +198,7 @@
     "FU.UI.multi": "Multi",
     "FU.UI.multiEx": "If enabled, attacks target this many enemies.",
     "FU.UI.no": "No",
+    "FU.UI.notes": "Notes",
     "FU.UI.openCompendium": "Open Compendium",
     "FU.UI.properties": "Properties",
     "FU.UI.range": "Range",

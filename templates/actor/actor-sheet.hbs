@@ -216,6 +216,31 @@
 
         {{!-- Classes --}}
         <div class="tab classes" data-group="primary" data-tab="classes">
+            <h2>{{localize "FU.Proficiencies.name"}}</h2>
+            <div class="flexrow martial-proficiencies">
+                <i class="fas fa-solid fa-sword {{#if actor.system.martial.melee}}martial{{/if}}"
+                    title="{{localize 'FU.Proficiencies.melee'}}"></i>
+                <i class="fas fa-solid fa-bow-arrow {{#if actor.system.martial.ranged}}martial{{/if}}"
+                    title="{{localize 'FU.Proficiencies.ranged'}}"></i>
+                <i class="fas fa-solid fa-helmet-battle {{#if actor.system.martial.armor}}martial{{/if}}"
+                    title="{{localize 'FU.Proficiencies.armor'}}"></i>
+                <i class="fas fa-solid fa-shield {{#if actor.system.martial.shields}}martial{{/if}}"
+                    title="{{localize 'FU.Proficiencies.shields'}}"></i>
+            </div>
+            <div class="flexrow rituals">
+                <i class="fas fa-solid fa-candle-holder {{#if actor.system.rituals.arcanism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.arcanism'}}"></i>
+                <i class="fas fa-solid fa-paw-claws {{#if actor.system.rituals.chimerism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.chimerism'}}"></i>
+                <i class="fas fa-solid fa-fire {{#if actor.system.rituals.elementalism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.elementalism'}}"></i>
+                <i class="fas fa-solid fa-atom-simple {{#if actor.system.rituals.entropism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.entropism'}}"></i>
+                <i class="fas fa-solid fa-circle-nodes {{#if actor.system.rituals.ritualism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.ritualism'}}"></i>
+                <i class="fas fa-solid fa-staff {{#if actor.system.rituals.spiritism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.spiritism'}}"></i>
+            </div>
             <h2>
                 {{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}
                 <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="classes"
@@ -307,6 +332,11 @@
 
         {{!-- Skills --}}
         <div class="tab skills" data-group="primary" data-tab="skills">
+            <h2>
+                {{localize "FU.Plural.skill"}}
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="skill"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h2>
             <div class="flexcol skills">
                 <div class="item-list">
                     {{#each actor.system.skills as |item|}}
@@ -320,6 +350,11 @@
 
         {{!-- Spells --}}
         <div class="tab spells" data-group="primary" data-tab="spells">
+            <h2>
+                {{localize "FU.Spells.name"}}
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="spell"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h2>
             <div class="flexcol spells">
                 <div class="item-list">
                     {{#each actor.system.spells as |item|}}
@@ -331,7 +366,7 @@
             </div>
             {{#if actor.system.canSummon}}
             <div class="flexcol arcanum">
-                <h2>{{localize "FU.Items.Types.arcanum"}}</h2>
+                <h2>{{localize "FU.Plural.arcanum"}}</h2>
                 <div class="item-list">
                     {{#each actor.system.arcanum as |item|}}
                     <div class="item arcana-card" data-item-id="{{item._id}}">
@@ -372,11 +407,16 @@
                 <button class="fabula-button item-create" data-type="bond"><i class="fas fa-solid fa-plus"></i></button>
             </h2>
             <div class="item-list bonds">
-                {{#each actor.system.bonds as |item ind|}}
+                {{#each actor.system.bonds as |item|}}
                 <div class="item" data-item-id="{{item._id}}">
                     {{> "systems/fabulaultima/templates/actor/partials/bond-card.hbs" bond=item}}
                 </div>
                 {{/each}}
+            </div>
+            <h2>{{localize "FU.UI.notes"}}</h2>
+            <div class="editor-host">
+                {{editor enrichedNotes target="system.notes" button=true owner=owner
+                editable=editable}}
             </div>
         </div>
     </section>
