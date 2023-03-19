@@ -9,6 +9,8 @@
 		<a class="item" data-tab="defense"><i class="fas fa-solid fa-shield"></i> {{localize
 			"FU.Attributes.defense"}}</a>
 		<a class="item" data-tab="quality"><i class="fas fa-solid fa-sparkles"></i> {{localize "FU.Quality.name"}}</a>
+		<a class="item" data-tab="effects"><i class="fas fa-solid fa-wand-magic-sparkles"></i> {{localize
+			"FU.Items.effects"}}</a>
 	</nav>
 
 	<section class="sheet-body">
@@ -69,5 +71,7 @@
 				editable=editable}}
 			</div>
 		</div>
+
+		{{> "systems/fabulaultima/templates/item/partials/item-effect-sheet.hbs" effects=effects}}
 	</section>
 </form>

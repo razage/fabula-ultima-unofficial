@@ -2,6 +2,7 @@ import { FabulaUltimaActor } from "./actor/actor.js";
 import { FabulaUltimaActorSheet } from "./actor/actor-sheet.js";
 import { FabulaUltimaItem } from "./item/item.js";
 import { FabulaUltimaItemSheet } from "./item/item-sheet.js";
+import { FUActiveEffect } from "./FUActiveEffect.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 
 Hooks.once("init", async function () {
@@ -13,6 +14,7 @@ Hooks.once("init", async function () {
     // Define custom Entity classes
     CONFIG.Actor.documentClass = FabulaUltimaActor;
     CONFIG.Item.documentClass = FabulaUltimaItem;
+    CONFIG.ActiveEffect.documentClass = FUActiveEffect;
 
     Actors.unregisterSheet("core", ActorSheet);
     Items.unregisterSheet("core", ItemSheet);

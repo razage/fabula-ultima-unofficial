@@ -168,7 +168,10 @@ h4.dice-total .multi {
 .character-sheet .resistances p.defense,
 .character-sheet .attributes p.mdefense,
 .character-sheet .defenses p.mdefense,
-.character-sheet .resistances p.mdefense {
+.character-sheet .resistances p.mdefense,
+.character-sheet .attributes p.resistance-text,
+.character-sheet .defenses p.resistance-text,
+.character-sheet .resistances p.resistance-text {
   text-align: center;
 }
 .character-sheet .conditions {
