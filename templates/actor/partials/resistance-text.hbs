@@ -1,0 +1,11 @@
+{{#if_eq resist -1}}
+<p class="resistance-text">{{localize "FU.Resistances.vulnerable"}}</p>
+{{else if_eq resist 0}}
+<p class="resistance-text">{{localize "FU.Resistances.neutral"}}</p>
+{{else if_eq resist 1}}
+<p class="resistance-text">{{localize "FU.Resistances.resistant"}}</p>
+{{else if_eq resist 2}}
+<p class="resistance-text">{{localize "FU.Resistances.immune"}}</p>
+{{else if_eq resist 3}}
+<p class="resistance-text">{{localize "FU.Resistances.absorb"}}</p>
+{{/if_eq}}

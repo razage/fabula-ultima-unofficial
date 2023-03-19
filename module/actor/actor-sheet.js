@@ -23,6 +23,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         data.effects = data.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         if (this.actor.type === "player") {
+            data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
+                async: true,
+            });
             this._prepareCharacterItems(data);
         }
 
@@ -32,6 +35,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
     _prepareCharacterItems(sheetData) {
         const actorData = sheetData.actor;
         const accessories = [];
+        const arcanum = [];
         const armor = [];
         const bonds = [];
         const classes = [];
@@ -39,6 +43,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
+        const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
             switch (item.type) {
@@ -46,49 +51,48 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     accessories.push(item);
                     break;
 
-                case "armor": {
+                case "arcanum":
+                    arcanum.push(item);
+                    break;
+
+                case "armor":
                     armor.push(item);
                     break;
-                }
 
-                case "bond": {
+                case "bond":
                     bonds.push(item);
                     break;
-                }
 
-                case "class": {
+                case "class":
+                    this._applyUnequippableActiveEffect(effects, item);
                     classes.push(item);
                     break;
-                }
 
-                case "consumable": {
+                case "consumable":
                     consumables.push(item);
                     break;
-                }
 
-                case "skill": {
+                case "skill":
+                    this._applyUnequippableActiveEffect(effects, item);
                     skills.push(item);
                     break;
-                }
 
-                case "spell": {
+                case "spell":
                     spells.push(item);
                     break;
-                }
 
-                case "weapon": {
+                case "weapon":
                     weapons.push(item);
                     break;
-                }
 
-                default: {
+                default:
                     console.log("itemType ", item.type, " is not currently implemented.");
-                }
             }
         });
 
         // This gets put into the actor object. For consistency, my data is stored in actor.system
         actorData.system.accessories = accessories;
+        actorData.system.arcanum = arcanum;
         actorData.system.armor = armor;
         actorData.system.bonds = bonds;
         actorData.system.classes = classes;
@@ -330,12 +334,16 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         event.preventDefault();
         const element = event.currentTarget;
         const dataset = element.dataset;
+        const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
+        const relevantEffects = effects.filter((effect) => effect.origin.endsWith(dataset.id));
 
         try {
             const item = this.actor.items.get(dataset.id);
-            var isEquipped = item.system.isEquipped;
+            const isEquipped = !item.system.isEquipped;
 
-            isEquipped = !isEquipped;
+            // Assumes only 1 ActiveEffect per item
+            const effect = relevantEffects[0];
+            await effect.update({ disabled: !isEquipped });
             item.update({ data: { isEquipped: isEquipped } });
         } catch (ex) {
             console.log(ex);
@@ -350,19 +358,28 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
         const relevantEffect = effects.filter((ef) => ef.label === dataset.condition);
 
-        let newValue = !condition;
+        let newValue = !condition.active;
         let actorProp = { system: { statuses: {} } };
-        actorProp.system.statuses[dataset.condition] = newValue;
+        actorProp.system.statuses[dataset.condition] = {
+            active: this.actor.system.statuses[dataset.condition].active,
+            immune: this.actor.system.statuses[dataset.condition].immune,
+        };
+        actorProp.system.statuses[dataset.condition].active = newValue;
+
+        // If they are immune to this condition, skip everything
+        if (condition.immune) {
+            return;
+        }
 
         if (relevantEffect.length > 0) {
             let effect = relevantEffect[0];
-            await effect.update({ disabled: condition });
+            await effect.update({ disabled: condition.active });
         } else {
             let data = {
                 label: dataset.condition,
                 icon: "icons/svg/aura.svg",
                 origin: this.actor.uuid,
-                disabled: condition,
+                disabled: condition.active,
             };
 
             switch (dataset.condition) {
@@ -434,5 +451,14 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             await this.actor.createEmbeddedDocuments("ActiveEffect", [data]);
         }
         await this.actor.update(actorProp);
+    }
+
+    _applyUnequippableActiveEffect(effects, item) {
+        let relevantEffects = effects.filter((effect) => effect.origin.endsWith(item._id));
+        let effect = relevantEffects[0];
+
+        if (relevantEffects.length === 0) return;
+
+        effect.update({ disabled: false });
     }
 }

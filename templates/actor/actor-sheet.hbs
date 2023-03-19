@@ -47,22 +47,22 @@
             {{!-- Status Conditions --}}
             <div class="grid grid-6col">
                 <div class="flexrow conditions">
-                    <img class="condition-icon {{#if actor.system.statuses.dazed}}active{{/if}}"
+                    <img class="condition-icon {{#unless actor.system.statuses.dazed.immune}} {{#if actor.system.statuses.dazed.active}}active{{/if}}{{else}}immune{{/unless}}"
                         src="systems/fabulaultima/assets/ui/knocked-out-stars.svg"
                         title="{{localize 'FU.Status.dazed'}}" data-condition="dazed" />
-                    <img class="condition-icon {{#if actor.system.statuses.enraged}}active{{/if}}"
+                    <img class="condition-icon {{#unless actor.system.statuses.enraged.immune}} {{#if actor.system.statuses.enraged.active}}active{{/if}}{{else}}immune{{/unless}}"
                         src="systems/fabulaultima/assets/ui/enrage.svg" title="{{localize 'FU.Status.enraged'}}"
                         data-condition="enraged" />
-                    <img class="condition-icon {{#if actor.system.statuses.poisoned}}active{{/if}}"
+                    <img class="condition-icon {{#unless actor.system.statuses.poisoned.immune}} {{#if actor.system.statuses.poisoned.active}}active{{/if}}{{else}}immune{{/unless}}"
                         src="systems/fabulaultima/assets/ui/poison-bottle.svg" title="{{localize 'FU.Status.poisoned'}}"
                         data-condition="poisoned" />
-                    <img class="condition-icon {{#if actor.system.statuses.shaken}}active{{/if}}"
+                    <img class="condition-icon {{#unless actor.system.statuses.shaken.immune}} {{#if actor.system.statuses.shaken.active}}active{{/if}}{{else}}immune{{/unless}}"
                         src="systems/fabulaultima/assets/ui/terror.svg" title="{{localize 'FU.Status.dazed'}}"
                         data-condition="shaken" />
-                    <img class="condition-icon {{#if actor.system.statuses.slow}}active{{/if}}"
+                    <img class="condition-icon {{#unless actor.system.statuses.slow.immune}} {{#if actor.system.statuses.slow.active}}active{{/if}}{{else}}immune{{/unless}}"
                         src="systems/fabulaultima/assets/ui/tortoise.svg" title="{{localize 'FU.Status.slow'}}"
                         data-condition="slow" />
-                    <img class="condition-icon {{#if actor.system.statuses.weak}}active{{/if}}"
+                    <img class="condition-icon {{#unless actor.system.statuses.weak.immune}} {{#if actor.system.weak.enraged.active}}active{{/if}}{{else}}immune{{/unless}}"
                         src="systems/fabulaultima/assets/ui/back-pain.svg" title="{{localize 'FU.Status.weak'}}"
                         data-condition="weak" />
                 </div>
@@ -153,61 +153,60 @@
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.air"><img src="{{getElementalIcon 'air'}}"
                                     title="{{localize 'FU.Elements.air'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.air" current=actor.system.resistances.air}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.air}}
                         </div>
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.bolt"><img src="{{getElementalIcon 'bolt'}}"
                                     title="{{localize 'FU.Elements.bolt'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.bolt" current=actor.system.resistances.bolt}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.bolt}}
                         </div>
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.dark"><img src="{{getElementalIcon 'dark'}}"
                                     title="{{localize 'FU.Elements.dark'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.dark" current=actor.system.resistances.dark}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.dark}}
                         </div>
                     </div>
                     <div class="flexrow">
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.earth"><img src="{{getElementalIcon 'earth'}}"
                                     title="{{localize 'FU.Elements.earth'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.earth" current=actor.system.resistances.earth}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.earth}}
                         </div>
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.fire"><img src="{{getElementalIcon 'fire'}}"
                                     title="{{localize 'FU.Elements.fire'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.fire" current=actor.system.resistances.fire}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.fire}}
                         </div>
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.ice"><img src="{{getElementalIcon 'ice'}}"
                                     title="{{localize 'FU.Elements.ice'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.ice" current=actor.system.resistances.ice}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.ice}}
                         </div>
                     </div>
                     <div class="flexrow">
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.light"><img src="{{getElementalIcon 'light'}}"
                                     title="{{localize 'FU.Elements.light'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.light" current=actor.system.resistances.light}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.light}}
                         </div>
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.physical"><img src="{{getElementalIcon 'physical'}}"
                                     title="{{localize 'FU.Elements.physical'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.physical"
-                            current=actor.system.resistances.physical}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.physical}}
                         </div>
                         <div class="flexcol element-resistance">
                             <label for="system.resistances.poison"><img src="{{getElementalIcon 'poison'}}"
                                     title="{{localize 'FU.Elements.poison'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs"
-                            selectName="system.resistances.poison" current=actor.system.resistances.poison}}
+                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+                            resist=actor.system.resistances.poison}}
                         </div>
                     </div>
                 </div>
@@ -216,6 +215,31 @@
 
         {{!-- Classes --}}
         <div class="tab classes" data-group="primary" data-tab="classes">
+            <h2>{{localize "FU.Proficiencies.name"}}</h2>
+            <div class="flexrow martial-proficiencies">
+                <i class="fas fa-solid fa-sword {{#if actor.system.martial.melee}}martial{{/if}}"
+                    title="{{localize 'FU.Proficiencies.melee'}}"></i>
+                <i class="fas fa-solid fa-bow-arrow {{#if actor.system.martial.ranged}}martial{{/if}}"
+                    title="{{localize 'FU.Proficiencies.ranged'}}"></i>
+                <i class="fas fa-solid fa-helmet-battle {{#if actor.system.martial.armor}}martial{{/if}}"
+                    title="{{localize 'FU.Proficiencies.armor'}}"></i>
+                <i class="fas fa-solid fa-shield {{#if actor.system.martial.shields}}martial{{/if}}"
+                    title="{{localize 'FU.Proficiencies.shields'}}"></i>
+            </div>
+            <div class="flexrow rituals">
+                <i class="fas fa-solid fa-candle-holder {{#if actor.system.rituals.arcanism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.arcanism'}}"></i>
+                <i class="fas fa-solid fa-paw-claws {{#if actor.system.rituals.chimerism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.chimerism'}}"></i>
+                <i class="fas fa-solid fa-fire {{#if actor.system.rituals.elementalism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.elementalism'}}"></i>
+                <i class="fas fa-solid fa-atom-simple {{#if actor.system.rituals.entropism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.entropism'}}"></i>
+                <i class="fas fa-solid fa-circle-nodes {{#if actor.system.rituals.ritualism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.ritualism'}}"></i>
+                <i class="fas fa-solid fa-staff {{#if actor.system.rituals.spiritism}}active{{/if}}"
+                    title="{{localize 'FU.Rituals.spiritism'}}"></i>
+            </div>
             <h2>
                 {{localize "FU.UI.characterLevel"}}: {{actor.system.characterLevel}}
                 <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="classes"
@@ -305,7 +329,13 @@
             </div>
         </div>
 
+        {{!-- Skills --}}
         <div class="tab skills" data-group="primary" data-tab="skills">
+            <h2>
+                {{localize "FU.Plural.skill"}}
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="skill"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h2>
             <div class="flexcol skills">
                 <div class="item-list">
                     {{#each actor.system.skills as |item|}}
@@ -319,6 +349,11 @@
 
         {{!-- Spells --}}
         <div class="tab spells" data-group="primary" data-tab="spells">
+            <h2>
+                {{localize "FU.Spells.name"}}
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="spell"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h2>
             <div class="flexcol spells">
                 <div class="item-list">
                     {{#each actor.system.spells as |item|}}
@@ -328,6 +363,22 @@
                     {{/each}}
                 </div>
             </div>
+            {{#if actor.system.canSummon}}
+            <div class="flexcol arcanum">
+                <h2>{{localize "FU.Plural.arcanum"}}</h2>
+                <div class="item-list">
+                    {{#each actor.system.arcanum as |item|}}
+                    <div class="item arcana-card" data-item-id="{{item._id}}">
+                        <div class="grid grid-4col">
+                            <div class="flexrow">
+                                {{> "systems/fabulaultima/templates/actor/partials/arcana-card.hbs" arcana=item}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/if}}
         </div>
 
         {{!-- Bio --}}
@@ -355,11 +406,16 @@
                 <button class="fabula-button item-create" data-type="bond"><i class="fas fa-solid fa-plus"></i></button>
             </h2>
             <div class="item-list bonds">
-                {{#each actor.system.bonds as |item ind|}}
+                {{#each actor.system.bonds as |item|}}
                 <div class="item" data-item-id="{{item._id}}">
                     {{> "systems/fabulaultima/templates/actor/partials/bond-card.hbs" bond=item}}
                 </div>
                 {{/each}}
+            </div>
+            <h2>{{localize "FU.UI.notes"}}</h2>
+            <div class="editor-host">
+                {{editor enrichedNotes target="system.notes" button=true owner=owner
+                editable=editable}}
             </div>
         </div>
     </section>

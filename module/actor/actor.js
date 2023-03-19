@@ -11,6 +11,8 @@ export class FabulaUltimaActor extends Actor {
         // Make separate methods for each Actor type (character, npc, etc.) to keep
         // things organized.
         if (actorData.type === "player") this._preparePlayerData(actorData);
+
+        this._determineImmunities(actorData);
     }
 
     _preparePlayerData(actorData) {
@@ -36,6 +38,7 @@ export class FabulaUltimaActor extends Actor {
                     system.bonuses.accuracy.magic += element.system.accuracyBonus.magic;
                 }
             }
+
             if (element.type === "armor") {
                 if (element.system.isEquipped) {
                     system.defenses.physical.bonus += element.system.defense.value;
@@ -74,6 +77,19 @@ export class FabulaUltimaActor extends Actor {
                 system.ip.bonus += element.system.benefits.resource.ip;
 
                 _tempLevel += element.system.level;
+
+                // Adjust rituals and proficiencies
+                for (const [key, value] of Object.entries(element.system.benefits.rituals)) {
+                    if (value) {
+                        system.rituals[key] = value;
+                    }
+                }
+
+                for (const [key, value] of Object.entries(element.system.benefits.martial)) {
+                    if (value) {
+                        system.martial[key] = value;
+                    }
+                }
             }
 
             if (element.type === "weapon") {
@@ -105,6 +121,23 @@ export class FabulaUltimaActor extends Actor {
             system.defenses.physical.base + system.defenses.physical.bonus;
         system.defenses.magic.base = system.attributes.insight.base;
         system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
+    }
+
+    _determineImmunities(actorData) {
+        for (const [key, value] of Object.entries(actorData.system.statuses)) {
+            // If the condition is active and the user is immune
+            if (value.immune && value.active) {
+                const effects = actorData.getEmbeddedCollection("ActiveEffect").contents;
+                const relevantEffects = effects.filter((k) => k.label === key);
+
+                if (relevantEffects.length === 0) continue;
+
+                let actorProp = { system: { statuses: {} } };
+                actorProp.system.statuses[key] = { active: false };
+                actorData.update(actorProp);
+                actorData.deleteEmbeddedDocuments("ActiveEffect", [relevantEffects[0]._id], {});
+            }
+        }
     }
 
     static async create(data, options = {}) {

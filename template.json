@@ -32,32 +32,50 @@
             },
             "charStatuses": {
                 "statuses": {
-                    "slow": false,
-                    "dazed": false,
-                    "weak": false,
-                    "shaken": false,
-                    "enraged": false,
-                    "poisoned": false,
+                    "slow": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "dazed": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "weak": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "shaken": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "enraged": {
+                        "active": false,
+                        "immune": false
+                    },
+                    "poisoned": {
+                        "active": false,
+                        "immune": false
+                    },
                     "crisis": false
                 }
             },
             "resistances": {
                 "resistances": {
-                    "air": "neutral",
-                    "bolt": "neutral",
-                    "dark": "neutral",
-                    "earth": "neutral",
-                    "fire": "neutral",
-                    "ice": "neutral",
-                    "light": "neutral",
-                    "physical": "neutral",
-                    "poison": "neutral"
+                    "air": 0,
+                    "bolt": 0,
+                    "dark": 0,
+                    "earth": 0,
+                    "fire": 0,
+                    "ice": 0,
+                    "light": 0,
+                    "physical": 0,
+                    "poison": 0
                 }
             }
         },
         "player": {
             "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.18",
+            "schemaVersion": "1.24",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -104,17 +122,33 @@
                     "bonus": 0
                 }
             },
+            "rituals": {
+                "arcanism": false,
+                "chimerism": false,
+                "elementalism": false,
+                "entropism": false,
+                "ritualism": false,
+                "spiritism": false
+            },
+            "martial": {
+                "melee": false,
+                "ranged": false,
+                "armor": false,
+                "shields": false
+            },
             "characterLevel": 0,
             "accessories": [],
+            "arcanum": [],
             "armor": [],
             "bonds": [],
             "classes": [],
             "consumables": [],
-            "rituals": [],
             "skills": [],
             "spells": [],
             "weapons": [],
-            "zenit": 500
+            "zenit": 500,
+            "canSummon": false,
+            "notes": ""
         }
     },
     "Item": {
@@ -191,10 +225,10 @@
             }
         },
         "arcanum": {
-            "schemaVersion": "1.0",
+            "templates": ["isEquipped"],
+            "schemaVersion": "1.01",
             "domains": "",
             "merge": "",
-            "isMerged": false,
             "dismiss": ""
         },
         "armor": {

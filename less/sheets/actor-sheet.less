@@ -44,13 +44,14 @@
 
         label,
         p.defense,
-        p.mdefense {
+        p.mdefense,
+        p.resistance-text {
             text-align: center;
         }
     }
 
     .conditions {
-        padding-top: 8px;
+        padding: 8px 0;
 
         img.condition-icon {
             display: block;
@@ -73,6 +74,15 @@
                 cursor: pointer;
                 height: 48px;
                 opacity: 0.55;
+            }
+
+            &.immune {
+                opacity: 0.1;
+
+                &:hover {
+                    height: 40px;
+                    cursor: not-allowed;
+                }
             }
         }
     }
@@ -109,6 +119,28 @@
 
             .element-resistance {
                 padding: 4px;
+            }
+        }
+    }
+
+    .classes {
+
+        .martial-proficiencies,
+        .rituals {
+            margin-bottom: 8px;
+            text-align: center;
+
+            i {
+                opacity: 0.4;
+
+                &.martial,
+                &.active {
+                    opacity: 1;
+                }
+
+                &.martial {
+                    color: @martial;
+                }
             }
         }
     }

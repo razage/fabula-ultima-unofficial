@@ -168,11 +168,14 @@ h4.dice-total .multi {
 .character-sheet .resistances p.defense,
 .character-sheet .attributes p.mdefense,
 .character-sheet .defenses p.mdefense,
-.character-sheet .resistances p.mdefense {
+.character-sheet .resistances p.mdefense,
+.character-sheet .attributes p.resistance-text,
+.character-sheet .defenses p.resistance-text,
+.character-sheet .resistances p.resistance-text {
   text-align: center;
 }
 .character-sheet .conditions {
-  padding-top: 8px;
+  padding: 8px 0;
 }
 .character-sheet .conditions img.condition-icon {
   display: block;
@@ -193,6 +196,13 @@ h4.dice-total .multi {
   cursor: pointer;
   height: 48px;
   opacity: 0.55;
+}
+.character-sheet .conditions img.condition-icon.immune {
+  opacity: 0.1;
+}
+.character-sheet .conditions img.condition-icon.immune:hover {
+  height: 40px;
+  cursor: not-allowed;
 }
 .character-sheet .rolls label {
   text-align: center;
@@ -218,6 +228,25 @@ h4.dice-total .multi {
 }
 .character-sheet .attributes .resistances .element-resistance {
   padding: 4px;
+}
+.character-sheet .classes .martial-proficiencies,
+.character-sheet .classes .rituals {
+  margin-bottom: 8px;
+  text-align: center;
+}
+.character-sheet .classes .martial-proficiencies i,
+.character-sheet .classes .rituals i {
+  opacity: 0.4;
+}
+.character-sheet .classes .martial-proficiencies i.martial,
+.character-sheet .classes .rituals i.martial,
+.character-sheet .classes .martial-proficiencies i.active,
+.character-sheet .classes .rituals i.active {
+  opacity: 1;
+}
+.character-sheet .classes .martial-proficiencies i.martial,
+.character-sheet .classes .rituals i.martial {
+  color: #c40101;
 }
 .character-sheet .backpack i {
   padding-right: 8px;
@@ -246,6 +275,11 @@ h4.dice-total .multi {
 .character-sheet .bio .pronouns input[type="text"] {
   width: 30%;
   margin: 0 auto 10px auto;
+}
+.domains label {
+  text-align: right;
+  font-size: 1.25rem;
+  padding-right: 4px;
 }
 .weapon-sheet > .flexrow {
   padding: 2px;
@@ -290,6 +324,9 @@ h4.dice-total .multi {
   min-height: 50px;
   height: 100%;
   flex: auto;
+}
+.sheet-body .editor-host .editor .tox.tox-tinymce {
+  height: 200px !important;
 }
 .sheet-body .editor-host .editor .tox .tox-edit-area__iframe {
   background: #f8f8f8;
@@ -403,6 +440,7 @@ button.fabula-button.item-create:hover {
 }
 .accessory-sheet input[type="text"],
 .actor-sheet input[type="text"],
+.arcanum-sheet input[type="text"],
 .armor-sheet input[type="text"],
 .bond-sheet input[type="text"],
 .class-sheet input[type="text"],
@@ -412,6 +450,7 @@ button.fabula-button.item-create:hover {
 .weapon-sheet input[type="text"],
 .accessory-sheet select,
 .actor-sheet select,
+.arcanum-sheet select,
 .armor-sheet select,
 .bond-sheet select,
 .class-sheet select,
@@ -423,6 +462,7 @@ button.fabula-button.item-create:hover {
 }
 .accessory-sheet input[type="text"]:not(:disabled),
 .actor-sheet input[type="text"]:not(:disabled),
+.arcanum-sheet input[type="text"]:not(:disabled),
 .armor-sheet input[type="text"]:not(:disabled),
 .bond-sheet input[type="text"]:not(:disabled),
 .class-sheet input[type="text"]:not(:disabled),
@@ -434,6 +474,7 @@ button.fabula-button.item-create:hover {
 }
 .accessory-sheet img.item-img,
 .actor-sheet img.item-img,
+.arcanum-sheet img.item-img,
 .armor-sheet img.item-img,
 .bond-sheet img.item-img,
 .class-sheet img.item-img,
@@ -447,6 +488,7 @@ button.fabula-button.item-create:hover {
 }
 .accessory-sheet label.label-pad-left,
 .actor-sheet label.label-pad-left,
+.arcanum-sheet label.label-pad-left,
 .armor-sheet label.label-pad-left,
 .bond-sheet label.label-pad-left,
 .class-sheet label.label-pad-left,
@@ -457,6 +499,7 @@ button.fabula-button.item-create:hover {
   padding-left: 8px;
 }
 .accessory-card,
+.arcana-card,
 .armor-card,
 .bond-card,
 .class-card,
@@ -469,6 +512,7 @@ button.fabula-button.item-create:hover {
   border-radius: 10px;
 }
 .accessory-card img.item-icon,
+.arcana-card img.item-icon,
 .armor-card img.item-icon,
 .bond-card img.item-icon,
 .class-card img.item-icon,
@@ -498,14 +542,17 @@ button.fabula-button.item-create:hover {
   color: #c40101;
 }
 .accessory-card,
+.arcana-card,
 .armor-card,
 .consumable-card {
   border: none !important;
 }
 .accessory-card i.item-edit:hover,
+.arcana-card i.item-edit:hover,
 .armor-card i.item-edit:hover,
 .consumable-card i.item-edit:hover,
 .accessory-card i.item-delete:hover,
+.arcana-card i.item-delete:hover,
 .armor-card i.item-delete:hover,
 .consumable-card i.item-delete:hover {
   cursor: pointer;
