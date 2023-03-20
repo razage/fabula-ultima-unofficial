@@ -4,7 +4,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["fabulaultima", "sheet", "actor"],
-            template: "systems/fabulaultima/templates/actor/actor-sheet.hbs",
             width: 700,
             height: 800,
             tabs: [
@@ -17,6 +16,13 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         });
     }
 
+    get template() {
+        const path = "systems/fabulaultima/templates/actor";
+
+        // unique sheet for each type of item
+        return `${path}/actor-${this.actor.type}-sheet.hbs`;
+    }
+
     async getData() {
         const data = super.getData();
 
@@ -27,6 +33,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 async: true,
             });
             this._prepareCharacterItems(data);
+        }
+
+        if (this.actor.type === "npc") {
+            data.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
+                async: true,
+            });
         }
 
         return data;

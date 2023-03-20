@@ -4,7 +4,11 @@
             <i class="{{icon}}"></i>{{toUpperCase r}}
         </label>
         <input name="{{inputName}}" type="text" data-dtype="Number" value="{{rValue}}" />
+        {{#if isNPC}}
+        <input name="system.{{r}}.max" type="text" value="{{rMax}}" data-dtype="Number" />
+        {{else}}
         <p>{{rMax}}</p>
+        {{/if}}
         {{#if_eq r "hp"}}
         <span class="{{r}} crisis">
             <p>

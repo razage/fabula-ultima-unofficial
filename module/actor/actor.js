@@ -10,9 +10,15 @@ export class FabulaUltimaActor extends Actor {
 
         // Make separate methods for each Actor type (character, npc, etc.) to keep
         // things organized.
-        if (actorData.type === "player") this._preparePlayerData(actorData);
+        if (actorData.type === "player") {
+            this._preparePlayerData(actorData);
+            this._determineImmunities(actorData);
+        }
 
-        this._determineImmunities(actorData);
+        if (actorData.type === "npc") {
+            this._prepareNPCData(actorData);
+            this._determineImmunities(actorData);
+        }
     }
 
     _preparePlayerData(actorData) {
@@ -121,6 +127,21 @@ export class FabulaUltimaActor extends Actor {
             system.defenses.physical.base + system.defenses.physical.bonus;
         system.defenses.magic.base = system.attributes.insight.base;
         system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
+    }
+
+    _prepareNPCData(actorData) {
+        const { system } = actorData;
+
+        //Calculate statistics
+        for (let [key, statistic] of Object.entries(system.attributes)) {
+            statistic.current = clamp(statistic.base + statistic.bonus, 6, 12);
+        }
+
+        // Clamp HP/MP, but don't calculate a max.
+        system.hp.value = clamp(system.hp.value, 0, system.hp.max);
+        system.mp.value = clamp(system.mp.value, 0, system.mp.max);
+
+        system.hp.crisis = Math.floor(system.hp.max / 2);
     }
 
     _determineImmunities(actorData) {

@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["player", "enemy", "group", "world"],
+        "types": ["player", "npc", "group", "world"],
         "templates": {
             "charAttributes": {
                 "attributes": {
@@ -29,6 +29,26 @@
                         "current": 6
                     }
                 }
+            },
+            "charDefenses": {
+                "defenses": {
+                    "physical": {
+                        "base": 6,
+                        "value": 0,
+                        "bonus": 0
+                    },
+                    "magic": {
+                        "base": 6,
+                        "value": 0,
+                        "bonus": 0
+                    }
+                }
+            },
+            "charEquipment": {
+                "armor": [],
+                "skills": [],
+                "spells": [],
+                "weapons": []
             },
             "charStatuses": {
                 "statuses": {
@@ -59,7 +79,7 @@
                     "crisis": false
                 }
             },
-            "resistances": {
+            "charResistances": {
                 "resistances": {
                     "air": 0,
                     "bolt": 0,
@@ -71,32 +91,41 @@
                     "physical": 0,
                     "poison": 0
                 }
+            },
+            "charResources": {
+                "hp": {
+                    "value": 35,
+                    "max": 35,
+                    "crisis": 17,
+                    "bonus": 0
+                },
+                "mp": {
+                    "value": 35,
+                    "max": 35,
+                    "bonus": 0
+                },
+                "ip": {
+                    "value": 6,
+                    "max": 6,
+                    "bonus": 0
+                }
             }
         },
         "player": {
-            "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.24",
+            "templates": [
+                "charAttributes",
+                "charDefenses",
+                "charEquipment",
+                "charStatuses",
+                "charResistances",
+                "charResources"
+            ],
+            "schemaVersion": "1.25",
             "pronouns": "",
             "identity": "",
             "theme": "",
             "origin": "",
             "isLeader": false,
-            "hp": {
-                "value": 35,
-                "max": 35,
-                "crisis": 17,
-                "bonus": 0
-            },
-            "mp": {
-                "value": 35,
-                "max": 35,
-                "bonus": 0
-            },
-            "ip": {
-                "value": 6,
-                "max": 6,
-                "bonus": 0
-            },
             "fabulaPoints": 3,
             "experiencePoints": 0,
             "initiativeMod": 0,
@@ -108,18 +137,6 @@
                 "damage": {
                     "physical": 0,
                     "magic": 0
-                }
-            },
-            "defenses": {
-                "physical": {
-                    "base": 6,
-                    "value": 0,
-                    "bonus": 0
-                },
-                "magic": {
-                    "base": 6,
-                    "value": 0,
-                    "bonus": 0
                 }
             },
             "rituals": {
@@ -139,16 +156,28 @@
             "characterLevel": 0,
             "accessories": [],
             "arcanum": [],
-            "armor": [],
             "bonds": [],
             "classes": [],
             "consumables": [],
-            "skills": [],
-            "spells": [],
-            "weapons": [],
             "zenit": 500,
             "canSummon": false,
             "notes": ""
+        },
+        "npc": {
+            "templates": [
+                "charAttributes",
+                "charDefenses",
+                "charEquipment",
+                "charStatuses",
+                "charResistances",
+                "charResources"
+            ],
+            "schemaVersion": "1.0",
+            "species": "Beast",
+            "initiative": 0,
+            "level": 0,
+            "typicalTraits": "",
+            "description": ""
         }
     },
     "Item": {
