@@ -172,7 +172,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.01",
+            "schemaVersion": "1.02",
             "defenses": {
                 "physical": {
                     "useDex": false
@@ -185,7 +185,8 @@
             "initiative": 0,
             "level": 0,
             "typicalTraits": "",
-            "description": ""
+            "description": "",
+            "specialRules": ""
         }
     },
     "Item": {

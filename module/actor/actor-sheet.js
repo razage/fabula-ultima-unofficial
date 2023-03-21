@@ -39,6 +39,10 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             data.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
                 async: true,
             });
+            data.enrichedSpecial = await TextEditor.enrichHTML(this.object.system.specialRules, {
+                async: true,
+            });
+            this._prepareNPCItems(data);
         }
 
         return data;
@@ -109,6 +113,34 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.bonds = bonds;
         actorData.system.classes = classes;
         actorData.system.consumables = consumables;
+        actorData.system.skills = skills;
+        actorData.system.spells = spells;
+        actorData.system.weapons = weapons;
+    }
+
+    _prepareNPCItems(sheetData) {
+        const actorData = sheetData.actor;
+        const skills = [];
+        const spells = [];
+        const weapons = [];
+
+        sheetData.items.forEach((item) => {
+            switch (item.type) {
+                case "skill":
+                    this._applyUnequippableActiveEffect(effects, item);
+                    skills.push(item);
+                    break;
+
+                case "spell":
+                    spells.push(item);
+                    break;
+
+                case "weapon":
+                    weapons.push(item);
+                    break;
+            }
+        });
+
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;

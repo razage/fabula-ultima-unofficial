@@ -88,9 +88,13 @@
     "FU.Items.Types.bond": "Bond",
     "FU.Items.Types.class": "Class",
     "FU.Items.Types.new": "New",
+    "FU.Items.Types.spell": "Spell",
     "FU.Items.Types.weapon": "Weapon",
 
     "FU.Navigation.tabGear": "Gear",
+
+    "FU.NPC.specialRules": "Special Rules",
+    "FU.NPC.typicalTraits": "Typical Traits",
 
     "FU.Plural.accessory": "Accessories",
     "FU.Plural.arcanum": "Arcana",
@@ -208,6 +212,7 @@
     "FU.UI.delete": "Delete",
     "FU.UI.description": "Description",
     "FU.UI.edit": "Edit",
+    "FU.UI.information": "Information",
     "FU.UI.magic": "Magic",
     "FU.UI.melee": "Melee",
     "FU.UI.multi": "Multi",

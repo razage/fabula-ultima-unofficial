@@ -88,11 +88,11 @@
 		<a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i> {{localize "FU.UI.roll"}}</a>
 		<a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i>
 			{{localize "FU.Attributes.name"}}</a>
+		<a class="item" data-tab="attacks">Attacks</a>
 		<a class="item" data-tab="skills"><i class="fas fa-solid fa-paintbrush"></i> {{localize "FU.Plural.skill"}}</a>
 		<a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i>
 			{{localize "FU.Spells.name"}}</a>
-		<a class="item" data-tab="info"><i class="fas fa-solid fa-message"></i>
-			Information</a>
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-message"></i> {{localize "FU.UI.information"}}</a>
 	</nav>
 
 	<section class="sheet-body">
@@ -113,6 +113,43 @@
 				</div>
 			</div>
 			{{> "systems/fabulaultima/templates/actor/partials/resistances.hbs" isNPC=true}}
+		</div>
+
+		<div class="tab attacks" data-group="primary" data-tab="attacks">
+			<button class="fabula-button item-create" data-type="weapon"><i class="fas fa-solid fa-plus"></i></button>
+			<div class="item-list attacks">
+				{{#each actor.system.weapons as |item|}}
+				<div class="item" data-item-id="{{item._id}}">
+					{{> "systems/fabulaultima/templates/actor/partials/weapon-card.hbs" weapon=item}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="tab spells" data-group="primary" data-tab="spells">
+			<button class="fabula-button item-create" data-type="spell"><i class="fas fa-solid fa-plus"></i></button>
+			<div class="item-list spells">
+				{{#each actor.system.spells as |item|}}
+				<div class="item" data-item-id="{{item._id}}">
+					{{> "systems/fabulaultima/templates/actor/partials/spell-card.hbs" spell=item}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="tab info" data-group="primary" data-tab="info">
+			<h2>{{localize "FU.NPC.specialRules"}}</h2>
+			<div class="editor-host">
+				{{editor enrichedSpecial target="system.specialRules" button=true owner=owner
+				editable=editable}}
+			</div>
+			<label for="system.typicalTraits">{{localize "FU.NPC.typicalTraits"}}</label>
+			<input name="system.typicalTraits" type="text" value="{{actor.system.typicalTraits}}" data-dtype="String" />
+			<h2>{{localize "FU.UI.description"}}</h2>
+			<div class="editor-host">
+				{{editor enrichedDescription target="system.description" button=true owner=owner
+				editable=editable}}
+			</div>
 		</div>
 	</section>
 </form>
