@@ -88,6 +88,7 @@
     "FU.Items.Types.bond": "Bond",
     "FU.Items.Types.class": "Class",
     "FU.Items.Types.new": "New",
+    "FU.Items.Types.skill": "Skill",
     "FU.Items.Types.spell": "Spell",
     "FU.Items.Types.weapon": "Weapon",
 
@@ -98,6 +99,7 @@
 
     "FU.Plural.accessory": "Accessories",
     "FU.Plural.arcanum": "Arcana",
+    "FU.Plural.attack": "Attacks",
     "FU.Plural.skill": "Skills",
 
     "FU.Proficiencies.name": "Proficiencies",

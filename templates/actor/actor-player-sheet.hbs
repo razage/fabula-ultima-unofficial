@@ -45,28 +45,7 @@
             </div>
 
             {{!-- Status Conditions --}}
-            <div class="grid grid-6col">
-                <div class="flexrow conditions">
-                    <img class="condition-icon {{#unless actor.system.statuses.dazed.immune}} {{#if actor.system.statuses.dazed.active}}active{{/if}}{{else}}immune{{/unless}}"
-                        src="systems/fabulaultima/assets/ui/knocked-out-stars.svg"
-                        title="{{localize 'FU.Status.dazed'}}" data-condition="dazed" />
-                    <img class="condition-icon {{#unless actor.system.statuses.enraged.immune}} {{#if actor.system.statuses.enraged.active}}active{{/if}}{{else}}immune{{/unless}}"
-                        src="systems/fabulaultima/assets/ui/enrage.svg" title="{{localize 'FU.Status.enraged'}}"
-                        data-condition="enraged" />
-                    <img class="condition-icon {{#unless actor.system.statuses.poisoned.immune}} {{#if actor.system.statuses.poisoned.active}}active{{/if}}{{else}}immune{{/unless}}"
-                        src="systems/fabulaultima/assets/ui/poison-bottle.svg" title="{{localize 'FU.Status.poisoned'}}"
-                        data-condition="poisoned" />
-                    <img class="condition-icon {{#unless actor.system.statuses.shaken.immune}} {{#if actor.system.statuses.shaken.active}}active{{/if}}{{else}}immune{{/unless}}"
-                        src="systems/fabulaultima/assets/ui/terror.svg" title="{{localize 'FU.Status.dazed'}}"
-                        data-condition="shaken" />
-                    <img class="condition-icon {{#unless actor.system.statuses.slow.immune}} {{#if actor.system.statuses.slow.active}}active{{/if}}{{else}}immune{{/unless}}"
-                        src="systems/fabulaultima/assets/ui/tortoise.svg" title="{{localize 'FU.Status.slow'}}"
-                        data-condition="slow" />
-                    <img class="condition-icon {{#unless actor.system.statuses.weak.immune}} {{#if actor.system.weak.enraged.active}}active{{/if}}{{else}}immune{{/unless}}"
-                        src="systems/fabulaultima/assets/ui/back-pain.svg" title="{{localize 'FU.Status.weak'}}"
-                        data-condition="weak" />
-                </div>
-            </div>
+            {{> "systems/fabulaultima/templates/actor/partials/conditions.hbs"}}
         </div>
     </header>
 

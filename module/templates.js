@@ -18,5 +18,6 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/fabulaultima/templates/actor/partials/roll-tab.hbs",
         "systems/fabulaultima/templates/actor/partials/resistances.hbs",
         "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs",
+        "systems/fabulaultima/templates/actor/partials/conditions.hbs",
     ]);
 };
