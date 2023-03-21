@@ -1,0 +1,19 @@
+<div class="tab rolls" data-group="primary" data-tab="rolls">
+	<div class="grid grid-4col">
+		<div class="flexrow">
+			<label for="attributeOne">{{localize "FU.Attributes.main"}}</label>
+			<label for="attributeTwo">{{localize "FU.Attributes.secondary"}}</label>
+			<label for="skill-bonus">{{localize "FU.UI.bonus"}}</label>
+			<span></span>
+		</div>
+		<div class="flexrow skill-roll-container">
+			{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+			className="attributeOne" selectName="attributeOne"}}
+			{{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
+			className="attributeTwo" selectName="attributeTwo"}}
+			<input id="skill-bonus" type="text" data-dtype="Number" />
+			<button class="fabula-button skill-roll"><i class="fas fa-solid fa-dice"></i> {{localize
+				"FU.UI.roll"}}</button>
+		</div>
+	</div>
+</div>

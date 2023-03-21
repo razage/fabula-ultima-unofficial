@@ -46,8 +46,41 @@
 					rValue=actor.system.mp.value rMax=actor.system.mp.max isNPC=true}}
 				</div>
 			</div>
-			<label for="system.initiative">{{localize "FU.Short.initiative"}}</label>
-			<input name="system.initiative" type="text" value="{{actor.system.initiative}}" data-dtype="Number" />
+
+			<div class="grid grid-3col">
+				<div class="flexrow defenses">
+					<div class="flexcol">
+						<label for="system.defenses.physical.value">{{localize "FU.Short.defense"}}</label>
+						<input name="system.defenses.physical.value" type="text"
+							value="{{actor.system.defenses.physical.value}}" data-dtype="Number" />
+						<span>
+							<label for=" system.defenses.physical.useDex">{{localize "FU.UI.addDex"}}</label>
+							<input name="system.defenses.physical.useDex" type="checkbox" data-dtype="Boolean" {{#if
+								actor.system.defenses.physical.useDex}}checked{{/if}} />
+						</span>
+					</div>
+
+					<div class="flexcol">
+						<label for="system.defenses.magic.value">{{localize "FU.Short.magicDefense"}}</label>
+						<input name="system.defenses.magic.value" type="text"
+							value="{{actor.system.defenses.magic.value}}" data-dtype="Number" />
+						<span>
+							<label for="system.defenses.magic.useIns">{{localize "FU.UI.addIns"}}</label>
+							<input name="system.defenses.magic.useIns" type="checkbox" data-dtype="Boolean" {{#if
+								actor.system.defenses.magic.useIns}}checked{{/if}} />
+						</span>
+					</div>
+
+					<div class="flexcol">
+						<label for="system.initiative">{{localize
+							"FU.Short.initiative"}}</label>
+						<input name="system.initiative" type="text" value="{{actor.system.initiative}}"
+							data-dtype="Number" />
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 
@@ -58,16 +91,20 @@
 		<a class="item" data-tab="skills"><i class="fas fa-solid fa-paintbrush"></i> {{localize "FU.Plural.skill"}}</a>
 		<a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i>
 			{{localize "FU.Spells.name"}}</a>
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-message"></i>
+			Information</a>
 	</nav>
 
 	<section class="sheet-body">
-		<div class="tab rolls" data-group="primary" data-tab="rolls"></div>
+		<div class="tab rolls" data-group="primary" data-tab="rolls">
+			{{> "systems/fabulaultima/templates/actor/partials/roll-tab.hbs"}}
+		</div>
 
 		<div class="tab attributes" data-group="primary" data-tab="attributes">
 			<div class="grid grid-4col">
 				<div class="flexrow">
 					{{#each actor.system.attributes as |attribute key|}}
-					<span>
+					<span class="stat-container">
 						<label for="system.attributes.{{key}}.base">{{localize (concat "FU.Attributes." key)}}</label>
 						{{> "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs" stat=key
 						obj=attribute}}
@@ -75,6 +112,7 @@
 					{{/each}}
 				</div>
 			</div>
+			{{> "systems/fabulaultima/templates/actor/partials/resistances.hbs" isNPC=true}}
 		</div>
 	</section>
 </form>

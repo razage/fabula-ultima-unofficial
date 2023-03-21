@@ -338,6 +338,31 @@ h4.dice-total .multi {
   font-size: 1.25rem;
   padding-right: 4px;
 }
+.npc-sheet {
+  padding-top: 8px;
+}
+.npc-sheet label {
+  color: #f8f8f8;
+}
+.npc-sheet label.species-label {
+  padding-left: 8px;
+}
+.npc-sheet .hp input[type="text"]:not(:disabled) {
+  color: #BF3F3F;
+}
+.npc-sheet .mp input[type="text"]:not(:disabled) {
+  color: #3FBFBF;
+}
+.npc-sheet .attributes .stat-container {
+  text-align: center;
+}
+.npc-sheet .attributes .stat-container label {
+  padding-right: 4px;
+}
+.npc-sheet .defenses label,
+.npc-sheet .defenses span {
+  text-align: center;
+}
 .weapon-sheet > .flexrow {
   padding: 2px;
 }

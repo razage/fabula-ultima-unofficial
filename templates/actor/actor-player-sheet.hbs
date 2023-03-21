@@ -87,25 +87,7 @@
 
     <section class="sheet-body">
         {{!-- Rolls --}}
-        <div class="tab rolls" data-group="primary" data-tab="rolls">
-            <div class="grid grid-4col">
-                <div class="flexrow">
-                    <label for="attributeOne">{{localize "FU.Attributes.main"}}</label>
-                    <label for="attributeTwo">{{localize "FU.Attributes.secondary"}}</label>
-                    <label for="skill-bonus">{{localize "FU.UI.bonus"}}</label>
-                    <span></span>
-                </div>
-                <div class="flexrow skill-roll-container">
-                    {{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
-                    className="attributeOne" selectName="attributeOne"}}
-                    {{> "systems/fabulaultima/templates/item/partials/attribute-dropdown.hbs"
-                    className="attributeTwo" selectName="attributeTwo"}}
-                    <input id="skill-bonus" type="text" data-dtype="Number" />
-                    <button class="fabula-button skill-roll"><i class="fas fa-solid fa-dice"></i> {{localize
-                        "FU.UI.roll"}}</button>
-                </div>
-            </div>
-        </div>
+        {{> "systems/fabulaultima/templates/actor/partials/roll-tab.hbs"}}
 
         {{!-- Attributes --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
@@ -147,69 +129,7 @@
                             {{actor.system.defenses.magic.value}}</p>
                     </div>
                 </div>
-                <h3>{{localize "FU.Resistances.name"}}</h3>
-                <div class="grid grid-3col resistances">
-                    <div class="flexrow">
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.air"><img src="{{getElementalIcon 'air'}}"
-                                    title="{{localize 'FU.Elements.air'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.air}}
-                        </div>
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.bolt"><img src="{{getElementalIcon 'bolt'}}"
-                                    title="{{localize 'FU.Elements.bolt'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.bolt}}
-                        </div>
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.dark"><img src="{{getElementalIcon 'dark'}}"
-                                    title="{{localize 'FU.Elements.dark'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.dark}}
-                        </div>
-                    </div>
-                    <div class="flexrow">
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.earth"><img src="{{getElementalIcon 'earth'}}"
-                                    title="{{localize 'FU.Elements.earth'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.earth}}
-                        </div>
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.fire"><img src="{{getElementalIcon 'fire'}}"
-                                    title="{{localize 'FU.Elements.fire'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.fire}}
-                        </div>
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.ice"><img src="{{getElementalIcon 'ice'}}"
-                                    title="{{localize 'FU.Elements.ice'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.ice}}
-                        </div>
-                    </div>
-                    <div class="flexrow">
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.light"><img src="{{getElementalIcon 'light'}}"
-                                    title="{{localize 'FU.Elements.light'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.light}}
-                        </div>
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.physical"><img src="{{getElementalIcon 'physical'}}"
-                                    title="{{localize 'FU.Elements.physical'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.physical}}
-                        </div>
-                        <div class="flexcol element-resistance">
-                            <label for="system.resistances.poison"><img src="{{getElementalIcon 'poison'}}"
-                                    title="{{localize 'FU.Elements.poison'}}" /></label>
-                            {{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
-                            resist=actor.system.resistances.poison}}
-                        </div>
-                    </div>
-                </div>
+                {{> "systems/fabulaultima/templates/actor/partials/resistances.hbs"}}
             </div>
         </div>
 

@@ -172,7 +172,15 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.01",
+            "defenses": {
+                "physical": {
+                    "useDex": false
+                },
+                "magic": {
+                    "useIns": false
+                }
+            },
             "species": "Beast",
             "initiative": 0,
             "level": 0,
