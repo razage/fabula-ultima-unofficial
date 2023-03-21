@@ -122,10 +122,10 @@ export class FabulaUltimaActor extends Actor {
         system.hp.crisis = Math.floor(system.hp.max / 2);
 
         // Calculate derived stats
-        system.defenses.physical.base = system.attributes.dexterity.base;
+        system.defenses.physical.base = system.attributes.dexterity.current;
         system.defenses.physical.value =
             system.defenses.physical.base + system.defenses.physical.bonus;
-        system.defenses.magic.base = system.attributes.insight.base;
+        system.defenses.magic.base = system.attributes.insight.current;
         system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
     }
 
@@ -142,6 +142,17 @@ export class FabulaUltimaActor extends Actor {
         system.mp.value = clamp(system.mp.value, 0, system.mp.max);
 
         system.hp.crisis = Math.floor(system.hp.max / 2);
+
+        // Calculate defenses
+        system.defenses.physical.base = system.attributes.dexterity.current;
+        system.defenses.magic.base = system.attributes.insight.current;
+        system.defenses.physical.value = system.defenses.physical.bonus;
+        system.defenses.magic.value = system.defenses.magic.bonus;
+
+        if (system.defenses.physical.useDex)
+            system.defenses.physical.value += system.defenses.physical.base;
+
+        if (system.defenses.magic.useIns) system.defenses.magic.value += system.defenses.magic.base;
     }
 
     _determineImmunities(actorData) {

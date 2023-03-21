@@ -363,6 +363,9 @@ h4.dice-total .multi {
 .npc-sheet .defenses span {
   text-align: center;
 }
+.npc-sheet .conditions span {
+  text-align: center;
+}
 .weapon-sheet > .flexrow {
   padding: 2px;
 }

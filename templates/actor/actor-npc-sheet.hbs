@@ -50,9 +50,13 @@
 			<div class="grid grid-3col">
 				<div class="flexrow defenses">
 					<div class="flexcol">
-						<label for="system.defenses.physical.value">{{localize "FU.Short.defense"}}</label>
-						<input name="system.defenses.physical.value" type="text"
-							value="{{actor.system.defenses.physical.value}}" data-dtype="Number" />
+						<label for="system.defenses.physical.value"><i class="fas fa-solid fa-shield"></i> {{localize
+							"FU.Short.defense"}}</label>
+						<span>
+							<p>{{actor.system.defenses.physical.value}}</p>
+							<input name="system.defenses.physical.bonus" type="text"
+								value="{{actor.system.defenses.physical.bonus}}" data-dtype="Number" />
+						</span>
 						<span>
 							<label for=" system.defenses.physical.useDex">{{localize "FU.UI.addDex"}}</label>
 							<input name="system.defenses.physical.useDex" type="checkbox" data-dtype="Boolean" {{#if
@@ -61,9 +65,13 @@
 					</div>
 
 					<div class="flexcol">
-						<label for="system.defenses.magic.value">{{localize "FU.Short.magicDefense"}}</label>
-						<input name="system.defenses.magic.value" type="text"
-							value="{{actor.system.defenses.magic.value}}" data-dtype="Number" />
+						<label for="system.defenses.magic.value"><i class="fas fa-solid fa-circle-nodes"></i> {{localize
+							"FU.Short.magicDefense"}}</label>
+						<span>
+							<p>{{actor.system.defenses.magic.value}}</p>
+							<input name="system.defenses.magic.bonus" type="text"
+								value="{{actor.system.defenses.magic.bonus}}" data-dtype="Number" />
+						</span>
 						<span>
 							<label for="system.defenses.magic.useIns">{{localize "FU.UI.addIns"}}</label>
 							<input name="system.defenses.magic.useIns" type="checkbox" data-dtype="Boolean" {{#if
@@ -72,7 +80,7 @@
 					</div>
 
 					<div class="flexcol">
-						<label for="system.initiative">{{localize
+						<label for="system.initiative"><i class="fas fa-solid fa-person-running"></i> {{localize
 							"FU.Short.initiative"}}</label>
 						<input name="system.initiative" type="text" value="{{actor.system.initiative}}"
 							data-dtype="Number" />
