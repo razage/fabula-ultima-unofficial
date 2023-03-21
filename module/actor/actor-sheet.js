@@ -386,8 +386,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             const isEquipped = !item.system.isEquipped;
 
             // Assumes only 1 ActiveEffect per item
-            const effect = relevantEffects[0];
-            await effect.update({ disabled: !isEquipped });
+            if (relevantEffects.length > 0) {
+                const effect = relevantEffects[0];
+                await effect.update({ disabled: !isEquipped });
+            }
+
             item.update({ data: { isEquipped: isEquipped } });
         } catch (ex) {
             console.log(ex);
