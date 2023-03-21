@@ -49,6 +49,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Burning meteor icon by Lorc
 -   Butterfly knife icon by Delapouite
 -   C96 icon by Skoll
+-   Cactus icon by Delapouite
+-   Cactus tap icon by Delapouite
 -   Caduceus icon by Delapouite
 -   Camping tent icon by Delapouite
 -   Candles icon by Delapouite
@@ -111,6 +113,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Kusarigama icon by DarkZaitzev
 -   Layered armor icon by Lorc
 -   Leather armor icon by Delapouite
+-   Life tap icon by Lorc
 -   Lightning branches icon by Lorc
 -   Lightning saber icon by Lorc
 -   Lightning storm icon by Lorc
@@ -172,6 +175,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Stone axe icon by Lorc
 -   Stone spear icon by Lorc
 -   Stone tower icon by Lorc
+-   Striking diamonds icon by Lorc
 -   Sun icon by Lorc
 -   Swords power icon by Delapouite
 -   Terror icon by Lorc

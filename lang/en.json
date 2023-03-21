@@ -94,6 +94,13 @@
 
     "FU.Navigation.tabGear": "Gear",
 
+    "FU.NPC.Rank.champion": "Champion",
+    "FU.NPC.Rank.companion": "Companion",
+    "FU.NPC.Rank.elite": "Elite",
+    "FU.NPC.Rank.majorVillain": "Major Villain",
+    "FU.NPC.Rank.minorVillain": "Minor Villain",
+    "FU.NPC.Rank.soldier": "Soldier",
+    "FU.NPC.Rank.supremeVillain": "Supreme Villain",
     "FU.NPC.specialRules": "Special Rules",
     "FU.NPC.typicalTraits": "Typical Traits",
 
@@ -118,12 +125,13 @@
     "FU.Resistances.vulnerable": "Vulnerable",
 
     "FU.Resources.name": "Resources",
-    "FU.Resources.hp": "Hit Points",
-    "FU.Resources.mp": "Mind Points",
-    "FU.Resources.ip": "Inventory Points",
-    "FU.Resources.fp": "Fabula Points",
-    "FU.Resources.xp": "Experience Points",
     "FU.Resources.currency": "Zenit",
+    "FU.Resources.fp": "Fabula Points",
+    "FU.Resources.hp": "Hit Points",
+    "FU.Resources.ip": "Inventory Points",
+    "FU.Resources.mp": "Mind Points",
+    "FU.Resources.up": "Ultima Points",
+    "FU.Resources.xp": "Experience Points",
 
     "FU.Rituals.name": "Rituals",
     "FU.Rituals.arcanism": "Arcanism",

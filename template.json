@@ -30,6 +30,18 @@
                     }
                 }
             },
+            "charBonuses": {
+                "bonuses": {
+                    "accuracy": {
+                        "physical": 0,
+                        "magic": 0
+                    },
+                    "damage": {
+                        "physical": 0,
+                        "magic": 0
+                    }
+                }
+            },
             "charDefenses": {
                 "defenses": {
                     "physical": {
@@ -114,13 +126,14 @@
         "player": {
             "templates": [
                 "charAttributes",
+                "charBonuses",
                 "charDefenses",
                 "charEquipment",
                 "charStatuses",
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.25",
+            "schemaVersion": "1.26",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -129,16 +142,6 @@
             "fabulaPoints": 3,
             "experiencePoints": 0,
             "initiativeMod": 0,
-            "bonuses": {
-                "accuracy": {
-                    "physical": 0,
-                    "magic": 0
-                },
-                "damage": {
-                    "physical": 0,
-                    "magic": 0
-                }
-            },
             "rituals": {
                 "arcanism": false,
                 "chimerism": false,
@@ -166,13 +169,14 @@
         "npc": {
             "templates": [
                 "charAttributes",
+                "charBonuses",
                 "charDefenses",
                 "charEquipment",
                 "charStatuses",
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.02",
+            "schemaVersion": "1.03",
             "defenses": {
                 "physical": {
                     "useDex": false
@@ -182,8 +186,12 @@
                 }
             },
             "species": "Beast",
+            "rank": "soldier",
+            "isBoss": false,
+            "canUseEquipment": false,
             "initiative": 0,
             "level": 0,
+            "ultimaPoints": 0,
             "typicalTraits": "",
             "description": "",
             "specialRules": ""

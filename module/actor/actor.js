@@ -8,17 +8,8 @@ export class FabulaUltimaActor extends Actor {
         const system = actorData.system;
         const flags = actorData.flags;
 
-        // Make separate methods for each Actor type (character, npc, etc.) to keep
-        // things organized.
-        if (actorData.type === "player") {
-            this._preparePlayerData(actorData);
-            this._determineImmunities(actorData);
-        }
-
-        if (actorData.type === "npc") {
-            this._prepareNPCData(actorData);
-            this._determineImmunities(actorData);
-        }
+        this._preparePlayerData(actorData);
+        this._determineImmunities(actorData);
     }
 
     _preparePlayerData(actorData) {
@@ -106,53 +97,49 @@ export class FabulaUltimaActor extends Actor {
             }
         });
 
-        system.characterLevel = clamp(_tempLevel, 0, 50);
+        // Calculate derived stats
+        system.defenses.physical.base = system.attributes.dexterity.current;
+        system.defenses.magic.base = system.attributes.insight.current;
 
-        // Update resources to reflect bonuses
-        system.hp.max =
-            system.attributes.might.current * 5 + system.characterLevel + system.hp.bonus;
-        system.mp.max =
-            system.attributes.willpower.current * 5 + system.characterLevel + system.mp.bonus;
-        system.ip.max = 6 + system.ip.bonus;
+        if (actorData.type === "player") {
+            system.defenses.physical.value =
+                system.defenses.physical.base + system.defenses.physical.bonus;
+            system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
+            system.characterLevel = clamp(_tempLevel, 0, 50);
+
+            // Update resources to reflect bonuses
+            system.hp.max =
+                system.attributes.might.current * 5 + system.characterLevel + system.hp.bonus;
+            system.mp.max =
+                system.attributes.willpower.current * 5 + system.characterLevel + system.mp.bonus;
+            system.ip.max = 6 + system.ip.bonus;
+        }
+
+        if (actorData.type === "npc") {
+            system.initiative = Math.floor(
+                (system.attributes.dexterity.base + system.attributes.insight.base) / 2
+            );
+            // Calculate max HP/MP and clamp it
+            system.hp.max =
+                system.attributes.might.current * 5 + system.level * 2 + system.hp.bonus;
+            system.mp.max = system.attributes.willpower.base * 5 + system.level + system.mp.bonus;
+
+            // Set default defense scores
+            if (system.defenses.physical.useDex)
+                system.defenses.physical.value += system.defenses.physical.base;
+
+            if (system.defenses.magic.useIns)
+                system.defenses.magic.value += system.defenses.magic.base;
+
+            system.defenses.physical.value += system.defenses.physical.bonus;
+            system.defenses.magic.value += system.defenses.magic.bonus;
+        }
 
         system.hp.value = clamp(system.hp.value, 0, system.hp.max);
         system.mp.value = clamp(system.mp.value, 0, system.mp.max);
         system.ip.value = clamp(system.ip.value, 0, system.ip.max);
 
         system.hp.crisis = Math.floor(system.hp.max / 2);
-
-        // Calculate derived stats
-        system.defenses.physical.base = system.attributes.dexterity.current;
-        system.defenses.physical.value =
-            system.defenses.physical.base + system.defenses.physical.bonus;
-        system.defenses.magic.base = system.attributes.insight.current;
-        system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
-    }
-
-    _prepareNPCData(actorData) {
-        const { system } = actorData;
-
-        //Calculate statistics
-        for (let [key, statistic] of Object.entries(system.attributes)) {
-            statistic.current = clamp(statistic.base + statistic.bonus, 6, 12);
-        }
-
-        // Clamp HP/MP, but don't calculate a max.
-        system.hp.value = clamp(system.hp.value, 0, system.hp.max);
-        system.mp.value = clamp(system.mp.value, 0, system.mp.max);
-
-        system.hp.crisis = Math.floor(system.hp.max / 2);
-
-        // Calculate defenses
-        system.defenses.physical.base = system.attributes.dexterity.current;
-        system.defenses.magic.base = system.attributes.insight.current;
-        system.defenses.physical.value = system.defenses.physical.bonus;
-        system.defenses.magic.value = system.defenses.magic.bonus;
-
-        if (system.defenses.physical.useDex)
-            system.defenses.physical.value += system.defenses.physical.base;
-
-        if (system.defenses.magic.useIns) system.defenses.magic.value += system.defenses.magic.base;
     }
 
     _determineImmunities(actorData) {
