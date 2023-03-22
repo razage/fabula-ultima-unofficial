@@ -360,7 +360,8 @@ h4.dice-total .multi {
   padding-right: 4px;
 }
 .npc-sheet .defenses label,
-.npc-sheet .defenses span {
+.npc-sheet .defenses span,
+.npc-sheet .defenses p.initiative-score {
   text-align: center;
 }
 .npc-sheet .conditions span {

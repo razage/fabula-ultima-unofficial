@@ -176,7 +176,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.03",
+            "schemaVersion": "1.04",
             "defenses": {
                 "physical": {
                     "useDex": false
@@ -189,7 +189,11 @@
             "rank": "soldier",
             "isBoss": false,
             "canUseEquipment": false,
-            "initiative": 0,
+            "initiative": {
+                "base": 0,
+                "bonus": 0,
+                "value": 0
+            },
             "level": 0,
             "ultimaPoints": 0,
             "typicalTraits": "",

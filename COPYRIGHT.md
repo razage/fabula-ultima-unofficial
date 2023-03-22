@@ -57,6 +57,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Carnival mask icon by Delapouite
 -   Cartwheel icon by Lorc
 -   Cat icon by Lorc
+-   Centipede icon by Lorc
 -   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
 -   Cloak and Dagger icon by Lorc
@@ -83,6 +84,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Evil hand icon by Lorc
 -   Evil moon icon by Lorc
 -   Eye shield icon by Lorc
+-   Fangs icon by Skoll
+-   Fast arrow icon by Lorc
 -   Fireball icon by Lorc
 -   Fire axe icon by Lorc
 -   Fire punch icon by Lorc
@@ -107,6 +110,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Holy oak icon by Cathelineau
 -   Ice bolt icon by Lorc
 -   Ice spear icon by Lorc
+-   Insect Jaws icon by Lorc
 -   Katana icon by Delapouite
 -   Knife thrust icon by Lorc
 -   Knocked out stars icon by Delapouite
@@ -125,6 +129,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Mailed fist icon by Lorc
 -   Meat cleaver icon by Lorc
 -   Minerals icon by Faithtoken
+-   Morph ball icon by Delapouite
 -   Musket icon by Skoll
 -   Nunchaku icon by Delapouite
 -   Panzerfaust icon by Delapouite
@@ -140,6 +145,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Public speaker icon by Delapouite
 -   Punch blast icon by Lorc
 -   Rake icon by Delapouite
+-   Rat icon by Delapouite
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite

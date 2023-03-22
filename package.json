@@ -1,7 +1,7 @@
 {
     "name": "fabulaultima",
     "type": "module",
-    "version": "0.5.5",
+    "version": "0.5.6",
     "description": "Implementing Fabula Ultima in FoundryVTT.",
     "main": "index.js",
     "scripts": {

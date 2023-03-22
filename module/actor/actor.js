@@ -116,9 +116,11 @@ export class FabulaUltimaActor extends Actor {
         }
 
         if (actorData.type === "npc") {
-            system.initiative = Math.floor(
+            system.initiative.base = Math.floor(
                 (system.attributes.dexterity.base + system.attributes.insight.base) / 2
             );
+            system.initiative.value = system.initiative.base + system.initiative.bonus;
+
             // Calculate max HP/MP and clamp it
             system.hp.max =
                 system.attributes.might.current * 5 + system.level * 2 + system.hp.bonus;
