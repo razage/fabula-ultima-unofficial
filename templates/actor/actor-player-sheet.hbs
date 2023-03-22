@@ -152,81 +152,9 @@
                 {{/each}}
             </div>
         </div>
-        </div>
 
         {{!-- Equipment --}}
-        <div class="tab backpack" data-group="primary" data-tab="backpack">
-            <span class="currency">
-                <i class="fas fa-duotone fa-coins"></i>{{localize "FU.Resources.currency"}}:
-                <input type="text" name="system.zenit" data-dtype="Number" value="{{actor.system.zenit}}" />
-            </span>
-            {{!-- Weapons --}}
-            <h2>
-                {{localize "FU.Items.Types.weapon"}}
-                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="weapons"
-                    title="{{localize 'FU.UI.openCompendium'}}"></i>
-            </h2>
-            <div class="flexcol">
-                <div class="item-list">
-                    {{#each actor.system.weapons as |item|}}
-                    <div class="item" data-item-id="{{item._id}}">
-                        {{> "systems/fabulaultima/templates/actor/partials/weapon-card.hbs" weapon=item}}
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
-            {{!-- Armor --}}
-            <h2>
-                {{localize "FU.Items.Types.armor"}}
-                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="armor"
-                    title="{{localize 'FU.UI.openCompendium'}}"></i>
-            </h2>
-            <div class="flexcol armor">
-                <div class="item-list">
-                    <div class="grid grid-6col">
-                        {{#each actor.system.armor as |item|}}
-                        <div class="flexrow armor-card item" data-item-id="{{item._id}}">
-                            {{> "systems/fabulaultima/templates/actor/partials/armor-card.hbs" armor=item}}
-                        </div>
-                        {{/each}}
-                    </div>
-                </div>
-            </div>
-            {{!-- Accessories --}}
-            <h3>
-                {{localize "FU.Plural.accessory"}}
-                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="accessory"
-                    title="{{localize 'FU.UI.openCompendium'}}"></i>
-            </h3>
-            <div class="flexcol accessories">
-                <div class="item-list">
-                    <div class="grid grid-4col">
-                        {{#each actor.system.accessories as |item|}}
-                        <div class="flexrow accessory-card item" data-item-id="{{item._id}}">
-                            {{> "systems/fabulaultima/templates/actor/partials/accessory-card.hbs" acc=item}}
-                        </div>
-                        {{/each}}
-                    </div>
-                </div>
-            </div>
-            {{!-- Items --}}
-            <h2>
-                {{localize "FU.Items.name"}} <i class="fas fa-solid fa-book-atlas open-compendium"
-                    data-compendium="consumables" title="{{localize 'FU.UI.openCompendium'}}"></i>
-            </h2>
-            <div class="flexcol">
-                <div class="grid grid-4col">
-                    {{#each actor.system.consumables as |item|}}
-                    <div class="flexrow consumable-card" data-item-id="{{item._id}}">
-                        <img src="{{item.img}}" class="item-icon">
-                        <p>{{item.name}}</p>
-                        <p>{{item.system.ipCost}} IP</p>
-                        <p>{{localize (concat "FU.Items.Blurbs." item.system.internalName)}}</p>
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
-        </div>
+        {{> "systems/fabulaultima/templates/actor/partials/equipment-tab.hbs" isPlayer=true}}
 
         {{!-- Skills --}}
         <div class="tab skills" data-group="primary" data-tab="skills">

@@ -57,6 +57,7 @@
                 }
             },
             "charEquipment": {
+                "accessories": [],
                 "armor": [],
                 "skills": [],
                 "spells": [],
@@ -133,7 +134,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.26",
+            "schemaVersion": "1.27",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -157,7 +158,6 @@
                 "shields": false
             },
             "characterLevel": 0,
-            "accessories": [],
             "arcanum": [],
             "bonds": [],
             "classes": [],
@@ -176,7 +176,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.04",
+            "schemaVersion": "1.05",
             "defenses": {
                 "physical": {
                     "useDex": false

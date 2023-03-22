@@ -95,7 +95,12 @@
 		<a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i> {{localize "FU.UI.roll"}}</a>
 		<a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i>
 			{{localize "FU.Attributes.name"}}</a>
+		{{#if actor.system.canUseEquipment}}
+		<a class="item" data-tab="backpack"><i class="fas fa-solid fa-backpack"></i>
+			{{localize "FU.Navigation.tabGear"}}</a>
+		{{else}}
 		<a class="item" data-tab="attacks"><i class="fas fa-solid fa-swords"></i> {{localize "FU.Plural.attack"}}</a>
+		{{/if}}
 		<a class="item" data-tab="skills"><i class="fas fa-solid fa-paintbrush"></i> {{localize "FU.Plural.skill"}}</a>
 		<a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i>
 			{{localize "FU.Spells.name"}}</a>
@@ -123,6 +128,8 @@
 			{{> "systems/fabulaultima/templates/actor/partials/conditions.hbs" isNPC=true}}
 			{{> "systems/fabulaultima/templates/actor/partials/resistances.hbs" isNPC=true}}
 		</div>
+
+		{{> "systems/fabulaultima/templates/actor/partials/equipment-tab.hbs"}}
 
 		<div class="tab attacks" data-group="primary" data-tab="attacks">
 			<button class="fabula-button item-create" data-type="weapon"><i class="fas fa-solid fa-plus"></i></button>
@@ -158,17 +165,36 @@
 		</div>
 
 		<div class="tab info" data-group="primary" data-tab="info">
-			<h2>{{localize "FU.NPC.specialRules"}}</h2>
-			<div class="editor-host">
-				{{editor enrichedSpecial target="system.specialRules" button=true owner=owner
-				editable=editable}}
-			</div>
-			<label for="system.typicalTraits">{{localize "FU.NPC.typicalTraits"}}</label>
-			<input name="system.typicalTraits" type="text" value="{{actor.system.typicalTraits}}" data-dtype="String" />
-			<h2>{{localize "FU.UI.description"}}</h2>
-			<div class="editor-host">
-				{{editor enrichedDescription target="system.description" button=true owner=owner
-				editable=editable}}
+			<div class="flexcol">
+				<div class="grid grid-2col">
+					<div class="flexrow">
+						<label for="system.rank">{{localize "FU.NPC.Rank.name"}}</label>
+						<select name="system.rank">
+							<option value="soldier">{{localize "FU.NPC.Rank.soldier"}}</option>
+							<option value="elite">{{localize "FU.NPC.Rank.elite"}}</option>
+							<option value="champion">{{localize "FU.NPC.Rank.champion"}}</option>
+							<option value="minor villain">{{localize "FU.NPC.Rank.minorVillain"}}</option>
+							<option value="major villain">{{localize "FU.NPC.Rank.majorVillain"}}</option>
+							<option value="supreme villain">{{localize "FU.NPC.Rank.supremeVillain"}}</option>
+							<option value="companion">{{localize "FU.NPC.Rank.companion"}}</option>
+						</select>
+					</div>
+				</div>
+				<h2>{{localize "FU.NPC.specialRules"}}</h2>
+				<div class="editor-host">
+					{{editor enrichedSpecial target="system.specialRules" button=true owner=owner
+					editable=editable}}
+				</div>
+				<h3>{{localize "FU.NPC.typicalTraits"}}</h3>
+				<div class="editor-host">
+					{{editor enrichedTraits target="system.typicalTraits" button=true owner=owner
+					editable=editable}}
+				</div>
+				<h3>{{localize "FU.UI.description"}}</h3>
+				<div class="editor-host">
+					{{editor enrichedDescription target="system.description" button=true owner=owner
+					editable=editable}}
+				</div>
 			</div>
 		</div>
 	</section>

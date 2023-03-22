@@ -20,7 +20,56 @@ export class FabulaUltimaActor extends Actor {
             statistic.current = clamp(statistic.base + statistic.bonus, 6, 12);
         }
 
-        // Calculate class-based stats
+        this._applyEquipment(actorData);
+
+        // Calculate derived stats
+        system.defenses.physical.base = system.attributes.dexterity.current;
+        system.defenses.magic.base = system.attributes.insight.current;
+
+        if (actorData.type === "player") {
+            system.defenses.physical.value =
+                system.defenses.physical.base + system.defenses.physical.bonus;
+            system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
+
+            // Update resources to reflect bonuses
+            system.hp.max =
+                system.attributes.might.current * 5 + system.characterLevel + system.hp.bonus;
+            system.mp.max =
+                system.attributes.willpower.current * 5 + system.characterLevel + system.mp.bonus;
+            system.ip.max = 6 + system.ip.bonus;
+        }
+
+        if (actorData.type === "npc") {
+            system.initiative.base = Math.floor(
+                (system.attributes.dexterity.base + system.attributes.insight.base) / 2
+            );
+            system.initiative.value = system.initiative.base + system.initiative.bonus;
+
+            // Calculate max HP/MP and clamp it
+            system.hp.max =
+                system.attributes.might.current * 5 + system.level * 2 + system.hp.bonus;
+            system.mp.max = system.attributes.willpower.base * 5 + system.level + system.mp.bonus;
+
+            // Set default defense scores
+            if (system.defenses.physical.useDex)
+                system.defenses.physical.value += system.defenses.physical.base;
+
+            if (system.defenses.magic.useIns)
+                system.defenses.magic.value += system.defenses.magic.base;
+
+            system.defenses.physical.value += system.defenses.physical.bonus;
+            system.defenses.magic.value += system.defenses.magic.bonus;
+        }
+
+        system.hp.value = clamp(system.hp.value, 0, system.hp.max);
+        system.mp.value = clamp(system.mp.value, 0, system.mp.max);
+        system.ip.value = clamp(system.ip.value, 0, system.ip.max);
+
+        system.hp.crisis = Math.floor(system.hp.max / 2);
+    }
+
+    _applyEquipment(actorData) {
+        const { system } = actorData;
         let _tempLevel = 0;
 
         actorData.items.forEach((element) => {
@@ -30,7 +79,9 @@ export class FabulaUltimaActor extends Actor {
                     system.mp.bonus += element.system.mpBonus;
                     system.defenses.physical.bonus += element.system.defense.value;
                     system.defenses.magic.bonus += element.system.mDefense.value;
-                    system.initiativeMod += element.system.initiative;
+                    if (actorData.type === "player")
+                        system.initiativeMod += element.system.initiative;
+                    else system.initiative.bonus += element.system.initiative;
                     system.bonuses.accuracy.physical += element.system.accuracyBonus.physical;
                     system.bonuses.accuracy.magic += element.system.accuracyBonus.magic;
                 }
@@ -40,15 +91,22 @@ export class FabulaUltimaActor extends Actor {
                 if (element.system.isEquipped) {
                     system.defenses.physical.bonus += element.system.defense.value;
                     system.defenses.magic.bonus += element.system.mDefense.value;
-                    system.initiativeMod += element.system.initiative;
+                    if (actorData.type === "player")
+                        system.initiativeMod += element.system.initiative;
+                    else system.initiative.bonus += element.system.initiative;
 
                     // If the armor uses a static value for the defense, subtract the attribute from the total
-                    if (!element.system.defense.useDex) {
-                        system.defenses.physical.bonus -= system.attributes.dexterity.current;
-                    }
+                    if (actorData.type === "player") {
+                        if (!element.system.defense.useDex) {
+                            system.defenses.physical.bonus -= system.attributes.dexterity.current;
+                        }
 
-                    if (!element.system.mDefense.useIns) {
-                        system.defenses.magic.bonus -= system.attributes.insight.current;
+                        if (!element.system.mDefense.useIns) {
+                            system.defenses.magic.bonus -= system.attributes.insight.current;
+                        }
+                    } else {
+                        system.defenses.physical.useDex = element.system.defense.useDex;
+                        system.defenses.magic.useIns = element.system.mDefense.useIns;
                     }
                 }
             }
@@ -96,52 +154,7 @@ export class FabulaUltimaActor extends Actor {
                 }
             }
         });
-
-        // Calculate derived stats
-        system.defenses.physical.base = system.attributes.dexterity.current;
-        system.defenses.magic.base = system.attributes.insight.current;
-
-        if (actorData.type === "player") {
-            system.defenses.physical.value =
-                system.defenses.physical.base + system.defenses.physical.bonus;
-            system.defenses.magic.value = system.defenses.magic.base + system.defenses.magic.bonus;
-            system.characterLevel = clamp(_tempLevel, 0, 50);
-
-            // Update resources to reflect bonuses
-            system.hp.max =
-                system.attributes.might.current * 5 + system.characterLevel + system.hp.bonus;
-            system.mp.max =
-                system.attributes.willpower.current * 5 + system.characterLevel + system.mp.bonus;
-            system.ip.max = 6 + system.ip.bonus;
-        }
-
-        if (actorData.type === "npc") {
-            system.initiative.base = Math.floor(
-                (system.attributes.dexterity.base + system.attributes.insight.base) / 2
-            );
-            system.initiative.value = system.initiative.base + system.initiative.bonus;
-
-            // Calculate max HP/MP and clamp it
-            system.hp.max =
-                system.attributes.might.current * 5 + system.level * 2 + system.hp.bonus;
-            system.mp.max = system.attributes.willpower.base * 5 + system.level + system.mp.bonus;
-
-            // Set default defense scores
-            if (system.defenses.physical.useDex)
-                system.defenses.physical.value += system.defenses.physical.base;
-
-            if (system.defenses.magic.useIns)
-                system.defenses.magic.value += system.defenses.magic.base;
-
-            system.defenses.physical.value += system.defenses.physical.bonus;
-            system.defenses.magic.value += system.defenses.magic.bonus;
-        }
-
-        system.hp.value = clamp(system.hp.value, 0, system.hp.max);
-        system.mp.value = clamp(system.mp.value, 0, system.mp.max);
-        system.ip.value = clamp(system.ip.value, 0, system.ip.max);
-
-        system.hp.crisis = Math.floor(system.hp.max / 2);
+        if (actorData.type === "player") system.characterLevel = clamp(_tempLevel, 0, 50);
     }
 
     _determineImmunities(actorData) {
