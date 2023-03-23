@@ -78,11 +78,6 @@ export class FabulaUltimaActor extends Actor {
                     system.defenses.physical.bonus += element.system.defense.value;
                     system.defenses.magic.bonus += element.system.mDefense.value;
 
-                    if (actorData.type === "npc") {
-                        system.defenses.physical.useDex = element.system.defense.useDex;
-                        system.defenses.magic.useIns = element.system.mDefense.useIns;
-                    }
-
                     // If the armor uses a static value for the defense, subtract the attribute from the total
                     if (!element.system.defense.useDex) {
                         system.defenses.physical.bonus -= system.attributes.dexterity.base;

@@ -176,15 +176,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.05",
-            "defenses": {
-                "physical": {
-                    "useDex": false
-                },
-                "magic": {
-                    "useIns": false
-                }
-            },
+            "schemaVersion": "1.06",
             "species": "Beast",
             "rank": "soldier",
             "isBoss": false,

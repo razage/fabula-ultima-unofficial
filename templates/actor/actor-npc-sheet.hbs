@@ -59,13 +59,6 @@
 								value="{{actor.system.defenses.physical.bonus}}" data-dtype="Number" />
 							{{/unless}}
 						</span>
-						{{#unless actor.system.canUseEquipment}}
-						<span>
-							<label for="system.defenses.physical.useDex">{{localize "FU.UI.addDex"}}</label>
-							<input name="system.defenses.physical.useDex" type="checkbox" data-dtype="Boolean" {{#if
-								actor.system.defenses.physical.useDex}}checked{{/if}} />
-						</span>
-						{{/unless}}
 					</div>
 
 					<div class="flexcol">
@@ -78,20 +71,12 @@
 								value="{{actor.system.defenses.magic.bonus}}" data-dtype="Number" />
 							{{/unless}}
 						</span>
-						{{#unless actor.system.canUseEquipment}}
-						<span>
-							<label for="system.defenses.magic.useIns">{{localize "FU.UI.addIns"}}</label>
-							<input name="system.defenses.magic.useIns" type="checkbox" data-dtype="Boolean" {{#if
-								actor.system.defenses.magic.useIns}}checked{{/if}} />
-						</span>
-						{{/unless}}
 					</div>
 
 					<div class="flexcol">
 						<label for="system.initiative.value"><i class="fas fa-solid fa-person-running"></i> {{localize
 							"FU.Short.initiative"}}</label>
 						<p class="initiative-score">{{actor.system.initiative.value}}</p>
-						<span></span>
 						<span></span>
 					</div>
 				</div>
