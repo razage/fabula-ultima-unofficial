@@ -101,6 +101,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Glock icon by Skoll
 -   Glowing hands icon by Lorc
 -   Gluttonous smile icon by Lorc
+-   Guards icon by Delapouite
 -   Halberd icon by Lorc
 -   Hand bandage icon by Delapouite
 -   Hand of god icon by Delapouite

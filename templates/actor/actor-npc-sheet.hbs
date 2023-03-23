@@ -54,14 +54,18 @@
 							"FU.Short.defense"}}</label>
 						<span>
 							<p>{{actor.system.defenses.physical.value}}</p>
+							{{#unless actor.system.canUseEquipment}}
 							<input name="system.defenses.physical.bonus" type="text"
 								value="{{actor.system.defenses.physical.bonus}}" data-dtype="Number" />
+							{{/unless}}
 						</span>
+						{{#unless actor.system.canUseEquipment}}
 						<span>
-							<label for=" system.defenses.physical.useDex">{{localize "FU.UI.addDex"}}</label>
+							<label for="system.defenses.physical.useDex">{{localize "FU.UI.addDex"}}</label>
 							<input name="system.defenses.physical.useDex" type="checkbox" data-dtype="Boolean" {{#if
 								actor.system.defenses.physical.useDex}}checked{{/if}} />
 						</span>
+						{{/unless}}
 					</div>
 
 					<div class="flexcol">
@@ -69,14 +73,18 @@
 							"FU.Short.magicDefense"}}</label>
 						<span>
 							<p>{{actor.system.defenses.magic.value}}</p>
+							{{#unless actor.system.canUseEquipment}}
 							<input name="system.defenses.magic.bonus" type="text"
 								value="{{actor.system.defenses.magic.bonus}}" data-dtype="Number" />
+							{{/unless}}
 						</span>
+						{{#unless actor.system.canUseEquipment}}
 						<span>
 							<label for="system.defenses.magic.useIns">{{localize "FU.UI.addIns"}}</label>
 							<input name="system.defenses.magic.useIns" type="checkbox" data-dtype="Boolean" {{#if
 								actor.system.defenses.magic.useIns}}checked{{/if}} />
 						</span>
+						{{/unless}}
 					</div>
 
 					<div class="flexcol">
