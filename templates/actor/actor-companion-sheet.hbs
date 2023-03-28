@@ -7,37 +7,18 @@
 				</h1>
 			</div>
 
-			<div class="grid grid-6col">
+			<div class="grid grid-4col">
 				<div class="flexrow">
-					<label for="system.level">{{localize "FU.Short.level"}}</label>
-					<input name="system.level" type="text" value="{{actor.system.level}}" data-dtype="Number" />
-					<label class="label-pad-left" for="system.species">{{localize "FU.Species.name"}}</label>
-					<select name="system.species" data-dtype="String">
-						<option value="beast" {{#if_eq actor.system.species "beast" }}selected{{/if_eq}}>{{localize
-							"FU.Species.beast"}}</option>
-						<option value="construct" {{#if_eq actor.system.species "construct" }}selected{{/if_eq}}>
-							{{localize
-							"FU.Species.construct"}}</option>
-						<option value="demon" {{#if_eq actor.system.species "demon" }}selected{{/if_eq}}>{{localize
-							"FU.Species.demon"}}</option>
-						<option value="elemental" {{#if_eq actor.system.species "elemental" }}selected{{/if_eq}}>
-							{{localize
-							"FU.Species.elemental"}}</option>
-						<option value="humanoid" {{#if_eq actor.system.species "humanoid" }}selected{{/if_eq}}>
-							{{localize
-							"FU.Species.humanoid"}}</option>
-						<option value="monster" {{#if_eq actor.system.species "monster" }}selected{{/if_eq}}>{{localize
-							"FU.Species.monster"}}</option>
-						<option value="plant" {{#if_eq actor.system.species "plant" }}selected{{/if_eq}}>{{localize
-							"FU.Species.plant"}}</option>
-						<option value="undead" {{#if_eq actor.system.species "undead" }}selected{{/if_eq}}>{{localize
-							"FU.Species.undead"}}</option>
-					</select>
-					{{#if actor.system.isBoss}}
-					<label class="label-pad-left" for="system.ultimaPoints">{{localize "FU.Resources.up"}}</label>
-					<input name="system.ultimaPoints" type="text" value="{{actor.system.ultimaPoints}}"
+					<label for="system.ownerLevel">{{localize "FU.Companion.ownerLevel"}} <i
+							class="fas fa-solid fa-circle-question"
+							title="{{localize 'FU.Companion.ownerLevelEx'}}"></i></label>
+					<input name="system.ownerLevel" type="text" value="{{actor.system.ownerLevel}}"
 						data-dtype="Number" />
-					{{/if}}
+					<label class="label-pad-left" for="system.skillLevel">{{localize "FU.Companion.skillLevel"}} <i
+							class="fas fa-solid fa-circle-question"
+							title="{{localize 'FU.Companion.skilLLevelEx'}}"></i></label>
+					<input name="system.skillLevel" type="text" value="{{actor.system.skillLevel}}"
+						data-dtype="Number" />
 				</div>
 			</div>
 
@@ -59,10 +40,6 @@
 							"FU.Short.defense"}}</label>
 						<span>
 							<p>{{actor.system.defenses.physical.value}}</p>
-							{{#unless actor.system.canUseEquipment}}
-							<input name="system.defenses.physical.bonus" type="text"
-								value="{{actor.system.defenses.physical.bonus}}" data-dtype="Number" />
-							{{/unless}}
 						</span>
 					</div>
 
@@ -71,18 +48,7 @@
 							"FU.Short.magicDefense"}}</label>
 						<span>
 							<p>{{actor.system.defenses.magic.value}}</p>
-							{{#unless actor.system.canUseEquipment}}
-							<input name="system.defenses.magic.bonus" type="text"
-								value="{{actor.system.defenses.magic.bonus}}" data-dtype="Number" />
-							{{/unless}}
 						</span>
-					</div>
-
-					<div class="flexcol">
-						<label for="system.initiative.value"><i class="fas fa-solid fa-person-running"></i> {{localize
-							"FU.Short.initiative"}}</label>
-						<p class="initiative-score">{{actor.system.initiative.value}}</p>
-						<span></span>
 					</div>
 				</div>
 			</div>
@@ -163,41 +129,34 @@
 		</div>
 
 		<div class="tab info" data-group="primary" data-tab="info">
-			<div class="flexcol">
-				<div class="grid grid-2col">
-					<div class="flexrow">
-						<label for="system.rank">{{localize "FU.NPC.Rank.name"}}</label>
-						<select name="system.rank">
-							<option value="soldier" {{#if_eq actor.system.rank "soldier" }}selected{{/if_eq}}>{{localize
-								"FU.NPC.Rank.soldier"}}</option>
-							<option value="elite" {{#if_eq actor.system.rank "elite" }}selected{{/if_eq}}>{{localize
-								"FU.NPC.Rank.elite"}}</option>
-							<option value="champion" {{#if_eq actor.system.rank "champion" }}selected{{/if_eq}}>
-								{{localize "FU.NPC.Rank.champion"}}</option>
-							<option value="minor villain" {{#if_eq actor.system.rank "minor villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.minorVillain"}}</option>
-							<option value="major villain" {{#if_eq actor.system.rank "major villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.majorVillain"}}</option>
-							<option value="supreme villain" {{#if_eq actor.system.rank "supreme villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.supremeVillain"}}</option>
-						</select>
-					</div>
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					<label for="system.isHeroic">{{localize "FU.Companion.heroic"}} <i
+							class="fas fa-solid fa-circle-question"
+							title="{{localize 'FU.Companion.heroicEx'}}"></i></label>
+					<input name="system.isHeroic" type="checkbox" data-dtype="Boolean" {{#if
+						actor.system.isHeroic}}checked{{/if}} />
 				</div>
-				<h2>{{localize "FU.NPC.specialRules"}}</h2>
-				<div class="editor-host">
-					{{editor enrichedSpecial target="system.specialRules" button=true owner=owner
-					editable=editable}}
+				<div class="flexrow">
+					<label for="system.species">{{localize "FU.Species.name"}}</label>
+					<select name="system.species" data-dtype="String">
+						<option value="beast" {{#if_eq actor.system.species "beast" }}selected{{/if_eq}}>{{localize
+							"FU.Species.beast"}}</option>
+						<option value="construct" {{#if_eq actor.system.species "construct" }}selected{{/if_eq}}>
+							{{localize
+							"FU.Species.construct"}}</option>
+						<option value="elemental" {{#if_eq actor.system.species "elemental" }}selected{{/if_eq}}>
+							{{localize
+							"FU.Species.elemental"}}</option>
+						<option value="plant" {{#if_eq actor.system.species "plant" }}selected{{/if_eq}}>{{localize
+							"FU.Species.plant"}}</option>
+					</select>
 				</div>
-				<h3>{{localize "FU.NPC.typicalTraits"}}</h3>
-				<div class="editor-host">
-					{{editor enrichedTraits target="system.typicalTraits" button=true owner=owner
-					editable=editable}}
-				</div>
-				<h3>{{localize "FU.UI.description"}}</h3>
-				<div class="editor-host">
-					{{editor enrichedDescription target="system.description" button=true owner=owner
-					editable=editable}}
-				</div>
+			</div>
+			<h3>{{localize "FU.UI.description"}}</h3>
+			<div class="editor-host">
+				{{editor enrichedDescription target="system.description" button=true owner=owner
+				editable=editable}}
 			</div>
 		</div>
 	</section>

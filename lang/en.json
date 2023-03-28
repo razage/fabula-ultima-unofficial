@@ -48,6 +48,14 @@
     "FU.Classes.wayfarer": "Wayfarer",
     "FU.Classes.weaponmaster": "Weaponmaster",
 
+    "FU.Companion.name": "Companion",
+    "FU.Companion.heroic": "Heroic Companion",
+    "FU.Companion.heroicEx": "Check this if you master the Wayfarer class and select this heroic skill. It will add the bonus HP automatically.",
+    "FU.Companion.ownerLevel": "Owner Level",
+    "FU.Companion.ownerLevelEx": "Your character's current level.",
+    "FU.Companion.skillLevel": "Skill Level",
+    "FU.Companion.skilLLevelEx": "The current level of your Faithful Companion skill.",
+
     "FU.Elements.physical": "Physical",
     "FU.Elements.air": "Air",
     "FU.Elements.bolt": "Bolt",
@@ -95,7 +103,6 @@
     "FU.Navigation.tabGear": "Gear",
 
     "FU.NPC.Rank.champion": "Champion",
-    "FU.NPC.Rank.companion": "Companion",
     "FU.NPC.Rank.elite": "Elite",
     "FU.NPC.Rank.majorVillain": "Major Villain",
     "FU.NPC.Rank.minorVillain": "Minor Villain",

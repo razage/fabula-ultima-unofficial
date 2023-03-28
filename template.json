@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["player", "npc", "group", "world"],
+        "types": ["player", "companion", "npc", "group", "world"],
         "templates": {
             "charAttributes": {
                 "attributes": {
@@ -123,6 +123,25 @@
                     "bonus": 0
                 }
             }
+        },
+        "companion": {
+            "templates": [
+                "charAttributes",
+                "charBonuses",
+                "charDefenses",
+                "charEquipment",
+                "charStatuses",
+                "charResistances",
+                "charResources"
+            ],
+            "schemaVersion": "1.0",
+            "skillLevel": 1,
+            "isHeroic": false,
+            "canUseEquipment": false,
+            "ownerLevel": 5,
+            "species": "Beast",
+            "level": 5,
+            "description": ""
         },
         "player": {
             "templates": [

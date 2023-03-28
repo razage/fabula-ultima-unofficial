@@ -47,10 +47,30 @@ export class FabulaUltimaActor extends Actor {
             );
             system.initiative.value = system.initiative.base + system.initiative.bonus;
 
-            // Calculate max HP/MP and clamp it
             system.hp.max =
                 system.attributes.might.current * 5 + system.level * 2 + system.hp.bonus;
             system.mp.max = system.attributes.willpower.base * 5 + system.level + system.mp.bonus;
+        }
+
+        if (actorData.type === "companion") {
+            // Make sure the skill level doesn't go above 5
+            system.skillLevel = clamp(system.skillLevel, 1, 5);
+
+            system.hp.max =
+                system.attributes.might.base * system.skillLevel +
+                Math.floor(system.ownerLevel / 2) +
+                system.hp.bonus;
+
+            /*
+            I'm not sure what kind of MP companions are supposed to have. Since the book directs
+            you to the NPC creation section, I'm assuming they use that formula. Even though they
+            have a custom formula for health.
+            */
+            system.mp.max = system.attributes.willpower.base * 5 + system.level + system.mp.bonus;
+
+            if (system.isHeroic) {
+                system.hp.max += 10;
+            }
         }
 
         system.hp.value = clamp(system.hp.value, 0, system.hp.max);
