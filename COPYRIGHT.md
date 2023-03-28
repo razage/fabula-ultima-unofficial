@@ -212,6 +212,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Two handed sword icon by Delapouite
 -   Unfriendly fire icon by Lorc
 -   Viking shield icon by Delapouite
+-   Vintage robot icon by Lorc
 -   Virus icon by Lorc
 -   Volcano icon by Lorc
 -   Walther PPK icon by Skoll

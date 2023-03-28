@@ -36,6 +36,12 @@ export class FabulaUltimaActor extends Actor {
         }
 
         if (actorData.type === "npc") {
+            const bossTypes = ["minor villain", "major villain", "supreme villain"];
+
+            if (bossTypes.includes(system.rank)) {
+                system.isBoss = true;
+            }
+
             system.initiative.base = Math.floor(
                 (system.attributes.dexterity.base + system.attributes.insight.base) / 2
             );

@@ -7,7 +7,7 @@
 				</h1>
 			</div>
 
-			<div class="grid grid-4col">
+			<div class="grid grid-6col">
 				<div class="flexrow">
 					<label for="system.level">{{localize "FU.Short.level"}}</label>
 					<input name="system.level" type="text" value="{{actor.system.level}}" data-dtype="Number" />
@@ -33,6 +33,11 @@
 						<option value="undead" {{#if_eq actor.system.species "undead" }}selected{{/if_eq}}>{{localize
 							"FU.Species.undead"}}</option>
 					</select>
+					{{#if actor.system.isBoss}}
+					<label class="label-pad-left" for="system.ultimaPoints">{{localize "FU.Resources.up"}}</label>
+					<input name="system.ultimaPoints" type="text" value="{{actor.system.ultimaPoints}}"
+						data-dtype="Number" />
+					{{/if}}
 				</div>
 			</div>
 
@@ -163,13 +168,20 @@
 					<div class="flexrow">
 						<label for="system.rank">{{localize "FU.NPC.Rank.name"}}</label>
 						<select name="system.rank">
-							<option value="soldier">{{localize "FU.NPC.Rank.soldier"}}</option>
-							<option value="elite">{{localize "FU.NPC.Rank.elite"}}</option>
-							<option value="champion">{{localize "FU.NPC.Rank.champion"}}</option>
-							<option value="minor villain">{{localize "FU.NPC.Rank.minorVillain"}}</option>
-							<option value="major villain">{{localize "FU.NPC.Rank.majorVillain"}}</option>
-							<option value="supreme villain">{{localize "FU.NPC.Rank.supremeVillain"}}</option>
-							<option value="companion">{{localize "FU.NPC.Rank.companion"}}</option>
+							<option value="soldier" {{#if_eq actor.system.rank "soldier" }}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.soldier"}}</option>
+							<option value="elite" {{#if_eq actor.system.rank "elite" }}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.elite"}}</option>
+							<option value="champion" {{#if_eq actor.system.rank "champion" }}selected{{/if_eq}}>
+								{{localize "FU.NPC.Rank.champion"}}</option>
+							<option value="minor villain" {{#if_eq actor.system.rank "minor villain"
+								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.minorVillain"}}</option>
+							<option value="major villain" {{#if_eq actor.system.rank "major villain"
+								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.majorVillain"}}</option>
+							<option value="supreme villain" {{#if_eq actor.system.rank "supreme villain"
+								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.supremeVillain"}}</option>
+							<option value="companion" {{#if_eq actor.system.rank "companion" }}selected{{/if_eq}}>
+								{{localize "FU.NPC.Rank.companion"}}</option>
 						</select>
 					</div>
 				</div>
