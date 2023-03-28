@@ -1,0 +1,45 @@
+.npc-sheet {
+	padding-top: 8px;
+
+	label {
+		color: @font-color;
+	}
+
+	label.species-label {
+		padding-left: 8px;
+	}
+
+	.hp input[type="text"]:not(:disabled) {
+		color: @health;
+	}
+
+	.mp input[type="text"]:not(:disabled) {
+		color: @mana;
+	}
+
+
+	.attributes {
+		.stat-container {
+			text-align: center;
+
+			label {
+				padding-right: 4px;
+			}
+		}
+	}
+
+	.defenses {
+
+		label,
+		span,
+		p.initiative-score {
+			text-align: center;
+		}
+	}
+
+	.conditions {
+		span {
+			text-align: center;
+		}
+	}
+}

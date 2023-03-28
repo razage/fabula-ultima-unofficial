@@ -1,0 +1,204 @@
+<form class="{{cssClass}} npc-sheet" autocomplete="off">
+	<header class="sheet-header flexcol">
+		<div class="header-fields">
+			<div class="flexrow">
+				<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+				<h1 class="character-name"><input name="name" type="text" data-dtype="String" value="{{actor.name}}" />
+				</h1>
+			</div>
+
+			<div class="grid grid-6col">
+				<div class="flexrow">
+					<label for="system.level">{{localize "FU.Short.level"}}</label>
+					<input name="system.level" type="text" value="{{actor.system.level}}" data-dtype="Number" />
+					<label class="label-pad-left" for="system.species">{{localize "FU.Species.name"}}</label>
+					<select name="system.species" data-dtype="String">
+						<option value="beast" {{#if_eq actor.system.species "beast" }}selected{{/if_eq}}>{{localize
+							"FU.Species.beast"}}</option>
+						<option value="construct" {{#if_eq actor.system.species "construct" }}selected{{/if_eq}}>
+							{{localize
+							"FU.Species.construct"}}</option>
+						<option value="demon" {{#if_eq actor.system.species "demon" }}selected{{/if_eq}}>{{localize
+							"FU.Species.demon"}}</option>
+						<option value="elemental" {{#if_eq actor.system.species "elemental" }}selected{{/if_eq}}>
+							{{localize
+							"FU.Species.elemental"}}</option>
+						<option value="humanoid" {{#if_eq actor.system.species "humanoid" }}selected{{/if_eq}}>
+							{{localize
+							"FU.Species.humanoid"}}</option>
+						<option value="monster" {{#if_eq actor.system.species "monster" }}selected{{/if_eq}}>{{localize
+							"FU.Species.monster"}}</option>
+						<option value="plant" {{#if_eq actor.system.species "plant" }}selected{{/if_eq}}>{{localize
+							"FU.Species.plant"}}</option>
+						<option value="undead" {{#if_eq actor.system.species "undead" }}selected{{/if_eq}}>{{localize
+							"FU.Species.undead"}}</option>
+					</select>
+					{{#if actor.system.isBoss}}
+					<label class="label-pad-left" for="system.ultimaPoints">{{localize "FU.Resources.up"}}</label>
+					<input name="system.ultimaPoints" type="text" value="{{actor.system.ultimaPoints}}"
+						data-dtype="Number" />
+					{{/if}}
+				</div>
+			</div>
+
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize
+					'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis
+					inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max isNPC=true}}
+					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="mp" title=(localize
+					'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value"
+					rValue=actor.system.mp.value rMax=actor.system.mp.max isNPC=true}}
+				</div>
+			</div>
+
+			<div class="grid grid-3col">
+				<div class="flexrow defenses">
+					<div class="flexcol">
+						<label for="system.defenses.physical.value"><i class="fas fa-solid fa-shield"></i> {{localize
+							"FU.Short.defense"}}</label>
+						<span>
+							<p>{{actor.system.defenses.physical.value}}</p>
+							{{#unless actor.system.canUseEquipment}}
+							<input name="system.defenses.physical.bonus" type="text"
+								value="{{actor.system.defenses.physical.bonus}}" data-dtype="Number" />
+							{{/unless}}
+						</span>
+					</div>
+
+					<div class="flexcol">
+						<label for="system.defenses.magic.value"><i class="fas fa-solid fa-circle-nodes"></i> {{localize
+							"FU.Short.magicDefense"}}</label>
+						<span>
+							<p>{{actor.system.defenses.magic.value}}</p>
+							{{#unless actor.system.canUseEquipment}}
+							<input name="system.defenses.magic.bonus" type="text"
+								value="{{actor.system.defenses.magic.bonus}}" data-dtype="Number" />
+							{{/unless}}
+						</span>
+					</div>
+
+					<div class="flexcol">
+						<label for="system.initiative.value"><i class="fas fa-solid fa-person-running"></i> {{localize
+							"FU.Short.initiative"}}</label>
+						<p class="initiative-score">{{actor.system.initiative.value}}</p>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i> {{localize "FU.UI.roll"}}</a>
+		<a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i>
+			{{localize "FU.Attributes.name"}}</a>
+		{{#if actor.system.canUseEquipment}}
+		<a class="item" data-tab="backpack"><i class="fas fa-solid fa-backpack"></i>
+			{{localize "FU.Navigation.tabGear"}}</a>
+		{{else}}
+		<a class="item" data-tab="attacks"><i class="fas fa-solid fa-swords"></i> {{localize "FU.Plural.attack"}}</a>
+		{{/if}}
+		<a class="item" data-tab="skills"><i class="fas fa-solid fa-paintbrush"></i> {{localize "FU.Plural.skill"}}</a>
+		<a class="item" data-tab="spells"><i class="fas fa-solid fa-book"></i>
+			{{localize "FU.Spells.name"}}</a>
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-message"></i> {{localize "FU.UI.information"}}</a>
+	</nav>
+
+	<section class="sheet-body">
+		<div class="tab rolls" data-group="primary" data-tab="rolls">
+			{{> "systems/fabulaultima/templates/actor/partials/roll-tab.hbs"}}
+		</div>
+
+		<div class="tab attributes" data-group="primary" data-tab="attributes">
+			<div class="grid grid-4col">
+				<div class="flexrow">
+					{{#each actor.system.attributes as |attribute key|}}
+					<span class="stat-container">
+						<label for="system.attributes.{{key}}.base">{{localize (concat "FU.Attributes." key)}}</label>
+						{{> "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs" stat=key
+						obj=attribute}}
+					</span>
+					{{/each}}
+				</div>
+			</div>
+			<h2>{{localize "FU.Status.name"}}</h2>
+			{{> "systems/fabulaultima/templates/actor/partials/conditions.hbs" isNPC=true}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistances.hbs" isNPC=true}}
+		</div>
+
+		{{> "systems/fabulaultima/templates/actor/partials/equipment-tab.hbs"}}
+
+		<div class="tab attacks" data-group="primary" data-tab="attacks">
+			<button class="fabula-button item-create" data-type="weapon"><i class="fas fa-solid fa-plus"></i></button>
+			<div class="item-list attacks">
+				{{#each actor.system.weapons as |item|}}
+				<div class="item" data-item-id="{{item._id}}">
+					{{> "systems/fabulaultima/templates/actor/partials/weapon-card.hbs" weapon=item}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="tab skills" data-group="primary" data-tab="skills">
+			<button class="fabula-button item-create" data-type="skill"><i class="fas fa-solid fa-plus"></i></button>
+			<div class="item-list spells">
+				{{#each actor.system.skills as |item|}}
+				<div class="item" data-item-id="{{item._id}}">
+					{{> "systems/fabulaultima/templates/actor/partials/skill-card.hbs" skill=item}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="tab spells" data-group="primary" data-tab="spells">
+			<button class="fabula-button item-create" data-type="spell"><i class="fas fa-solid fa-plus"></i></button>
+			<div class="item-list spells">
+				{{#each actor.system.spells as |item|}}
+				<div class="item" data-item-id="{{item._id}}">
+					{{> "systems/fabulaultima/templates/actor/partials/spell-card.hbs" spell=item}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="tab info" data-group="primary" data-tab="info">
+			<div class="flexcol">
+				<div class="grid grid-2col">
+					<div class="flexrow">
+						<label for="system.rank">{{localize "FU.NPC.Rank.name"}}</label>
+						<select name="system.rank">
+							<option value="soldier" {{#if_eq actor.system.rank "soldier" }}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.soldier"}}</option>
+							<option value="elite" {{#if_eq actor.system.rank "elite" }}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.elite"}}</option>
+							<option value="champion" {{#if_eq actor.system.rank "champion" }}selected{{/if_eq}}>
+								{{localize "FU.NPC.Rank.champion"}}</option>
+							<option value="minor villain" {{#if_eq actor.system.rank "minor villain"
+								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.minorVillain"}}</option>
+							<option value="major villain" {{#if_eq actor.system.rank "major villain"
+								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.majorVillain"}}</option>
+							<option value="supreme villain" {{#if_eq actor.system.rank "supreme villain"
+								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.supremeVillain"}}</option>
+						</select>
+					</div>
+				</div>
+				<h2>{{localize "FU.NPC.specialRules"}}</h2>
+				<div class="editor-host">
+					{{editor enrichedSpecial target="system.specialRules" button=true owner=owner
+					editable=editable}}
+				</div>
+				<h3>{{localize "FU.NPC.typicalTraits"}}</h3>
+				<div class="editor-host">
+					{{editor enrichedTraits target="system.typicalTraits" button=true owner=owner
+					editable=editable}}
+				</div>
+				<h3>{{localize "FU.UI.description"}}</h3>
+				<div class="editor-host">
+					{{editor enrichedDescription target="system.description" button=true owner=owner
+					editable=editable}}
+				</div>
+			</div>
+		</div>
+	</section>
+</form>

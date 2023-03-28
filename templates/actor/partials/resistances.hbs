@@ -1,0 +1,109 @@
+<h3>{{localize "FU.Resistances.name"}}</h3>
+<div class="grid grid-3col resistances">
+	<div class="flexrow">
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.air"><img src="{{getElementalIcon 'air'}}"
+					title="{{localize 'FU.Elements.air'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="air"
+			current=actor.system.resistances.air}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.air}}
+			{{/if}}
+		</div>
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.bolt"><img src="{{getElementalIcon 'bolt'}}"
+					title="{{localize 'FU.Elements.bolt'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="bolt"
+			current=actor.system.resistances.bolt}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.bolt}}
+			{{/if}}
+		</div>
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.dark"><img src="{{getElementalIcon 'dark'}}"
+					title="{{localize 'FU.Elements.dark'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="dark"
+			current=actor.system.resistances.dark}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.dark}}
+			{{/if}}
+
+		</div>
+	</div>
+	<div class="flexrow">
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.earth"><img src="{{getElementalIcon 'earth'}}"
+					title="{{localize 'FU.Elements.earth'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="earth"
+			current=actor.system.resistances.earth}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.earth}}
+			{{/if}}
+		</div>
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.fire"><img src="{{getElementalIcon 'fire'}}"
+					title="{{localize 'FU.Elements.fire'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="fire"
+			current=actor.system.resistances.fire}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.fire}}
+			{{/if}}
+		</div>
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.ice"><img src="{{getElementalIcon 'ice'}}"
+					title="{{localize 'FU.Elements.ice'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="ice"
+			current=actor.system.resistances.ice}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.ice}}
+			{{/if}}
+		</div>
+	</div>
+	<div class="flexrow">
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.light"><img src="{{getElementalIcon 'light'}}"
+					title="{{localize 'FU.Elements.light'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="light"
+			current=actor.system.resistances.light}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.light}}
+			{{/if}}
+		</div>
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.physical"><img src="{{getElementalIcon 'physical'}}"
+					title="{{localize 'FU.Elements.physical'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="physical"
+			current=actor.system.resistances.physical}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.physical}}
+			{{/if}}
+		</div>
+		<div class="flexcol element-resistance">
+			<label for="system.resistances.poison"><img src="{{getElementalIcon 'poison'}}"
+					title="{{localize 'FU.Elements.poison'}}" /></label>
+			{{#if isNPC}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-dropdown.hbs" resist="poison"
+			current=actor.system.resistances.poison}}
+			{{else}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistance-text.hbs"
+			resist=actor.system.resistances.poison}}
+			{{/if}}
+		</div>
+	</div>
+</div>

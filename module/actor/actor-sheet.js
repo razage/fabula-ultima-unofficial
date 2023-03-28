@@ -4,7 +4,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["fabulaultima", "sheet", "actor"],
-            template: "systems/fabulaultima/templates/actor/actor-sheet.hbs",
             width: 700,
             height: 800,
             tabs: [
@@ -17,16 +16,43 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         });
     }
 
+    get template() {
+        const path = "systems/fabulaultima/templates/actor";
+
+        // unique sheet for each type of item
+        return `${path}/actor-${this.actor.type}-sheet.hbs`;
+    }
+
     async getData() {
         const data = super.getData();
 
         data.effects = data.actor.getEmbeddedCollection("ActiveEffect").contents;
+
+        if (this.actor.type === "companion") {
+            data.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
+                async: true,
+            });
+            this._prepareNPCItems(data);
+        }
 
         if (this.actor.type === "player") {
             data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
                 async: true,
             });
             this._prepareCharacterItems(data);
+        }
+
+        if (this.actor.type === "npc") {
+            data.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
+                async: true,
+            });
+            data.enrichedSpecial = await TextEditor.enrichHTML(this.object.system.specialRules, {
+                async: true,
+            });
+            data.enrichedTraits = await TextEditor.enrichHTML(this.object.system.typicalTraits, {
+                async: true,
+            });
+            this._prepareNPCItems(data);
         }
 
         return data;
@@ -97,6 +123,45 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.bonds = bonds;
         actorData.system.classes = classes;
         actorData.system.consumables = consumables;
+        actorData.system.skills = skills;
+        actorData.system.spells = spells;
+        actorData.system.weapons = weapons;
+    }
+
+    _prepareNPCItems(sheetData) {
+        const actorData = sheetData.actor;
+        const accessories = [];
+        const armor = [];
+        const skills = [];
+        const spells = [];
+        const weapons = [];
+        const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
+
+        sheetData.items.forEach((item) => {
+            switch (item.type) {
+                case "armor":
+                    armor.push(item);
+                    break;
+                case "accessory":
+                    accessories.push(item);
+                    break;
+                case "skill":
+                    this._applyUnequippableActiveEffect(effects, item);
+                    skills.push(item);
+                    break;
+
+                case "spell":
+                    spells.push(item);
+                    break;
+
+                case "weapon":
+                    weapons.push(item);
+                    break;
+            }
+        });
+
+        actorData.system.accessories = accessories;
+        actorData.system.armor = armor;
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
@@ -342,8 +407,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             const isEquipped = !item.system.isEquipped;
 
             // Assumes only 1 ActiveEffect per item
-            const effect = relevantEffects[0];
-            await effect.update({ disabled: !isEquipped });
+            if (relevantEffects.length > 0) {
+                const effect = relevantEffects[0];
+                await effect.update({ disabled: !isEquipped });
+            }
+
             item.update({ data: { isEquipped: isEquipped } });
         } catch (ex) {
             console.log(ex);

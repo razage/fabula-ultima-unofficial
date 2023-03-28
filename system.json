@@ -5,7 +5,7 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "compatibility": {
         "minimum": "10",
         "verified": "10.291"
@@ -64,6 +64,24 @@
             "path": "packs/consumables.db",
             "private": false,
             "type": "Item",
+            "flags": {}
+        },
+        {
+            "name": "npc-skills",
+            "label": "NPC Skills",
+            "system": "fabulaultima",
+            "path": "packs/npc-skills.db",
+            "private": false,
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "name": "npcs",
+            "label": "NPCs",
+            "system": "fabulaultima",
+            "path": "packs/npcs.db",
+            "private": false,
+            "type": "Actor",
             "flags": {}
         },
         {

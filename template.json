@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["player", "enemy", "group", "world"],
+        "types": ["player", "companion", "npc", "group", "world"],
         "templates": {
             "charAttributes": {
                 "attributes": {
@@ -29,6 +29,39 @@
                         "current": 6
                     }
                 }
+            },
+            "charBonuses": {
+                "bonuses": {
+                    "accuracy": {
+                        "physical": 0,
+                        "magic": 0
+                    },
+                    "damage": {
+                        "physical": 0,
+                        "magic": 0
+                    }
+                }
+            },
+            "charDefenses": {
+                "defenses": {
+                    "physical": {
+                        "base": 6,
+                        "value": 0,
+                        "bonus": 0
+                    },
+                    "magic": {
+                        "base": 6,
+                        "value": 0,
+                        "bonus": 0
+                    }
+                }
+            },
+            "charEquipment": {
+                "accessories": [],
+                "armor": [],
+                "skills": [],
+                "spells": [],
+                "weapons": []
             },
             "charStatuses": {
                 "statuses": {
@@ -59,7 +92,7 @@
                     "crisis": false
                 }
             },
-            "resistances": {
+            "charResistances": {
                 "resistances": {
                     "air": 0,
                     "bolt": 0,
@@ -71,57 +104,64 @@
                     "physical": 0,
                     "poison": 0
                 }
+            },
+            "charResources": {
+                "hp": {
+                    "value": 35,
+                    "max": 35,
+                    "crisis": 17,
+                    "bonus": 0
+                },
+                "mp": {
+                    "value": 35,
+                    "max": 35,
+                    "bonus": 0
+                },
+                "ip": {
+                    "value": 6,
+                    "max": 6,
+                    "bonus": 0
+                }
             }
         },
+        "companion": {
+            "templates": [
+                "charAttributes",
+                "charBonuses",
+                "charDefenses",
+                "charEquipment",
+                "charStatuses",
+                "charResistances",
+                "charResources"
+            ],
+            "schemaVersion": "1.0",
+            "skillLevel": 1,
+            "isHeroic": false,
+            "canUseEquipment": false,
+            "ownerLevel": 5,
+            "species": "Beast",
+            "level": 5,
+            "description": ""
+        },
         "player": {
-            "templates": ["charAttributes", "charStatuses", "resistances"],
-            "schemaVersion": "1.24",
+            "templates": [
+                "charAttributes",
+                "charBonuses",
+                "charDefenses",
+                "charEquipment",
+                "charStatuses",
+                "charResistances",
+                "charResources"
+            ],
+            "schemaVersion": "1.27",
             "pronouns": "",
             "identity": "",
             "theme": "",
             "origin": "",
             "isLeader": false,
-            "hp": {
-                "value": 35,
-                "max": 35,
-                "crisis": 17,
-                "bonus": 0
-            },
-            "mp": {
-                "value": 35,
-                "max": 35,
-                "bonus": 0
-            },
-            "ip": {
-                "value": 6,
-                "max": 6,
-                "bonus": 0
-            },
             "fabulaPoints": 3,
             "experiencePoints": 0,
             "initiativeMod": 0,
-            "bonuses": {
-                "accuracy": {
-                    "physical": 0,
-                    "magic": 0
-                },
-                "damage": {
-                    "physical": 0,
-                    "magic": 0
-                }
-            },
-            "defenses": {
-                "physical": {
-                    "base": 6,
-                    "value": 0,
-                    "bonus": 0
-                },
-                "magic": {
-                    "base": 6,
-                    "value": 0,
-                    "bonus": 0
-                }
-            },
             "rituals": {
                 "arcanism": false,
                 "chimerism": false,
@@ -137,18 +177,39 @@
                 "shields": false
             },
             "characterLevel": 0,
-            "accessories": [],
             "arcanum": [],
-            "armor": [],
             "bonds": [],
             "classes": [],
             "consumables": [],
-            "skills": [],
-            "spells": [],
-            "weapons": [],
             "zenit": 500,
             "canSummon": false,
             "notes": ""
+        },
+        "npc": {
+            "templates": [
+                "charAttributes",
+                "charBonuses",
+                "charDefenses",
+                "charEquipment",
+                "charStatuses",
+                "charResistances",
+                "charResources"
+            ],
+            "schemaVersion": "1.06",
+            "species": "Beast",
+            "rank": "soldier",
+            "isBoss": false,
+            "canUseEquipment": false,
+            "initiative": {
+                "base": 0,
+                "bonus": 0,
+                "value": 0
+            },
+            "level": 0,
+            "ultimaPoints": 0,
+            "typicalTraits": "",
+            "description": "",
+            "specialRules": ""
         }
     },
     "Item": {
