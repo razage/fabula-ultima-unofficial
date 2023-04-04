@@ -16,8 +16,8 @@
     "FU.Attributes.main": "Primary Attribute",
     "FU.Attributes.secondary": "Secondary Attribute",
 
-    "FU.Bio.nameLabel": "Name",
     "FU.Bio.name": "Bio",
+    "FU.Bio.nameLabel": "Name",
     "FU.Bio.pronouns": "Pronouns",
 
     "FU.Bonds.name": "Bonds",
@@ -66,17 +66,25 @@
     "FU.Elements.light": "Light",
     "FU.Elements.poison": "Poison",
 
+    "FU.Emotions.name": "Emotions",
     "FU.Emotions.admiration": "Admiration",
     "FU.Emotions.inferiority": "Inferiority",
     "FU.Emotions.loyalty": "Loyalty",
     "FU.Emotions.mistrust": "Mistrust",
     "FU.Emotions.affection": "Affection",
     "FU.Emotions.hatred": "Hatred",
-    "FU.Emotions.name": "Emotions",
 
     "FU.Equipment.name": "Equipment",
     "FU.Equipment.mainHand": "Main-Hand",
     "FU.Equipment.offHand": "Off-Hand",
+
+    "FU.Group.name": "Group",
+    "FU.Group.creatures": "Creatures",
+    "FU.Group.leader": "Group Leader",
+    "FU.Group.leaderEx": "Used in group rolls to determine the target. This can be changed at will, but there can only be one leader.",
+    "FU.Group.locations": "Locations",
+    "FU.Group.members": "Group Members",
+    "FU.Group.rolls": "Group Rolls",
 
     "FU.Items.name": "Items",
     "FU.Items.Blurbs.elementalShard": "Deals 10 air, bolt, earth, fire, or ice damage to a target.",

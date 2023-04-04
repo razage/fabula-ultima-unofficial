@@ -1,4 +1,4 @@
-<form class="{{cssClass}} party-sheet" autocomplete="off">
+<form class="{{cssClass}} group-sheet" autocomplete="off">
 	<header class="sheet-header flexcol">
 		<div class="header-fields">
 			<div class="flexrow">
@@ -11,28 +11,33 @@
 	</header>
 
 	<nav class="sheet-tabs tabs" data-group="primary">
-		<a class="item" data-tab="party">Party Members</a>
-		<a class="item" data-tab="creatures">Creatures</a>
-		<a class="item" data-tab="locations">Locations</a>
+		<a class="item" data-tab="party"><i class="fas fa-solid fa-people-group"></i> {{localize
+			"FU.Group.members"}}</a>
+		<a class="item" data-tab="creatures"><i class="fas fa-solid fa-paw"></i> {{localize "FU.Group.creatures"}}</a>
+		<a class="item" data-tab="locations"><i class="fas fa-solid fa-earth-americas"></i> {{localize
+			"FU.Group.locations"}}</a>
 	</nav>
 
 	<section class="sheet-body">
 		<div class="tab party" data-group="primary" data-tab="party">
-			<div class="grid grid-6col">
-				<div class="flexrow">
-					<p>Character Name</p>
-					<p>Level</p>
-					<p>Leader <i class="fas fa-solid fa-circle-question"></i></p>
+			<div class="grid grid-6col group-members">
+				<div class="flexrow header">
+					<p>{{localize "FU.Bio.nameLabel"}}</p>
+					<p>{{localize "FU.Short.level"}}</p>
+					<p>{{localize "FU.Group.leader"}} <i class="fas fa-solid fa-circle-question"
+							title="{{localize 'FU.Group.leaderEx'}}"></i></p>
 				</div>
 				{{#each actor.system.groupMembers as |player|}}
 				<div class="flexrow">
 					<p>{{player.name}}</p>
 					<p>{{player.system.characterLevel}}</p>
-					<input name="characterLeader" type="checkbox" data-dtype="Boolean" {{#if
-						player.system.isLeader}}checked{{/if}} />
+					<button class="fabula-button leader" data-source="{{actor._id}}"
+						data-actor-id="{{player._id}}">{{#if player.system.isLeader}}<i
+							class="fas fa-solid fa-crown"></i> Leader{{else}}Party Member{{/if}}</button>
 				</div>
 				{{/each}}
 			</div>
+			<h2>{{localize "FU.UI.notes"}}</h2>
 			<div class="editor-host">
 				{{editor enrichedNotes target="system.notes" button=true owner=owner
 				editable=editable}}

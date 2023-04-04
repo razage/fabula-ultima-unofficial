@@ -338,6 +338,15 @@ h4.dice-total .multi {
   font-size: 1.25rem;
   padding-right: 4px;
 }
+.group-sheet .group-members .header {
+  border-bottom: 1px solid #f8f8f8;
+}
+.group-sheet .group-members p {
+  text-align: center;
+}
+.group-sheet .group-members span {
+  text-align: center;
+}
 .npc-sheet {
   padding-top: 8px;
 }
@@ -531,8 +540,8 @@ button.fabula-button.item-create:hover {
 .bond-sheet input[type="text"],
 .class-sheet input[type="text"],
 .consumable-sheet input[type="text"],
+.group-sheet input[type="text"],
 .npc-sheet input[type="text"],
-.party-sheet input[type="text"],
 .skill-sheet input[type="text"],
 .spell-sheet input[type="text"],
 .weapon-sheet input[type="text"],
@@ -543,8 +552,8 @@ button.fabula-button.item-create:hover {
 .bond-sheet select,
 .class-sheet select,
 .consumable-sheet select,
+.group-sheet select,
 .npc-sheet select,
-.party-sheet select,
 .skill-sheet select,
 .spell-sheet select,
 .weapon-sheet select {
@@ -557,8 +566,8 @@ button.fabula-button.item-create:hover {
 .bond-sheet input[type="text"]:not(:disabled),
 .class-sheet input[type="text"]:not(:disabled),
 .consumable-sheet input[type="text"]:not(:disabled),
+.group-sheet input[type="text"]:not(:disabled),
 .npc-sheet input[type="text"]:not(:disabled),
-.party-sheet input[type="text"]:not(:disabled),
 .skill-sheet input[type="text"]:not(:disabled),
 .spell-sheet input[type="text"]:not(:disabled),
 .weapon-sheet input[type="text"]:not(:disabled) {
@@ -571,8 +580,8 @@ button.fabula-button.item-create:hover {
 .bond-sheet img.item-img,
 .class-sheet img.item-img,
 .consumable-sheet img.item-img,
+.group-sheet img.item-img,
 .npc-sheet img.item-img,
-.party-sheet img.item-img,
 .skill-sheet img.item-img,
 .spell-sheet img.item-img,
 .weapon-sheet img.item-img {
@@ -587,8 +596,8 @@ button.fabula-button.item-create:hover {
 .bond-sheet label.label-pad-left,
 .class-sheet label.label-pad-left,
 .consumable-sheet label.label-pad-left,
+.group-sheet label.label-pad-left,
 .npc-sheet label.label-pad-left,
-.party-sheet label.label-pad-left,
 .skill-sheet label.label-pad-left,
 .spell-sheet label.label-pad-left,
 .weapon-sheet label.label-pad-left {

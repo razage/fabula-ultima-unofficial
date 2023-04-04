@@ -143,8 +143,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             if (actor.type === "player") groupMembers.push(actor);
         });
 
-        console.log(groupMembers);
-
         groupData.system.groupMembers = groupMembers;
     }
 
@@ -238,6 +236,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
         // Update the equipped status for an item
         html.find(".equipped").click(this._onItemEquippedStatusChange.bind(this));
+
+        // Update the leader status for a character
+        html.find(".leader").click(this._onGroupLeaderChanged.bind(this));
 
         // Open compendium
         html.find(".open-compendium").click((ev) => {
@@ -433,6 +434,27 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             }
 
             item.update({ data: { isEquipped: isEquipped } });
+        } catch (ex) {
+            console.log(ex);
+        }
+    }
+
+    async _onGroupLeaderChanged(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+
+        try {
+            const player = game.actors.get(dataset.actorId);
+            const isLeader = !player.system.isLeader;
+
+            await player.update({ data: { isLeader: isLeader } });
+
+            /* 
+            This forces the group sheet to "refresh", since the value being 
+            changed is on a different actor instead of an embedded item.
+            */
+            this.render();
         } catch (ex) {
             console.log(ex);
         }
