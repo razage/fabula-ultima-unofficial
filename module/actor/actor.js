@@ -8,8 +8,11 @@ export class FabulaUltimaActor extends Actor {
         const system = actorData.system;
         const flags = actorData.flags;
 
-        this._preparePlayerData(actorData);
-        this._determineImmunities(actorData);
+        // Skip the calculations for groups, since they just embed player objects anyway
+        if (actorData.type !== "group") {
+            this._preparePlayerData(actorData);
+            this._determineImmunities(actorData);
+        }
     }
 
     _preparePlayerData(actorData) {

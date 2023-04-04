@@ -155,6 +155,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Plain dagger icon by Lorc
 -   Plastron icon by Lorc
 -   Poison bottle icon by Lorc
+-   Poker Hand icon by Lorc
 -   Pope crown icon by Delepouite
 -   Potion ball icon by Lorc
 -   Public speaker icon by Delapouite

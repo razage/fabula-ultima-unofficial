@@ -35,6 +35,13 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             this._prepareNPCItems(data);
         }
 
+        if (this.actor.type === "group") {
+            data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
+                async: true,
+            });
+            this._prepareGroupData(data);
+        }
+
         if (this.actor.type === "player") {
             data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
                 async: true,
@@ -126,6 +133,19 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
+    }
+
+    _prepareGroupData(sheetData) {
+        const groupData = sheetData.actor;
+        const groupMembers = [];
+
+        game.actors.forEach((actor) => {
+            if (actor.type === "player") groupMembers.push(actor);
+        });
+
+        console.log(groupMembers);
+
+        groupData.system.groupMembers = groupMembers;
     }
 
     _prepareNPCItems(sheetData) {

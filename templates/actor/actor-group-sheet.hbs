@@ -1,0 +1,42 @@
+<form class="{{cssClass}} party-sheet" autocomplete="off">
+	<header class="sheet-header flexcol">
+		<div class="header-fields">
+			<div class="flexrow">
+				<img class="item-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+				<h1 class="character-name"><input name="name" type="text" data-dtype="String" value="{{actor.name}}"
+						placeholder="Party Name" />
+				</h1>
+			</div>
+		</div>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="party">Party Members</a>
+		<a class="item" data-tab="creatures">Creatures</a>
+		<a class="item" data-tab="locations">Locations</a>
+	</nav>
+
+	<section class="sheet-body">
+		<div class="tab party" data-group="primary" data-tab="party">
+			<div class="grid grid-6col">
+				<div class="flexrow">
+					<p>Character Name</p>
+					<p>Level</p>
+					<p>Leader <i class="fas fa-solid fa-circle-question"></i></p>
+				</div>
+				{{#each actor.system.groupMembers as |player|}}
+				<div class="flexrow">
+					<p>{{player.name}}</p>
+					<p>{{player.system.characterLevel}}</p>
+					<input name="characterLeader" type="checkbox" data-dtype="Boolean" {{#if
+						player.system.isLeader}}checked{{/if}} />
+				</div>
+				{{/each}}
+			</div>
+			<div class="editor-host">
+				{{editor enrichedNotes target="system.notes" button=true owner=owner
+				editable=editable}}
+			</div>
+		</div>
+	</section>
+</form>

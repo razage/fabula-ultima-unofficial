@@ -532,6 +532,7 @@ button.fabula-button.item-create:hover {
 .class-sheet input[type="text"],
 .consumable-sheet input[type="text"],
 .npc-sheet input[type="text"],
+.party-sheet input[type="text"],
 .skill-sheet input[type="text"],
 .spell-sheet input[type="text"],
 .weapon-sheet input[type="text"],
@@ -543,6 +544,7 @@ button.fabula-button.item-create:hover {
 .class-sheet select,
 .consumable-sheet select,
 .npc-sheet select,
+.party-sheet select,
 .skill-sheet select,
 .spell-sheet select,
 .weapon-sheet select {
@@ -556,6 +558,7 @@ button.fabula-button.item-create:hover {
 .class-sheet input[type="text"]:not(:disabled),
 .consumable-sheet input[type="text"]:not(:disabled),
 .npc-sheet input[type="text"]:not(:disabled),
+.party-sheet input[type="text"]:not(:disabled),
 .skill-sheet input[type="text"]:not(:disabled),
 .spell-sheet input[type="text"]:not(:disabled),
 .weapon-sheet input[type="text"]:not(:disabled) {
@@ -569,6 +572,7 @@ button.fabula-button.item-create:hover {
 .class-sheet img.item-img,
 .consumable-sheet img.item-img,
 .npc-sheet img.item-img,
+.party-sheet img.item-img,
 .skill-sheet img.item-img,
 .spell-sheet img.item-img,
 .weapon-sheet img.item-img {
@@ -584,6 +588,7 @@ button.fabula-button.item-create:hover {
 .class-sheet label.label-pad-left,
 .consumable-sheet label.label-pad-left,
 .npc-sheet label.label-pad-left,
+.party-sheet label.label-pad-left,
 .skill-sheet label.label-pad-left,
 .spell-sheet label.label-pad-left,
 .weapon-sheet label.label-pad-left {

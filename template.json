@@ -143,6 +143,14 @@
             "level": 5,
             "description": ""
         },
+        "group": {
+            "schemaVersion": "1.0",
+            "partyMembers": [],
+            "characters": [],
+            "creatures": [],
+            "locations": [],
+            "notes": ""
+        },
         "player": {
             "templates": [
                 "charAttributes",
