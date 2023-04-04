@@ -11,21 +11,26 @@
 	</header>
 
 	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i> {{localize "FU.UI.roll"}}</a>
 		<a class="item" data-tab="party"><i class="fas fa-solid fa-people-group"></i> {{localize
-			"FU.Group.members"}}</a>
+			"FU.Plural.groupMember"}}</a>
 		<a class="item" data-tab="creatures"><i class="fas fa-solid fa-paw"></i> {{localize "FU.Group.creatures"}}</a>
 		<a class="item" data-tab="locations"><i class="fas fa-solid fa-earth-americas"></i> {{localize
 			"FU.Group.locations"}}</a>
 	</nav>
 
 	<section class="sheet-body">
+		<div class="tab rolls" data-group="primary" data-tab="rolls">
+			<button class="fabula-button group-roll" data-main-stat="dexterity" data-secondary-stat="insight">Initiative
+				Roll</button>
+		</div>
+
 		<div class="tab party" data-group="primary" data-tab="party">
 			<div class="grid grid-6col group-members">
 				<div class="flexrow header">
 					<p>{{localize "FU.Bio.nameLabel"}}</p>
 					<p>{{localize "FU.Short.level"}}</p>
-					<p>{{localize "FU.Group.leader"}} <i class="fas fa-solid fa-circle-question"
-							title="{{localize 'FU.Group.leaderEx'}}"></i></p>
+					<span></span>
 				</div>
 				{{#each actor.system.groupMembers as |player|}}
 				<div class="flexrow">
@@ -33,7 +38,8 @@
 					<p>{{player.system.characterLevel}}</p>
 					<button class="fabula-button leader" data-source="{{actor._id}}"
 						data-actor-id="{{player._id}}">{{#if player.system.isLeader}}<i
-							class="fas fa-solid fa-crown"></i> Leader{{else}}Party Member{{/if}}</button>
+							class="fas fa-solid fa-crown"></i> {{localize "FU.Group.leader"}}{{else}}{{localize
+						"FU.Group.member"}}{{/if}}</button>
 				</div>
 				{{/each}}
 			</div>

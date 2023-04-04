@@ -80,10 +80,12 @@
 
     "FU.Group.name": "Group",
     "FU.Group.creatures": "Creatures",
+    "FU.Group.fail": "Fail",
     "FU.Group.leader": "Group Leader",
     "FU.Group.leaderEx": "Used in group rolls to determine the target. This can be changed at will, but there can only be one leader.",
     "FU.Group.locations": "Locations",
-    "FU.Group.members": "Group Members",
+    "FU.Group.member": "Group Member",
+    "FU.Group.pass": "Pass",
     "FU.Group.rolls": "Group Rolls",
 
     "FU.Items.name": "Items",
@@ -123,6 +125,7 @@
     "FU.Plural.accessory": "Accessories",
     "FU.Plural.arcanum": "Arcana",
     "FU.Plural.attack": "Attacks",
+    "FU.Plural.groupMember": "Group Members",
     "FU.Plural.skill": "Skills",
 
     "FU.Proficiencies.name": "Proficiencies",
@@ -254,6 +257,7 @@
     "FU.UI.selectCompendium": "Select Compendium",
     "FU.UI.target": "Target",
     "FU.UI.targets": "Targets",
+    "FU.UI.toHit": "To Hit",
     "FU.UI.yes": "Yes",
 
     "FU.Weapons.Categories.name": "Weapon Category",

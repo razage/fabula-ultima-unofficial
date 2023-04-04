@@ -340,6 +340,11 @@ h4.dice-total .multi {
 }
 .group-sheet .group-members .header {
   border-bottom: 1px solid #f8f8f8;
+  margin-bottom: 8px;
+}
+.group-sheet .group-members .header p {
+  margin: 0;
+  padding: 2px;
 }
 .group-sheet .group-members p {
   text-align: center;

@@ -58,7 +58,26 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             }</b> (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
                 "FU.Short." + mainStat.name
             )} + ${game.i18n.localize("FU.Short." + secondaryStat.name)}</b>)`;
+            break;
+        case "groupRoll":
+            obj.roll = data.leader.rollObj;
+            obj.crit = data.leader.isCrit;
+            obj.fumble = data.leader.isFumble;
+            obj.mainStat = mainStat;
+            obj.secondaryStat = secondaryStat;
+            obj.total = data.leader.rollObj.total + data.leader.successBonus;
+            obj.leader = data.leader;
+            obj.members = data.members;
 
+            result = await renderTemplate(
+                "systems/fabulaultima/templates/rolls/group-roll.hbs",
+                obj
+            );
+            flavor = `${game.i18n.localize("FU.Chat.rollingSkillCheck")} (${game.i18n.localize(
+                "FU.Chat.using"
+            )} <b>${game.i18n.localize("FU.Short." + mainStat)} + ${game.i18n.localize(
+                "FU.Short." + secondaryStat
+            )}</b>)`;
             break;
         case "skill":
             obj.roll = data.rollObj;
@@ -66,7 +85,6 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.fumble = data.isFumble;
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
-            obj.total = data.rollObj.total;
 
             result = await renderTemplate(
                 "systems/fabulaultima/templates/rolls/skill-roll.hbs",
@@ -113,10 +131,54 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
         roll: data.rollObj,
     };
 
+    // Override the roll value if using a group roll, since it's in a different place
+    if (rollType === "groupRoll") messageData.roll = data.leader.rollObj;
+
     // Fallback audio in case the user isn't using DiceSoNice
     AudioHelper.play({ src: "sounds/dice.wav", volume: 0.8, autoplay: true, loop: false }, true);
 
     ChatMessage.create(messageData, {});
+}
+
+export async function makeGroupRoll(actors, mainStat, secondaryStat, isLeader, bonus = 0) {
+    let data = { members: {} };
+    let successBonus = 0;
+    let leader;
+
+    actors.forEach(async (actor) => {
+        let isLeader = actor.system.isLeader;
+
+        // Ignore any non-players, like groups
+        if (actor.type !== "player") return;
+
+        if (!isLeader) {
+            let actorRollData = await _fabulaRollCommon(
+                actor,
+                actor.system.attributes[mainStat],
+                actor.system.attributes[secondaryStat]
+            );
+
+            actorRollData.total = actorRollData.rollObj.total;
+            data.members[actor.name] = actorRollData;
+
+            if (actorRollData.total >= 10 && !actorRollData.isFumble) {
+                successBonus++;
+                data.members[actor.name].pass = true;
+            } else data.members[actor.name].pass = false;
+        } else leader = actor;
+    });
+
+    let leaderRollData = await _fabulaRollCommon(
+        leader,
+        leader.system.attributes[mainStat],
+        leader.system.attributes[secondaryStat],
+        successBonus
+    );
+    data.leader = leaderRollData;
+    data.leader.successBonus = successBonus;
+    data.leader.total = leaderRollData.rollObj.total;
+
+    await sendRollToChat(leader, mainStat, secondaryStat, "groupRoll", data);
 }
 
 async function _fabulaRollCommon(actor, mainStat, secondaryStat, bonus = 0) {

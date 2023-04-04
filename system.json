@@ -5,11 +5,15 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "compatibility": {
         "minimum": "10",
         "verified": "10.291"
     },
+    "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
+    "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/master.zip",
+    "primaryTokeAttribute": "hp",
+    "secondaryTokenAttribute": "mp",
     "esmodules": ["module/fabulaultima.js"],
     "styles": ["fabulaultima.css"],
     "languages": [
@@ -201,9 +205,5 @@
             "type": "Item",
             "flags": {}
         }
-    ],
-    "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
-    "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/master.zip",
-    "primaryTokeAttribute": "hp",
-    "secondaryTokenAttribute": "mp"
+    ]
 }

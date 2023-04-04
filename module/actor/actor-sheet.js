@@ -1,4 +1,4 @@
-import { fabulaAttackRoll, fabulaSkillRoll } from "../roll/roll.js";
+import { fabulaAttackRoll, fabulaSkillRoll, makeGroupRoll } from "../roll/roll.js";
 
 export class FabulaUltimaActorSheet extends ActorSheet {
     static get defaultOptions() {
@@ -239,6 +239,15 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
         // Update the leader status for a character
         html.find(".leader").click(this._onGroupLeaderChanged.bind(this));
+
+        // Make a group roll
+        html.find(".group-roll").click((ev) => {
+            ev.preventDefault();
+            const element = ev.currentTarget;
+            const dataset = element.dataset;
+
+            makeGroupRoll(game.actors, dataset.mainStat, dataset.secondaryStat);
+        });
 
         // Open compendium
         html.find(".open-compendium").click((ev) => {

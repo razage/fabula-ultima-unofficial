@@ -25,7 +25,7 @@
 		</div>
 		<h4 class="dice-total">
 			{{#unless crit}}
-			<i class="fas fa-solid fa-bullseye" title="To Hit"></i>
+			<i class="fas fa-solid fa-bullseye" title="{{localize 'FU.UI.toHit'}}"></i>
 			{{roll.total}},
 			{{/unless}}
 			<img src="{{getElementalIcon damage.type}}" title="{{localize (concat 'FU.Elements.' damage.type)}}"
