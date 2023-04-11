@@ -243,10 +243,17 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         // Make a group roll
         html.find(".group-roll").click((ev) => {
             ev.preventDefault();
-            const element = ev.currentTarget;
-            const dataset = element.dataset;
+            const parent = $(ev.currentTarget).parents(".skill-roll-container");
+            const main = parent.children(".attributeOne")[0].value;
+            const sec = parent.children(".attributeTwo")[0].value;
+            let bonus = parent.children("#skill-bonus")[0].value;
 
-            makeGroupRoll(game.actors, dataset.mainStat, dataset.secondaryStat);
+            // Basic error  checking
+            if (isNaN(bonus)) {
+                bonus = 0;
+            }
+
+            makeGroupRoll(game.actors, main, sec, bonus);
         });
 
         // Open compendium

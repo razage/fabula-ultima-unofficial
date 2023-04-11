@@ -20,10 +20,7 @@
 	</nav>
 
 	<section class="sheet-body">
-		<div class="tab rolls" data-group="primary" data-tab="rolls">
-			<button class="fabula-button group-roll" data-main-stat="dexterity" data-secondary-stat="insight">Initiative
-				Roll</button>
-		</div>
+		{{>"systems/fabulaultima/templates/actor/partials/roll-tab.hbs" isGroupSheet=true}}
 
 		<div class="tab party" data-group="primary" data-tab="party">
 			<div class="grid grid-6col group-members">

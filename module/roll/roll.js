@@ -73,7 +73,7 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
                 "systems/fabulaultima/templates/rolls/group-roll.hbs",
                 obj
             );
-            flavor = `${game.i18n.localize("FU.Chat.rollingSkillCheck")} (${game.i18n.localize(
+            flavor = `${game.i18n.localize("FU.Chat.rollingGroupSkillCheck")} (${game.i18n.localize(
                 "FU.Chat.using"
             )} <b>${game.i18n.localize("FU.Short." + mainStat)} + ${game.i18n.localize(
                 "FU.Short." + secondaryStat
@@ -140,7 +140,7 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
     ChatMessage.create(messageData, {});
 }
 
-export async function makeGroupRoll(actors, mainStat, secondaryStat, isLeader, bonus = 0) {
+export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) {
     let data = { members: {} };
     let successBonus = 0;
     let leader;
@@ -176,7 +176,7 @@ export async function makeGroupRoll(actors, mainStat, secondaryStat, isLeader, b
     );
     data.leader = leaderRollData;
     data.leader.successBonus = successBonus;
-    data.leader.total = leaderRollData.rollObj.total;
+    data.leader.total = leaderRollData.rollObj.total + bonus;
 
     await sendRollToChat(leader, mainStat, secondaryStat, "groupRoll", data);
 }

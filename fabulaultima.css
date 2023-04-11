@@ -338,6 +338,16 @@ h4.dice-total .multi {
   font-size: 1.25rem;
   padding-right: 4px;
 }
+.group-sheet .rolls label {
+  text-align: center;
+}
+.group-sheet .rolls input,
+.group-sheet .rolls select {
+  margin-top: 4px;
+}
+.group-sheet .rolls input[type="text"] {
+  color: #f8f8f8;
+}
 .group-sheet .group-members .header {
   border-bottom: 1px solid #f8f8f8;
   margin-bottom: 8px;
