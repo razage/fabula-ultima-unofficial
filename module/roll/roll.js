@@ -155,7 +155,8 @@ export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) 
             let actorRollData = await _fabulaRollCommon(
                 actor,
                 actor.system.attributes[mainStat],
-                actor.system.attributes[secondaryStat]
+                actor.system.attributes[secondaryStat],
+                bonus
             );
 
             actorRollData.total = actorRollData.rollObj.total;
@@ -176,7 +177,7 @@ export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) 
     );
     data.leader = leaderRollData;
     data.leader.successBonus = successBonus;
-    data.leader.total = leaderRollData.rollObj.total + bonus;
+    data.leader.total = leaderRollData.rollObj.total;
 
     await sendRollToChat(leader, mainStat, secondaryStat, "groupRoll", data);
 }

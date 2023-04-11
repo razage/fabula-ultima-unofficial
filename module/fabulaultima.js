@@ -3,6 +3,8 @@ import { FabulaUltimaActorSheet } from "./actor/actor-sheet.js";
 import { FabulaUltimaItem } from "./item/item.js";
 import { FabulaUltimaItemSheet } from "./item/item-sheet.js";
 import { FUActiveEffect } from "./FUActiveEffect.js";
+// import { FUCombat } from "./combat/combat.js";
+import { FUCombatant } from "./combat/combatant.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 
 Hooks.once("init", async function () {
@@ -15,6 +17,8 @@ Hooks.once("init", async function () {
     CONFIG.Actor.documentClass = FabulaUltimaActor;
     CONFIG.Item.documentClass = FabulaUltimaItem;
     CONFIG.ActiveEffect.documentClass = FUActiveEffect;
+    // CONFIG.Combat.documentClass = FUCombat;
+    CONFIG.Combatant.documentClass = FUCombatant;
 
     Actors.unregisterSheet("core", ActorSheet);
     Items.unregisterSheet("core", ItemSheet);
