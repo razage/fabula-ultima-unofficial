@@ -50,17 +50,20 @@
   font-size: 1rem;
 }
 .resource-card .hp,
+.resource-card .gp,
 .resource-card .mp,
 .resource-card .ip {
   margin: 0 auto;
   text-align: center;
 }
 .resource-card .hp label,
+.resource-card .gp label,
 .resource-card .mp label,
 .resource-card .ip label {
   margin-bottom: 8px;
 }
 .resource-card .hp input,
+.resource-card .gp input,
 .resource-card .mp input,
 .resource-card .ip input {
   margin: 0 auto;
@@ -83,6 +86,11 @@
 .resource-card .ip input,
 .resource-card .ip p {
   color: #3FBF3F;
+}
+.resource-card .gp label,
+.resource-card .gp input,
+.resource-card .gp p {
+  color: #bd3ed6;
 }
 .resource-card i {
   font-size: 1.5rem;

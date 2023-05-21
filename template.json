@@ -121,6 +121,11 @@
                     "value": 6,
                     "max": 6,
                     "bonus": 0
+                },
+                "gp": {
+                    "enabled": false,
+                    "value": 0,
+                    "max": 6
                 }
             }
         },
@@ -161,7 +166,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.27",
+            "schemaVersion": "1.28",
             "pronouns": "",
             "identity": "",
             "theme": "",

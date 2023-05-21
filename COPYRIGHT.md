@@ -172,6 +172,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Potion ball icon by Lorc
 -   Public speaker icon by Delapouite
 -   Punch blast icon by Lorc
+-   Raise zombie icon by Skoll
 -   Rake icon by Delapouite
 -   Rat icon by Delapouite
 -   Reaper scythe icon by Lorc

@@ -20,6 +20,15 @@
                     'FU.Resources.ip') icon="fas fa-solid fa-bag-shopping" inputName="system.ip.value"
                     rValue=actor.system.ip.value rMax=actor.system.ip.max}}
                 </div>
+                {{#if actor.system.gp.enabled}}
+                <div class="flexrow">
+                    <span></span>
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="gp" title=(localize
+                    'FU.Resources.gp') icon="fas fa-solid fa-tombstone-blank" inputName="system.gp.value"
+                    rValue=actor.system.gp.value rMax=actor.system.gp.max}}
+                    <span></span>
+                </div>
+                {{/if}}
 
                 <div class="flexrow">
                     <span class="fabula">
