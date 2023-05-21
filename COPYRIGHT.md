@@ -40,6 +40,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Bone mace icon by Delapouite
 -   Book cover icon by Lorc
 -   Bookmark icon by Lorc
+-   Boomerang icon by Delapouite
 -   Boot kick icon by Lorc
 -   Bordered shield icon by Lorc
 -   Bow arrow icon by Delapouite
@@ -62,6 +63,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Cartwheel icon by Lorc
 -   Cat icon by Lorc
 -   Centipede icon by Lorc
+-   Chakram icon by Delapouite
 -   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
 -   Claw slashes icon by Lorc
@@ -70,6 +72,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Colt M1911 icon by Skoll
 -   Conqueror icon by Delapouite
 -   Crab claw icon by Lorc
+-   Crescent blade icon by Lorc
 -   Crescent staff icon by Delapouite
 -   Cross shield icon by Delapouite
 -   Crossed axes icon by Lorc
@@ -82,6 +85,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Desert Eagle icon by Skoll
 -   Dragon shield icon by Delapouite
 -   Dripping Knife icon by Lorc
+-   Earth crack icon by Lorc
 -   Edged Shield icon by Lorc
 -   Electric whip icon by Lorc
 -   Energise icon by Lorc
@@ -144,6 +148,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Minerals icon by Faithtoken
 -   Morph ball icon by Delapouite
 -   Musket icon by Skoll
+-   Nails icon by Lorc
 -   Nunchaku icon by Delapouite
 -   Panzerfaust icon by Delapouite
 -   Paw icon by Lorc
@@ -219,7 +224,9 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Walther PPK icon by Skoll
 -   War axe icon by Delapouite
 -   Warhammer icon by Delapouite
+-   Wasp sting icon by Lorc
 -   Whip icon by Lorc
+-   Whirlpool shuriken icon by DarkZaitzev
 -   White book icon by Wildabeast
 -   Winchester rifle icon by Skoll
 -   Winged scepter icon by Delapouite
@@ -229,3 +236,4 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Wolf head icon by Lorc
 -   Wolf howl icon by Lorc
 -   Wood axe icon by Lorc
+-   Wrapping star icon by Lorc
