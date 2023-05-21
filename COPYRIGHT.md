@@ -22,6 +22,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Anvil icon by Lorc
 -   Archer icon by Delapouite
 -   Armor punch icon by Delapouite
+-   Arrow shield icon by Lorc
 -   Arrowhead icon by Lorc
 -   Auto repair icon by Lorc
 -   Back pain icon by Lorc
@@ -50,6 +51,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc
+-   Broken Shield icon by Lorc
 -   Burning book icon by Lorc
 -   Burning meteor icon by Lorc
 -   Butterfly knife icon by Delapouite
@@ -100,6 +102,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Fireball icon by Lorc
 -   Fire axe icon by Lorc
 -   Fire punch icon by Lorc
+-   Fire ray icon by Lorc
+-   Fire shield icon by Lorc
 -   Fist icon by Lorc
 -   Flail icon by Delapouite
 -   Flame icon by Carl Olsen
@@ -121,8 +125,10 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Healing icon by Delapouite
 -   Health potion icon by Delapouite
 -   Heart armor icon by Delapouite
+-   Heart shield icon by Delapouite
 -   Holy oak icon by Cathelineau
 -   Ice bolt icon by Lorc
+-   Ice shield icon by Lorc
 -   Ice spear icon by Lorc
 -   Icebergs icon by Lorc
 -   Insect Jaws icon by Lorc
@@ -137,6 +143,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Life tap icon by Lorc
 -   Lightning branches icon by Lorc
 -   Lightning saber icon by Lorc
+-   Lightning shield icon by Lorc
 -   Lightning storm icon by Lorc
 -   Lion icon by Lorc
 -   Log icon by Delapouite
@@ -187,6 +194,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
 -   Siren icon by Skoll
+-   Skull shield icon by Lorc
 -   Skull staff icon by Delapouite
 -   Snowflake 1 icon by Lorc
 -   Snowflake 2 icon by Lorc
@@ -198,6 +206,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Spiked shield icon by Delapouite
 -   Spine arrow icon by Lorc
 -   Splashy stream icon by Lorc
+-   Stalactite icon by Lorc
 -   Static waves icon by Lorc
 -   Stiletto icon by Lorc
 -   Stiletto icon by Skoll
@@ -230,6 +239,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   White book icon by Wildabeast
 -   Winchester rifle icon by Skoll
 -   Winged scepter icon by Delapouite
+-   Winged shield icon by Lorc
 -   Winged sword icon by Lorc
 -   Winter gloves icon by Delapouite
 -   Wizard staff icon by Lorc

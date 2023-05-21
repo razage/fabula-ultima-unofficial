@@ -68,13 +68,11 @@ export class FabulaUltimaItemSheet extends ItemSheet {
         switch (a.dataset.action) {
             case "create":
                 if (this.item.isEmbedded) {
-                    return ui.notifications.error(
-                        "Managing embedded Documents which are not direct descendants of a primary Document is un-supported at this time."
-                    );
+                    return ui.notifications.error(game.i18n.localize("FU.UI.effectWarning"));
                 }
                 return owner.createEmbeddedDocuments("ActiveEffect", [
                     {
-                        label: "New Effect",
+                        label: game.i18n.localize("FU.UI.newEffect"),
                         icon: "icons/svg/aura.svg",
                         origin: owner.uuid,
                         disabled: true,
