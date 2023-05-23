@@ -209,6 +209,7 @@
     "FU.Spells.mpCost": "MP Cost",
     "FU.Spells.mpCostTargets": "MP Cost per Target",
     "FU.Spells.multiEx": "If checked, this spell can hit more than one target.",
+    "FU.Spells.noDamage": "Deals No Damage",
     "FU.Spells.offensive": "Offensive Spell",
     "FU.Spells.opportunity": "Opportunity",
 

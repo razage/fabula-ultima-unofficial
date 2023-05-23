@@ -369,6 +369,7 @@
             "schemaVersion": "1.02",
             "manaCost": 0,
             "offensiveSpell": false,
+            "noDamage": false,
             "target": "Self",
             "multipleTargets": false,
             "duration": "instantaneous",

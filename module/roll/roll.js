@@ -98,6 +98,7 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             break;
         case "spell":
             obj.roll = data.rollObj;
+            obj.noDamage = data.item.system.noDamage;
             obj.crit = data.isCrit;
             obj.fumble = data.isFumble;
             obj.mainStat = mainStat;

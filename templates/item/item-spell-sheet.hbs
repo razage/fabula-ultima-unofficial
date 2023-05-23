@@ -40,6 +40,11 @@
 						item.system.offensiveSpell}} checked{{/if}} />
 				</div>
 				<div class="flexrow">
+					<label for="system.noDamage">{{localize "FU.Spells.noDamage"}}</label>
+					<input name="system.noDamage" type="checkbox" data-dtype="Boolean" {{#if
+						item.system.offensiveSpell}}{{#if item.system.noDamage}}checked{{/if}}{{else}}disabled{{/if}} />
+				</div>
+				<div class="flexrow">
 					<label for="system.duration">{{localize "FU.Spells.Durations.name"}}</label>
 					<select name="system.duration" data-dtype="String">
 						<option value="instantaneous" {{#if_eq item.system.duration "instantaneous" }}
@@ -89,12 +94,12 @@
 				<div class="flexrow">
 					<label for="system.damage.bonus">{{localize "FU.UI.bonus"}}</label>
 					<input name="system.damage.bonus" type="text" value="{{item.system.damage.bonus}}"
-						data-dtype="Number" />
+						data-dtype="Number" {{#if item.system.noDamage}}disabled{{/if}} />
 				</div>
 				<div class="flexrow">
 					<label for="system.damage.type">{{localize "FU.UI.damageType"}}</label>
 					{{> "systems/fabulaultima/templates/item/partials/damage-type-dropdown.hbs"
-					selectName="system.damage.type" current=item.system.damage.type}}
+					selectName="system.damage.type" current=item.system.damage.type disabled=item.system.noDamage}}
 				</div>
 			</div>
 		</div>
