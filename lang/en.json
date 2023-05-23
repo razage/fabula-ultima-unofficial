@@ -109,6 +109,7 @@
     "FU.Items.Types.new": "New",
     "FU.Items.Types.skill": "Skill",
     "FU.Items.Types.spell": "Spell",
+    "FU.Items.Types.spellEffects": "Spell Effects",
     "FU.Items.Types.weapon": "Weapon",
 
     "FU.Navigation.tabGear": "Gear",

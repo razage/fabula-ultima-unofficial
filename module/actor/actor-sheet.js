@@ -76,6 +76,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
+        const buffs = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -118,6 +119,10 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     weapons.push(item);
                     break;
 
+                case "buff":
+                    buffs.push(item);
+                    break;
+
                 default:
                     console.log("itemType ", item.type, " is not currently implemented.");
             }
@@ -133,6 +138,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
+        actorData.system.buffs = buffs;
     }
 
     _prepareGroupData(sheetData) {
@@ -384,6 +390,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     });
                     dialog.render(true);
                     break;
+                case "spell-effects":
+                    game.packs
+                        .find((k) => k.collection === "fabulaultima.spellEffects")
+                        .render(true);
+                    break;
+
                 default:
                     console.log(
                         "Compendium ",

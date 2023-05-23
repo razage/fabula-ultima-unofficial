@@ -71,6 +71,8 @@
             {{localize "FU.Spells.name"}}</a>
         <a class="item" data-tab="bio"><i class="fas fa-solid fa-message"></i>
             {{localize "FU.Bio.name"}}</a>
+        <a class="item" data-tab="effects"><i class="fa-solid fa-wand-magic-sparkles"></i> {{localize
+            "FU.Items.effects"}}</a>
     </nav>
 
     <section class="sheet-body">
@@ -252,6 +254,30 @@
             <div class="editor-host">
                 {{editor enrichedNotes target="system.notes" button=true owner=owner
                 editable=editable}}
+            </div>
+        </div>
+
+        {{!-- Buffs/Debuffs --}}
+        <div class="tab effects" data-group="primary" data-tab="effects">
+            <h2>
+                {{localize "FU.Items.Types.spellEffects"}}
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="spell-effects"
+                    title="{{localize 'FU.UI.openCompendium'}}"></i>
+            </h2>
+            <div class="flexcol buffs">
+                <div class="item-list">
+                    {{#each actor.system.buffs as |buff|}}
+                    <div class="buff item" data-item-id="{{buff._id}}">
+                        <div class="grid grid-3col">
+                            <div class="flexrow">
+                                <p>{{buff.name}}</p>
+                                <button class="fabula-button item-delete" title="{{localize 'FU.UI.delete'}}"><i
+                                        class="fas fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
         </div>
     </section>
