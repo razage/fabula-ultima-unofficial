@@ -39,6 +39,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
                 async: true,
             });
+            data.enrichedCreatures = await TextEditor.enrichHTML(this.object.system.creatures, {
+                async: true,
+            });
+            data.enrichedLocations = await TextEditor.enrichHTML(this.object.system.locations, {
+                async: true,
+            });
             this._prepareGroupData(data);
         }
 

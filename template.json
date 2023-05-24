@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["player", "companion", "npc", "group", "world"],
+        "types": ["player", "companion", "npc", "group"],
         "templates": {
             "charAttributes": {
                 "attributes": {
@@ -149,11 +149,11 @@
             "description": ""
         },
         "group": {
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.01",
             "partyMembers": [],
             "characters": [],
-            "creatures": [],
-            "locations": [],
+            "creatures": "",
+            "locations": "",
             "notes": ""
         },
         "player": {
