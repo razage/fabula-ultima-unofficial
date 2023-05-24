@@ -402,38 +402,39 @@ h4.dice-total .multi {
 .weapon-sheet > .flexrow {
   padding: 2px;
 }
-.dialog section.window-content {
+.app.window-app.dialog section.window-content {
   background: #2021a0;
   background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
 }
-.dialog section.window-content .dialog-content p,
-.dialog section.window-content .dialog-content h4 {
+.app.window-app.dialog section.window-content .dialog-content p,
+.app.window-app.dialog section.window-content .dialog-content h4 {
+  color: #f8f8f8;
+  margin: 0 auto;
+}
+.app.window-app.dialog section.window-content .dialog-content form .form-group label {
   color: #f8f8f8;
 }
-.dialog section.window-content .dialog-content form .form-group label {
+.app.window-app.dialog section.window-content .dialog-content form .form-group input[type="text"],
+.app.window-app.dialog section.window-content .dialog-content form .form-group input::placeholder {
   color: #f8f8f8;
 }
-.dialog section.window-content .dialog-content form .form-group input[type="text"],
-.dialog section.window-content .dialog-content form .form-group input::placeholder {
+.app.window-app.dialog section.window-content .dialog-content form .form-group select {
   color: #f8f8f8;
 }
-.dialog section.window-content .dialog-content form .form-group select {
-  color: #f8f8f8;
-}
-.dialog section.window-content .dialog-content form .form-group select option {
+.app.window-app.dialog section.window-content .dialog-content form .form-group select option {
   background: #010661;
 }
-.dialog section.window-content .dialog-buttons button {
+.app.window-app.dialog section.window-content .dialog-buttons button {
   color: #f8f8f8;
   border: 1px solid #f8f8f8;
   border-radius: 10px;
 }
-.dialog section.window-content .dialog-buttons button:hover,
-.dialog section.window-content .dialog-buttons button:active,
-.dialog section.window-content .dialog-buttons button:focus {
+.app.window-app.dialog section.window-content .dialog-buttons button:hover,
+.app.window-app.dialog section.window-content .dialog-buttons button:active,
+.app.window-app.dialog section.window-content .dialog-buttons button:focus {
   box-shadow: none;
 }
-.dialog section.window-content .dialog-buttons button:hover {
+.app.window-app.dialog section.window-content .dialog-buttons button:hover {
   background: #010661;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
   border: 1px solid #929292;
