@@ -39,7 +39,7 @@ export class FabulaUltimaItemSheet extends ItemSheet {
             );
         }
 
-        /// Arcanum enriched text fields
+        // Arcanum enriched text fields
         if (this.object.type === "arcanum") {
             data.enrichedMerge = await TextEditor.enrichHTML(this.object.system.merge, {
                 async: true,
@@ -48,6 +48,14 @@ export class FabulaUltimaItemSheet extends ItemSheet {
                 async: true,
             });
         }
+
+        // Skill enriched text fields
+        if (this.object.type === "skill") {
+            data.enrichedReq = await TextEditor.enrichHTML(this.object.system.requirements, {
+                async: true,
+            });
+        }
+
         return data;
     }
 

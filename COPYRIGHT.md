@@ -39,6 +39,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Belt icon by Lucas
 -   Black belt icon by Delapouite
 -   Black book icon by Wildabeast
+-   Bleeding heart icon by Lorc
 -   Bone knife icon by Delapouite
 -   Bone mace icon by Delapouite
 -   Book cover icon by Lorc
@@ -63,6 +64,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Caduceus icon by Delapouite
 -   Camping tent icon by Delapouite
 -   Candles icon by Delapouite
+-   Card 7 of diamonds icon by Simon (aussiesim)
+-   Carillon icon by Lorc
 -   Carnival mask icon by Delapouite
 -   Cartwheel icon by Lorc
 -   Cat icon by Lorc
@@ -84,6 +87,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Crystal ball icon by Lorc
 -   Crystal wand icon by Lorc
 -   Curvy knife icon by Lorc
+-   Cut palm icon by Lorc
 -   CZ Skorpion icon by Skoll
 -   Daggers icon by Lorc
 -   Death note icon by Lorc
@@ -99,6 +103,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Erlenmeyer icon by Lorc
 -   Evil book icon by Lorc
 -   Evil hand icon by Lorc
+-   Evil love icon by Lorc
 -   Evil moon icon by Lorc
 -   Eye shield icon by Lorc
 -   Extra lucid icon by Lorc
@@ -124,6 +129,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Glock icon by Skoll
 -   Glowing hands icon by Lorc
 -   Gluttonous smile icon by Lorc
+-   Graveyard icon by Delapouite
 -   Guards icon by Delapouite
 -   Halberd icon by Lorc
 -   Hand bandage icon by Delapouite
@@ -133,6 +139,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Healing icon by Delapouite
 -   Health potion icon by Delapouite
 -   Heart armor icon by Delapouite
+-   Heart minus by Zeromancer (CC0 PDD)
 -   Heart shield icon by Delapouite
 -   Holy oak icon by Cathelineau
 -   Holy water icon by Delapouite
@@ -141,6 +148,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Ice spear icon by Lorc
 -   Icebergs icon by Lorc
 -   Insect Jaws icon by Lorc
+-   Internal injury icon by Lorc
 -   Jester hat icon by Delapouite
 -   Katana icon by Delapouite
 -   Knife thrust icon by Lorc
@@ -157,11 +165,14 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Lion icon by Lorc
 -   Log icon by Delapouite
 -   Lunar wand icon by Delapouite
+-   Maggot icon by Lorc
 -   Magic axe icon by Delapouite
+-   Magic portal icon by Lorc
 -   Magic shield icon by Lorc
 -   Magic swirl by Lorc
 -   Mailed fist icon by Lorc
 -   Meat cleaver icon by Lorc
+-   Mighty force icon by Delapouite
 -   Minerals icon by Faithtoken
 -   Morph ball icon by Delapouite
 -   Musket icon by Skoll
@@ -183,6 +194,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Prayer icon by Lorc
 -   Public speaker icon by Delapouite
 -   Punch blast icon by Lorc
+-   Qaitbay Citadel icon by Delapouite
 -   Raise zombie icon by Skoll
 -   Rake icon by Delapouite
 -   Rat icon by Delapouite
@@ -197,8 +209,12 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Rune sword icon by Lorc
 -   Saber slash icon by Lorc
 -   Sai icon by Delapouite
+-   Sands of time icon by Lorc
 -   Sawed-off shotgun icon by Delapouite
+-   Screaming icon by Lorc
 -   Scythe icon by Lorc
+-   Shadow grasp icon by Lorc
+-   Shambling zombie icon by Delapouite
 -   Shard sword icon by Lorc
 -   Sharp axe icon by Delapouite
 -   Sharp haldberd icon by Delapouite
@@ -221,6 +237,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Spiked mace icon by Lorc
 -   Spiked shield icon by Delapouite
 -   Spine arrow icon by Lorc
+-   Spinning blades icon by Lorc
 -   Splashy stream icon by Lorc
 -   Stalactite icon by Lorc
 -   Static waves icon by Lorc
@@ -236,6 +253,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Terror icon by Lorc
 -   Thor fist icon by Lorc
 -   Thor hammer icon by Delapouite
+-   Thumb down icon by Delapouite
 -   Tomahawk icon by Delapouite
 -   Tornado icon by Lorc
 -   Tortoise icon by Delapouite
@@ -262,5 +280,6 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Wizard staff icon by Lorc
 -   Wolf head icon by Lorc
 -   Wolf howl icon by Lorc
+-   Wolverine claws icon by Lorc
 -   Wood axe icon by Lorc
 -   Wrapping star icon by Lorc
