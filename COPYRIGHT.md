@@ -21,6 +21,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Ant icon by Delapouite
 -   Anvil icon by Lorc
 -   Archer icon by Delapouite
+-   Archive research icon by Delapouite
 -   Armor punch icon by Delapouite
 -   Arrow shield icon by Lorc
 -   Arrowhead icon by Lorc
@@ -49,12 +50,14 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Bordered shield icon by Lorc
 -   Bow arrow icon by Delapouite
 -   Bowie knife icon by Lorc
+-   Brass knuckles icon by Delapouite
 -   Breastplate icon by Lorc
 -   Bright explosion icon by Lorc
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc
 -   Broken Shield icon by Lorc
+-   Bully minion icon by Delapouite
 -   Burning book icon by Lorc
 -   Burning meteor icon by Lorc
 -   Butterfly knife icon by Delapouite
@@ -92,6 +95,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Daggers icon by Lorc
 -   Death note icon by Lorc
 -   Desert Eagle icon by Skoll
+-   Dodging icon by Lorc
 -   Dragon shield icon by Delapouite
 -   Dripping Knife icon by Lorc
 -   Earth crack icon by Lorc
@@ -106,7 +110,9 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Evil love icon by Lorc
 -   Evil moon icon by Lorc
 -   Eye shield icon by Lorc
+-   Eye target icon by Delapouite
 -   Extra lucid icon by Lorc
+-   Fairy icon by Lorc
 -   Fangs icon by Skoll
 -   Fast arrow icon by Lorc
 -   Fast forward button icon by Delapouite
@@ -136,6 +142,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Hand of god icon by Delapouite
 -   Hatchet icon by Delapouite
 -   Haunting icon by Lorc
+-   Hazard sign icon by Lorc
 -   Healing icon by Delapouite
 -   Health potion icon by Delapouite
 -   Heart armor icon by Delapouite
@@ -158,6 +165,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Layered armor icon by Lorc
 -   Leather armor icon by Delapouite
 -   Life tap icon by Lorc
+-   Light bulb icon by Lorc
 -   Lightning branches icon by Lorc
 -   Lightning saber icon by Lorc
 -   Lightning shield icon by Lorc
@@ -170,8 +178,11 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Magic portal icon by Lorc
 -   Magic shield icon by Lorc
 -   Magic swirl by Lorc
+-   Magnifying glass icon by Lorc
 -   Mailed fist icon by Lorc
 -   Meat cleaver icon by Lorc
+-   Medical pack icon by sbed
+-   Meditation icon by Lorc
 -   Mighty force icon by Delapouite
 -   Minerals icon by Faithtoken
 -   Morph ball icon by Delapouite
@@ -187,6 +198,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Pistol gun by John Colburn
 -   Plain dagger icon by Lorc
 -   Plastron icon by Lorc
+-   Pointing icon by Lorc
 -   Poison bottle icon by Lorc
 -   Poker Hand icon by Lorc
 -   Pope crown icon by Delepouite
@@ -206,6 +218,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Rock icon by Lorc
 -   Roman shield icon by Delapouite
 -   Round shield icon by Wildabeast
+-   Run icon by Lorc
 -   Rune sword icon by Lorc
 -   Saber slash icon by Lorc
 -   Sai icon by Delapouite
@@ -218,6 +231,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shard sword icon by Lorc
 -   Sharp axe icon by Delapouite
 -   Sharp haldberd icon by Delapouite
+-   Shield opposition icon by Delapouite
 -   Shield reflect icon by Delapouite
 -   Shiny omega icon by Lorc
 -   Shirt icon by Lucas
@@ -234,6 +248,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Sparkling sabre icon by Lorc
 -   Spear feather icon by Delapouite
 -   Spear hook icon by Lorc
+-   Speedometer icon by Delapouite
 -   Spiked mace icon by Lorc
 -   Spiked shield icon by Delapouite
 -   Spine arrow icon by Lorc
@@ -247,13 +262,17 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Stone spear icon by Lorc
 -   Stone tower icon by Lorc
 -   Stop sign icon by Delapouite
+-   Striking arrows icon by Lorc
 -   Striking diamonds icon by Lorc
 -   Sun icon by Lorc
+-   Surrounded shield icon by Lorc
 -   Swords power icon by Delapouite
+-   Target arrows icon by Lorc
 -   Terror icon by Lorc
 -   Thor fist icon by Lorc
 -   Thor hammer icon by Delapouite
 -   Thumb down icon by Delapouite
+-   Thumb up icon by Delapouite
 -   Tomahawk icon by Delapouite
 -   Tornado icon by Lorc
 -   Tortoise icon by Delapouite
