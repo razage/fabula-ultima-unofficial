@@ -5,7 +5,7 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.6.9",
+    "version": "0.6.10",
     "compatibility": {
         "minimum": "10",
         "verified": "10.291"
@@ -35,10 +35,10 @@
             "flags": {}
         },
         {
-            "name": "arcanum",
-            "label": "Arcanum",
+            "name": "arcana",
+            "label": "Arcana",
             "system": "fabulaultima",
-            "path": "packs/arcanum.db",
+            "path": "packs/arcana.db",
             "private": false,
             "type": "Item",
             "flags": {}

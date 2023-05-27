@@ -165,6 +165,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
+        const buffs = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -172,9 +173,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 case "armor":
                     armor.push(item);
                     break;
+
                 case "accessory":
                     accessories.push(item);
                     break;
+
                 case "skill":
                     this._applyUnequippableActiveEffect(effects, item);
                     skills.push(item);
@@ -187,6 +190,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 case "weapon":
                     weapons.push(item);
                     break;
+
+                case "buff":
+                    buffs.push(item);
             }
         });
 
@@ -195,6 +201,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
+        actorData.system.buffs = buffs;
     }
 
     activateListeners(html) {
