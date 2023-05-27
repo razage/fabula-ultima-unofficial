@@ -1,5 +1,17 @@
-export async function fabulaAttackRoll(actor, mainStat, secondaryStat, item, attackType) {
-    let data = await _fabulaRollCommon(actor, mainStat, secondaryStat, item.system.accuracy.bonus);
+export async function fabulaAttackRoll(
+    actor,
+    mainStat,
+    secondaryStat,
+    item,
+    attackType,
+    bonus = 0
+) {
+    let data = await _fabulaRollCommon(
+        actor,
+        mainStat,
+        secondaryStat,
+        bonus + item.system.accuracy.bonus
+    );
     data.item = item;
 
     switch (attackType) {
@@ -37,13 +49,24 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
             obj.damage = {
-                bonus: data.item.system.damage.bonus,
                 type: data.item.system.damage.type,
                 multi: data.item.system.multi.enabled,
                 multiValue: data.item.system.multi.value,
             };
             obj.highRoll = data.highRoll;
             obj.itemName = data.item.name;
+
+            // Determine the correct damage bonus to apply
+            if (data.item.system.category === "shield") {
+                obj.damage["bonus"] =
+                    actor.system.bonuses.damage.shield +
+                    actor.system.bonuses.damage.brawling +
+                    data.item.system.damage.bonus;
+            } else {
+                obj.damage["bonus"] =
+                    actor.system.bonuses.damage[data.item.system.category] +
+                    data.item.system.damage.bonus;
+            }
 
             // Calculate the total after all adjustments
             obj.damage.total = obj.highRoll + obj.damage.bonus;

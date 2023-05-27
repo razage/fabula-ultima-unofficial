@@ -34,11 +34,33 @@
                 "bonuses": {
                     "accuracy": {
                         "physical": 0,
-                        "magic": 0
+                        "magic": 0,
+                        "arcane": 0,
+                        "bow": 0,
+                        "brawling": 0,
+                        "dagger": 0,
+                        "firearm": 0,
+                        "flail": 0,
+                        "heavy": 0,
+                        "shield": 0,
+                        "spear": 0,
+                        "sword": 0,
+                        "thrown": 0
                     },
                     "damage": {
                         "physical": 0,
-                        "magic": 0
+                        "magic": 0,
+                        "arcane": 0,
+                        "bow": 0,
+                        "brawling": 0,
+                        "dagger": 0,
+                        "firearm": 0,
+                        "flail": 0,
+                        "heavy": 0,
+                        "shield": 0,
+                        "spear": 0,
+                        "sword": 0,
+                        "thrown": 0
                     }
                 }
             },
@@ -139,7 +161,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.01",
             "skillLevel": 1,
             "isHeroic": false,
             "canUseEquipment": false,
@@ -166,7 +188,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.28",
+            "schemaVersion": "1.29",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -208,7 +230,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.06",
+            "schemaVersion": "1.07",
             "species": "Beast",
             "rank": "soldier",
             "isBoss": false,

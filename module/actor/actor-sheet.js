@@ -226,14 +226,23 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             const item = this.actor.items.get(parent.data("itemId"));
             const main = this.actor.system.attributes[item.system.accuracy.mainStat];
             const sec = this.actor.system.attributes[item.system.accuracy.secondaryStat];
+            let bonus = 0;
 
-            switch (attackType) {
-                case "weapon":
-                    fabulaAttackRoll(this.actor, main, sec, item, "weapon");
-                    break;
-                case "spell":
-                    fabulaAttackRoll(this.actor, main, sec, item, "spell");
-                    break;
+            // Figure out if the item is a weapon or spell and handle accordingly
+            if (attackType === "weapon") {
+                let weaponType = ev.currentTarget.dataset.weaponType;
+
+                if (weaponType === "shield") {
+                    bonus +=
+                        this.actor.system.bonuses.accuracy.shield +
+                        this.actor.system.bonuses.accuracy.brawling;
+                } else {
+                    bonus += this.actor.system.bonuses.accuracy[weaponType];
+                }
+
+                fabulaAttackRoll(this.actor, main, sec, item, "weapon", bonus);
+            } else {
+                fabulaAttackRoll(this.actor, main, sec, item, "spell");
             }
         });
 

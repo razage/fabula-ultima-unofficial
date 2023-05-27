@@ -60,9 +60,10 @@
 						weapon.system.isEquipped}}<i class="fas fa-solid fa-check"></i> {{/if}}{{localize
 						"FU.Items.equipped"}}</button>
 					<div class="flexcol button-holder">
-						<button class="item-roll fabula-button" data-attack-type="weapon" {{#unless
-							weapon.system.isEquipped}}disabled{{/unless}}><i class="fas fa-solid fa-dice"></i>
-							{{localize "FU.UI.attack"}}</button>
+						<button class="item-roll fabula-button" data-attack-type="weapon"
+							data-weapon-type="{{weapon.system.category}}" {{#unless
+							weapon.system.isEquipped}}disabled{{/unless}}><i class="fas fa-solid fa-dice"></i>{{localize
+							"FU.UI.attack"}}</button>
 						<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
 							"FU.UI.edit"}}</button>
 						<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash"></i> {{localize
