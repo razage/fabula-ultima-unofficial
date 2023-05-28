@@ -52,6 +52,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Bookmark icon by Lorc
 -   Boomerang icon by Delapouite
 -   Boot kick icon by Lorc
+-   Boots icon by Lorc
 -   Bordered shield icon by Lorc
 -   Bow arrow icon by Delapouite
 -   Bow tie icon by Delapouite
@@ -98,6 +99,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Cracked shield icon by Lorc
 -   Crescent blade icon by Lorc
 -   Crescent staff icon by Delapouite
+-   Crested helmet icon by Lorc
 -   Cross shield icon by Delapouite
 -   Crossed axes icon by Lorc
 -   Crossbow icon by Carl Olsen
@@ -109,6 +111,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Daggers icon by Lorc
 -   Death note icon by Lorc
 -   Desert Eagle icon by Skoll
+-   Devil mask icon by Delapouite
+-   Diamond ring icon by Delapouite
 -   Dodging icon by Lorc
 -   Double fish icon by Delapoiute
 -   Dragon shield icon by Delapouite
@@ -153,10 +157,12 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Gargoyle icon by Delapouite
 -   Gavel icon by Lorc
 -   Gears icon by Lorc
+-   Gem pendant icon by Lorc
 -   Ghost ally icon by Lorc
 -   Gladius icon by Skoll
 -   Glaive icon by Delapouite
 -   Glock icon by Skoll
+-   Gloves icon by Delapouite
 -   Glowing hands icon by Lorc
 -   Gluttonous smile icon by Lorc
 -   Graveyard icon by Delapouite
@@ -180,6 +186,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Holy water icon by Delapouite
 -   Hydra icon by Lorc
 -   Ice bolt icon by Lorc
+-   Ice cube icon by Lorc
 -   Ice shield icon by Lorc
 -   Ice spear icon by Lorc
 -   Icebergs icon by Lorc
@@ -226,6 +233,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Nails icon by Lorc
 -   Ninja armor by Delapouite
 -   Nunchaku icon by Delapouite
+-   Owl icon by Lorc
 -   Panzerfaust icon by Delapouite
 -   Paw icon by Lorc
 -   Pentacle icon by Skoll
@@ -236,10 +244,12 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Plain dagger icon by Lorc
 -   Plastron icon by Lorc
 -   Pointing icon by Lorc
+-   Pointy hat icon by Lorc
 -   Poison bottle icon by Lorc
 -   Poker Hand icon by Lorc
 -   Pope crown icon by Delepouite
 -   Potion ball icon by Lorc
+-   Power ring icon by Delapouite
 -   Prayer icon by Lorc
 -   Psychic waves icon by Lorc
 -   Public speaker icon by Delapouite
@@ -252,6 +262,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite
+-   Ring icon by Delapouite
 -   Riposte icon by Andy Meneely
 -   Robber hand icon by DarkZaitzev
 -   Robe icon by Lorc
@@ -283,6 +294,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Siren icon by Skoll
 -   Sitting dog icon by Delapouite
 -   Skull shield icon by Lorc
+-   Skull signet icon by Lorc
 -   Skull staff icon by Delapouite
 -   Slot machine icon by Caro Ascercion
 -   Snowflake 1 icon by Lorc
