@@ -239,6 +239,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 } else {
                     bonus += this.actor.system.bonuses.accuracy[weaponType];
                 }
+                bonus += this.actor.system.bonuses.accuracy.physical;
 
                 fabulaAttackRoll(this.actor, main, sec, item, "weapon", bonus);
             } else {

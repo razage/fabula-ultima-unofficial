@@ -67,6 +67,7 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
                     actor.system.bonuses.damage[data.item.system.category] +
                     data.item.system.damage.bonus;
             }
+            obj.damage.bonus += actor.system.bonuses.damage.physical; // This is for bonuses that apply to all damage types
 
             // Calculate the total after all adjustments
             obj.damage.total = obj.highRoll + obj.damage.bonus;
