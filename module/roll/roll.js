@@ -1,5 +1,18 @@
-export async function fabulaAttackRoll(actor, mainStat, secondaryStat, item, attackType) {
-    let data = await _fabulaRollCommon(actor, mainStat, secondaryStat, item.system.accuracy.bonus);
+export async function fabulaAttackRoll(
+    actor,
+    mainStat,
+    secondaryStat,
+    item,
+    attackType,
+    bonus = 0
+) {
+    let data = await _fabulaRollCommon(
+        actor,
+        item,
+        mainStat,
+        secondaryStat,
+        bonus + item.system.accuracy.bonus
+    );
     data.item = item;
 
     switch (attackType) {
@@ -18,7 +31,7 @@ export async function fabulaAttackRoll(actor, mainStat, secondaryStat, item, att
 }
 
 export async function fabulaSkillRoll(actor, mainStat, secondaryStat, bonus = 0) {
-    let data = await _fabulaRollCommon(actor, mainStat, secondaryStat, bonus);
+    let data = await _fabulaRollCommon(actor, null, mainStat, secondaryStat, bonus);
 
     await sendRollToChat(actor, mainStat, secondaryStat, "skill", data);
 }
@@ -36,14 +49,39 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.dw = data.item.system.isDualWielding;
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
+            obj.accuracy = {
+                base: obj.roll.total,
+                bonus: 0,
+                total: 0,
+            };
             obj.damage = {
-                bonus: data.item.system.damage.bonus,
                 type: data.item.system.damage.type,
                 multi: data.item.system.multi.enabled,
                 multiValue: data.item.system.multi.value,
             };
             obj.highRoll = data.highRoll;
             obj.itemName = data.item.name;
+
+            // Calculate accuracy bonus
+            obj.accuracy.bonus =
+                actor.system.bonuses.accuracy.physical +
+                actor.system.bonuses.accuracy[data.item.system.category];
+
+            // Calculate the total accuracy check
+            obj.accuracy.total = obj.accuracy.base + obj.accuracy.bonus;
+
+            // Determine the correct damage bonus to apply
+            if (data.item.system.category === "shield") {
+                obj.damage["bonus"] =
+                    actor.system.bonuses.damage.shield +
+                    actor.system.bonuses.damage.brawling +
+                    data.item.system.damage.bonus;
+            } else {
+                obj.damage["bonus"] =
+                    actor.system.bonuses.damage[data.item.system.category] +
+                    data.item.system.damage.bonus;
+            }
+            obj.damage.bonus += actor.system.bonuses.damage.physical; // This is for bonuses that apply to all damage types
 
             // Calculate the total after all adjustments
             obj.damage.total = obj.highRoll + obj.damage.bonus;
@@ -58,7 +96,26 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             }</b> (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
                 "FU.Short." + mainStat.name
             )} + ${game.i18n.localize("FU.Short." + secondaryStat.name)}</b>)`;
+            break;
+        case "groupRoll":
+            obj.roll = data.leader.rollObj;
+            obj.crit = data.leader.isCrit;
+            obj.fumble = data.leader.isFumble;
+            obj.mainStat = mainStat;
+            obj.secondaryStat = secondaryStat;
+            obj.total = data.leader.rollObj.total + data.leader.successBonus;
+            obj.leader = data.leader;
+            obj.members = data.members;
 
+            result = await renderTemplate(
+                "systems/fabulaultima/templates/rolls/group-roll.hbs",
+                obj
+            );
+            flavor = `${game.i18n.localize("FU.Chat.rollingGroupSkillCheck")} (${game.i18n.localize(
+                "FU.Chat.using"
+            )} <b>${game.i18n.localize("FU.Short." + mainStat)} + ${game.i18n.localize(
+                "FU.Short." + secondaryStat
+            )}</b>)`;
             break;
         case "skill":
             obj.roll = data.rollObj;
@@ -66,7 +123,6 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.fumble = data.isFumble;
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
-            obj.total = data.rollObj.total;
 
             result = await renderTemplate(
                 "systems/fabulaultima/templates/rolls/skill-roll.hbs",
@@ -80,16 +136,26 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             break;
         case "spell":
             obj.roll = data.rollObj;
+            obj.noDamage = data.item.system.noDamage;
             obj.crit = data.isCrit;
             obj.fumble = data.isFumble;
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
+            obj.accuracy = {
+                base: obj.roll.total,
+                bonus: actor.system.bonuses.accuracy.magic,
+                total: 0,
+            };
             obj.damage = {
-                bonus: data.item.system.damage.bonus,
+                bonus: actor.system.bonuses.damage.magic + data.item.system.damage.bonus,
                 type: data.item.system.damage.type,
             };
             obj.highRoll = data.highRoll;
             obj.itemName = data.item.name;
+
+            // Calculate the total accuracy check
+            obj.accuracy.total = obj.accuracy.base + obj.accuracy.bonus;
+
             obj.damage.total = obj.highRoll + obj.damage.bonus;
 
             result = await renderTemplate(
@@ -113,13 +179,60 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
         roll: data.rollObj,
     };
 
+    // Override the roll value if using a group roll, since it's in a different place
+    if (rollType === "groupRoll") messageData.roll = data.leader.rollObj;
+
     // Fallback audio in case the user isn't using DiceSoNice
     AudioHelper.play({ src: "sounds/dice.wav", volume: 0.8, autoplay: true, loop: false }, true);
 
     ChatMessage.create(messageData, {});
 }
 
-async function _fabulaRollCommon(actor, mainStat, secondaryStat, bonus = 0) {
+export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) {
+    let data = { members: {} };
+    let successBonus = 0;
+    let leader;
+
+    actors.forEach(async (actor) => {
+        let isLeader = actor.system.isLeader;
+
+        // Ignore any non-players, like groups
+        if (actor.type !== "player") return;
+
+        if (!isLeader) {
+            let actorRollData = await _fabulaRollCommon(
+                actor,
+                null,
+                actor.system.attributes[mainStat],
+                actor.system.attributes[secondaryStat],
+                bonus
+            );
+
+            actorRollData.total = actorRollData.rollObj.total;
+            data.members[actor.name] = actorRollData;
+
+            if (actorRollData.total >= 10 && !actorRollData.isFumble) {
+                successBonus++;
+                data.members[actor.name].pass = true;
+            } else data.members[actor.name].pass = false;
+        } else leader = actor;
+    });
+
+    let leaderRollData = await _fabulaRollCommon(
+        leader,
+        null,
+        leader.system.attributes[mainStat],
+        leader.system.attributes[secondaryStat],
+        successBonus
+    );
+    data.leader = leaderRollData;
+    data.leader.successBonus = successBonus;
+    data.leader.total = leaderRollData.rollObj.total;
+
+    await sendRollToChat(leader, mainStat, secondaryStat, "groupRoll", data);
+}
+
+async function _fabulaRollCommon(actor, item = null, mainStat, secondaryStat, bonus = 0) {
     let roll = new Roll(`d${mainStat.current}+d${secondaryStat.current}+${bonus}`, actor.system);
 
     await roll.evaluate({ async: true });
@@ -139,7 +252,7 @@ async function _fabulaRollCommon(actor, mainStat, secondaryStat, bonus = 0) {
     data.rollObj = roll;
     data.highRoll = highRoll;
     data.isFumble = isRollFumble(results);
-    data.isCrit = isRollCrit(results);
+    data.isCrit = isRollCrit(results, actor, item);
 
     return data;
 }
@@ -149,9 +262,18 @@ function isRollFumble(rollResults) {
     else return false;
 }
 
-function isRollCrit(rollResults) {
-    // If the numbers match and they're both 6 or above
-    if (rollResults[0] === rollResults[1] && rollResults[0] >= 6 && rollResults[1] >= 6)
-        return true;
-    else return false;
+function isRollCrit(rollResults, actor, item = null) {
+    let frenzyAffectedWeapons = ["brawling", "dagger", "flail", "thrown"];
+
+    // If the character has the frenzy skill, certain weapons crit way more often
+    if (item && actor.system.hasFrenzy && frenzyAffectedWeapons.includes(item.system.category)) {
+        if (rollResults[0] === rollResults[1] && rollResults[0] > 1 && rollResults[1] > 1)
+            return true;
+        else return false;
+    } else {
+        // If the numbers match and they're both 6 or above
+        if (rollResults[0] === rollResults[1] && rollResults[0] >= 6 && rollResults[1] >= 6)
+            return true;
+        else return false;
+    }
 }

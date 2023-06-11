@@ -15,16 +15,23 @@ This code uses Foundry VTT and its API under the terms of the Limited License Ag
 All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license](https://creativecommons.org/licenses/by/3.0/), unless noted otherwise. I've included many icons that are not in use by compendium items. These are to help you create your own custom items without needing to search for additional icons.
 
 -   3D Hammer icon by Delapouite
+-   Abdominal armor icon by Delapouite
 -   Ancient sword icon by Delapouite
 -   Andromeda chain icon by Lorc
 -   Angel outfit icon by Lorc
 -   Ant icon by Delapouite
+-   Antibody icon by Delapouite
 -   Anvil icon by Lorc
 -   Archer icon by Delapouite
+-   Archive research icon by Delapouite
 -   Armor punch icon by Delapouite
+-   Arrow shield icon by Lorc
 -   Arrowhead icon by Lorc
+-   Aura icon by Lorc
 -   Auto repair icon by Lorc
+-   Back and forth icon by Lorc
 -   Back pain icon by Lorc
+-   Backpack icon by Delapouite
 -   Ballista icon by Skoll
 -   Barbed Spear icon by Lorc
 -   Bat icon by Delapouite
@@ -33,22 +40,35 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Bayonet icon by Skoll
 -   Bear head icon by Delapouite
 -   Beast eye icon by Lorc
+-   Beer stein icon by Lorc
+-   Bell shield icon by Lorc
 -   Belt icon by Lucas
 -   Black belt icon by Delapouite
 -   Black book icon by Wildabeast
+-   Bleeding heart icon by Lorc
 -   Bone knife icon by Delapouite
 -   Bone mace icon by Delapouite
 -   Book cover icon by Lorc
 -   Bookmark icon by Lorc
+-   Boomerang icon by Delapouite
 -   Boot kick icon by Lorc
+-   Boots icon by Lorc
 -   Bordered shield icon by Lorc
 -   Bow arrow icon by Delapouite
+-   Bow tie icon by Delapouite
 -   Bowie knife icon by Lorc
+-   Brain icon by Lorc
+-   Brass knuckles icon by Delapouite
 -   Breastplate icon by Lorc
 -   Bright explosion icon by Lorc
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc
+-   Broken bone icon by Lorc
+-   Broken heart icon by Lorc
+-   Broken Shield icon by Lorc
+-   Bullseye icon by Skoll
+-   Bully minion icon by Delapouite
 -   Burning book icon by Lorc
 -   Burning meteor icon by Lorc
 -   Butterfly knife icon by Delapouite
@@ -56,12 +76,18 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Cactus icon by Delapouite
 -   Cactus tap icon by Delapouite
 -   Caduceus icon by Delapouite
+-   Calculator icon by Delapouite
 -   Camping tent icon by Delapouite
 -   Candles icon by Delapouite
+-   Card 7 of diamonds icon by Simon (aussiesim)
+-   Card discard icon by Faithtoken
+-   Carillon icon by Lorc
 -   Carnival mask icon by Delapouite
 -   Cartwheel icon by Lorc
 -   Cat icon by Lorc
 -   Centipede icon by Lorc
+-   Chakram icon by Delapouite
+-   Chess knight icon by Skoll
 -   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
 -   Claw slashes icon by Lorc
@@ -70,81 +96,144 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Colt M1911 icon by Skoll
 -   Conqueror icon by Delapouite
 -   Crab claw icon by Lorc
+-   Cracked shield icon by Lorc
+-   Crescent blade icon by Lorc
 -   Crescent staff icon by Delapouite
+-   Crested helmet icon by Lorc
 -   Cross shield icon by Delapouite
 -   Crossed axes icon by Lorc
 -   Crossbow icon by Carl Olsen
+-   Crystal ball icon by Lorc
 -   Crystal wand icon by Lorc
 -   Curvy knife icon by Lorc
+-   Cut palm icon by Lorc
 -   CZ Skorpion icon by Skoll
 -   Daggers icon by Lorc
 -   Death note icon by Lorc
 -   Desert Eagle icon by Skoll
+-   Devil mask icon by Delapouite
+-   Diamond ring icon by Delapouite
+-   Dodging icon by Lorc
+-   Double fish icon by Delapoiute
 -   Dragon shield icon by Delapouite
+-   Dress icon by Skoll
 -   Dripping Knife icon by Lorc
+-   Drop weapon icon by Skoll
+-   Duel icon by sbed
+-   Dwarf king icon by Kier Heyl
+-   Earth crack icon by Lorc
+-   Echo ripples icon by Lorc
 -   Edged Shield icon by Lorc
 -   Electric whip icon by Lorc
+-   Elf helmet icon by Kier Heyl
 -   Energise icon by Lorc
+-   Energy shield icon by Lorc
+-   Enlightenment icon by Lorc
 -   Enrage icon by Delapouite
 -   Erlenmeyer icon by Lorc
 -   Evil book icon by Lorc
 -   Evil hand icon by Lorc
+-   Evil love icon by Lorc
 -   Evil moon icon by Lorc
 -   Eye shield icon by Lorc
+-   Eye target icon by Delapouite
+-   Extra lucid icon by Lorc
+-   Fairy icon by Lorc
 -   Fangs icon by Skoll
 -   Fast arrow icon by Lorc
+-   Fast forward button icon by Delapouite
 -   Fireball icon by Lorc
 -   Fire axe icon by Lorc
 -   Fire punch icon by Lorc
+-   Fire ray icon by Lorc
+-   Fire shield icon by Lorc
 -   Fist icon by Lorc
 -   Flail icon by Delapouite
 -   Flame icon by Carl Olsen
 -   Flanged mace icon by Delapouite
 -   Flat Hammer icon by Lorc
+-   Fox icon by Caro Ascercion
 -   Galaxy icon by Delapouite
 -   Gargoyle icon by Delapouite
 -   Gavel icon by Lorc
+-   Gears icon by Lorc
+-   Gem pendant icon by Lorc
+-   Ghost ally icon by Lorc
 -   Gladius icon by Skoll
 -   Glaive icon by Delapouite
 -   Glock icon by Skoll
+-   Gloves icon by Delapouite
 -   Glowing hands icon by Lorc
 -   Gluttonous smile icon by Lorc
+-   Graveyard icon by Delapouite
+-   Griffin symbol icon by Delapouite
 -   Guards icon by Delapouite
 -   Halberd icon by Lorc
 -   Hand bandage icon by Delapouite
 -   Hand of god icon by Delapouite
 -   Hatchet icon by Delapouite
+-   Haunting icon by Lorc
+-   Hazard sign icon by Lorc
+-   Hazmat suit icon by Delapouite
 -   Healing icon by Delapouite
 -   Health potion icon by Delapouite
 -   Heart armor icon by Delapouite
+-   Heart minus by Zeromancer (CC0 PDD)
+-   Heart shield icon by Delapouite
+-   Heavy rain icon by Lorc
+-   Herbs bundle icon by Delapouite
 -   Holy oak icon by Cathelineau
+-   Holy water icon by Delapouite
+-   Hydra icon by Lorc
 -   Ice bolt icon by Lorc
+-   Ice cube icon by Lorc
+-   Ice shield icon by Lorc
 -   Ice spear icon by Lorc
 -   Icebergs icon by Lorc
 -   Insect Jaws icon by Lorc
+-   Internal injury icon by Lorc
+-   Invisible icon by Delapouite
 -   Jester hat icon by Delapouite
+-   Journey icon by Lorc
 -   Katana icon by Delapouite
+-   Kimono icon by Delapouite
+-   Knapsack icon by Lorc
 -   Knife thrust icon by Lorc
 -   Knocked out stars icon by Delapouite
 -   Kusarigama icon by DarkZaitzev
+-   Lamellar icon by Lorc
 -   Lantern icon by Lorc
 -   Layered armor icon by Lorc
 -   Leather armor icon by Delapouite
 -   Life tap icon by Lorc
+-   Light bulb icon by Lorc
 -   Lightning branches icon by Lorc
 -   Lightning saber icon by Lorc
+-   Lightning shield icon by Lorc
 -   Lightning storm icon by Lorc
 -   Lion icon by Lorc
 -   Log icon by Delapouite
 -   Lunar wand icon by Delapouite
+-   Maggot icon by Lorc
 -   Magic axe icon by Delapouite
+-   Magic portal icon by Lorc
 -   Magic shield icon by Lorc
+-   Magic swirl by Lorc
+-   Magnifying glass icon by Lorc
 -   Mailed fist icon by Lorc
+-   Mantrap icon by Lorc
 -   Meat cleaver icon by Lorc
+-   Medical pack icon by sbed
+-   Meditation icon by Lorc
+-   Mighty force icon by Delapouite
 -   Minerals icon by Faithtoken
+-   Monkey icon by Lorc
 -   Morph ball icon by Delapouite
 -   Musket icon by Skoll
+-   Nails icon by Lorc
+-   Ninja armor by Delapouite
 -   Nunchaku icon by Delapouite
+-   Owl icon by Lorc
 -   Panzerfaust icon by Delapouite
 -   Paw icon by Lorc
 -   Pentacle icon by Skoll
@@ -154,63 +243,105 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Pistol gun by John Colburn
 -   Plain dagger icon by Lorc
 -   Plastron icon by Lorc
+-   Pointing icon by Lorc
+-   Pointy hat icon by Lorc
 -   Poison bottle icon by Lorc
+-   Poker Hand icon by Lorc
 -   Pope crown icon by Delepouite
 -   Potion ball icon by Lorc
+-   Power ring icon by Delapouite
+-   Prayer icon by Lorc
+-   Psychic waves icon by Lorc
 -   Public speaker icon by Delapouite
 -   Punch blast icon by Lorc
+-   Qaitbay Citadel icon by Delapouite
+-   Raise zombie icon by Skoll
 -   Rake icon by Delapouite
+-   Rampart icon by Delapouite
 -   Rat icon by Delapouite
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
 -   Revolver icon by Delapouite
+-   Ring icon by Delapouite
+-   Riposte icon by Andy Meneely
 -   Robber hand icon by DarkZaitzev
 -   Robe icon by Lorc
+-   Rober icon by Delapouite
 -   Rock icon by Lorc
 -   Roman shield icon by Delapouite
 -   Round shield icon by Wildabeast
+-   Run icon by Lorc
 -   Rune sword icon by Lorc
 -   Saber slash icon by Lorc
 -   Sai icon by Delapouite
+-   Sands of time icon by Lorc
 -   Sawed-off shotgun icon by Delapouite
+-   Screaming icon by Lorc
 -   Scythe icon by Lorc
+-   Serrated slash icon by Lorc
+-   Shadow grasp icon by Lorc
+-   Shambling zombie icon by Delapouite
 -   Shard sword icon by Lorc
 -   Sharp axe icon by Delapouite
 -   Sharp haldberd icon by Delapouite
+-   Sherlock Holmes icon by Delapouite
+-   Shield opposition icon by Delapouite
+-   Shield reflect icon by Delapouite
+-   Shiny omega icon by Lorc
 -   Shirt icon by Lucas
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
 -   Siren icon by Skoll
+-   Sitting dog icon by Delapouite
+-   Skull shield icon by Lorc
+-   Skull signet icon by Lorc
 -   Skull staff icon by Delapouite
+-   Slot machine icon by Caro Ascercion
 -   Snowflake 1 icon by Lorc
 -   Snowflake 2 icon by Lorc
 -   Sonic screech icon by Lorc
+-   Sparkles icon by Delapouite
 -   Sparkling sabre icon by Lorc
 -   Spear feather icon by Delapouite
 -   Spear hook icon by Lorc
+-   Speedometer icon by Delapouite
 -   Spiked mace icon by Lorc
 -   Spiked shield icon by Delapouite
+-   Spiked shoulder armor icon by Delapouite
 -   Spine arrow icon by Lorc
+-   Spinning blades icon by Lorc
+-   Spinning sword icon by Lorc
 -   Splashy stream icon by Lorc
+-   Stack icon by Delapouite
+-   Stalactite icon by Lorc
 -   Static waves icon by Lorc
 -   Stiletto icon by Lorc
 -   Stiletto icon by Skoll
 -   Stone axe icon by Lorc
 -   Stone spear icon by Lorc
 -   Stone tower icon by Lorc
+-   Stop sign icon by Delapouite
+-   Striking arrows icon by Lorc
 -   Striking diamonds icon by Lorc
 -   Sun icon by Lorc
+-   Surrounded shield icon by Lorc
 -   Swords power icon by Delapouite
+-   Target arrows icon by Lorc
 -   Terror icon by Lorc
 -   Thor fist icon by Lorc
 -   Thor hammer icon by Delapouite
+-   Thumb down icon by Delapouite
+-   Thumb up icon by Delapouite
 -   Tomahawk icon by Delapouite
 -   Tornado icon by Lorc
 -   Tortoise icon by Delapouite
+-   Transparent slime icon by Cathelineau
+-   Treasure map icon by Lorc
 -   Trident icon by Lorc
 -   Trident shield icon by Delapouite
 -   Two handed sword icon by Delapouite
 -   Unfriendly fire icon by Lorc
+-   Upgrade icon Delapouite
 -   Viking shield icon by Delapouite
 -   Vintage robot icon by Lorc
 -   Virus icon by Lorc
@@ -218,13 +349,21 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Walther PPK icon by Skoll
 -   War axe icon by Delapouite
 -   Warhammer icon by Delapouite
+-   Wasp sting icon by Lorc
+-   Western hat icon by Delapouite
 -   Whip icon by Lorc
+-   Whirlpool shuriken icon by DarkZaitzev
 -   White book icon by Wildabeast
+-   Wind hole icon by Lorc
 -   Winchester rifle icon by Skoll
 -   Winged scepter icon by Delapouite
+-   Winged shield icon by Lorc
 -   Winged sword icon by Lorc
 -   Winter gloves icon by Delapouite
 -   Wizard staff icon by Lorc
 -   Wolf head icon by Lorc
 -   Wolf howl icon by Lorc
+-   Wolverine claws icon by Lorc
 -   Wood axe icon by Lorc
+-   Wrapping star icon by Lorc
+-   Yin yang icon by Delapouite

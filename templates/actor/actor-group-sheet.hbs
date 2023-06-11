@@ -1,0 +1,64 @@
+<form class="{{cssClass}} group-sheet" autocomplete="off">
+	<header class="sheet-header flexcol">
+		<div class="header-fields">
+			<div class="flexrow">
+				<img class="item-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+				<h1 class="character-name"><input name="name" type="text" data-dtype="String" value="{{actor.name}}"
+						placeholder="Party Name" />
+				</h1>
+			</div>
+		</div>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i> {{localize "FU.UI.roll"}}</a>
+		<a class="item" data-tab="party"><i class="fas fa-solid fa-people-group"></i> {{localize
+			"FU.Plural.groupMember"}}</a>
+		<a class="item" data-tab="creatures"><i class="fas fa-solid fa-paw"></i> {{localize "FU.Group.creatures"}}</a>
+		<a class="item" data-tab="locations"><i class="fas fa-solid fa-earth-americas"></i> {{localize
+			"FU.Group.locations"}}</a>
+	</nav>
+
+	<section class="sheet-body">
+		{{>"systems/fabulaultima/templates/actor/partials/roll-tab.hbs" isGroupSheet=true}}
+
+		<div class="tab party" data-group="primary" data-tab="party">
+			<div class="grid grid-6col group-members">
+				<div class="flexrow header">
+					<p>{{localize "FU.Bio.nameLabel"}}</p>
+					<p>{{localize "FU.Short.level"}}</p>
+					<span></span>
+				</div>
+				{{#each actor.system.groupMembers as |player|}}
+				<div class="flexrow">
+					<p>{{player.name}}</p>
+					<p>{{player.system.characterLevel}}</p>
+					<button class="fabula-button leader" data-source="{{actor._id}}"
+						data-actor-id="{{player._id}}">{{#if player.system.isLeader}}<i
+							class="fas fa-solid fa-crown"></i> {{localize "FU.Group.leader"}}{{else}}{{localize
+						"FU.Group.member"}}{{/if}}</button>
+				</div>
+				{{/each}}
+			</div>
+			<h2>{{localize "FU.UI.notes"}}</h2>
+			<div class="editor-host">
+				{{editor enrichedNotes target="system.notes" button=true owner=owner
+				editable=editable}}
+			</div>
+		</div>
+
+		<div class="tab creatures" data-group="primary" data-tab="creatures">
+			<div class="editor-host">
+				{{editor enrichedCreatures target="system.creatures" button=true owner=owner
+				editable=editable}}
+			</div>
+		</div>
+
+		<div class="tab locations" data-group="primary" data-tab="locations">
+			<div class="editor-host">
+				{{editor enrichedLocations target="system.locations" button=true owner=owner
+				editable=editable}}
+			</div>
+		</div>
+	</section>
+</form>

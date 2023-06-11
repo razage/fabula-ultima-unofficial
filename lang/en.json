@@ -16,8 +16,8 @@
     "FU.Attributes.main": "Primary Attribute",
     "FU.Attributes.secondary": "Secondary Attribute",
 
-    "FU.Bio.nameLabel": "Name",
     "FU.Bio.name": "Bio",
+    "FU.Bio.nameLabel": "Name",
     "FU.Bio.pronouns": "Pronouns",
 
     "FU.Bonds.name": "Bonds",
@@ -26,6 +26,7 @@
     "FU.Chat.critical": "Critical Success!",
     "FU.Chat.fumble": "FUMBLE!!!",
     "FU.Chat.attackingWith": "Attacking with",
+    "FU.Chat.rollingGroupSkillCheck": "Rolling a group skill check",
     "FU.Chat.rollingSkillCheck": "Rolling a skill check",
     "FU.Chat.using": "using",
 
@@ -66,17 +67,27 @@
     "FU.Elements.light": "Light",
     "FU.Elements.poison": "Poison",
 
+    "FU.Emotions.name": "Emotions",
     "FU.Emotions.admiration": "Admiration",
     "FU.Emotions.inferiority": "Inferiority",
     "FU.Emotions.loyalty": "Loyalty",
     "FU.Emotions.mistrust": "Mistrust",
     "FU.Emotions.affection": "Affection",
     "FU.Emotions.hatred": "Hatred",
-    "FU.Emotions.name": "Emotions",
 
     "FU.Equipment.name": "Equipment",
     "FU.Equipment.mainHand": "Main-Hand",
     "FU.Equipment.offHand": "Off-Hand",
+
+    "FU.Group.name": "Group",
+    "FU.Group.creatures": "Creatures",
+    "FU.Group.fail": "Fail",
+    "FU.Group.leader": "Group Leader",
+    "FU.Group.leaderEx": "Used in group rolls to determine the target. This can be changed at will, but there can only be one leader.",
+    "FU.Group.locations": "Locations",
+    "FU.Group.member": "Group Member",
+    "FU.Group.pass": "Pass",
+    "FU.Group.rolls": "Group Rolls",
 
     "FU.Items.name": "Items",
     "FU.Items.Blurbs.elementalShard": "Deals 10 air, bolt, earth, fire, or ice damage to a target.",
@@ -98,6 +109,7 @@
     "FU.Items.Types.new": "New",
     "FU.Items.Types.skill": "Skill",
     "FU.Items.Types.spell": "Spell",
+    "FU.Items.Types.spellEffects": "Spell Effects",
     "FU.Items.Types.weapon": "Weapon",
 
     "FU.Navigation.tabGear": "Gear",
@@ -115,6 +127,7 @@
     "FU.Plural.accessory": "Accessories",
     "FU.Plural.arcanum": "Arcana",
     "FU.Plural.attack": "Attacks",
+    "FU.Plural.groupMember": "Group Members",
     "FU.Plural.skill": "Skills",
 
     "FU.Proficiencies.name": "Proficiencies",
@@ -196,6 +209,7 @@
     "FU.Spells.mpCost": "MP Cost",
     "FU.Spells.mpCostTargets": "MP Cost per Target",
     "FU.Spells.multiEx": "If checked, this spell can hit more than one target.",
+    "FU.Spells.noDamage": "Deals No Damage",
     "FU.Spells.offensive": "Offensive Spell",
     "FU.Spells.opportunity": "Opportunity",
 
@@ -230,11 +244,15 @@
     "FU.UI.delete": "Delete",
     "FU.UI.description": "Description",
     "FU.UI.edit": "Edit",
+    "FU.UI.effectWarning": "Managing embedded Documents which are not direct descendants of a primary Document is un-supported at this time.",
     "FU.UI.information": "Information",
+    "FU.UI.item": "Item",
     "FU.UI.magic": "Magic",
     "FU.UI.melee": "Melee",
+    "FU.UI.misc": "Misc",
     "FU.UI.multi": "Multi",
     "FU.UI.multiEx": "If enabled, attacks target this many enemies.",
+    "FU.UI.newEffect": "New Effect",
     "FU.UI.no": "No",
     "FU.UI.notes": "Notes",
     "FU.UI.openCompendium": "Open Compendium",
@@ -246,6 +264,7 @@
     "FU.UI.selectCompendium": "Select Compendium",
     "FU.UI.target": "Target",
     "FU.UI.targets": "Targets",
+    "FU.UI.toHit": "To Hit",
     "FU.UI.yes": "Yes",
 
     "FU.Weapons.Categories.name": "Weapon Category",

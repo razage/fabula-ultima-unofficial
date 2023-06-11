@@ -5,11 +5,15 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "compatibility": {
         "minimum": "10",
-        "verified": "10.291"
+        "verified": "11.301"
     },
+    "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
+    "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/master.zip",
+    "primaryTokeAttribute": "hp",
+    "secondaryTokenAttribute": "mp",
     "esmodules": ["module/fabulaultima.js"],
     "styles": ["fabulaultima.css"],
     "languages": [
@@ -31,10 +35,10 @@
             "flags": {}
         },
         {
-            "name": "arcanum",
-            "label": "Arcanum",
+            "name": "arcana",
+            "label": "Arcana",
             "system": "fabulaultima",
-            "path": "packs/arcanum.db",
+            "path": "packs/arcana.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -98,6 +102,14 @@
             "label": "Spells",
             "system": "fabulaultima",
             "path": "packs/spells.db",
+            "private": false,
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "name": "spellEffects",
+            "label": "Spell Effects",
+            "path": "packs/spell-effects.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -201,9 +213,5 @@
             "type": "Item",
             "flags": {}
         }
-    ],
-    "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
-    "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/master.zip",
-    "primaryTokeAttribute": "hp",
-    "secondaryTokenAttribute": "mp"
+    ]
 }

@@ -26,14 +26,20 @@
 					<input name="system.isHeroic" type="checkbox" data-dtype="Boolean" {{#if item.system.isHeroic }}
 						checked{{/if}} />
 				</div>
+				<h3>{{localize "FU.UI.requirements"}}</h3>
+				{{#if item.system.isHeroic}}
+				<div class="editor-host">
+					{{editor enrichedReq target="system.requirements" button=true owner=owner editable=editable}}
+				</div>
+				{{/if}}
+			</div>
+			<h3>{{localize "FU.Skills.level"}}</h3>
+			<div class="grid grid-2col">
 				<div class="flexrow">
 					<label for="system.hasLevels">{{localize "FU.Skills.hasLevels"}}</label>
 					<input name="system.hasLevels" type="checkbox" data-dtype="Boolean" {{#if item.system.hasLevels }}
 						checked{{/if}} />
 				</div>
-			</div>
-			<h3>{{localize "FU.Skills.level"}}</h3>
-			<div class="grid grid-2col">
 				<div class="flexrow">
 					<label for="system.skillLevel.value">{{localize "FU.Skills.level"}}</label>
 					<input name="system.skillLevel.value" type="text" value="{{item.system.skillLevel.value}}"

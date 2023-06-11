@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["player", "companion", "npc", "group", "world"],
+        "types": ["player", "companion", "npc", "group"],
         "templates": {
             "charAttributes": {
                 "attributes": {
@@ -34,11 +34,33 @@
                 "bonuses": {
                     "accuracy": {
                         "physical": 0,
-                        "magic": 0
+                        "magic": 0,
+                        "arcane": 0,
+                        "bow": 0,
+                        "brawling": 0,
+                        "dagger": 0,
+                        "firearm": 0,
+                        "flail": 0,
+                        "heavy": 0,
+                        "shield": 0,
+                        "spear": 0,
+                        "sword": 0,
+                        "thrown": 0
                     },
                     "damage": {
                         "physical": 0,
-                        "magic": 0
+                        "magic": 0,
+                        "arcane": 0,
+                        "bow": 0,
+                        "brawling": 0,
+                        "dagger": 0,
+                        "firearm": 0,
+                        "flail": 0,
+                        "heavy": 0,
+                        "shield": 0,
+                        "spear": 0,
+                        "sword": 0,
+                        "thrown": 0
                     }
                 }
             },
@@ -121,6 +143,11 @@
                     "value": 6,
                     "max": 6,
                     "bonus": 0
+                },
+                "gp": {
+                    "enabled": false,
+                    "value": 0,
+                    "max": 6
                 }
             }
         },
@@ -134,7 +161,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.0",
+            "schemaVersion": "1.01",
             "skillLevel": 1,
             "isHeroic": false,
             "canUseEquipment": false,
@@ -142,6 +169,14 @@
             "species": "Beast",
             "level": 5,
             "description": ""
+        },
+        "group": {
+            "schemaVersion": "1.01",
+            "partyMembers": [],
+            "characters": [],
+            "creatures": "",
+            "locations": "",
+            "notes": ""
         },
         "player": {
             "templates": [
@@ -153,7 +188,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.27",
+            "schemaVersion": "1.30",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -183,6 +218,7 @@
             "consumables": [],
             "zenit": 500,
             "canSummon": false,
+            "hasFrenzy": false,
             "notes": ""
         },
         "npc": {
@@ -195,7 +231,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.06",
+            "schemaVersion": "1.07",
             "species": "Beast",
             "rank": "soldier",
             "isBoss": false,
@@ -221,6 +257,7 @@
             "arcanum",
             "class",
             "spell",
+            "buff",
             "skill",
             "bond"
         ],
@@ -336,22 +373,27 @@
             "ipCost": 0,
             "quality": "No Quality."
         },
+        "buff": {
+            "schemaVersion": "1.0"
+        },
         "skill": {
             "templates": ["hasClass"],
-            "schemaVersion": "1.01",
+            "schemaVersion": "1.03",
             "notes": "",
             "hasLevels": false,
             "skillLevel": {
-                "value": 0,
-                "max": 0
+                "value": 1,
+                "max": 1
             },
-            "isHeroic": false
+            "isHeroic": false,
+            "requirements": ""
         },
         "spell": {
             "templates": ["dealsDamage", "usesAccuracy", "hasClass"],
             "schemaVersion": "1.02",
             "manaCost": 0,
             "offensiveSpell": false,
+            "noDamage": false,
             "target": "Self",
             "multipleTargets": false,
             "duration": "instantaneous",

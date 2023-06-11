@@ -50,17 +50,20 @@
   font-size: 1rem;
 }
 .resource-card .hp,
+.resource-card .gp,
 .resource-card .mp,
 .resource-card .ip {
   margin: 0 auto;
   text-align: center;
 }
 .resource-card .hp label,
+.resource-card .gp label,
 .resource-card .mp label,
 .resource-card .ip label {
   margin-bottom: 8px;
 }
 .resource-card .hp input,
+.resource-card .gp input,
 .resource-card .mp input,
 .resource-card .ip input {
   margin: 0 auto;
@@ -83,6 +86,11 @@
 .resource-card .ip input,
 .resource-card .ip p {
   color: #3FBF3F;
+}
+.resource-card .gp label,
+.resource-card .gp input,
+.resource-card .gp p {
+  color: #bd3ed6;
 }
 .resource-card i {
   font-size: 1.5rem;
@@ -338,6 +346,30 @@ h4.dice-total .multi {
   font-size: 1.25rem;
   padding-right: 4px;
 }
+.group-sheet .rolls label {
+  text-align: center;
+}
+.group-sheet .rolls input,
+.group-sheet .rolls select {
+  margin-top: 4px;
+}
+.group-sheet .rolls input[type="text"] {
+  color: #f8f8f8;
+}
+.group-sheet .group-members .header {
+  border-bottom: 1px solid #f8f8f8;
+  margin-bottom: 8px;
+}
+.group-sheet .group-members .header p {
+  margin: 0;
+  padding: 2px;
+}
+.group-sheet .group-members p {
+  text-align: center;
+}
+.group-sheet .group-members span {
+  text-align: center;
+}
 .npc-sheet {
   padding-top: 8px;
 }
@@ -370,38 +402,39 @@ h4.dice-total .multi {
 .weapon-sheet > .flexrow {
   padding: 2px;
 }
-.dialog section.window-content {
+.app.window-app.dialog section.window-content {
   background: #2021a0;
   background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
 }
-.dialog section.window-content .dialog-content p,
-.dialog section.window-content .dialog-content h4 {
+.app.window-app.dialog section.window-content .dialog-content p,
+.app.window-app.dialog section.window-content .dialog-content h4 {
+  color: #f8f8f8;
+  margin: 0 auto;
+}
+.app.window-app.dialog section.window-content .dialog-content form .form-group label {
   color: #f8f8f8;
 }
-.dialog section.window-content .dialog-content form .form-group label {
+.app.window-app.dialog section.window-content .dialog-content form .form-group input[type="text"],
+.app.window-app.dialog section.window-content .dialog-content form .form-group input::placeholder {
   color: #f8f8f8;
 }
-.dialog section.window-content .dialog-content form .form-group input[type="text"],
-.dialog section.window-content .dialog-content form .form-group input::placeholder {
+.app.window-app.dialog section.window-content .dialog-content form .form-group select {
   color: #f8f8f8;
 }
-.dialog section.window-content .dialog-content form .form-group select {
-  color: #f8f8f8;
-}
-.dialog section.window-content .dialog-content form .form-group select option {
+.app.window-app.dialog section.window-content .dialog-content form .form-group select option {
   background: #010661;
 }
-.dialog section.window-content .dialog-buttons button {
+.app.window-app.dialog section.window-content .dialog-buttons button {
   color: #f8f8f8;
   border: 1px solid #f8f8f8;
   border-radius: 10px;
 }
-.dialog section.window-content .dialog-buttons button:hover,
-.dialog section.window-content .dialog-buttons button:active,
-.dialog section.window-content .dialog-buttons button:focus {
+.app.window-app.dialog section.window-content .dialog-buttons button:hover,
+.app.window-app.dialog section.window-content .dialog-buttons button:active,
+.app.window-app.dialog section.window-content .dialog-buttons button:focus {
   box-shadow: none;
 }
-.dialog section.window-content .dialog-buttons button:hover {
+.app.window-app.dialog section.window-content .dialog-buttons button:hover {
   background: #010661;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
   border: 1px solid #929292;
@@ -529,8 +562,10 @@ button.fabula-button.item-create:hover {
 .arcanum-sheet input[type="text"],
 .armor-sheet input[type="text"],
 .bond-sheet input[type="text"],
+.buff-sheet input[type="text"],
 .class-sheet input[type="text"],
 .consumable-sheet input[type="text"],
+.group-sheet input[type="text"],
 .npc-sheet input[type="text"],
 .skill-sheet input[type="text"],
 .spell-sheet input[type="text"],
@@ -540,8 +575,10 @@ button.fabula-button.item-create:hover {
 .arcanum-sheet select,
 .armor-sheet select,
 .bond-sheet select,
+.buff-sheet select,
 .class-sheet select,
 .consumable-sheet select,
+.group-sheet select,
 .npc-sheet select,
 .skill-sheet select,
 .spell-sheet select,
@@ -553,8 +590,10 @@ button.fabula-button.item-create:hover {
 .arcanum-sheet input[type="text"]:not(:disabled),
 .armor-sheet input[type="text"]:not(:disabled),
 .bond-sheet input[type="text"]:not(:disabled),
+.buff-sheet input[type="text"]:not(:disabled),
 .class-sheet input[type="text"]:not(:disabled),
 .consumable-sheet input[type="text"]:not(:disabled),
+.group-sheet input[type="text"]:not(:disabled),
 .npc-sheet input[type="text"]:not(:disabled),
 .skill-sheet input[type="text"]:not(:disabled),
 .spell-sheet input[type="text"]:not(:disabled),
@@ -566,8 +605,10 @@ button.fabula-button.item-create:hover {
 .arcanum-sheet img.item-img,
 .armor-sheet img.item-img,
 .bond-sheet img.item-img,
+.buff-sheet img.item-img,
 .class-sheet img.item-img,
 .consumable-sheet img.item-img,
+.group-sheet img.item-img,
 .npc-sheet img.item-img,
 .skill-sheet img.item-img,
 .spell-sheet img.item-img,
@@ -581,8 +622,10 @@ button.fabula-button.item-create:hover {
 .arcanum-sheet label.label-pad-left,
 .armor-sheet label.label-pad-left,
 .bond-sheet label.label-pad-left,
+.buff-sheet label.label-pad-left,
 .class-sheet label.label-pad-left,
 .consumable-sheet label.label-pad-left,
+.group-sheet label.label-pad-left,
 .npc-sheet label.label-pad-left,
 .skill-sheet label.label-pad-left,
 .spell-sheet label.label-pad-left,

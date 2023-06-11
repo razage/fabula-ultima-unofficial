@@ -1,4 +1,4 @@
-import { fabulaAttackRoll, fabulaSkillRoll } from "../roll/roll.js";
+import { fabulaAttackRoll, fabulaSkillRoll, makeGroupRoll } from "../roll/roll.js";
 
 export class FabulaUltimaActorSheet extends ActorSheet {
     static get defaultOptions() {
@@ -35,6 +35,19 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             this._prepareNPCItems(data);
         }
 
+        if (this.actor.type === "group") {
+            data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
+                async: true,
+            });
+            data.enrichedCreatures = await TextEditor.enrichHTML(this.object.system.creatures, {
+                async: true,
+            });
+            data.enrichedLocations = await TextEditor.enrichHTML(this.object.system.locations, {
+                async: true,
+            });
+            this._prepareGroupData(data);
+        }
+
         if (this.actor.type === "player") {
             data.enrichedNotes = await TextEditor.enrichHTML(this.object.system.notes, {
                 async: true,
@@ -69,6 +82,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
+        const buffs = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -111,6 +125,10 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     weapons.push(item);
                     break;
 
+                case "buff":
+                    buffs.push(item);
+                    break;
+
                 default:
                     console.log("itemType ", item.type, " is not currently implemented.");
             }
@@ -126,6 +144,18 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
+        actorData.system.buffs = buffs;
+    }
+
+    _prepareGroupData(sheetData) {
+        const groupData = sheetData.actor;
+        const groupMembers = [];
+
+        game.actors.forEach((actor) => {
+            if (actor.type === "player") groupMembers.push(actor);
+        });
+
+        groupData.system.groupMembers = groupMembers;
     }
 
     _prepareNPCItems(sheetData) {
@@ -135,6 +165,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
+        const buffs = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -142,9 +173,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 case "armor":
                     armor.push(item);
                     break;
+
                 case "accessory":
                     accessories.push(item);
                     break;
+
                 case "skill":
                     this._applyUnequippableActiveEffect(effects, item);
                     skills.push(item);
@@ -157,6 +190,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 case "weapon":
                     weapons.push(item);
                     break;
+
+                case "buff":
+                    buffs.push(item);
             }
         });
 
@@ -165,6 +201,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
+        actorData.system.buffs = buffs;
     }
 
     activateListeners(html) {
@@ -189,14 +226,24 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             const item = this.actor.items.get(parent.data("itemId"));
             const main = this.actor.system.attributes[item.system.accuracy.mainStat];
             const sec = this.actor.system.attributes[item.system.accuracy.secondaryStat];
+            let bonus = 0;
 
-            switch (attackType) {
-                case "weapon":
-                    fabulaAttackRoll(this.actor, main, sec, item, "weapon");
-                    break;
-                case "spell":
-                    fabulaAttackRoll(this.actor, main, sec, item, "spell");
-                    break;
+            // Figure out if the item is a weapon or spell and handle accordingly
+            if (attackType === "weapon") {
+                let weaponType = ev.currentTarget.dataset.weaponType;
+
+                if (weaponType === "shield") {
+                    bonus +=
+                        this.actor.system.bonuses.accuracy.shield +
+                        this.actor.system.bonuses.accuracy.brawling;
+                } else {
+                    bonus += this.actor.system.bonuses.accuracy[weaponType];
+                }
+                bonus += this.actor.system.bonuses.accuracy.physical;
+
+                fabulaAttackRoll(this.actor, main, sec, item, "weapon", bonus);
+            } else {
+                fabulaAttackRoll(this.actor, main, sec, item, "spell");
             }
         });
 
@@ -218,6 +265,25 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
         // Update the equipped status for an item
         html.find(".equipped").click(this._onItemEquippedStatusChange.bind(this));
+
+        // Update the leader status for a character
+        html.find(".leader").click(this._onGroupLeaderChanged.bind(this));
+
+        // Make a group roll
+        html.find(".group-roll").click((ev) => {
+            ev.preventDefault();
+            const parent = $(ev.currentTarget).parents(".skill-roll-container");
+            const main = parent.children(".attributeOne")[0].value;
+            const sec = parent.children(".attributeTwo")[0].value;
+            let bonus = parent.children("#skill-bonus")[0].value;
+
+            // Basic error  checking
+            if (isNaN(bonus)) {
+                bonus = 0;
+            }
+
+            makeGroupRoll(game.actors, main, sec, bonus);
+        });
 
         // Open compendium
         html.find(".open-compendium").click((ev) => {
@@ -347,6 +413,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     });
                     dialog.render(true);
                     break;
+                case "spell-effects":
+                    game.packs
+                        .find((k) => k.collection === "fabulaultima.spellEffects")
+                        .render(true);
+                    break;
+
                 default:
                     console.log(
                         "Compendium ",
@@ -413,6 +485,27 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             }
 
             item.update({ data: { isEquipped: isEquipped } });
+        } catch (ex) {
+            console.log(ex);
+        }
+    }
+
+    async _onGroupLeaderChanged(event) {
+        event.preventDefault();
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+
+        try {
+            const player = game.actors.get(dataset.actorId);
+            const isLeader = !player.system.isLeader;
+
+            await player.update({ data: { isLeader: isLeader } });
+
+            /* 
+            This forces the group sheet to "refresh", since the value being 
+            changed is on a different actor instead of an embedded item.
+            */
+            this.render();
         } catch (ex) {
             console.log(ex);
         }

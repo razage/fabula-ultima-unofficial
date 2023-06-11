@@ -1,9 +1,11 @@
 <div class="dice-roll">
 	<div class="dice-result">
 		{{#if fumble}}
-		<div class="dice-formula fumble">{{localize "FU.Chat.fumble"}}</div>
+		<div class="dice-formula fumble"><i class="fas fa-solid fa-triangle-exclamation"></i> {{localize
+			"FU.Chat.fumble"}} <i class="fas fa-solid fa-triangle-exclamation"></i></div>
 		{{else if crit}}
-		<div class="dice-formula critical">{{localize "FU.Chat.critical"}}</div>
+		<div class="dice-formula critical"><i class="fas fa-duotone fa-sparkles"></i> {{localize "FU.Chat.critical"}} <i
+				class="fas fa-duotone fa-sparkles"></i></div>
 		{{/if}}
 		{{#unless fumble}}
 		<div class="dice-tooltip">
@@ -14,24 +16,29 @@
 						<li class="roll die d{{r.faces}}">{{r.results.0.result}}</li>
 						{{/each}}
 					</ol>
-					<p class="part-formula">{{localize "FU.UI.accuracy"}}: {{roll.formula}}</p>
+					<p class="part-formula">{{localize "FU.UI.accuracy"}}: {{accuracy.base}} ({{localize
+						"FU.UI.item"}}) + {{accuracy.bonus}} ({{localize "FU.UI.misc"}})</p>
+					{{#unless noDamage}}
 					<p class="part-formula">
 						{{localize "FU.UI.damage"}}: {{highRoll}} ({{localize "FU.Short.highRoll"}}) + {{damage.bonus}}
 						({{localize (concat 'FU.Elements.' damage.type)}}){{#if dw}} <i class="fas fa-solid fa-swords"
 							title="{{localize 'FU.Weapons.dualWield'}}"></i>{{/if}}
 					</p>
+					{{/unless}}
 				</div>
 			</section>
 		</div>
 		<h4 class="dice-total">
 			{{#unless crit}}
-			<i class="fas fa-solid fa-bullseye" title="To Hit"></i>
-			{{roll.total}},
+			<i class="fas fa-solid fa-bullseye" title="{{localize 'FU.UI.toHit'}}"></i>
+			{{accuracy.total}}{{#unless noDamage}}, {{/unless}}
 			{{/unless}}
+			{{#unless noDamage}}
 			<img src="{{getElementalIcon damage.type}}" title="{{localize (concat 'FU.Elements.' damage.type)}}"
 				class="damage-type {{damage.type}}" /> {{damage.total}} {{#unless dw}}{{#if
 			damage.multi}} <span class="multi">({{damage.multiValue}} {{localize
 				"FU.UI.targets"}})</span>{{/if}}{{/unless}}
+			{{/unless}}
 		</h4>
 		{{/unless}}
 	</div>
