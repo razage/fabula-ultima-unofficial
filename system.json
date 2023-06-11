@@ -8,7 +8,7 @@
     "version": "0.6.11",
     "compatibility": {
         "minimum": "10",
-        "verified": "10.291"
+        "verified": "11.301"
     },
     "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
     "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/master.zip",

@@ -3,3 +3,16 @@ node_modules
 
 # Files
 TODO.md
+
+# Migration Bullshit
+packs/accessories/*
+packs/arcana/*
+packs/armor/*
+packs/character-classes/*
+packs/consumables/*
+packs/npc-skills/*
+packs/npcs/*
+packs/skills/*
+packs/spell-effects/*
+packs/spells/*
+packs/weapons-*/**
