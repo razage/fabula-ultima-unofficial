@@ -1,9 +1,11 @@
 <div class="dice-roll">
 	<div class="dice-result">
 		{{#if fumble}}
-		<div class="dice-formula fumble">{{localize "FU.Chat.fumble"}}</div>
+		<div class="dice-formula fumble"><i class="fas fa-solid fa-triangle-exclamation"></i> {{localize
+			"FU.Chat.fumble"}} <i class="fas fa-solid fa-triangle-exclamation"></i></div>
 		{{else if crit}}
-		<div class="dice-formula critical">{{localize "FU.Chat.critical"}}</div>
+		<div class="dice-formula critical"><i class="fas fa-duotone fa-sparkles"></i> {{localize "FU.Chat.critical"}} <i
+				class="fas fa-duotone fa-sparkles"></i></div>
 		{{/if}}
 		{{#unless fumble}}
 		<div class="dice-tooltip">
