@@ -23,6 +23,7 @@
 					{{/if_eq}}
 				</span>
 				<p>
+					{{#unless spell.system.noDamage}}
 					{{#if_eq spell.system.damage.bonus 0}}
 					{{localize "FU.UI.damage"}}: <b>[{{localize
 						"FU.Short.highRoll"}}]</b>
@@ -30,6 +31,9 @@
 					{{localize "FU.UI.damage"}}: <b>[{{localize
 						"FU.Short.highRoll"}}+{{spell.system.damage.bonus}}]</b>
 					{{/if_eq}}
+					{{else}}
+					{{localize "FU.UI.damage"}}: <b>N/A</b>
+					{{/unless}}
 				</p>
 				{{/if}}
 			</div>
