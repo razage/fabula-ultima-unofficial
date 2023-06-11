@@ -8,6 +8,7 @@ export async function fabulaAttackRoll(
 ) {
     let data = await _fabulaRollCommon(
         actor,
+        item,
         mainStat,
         secondaryStat,
         bonus + item.system.accuracy.bonus
@@ -30,7 +31,7 @@ export async function fabulaAttackRoll(
 }
 
 export async function fabulaSkillRoll(actor, mainStat, secondaryStat, bonus = 0) {
-    let data = await _fabulaRollCommon(actor, mainStat, secondaryStat, bonus);
+    let data = await _fabulaRollCommon(actor, null, mainStat, secondaryStat, bonus);
 
     await sendRollToChat(actor, mainStat, secondaryStat, "skill", data);
 }
@@ -179,6 +180,7 @@ export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) 
         if (!isLeader) {
             let actorRollData = await _fabulaRollCommon(
                 actor,
+                null,
                 actor.system.attributes[mainStat],
                 actor.system.attributes[secondaryStat],
                 bonus
@@ -196,6 +198,7 @@ export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) 
 
     let leaderRollData = await _fabulaRollCommon(
         leader,
+        null,
         leader.system.attributes[mainStat],
         leader.system.attributes[secondaryStat],
         successBonus
@@ -207,7 +210,7 @@ export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) 
     await sendRollToChat(leader, mainStat, secondaryStat, "groupRoll", data);
 }
 
-async function _fabulaRollCommon(actor, mainStat, secondaryStat, bonus = 0) {
+async function _fabulaRollCommon(actor, item = null, mainStat, secondaryStat, bonus = 0) {
     let roll = new Roll(`d${mainStat.current}+d${secondaryStat.current}+${bonus}`, actor.system);
 
     await roll.evaluate({ async: true });
@@ -227,7 +230,7 @@ async function _fabulaRollCommon(actor, mainStat, secondaryStat, bonus = 0) {
     data.rollObj = roll;
     data.highRoll = highRoll;
     data.isFumble = isRollFumble(results);
-    data.isCrit = isRollCrit(results);
+    data.isCrit = isRollCrit(results, actor, item);
 
     return data;
 }
@@ -237,9 +240,18 @@ function isRollFumble(rollResults) {
     else return false;
 }
 
-function isRollCrit(rollResults) {
-    // If the numbers match and they're both 6 or above
-    if (rollResults[0] === rollResults[1] && rollResults[0] >= 6 && rollResults[1] >= 6)
-        return true;
-    else return false;
+function isRollCrit(rollResults, actor, item = null) {
+    let frenzyAffectedWeapons = ["brawling", "dagger", "flail", "thrown"];
+
+    // If the character has the frenzy skill, certain weapons crit way more often
+    if (item && actor.system.hasFrenzy && frenzyAffectedWeapons.includes(item.system.category)) {
+        if (rollResults[0] === rollResults[1] && rollResults[0] > 1 && rollResults[1] > 1)
+            return true;
+        else return false;
+    } else {
+        // If the numbers match and they're both 6 or above
+        if (rollResults[0] === rollResults[1] && rollResults[0] >= 6 && rollResults[1] >= 6)
+            return true;
+        else return false;
+    }
 }

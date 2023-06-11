@@ -188,7 +188,7 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.29",
+            "schemaVersion": "1.30",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -218,6 +218,7 @@
             "consumables": [],
             "zenit": 500,
             "canSummon": false,
+            "hasFrenzy": false,
             "notes": ""
         },
         "npc": {
