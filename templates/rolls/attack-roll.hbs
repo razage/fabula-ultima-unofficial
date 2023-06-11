@@ -16,7 +16,8 @@
 						<li class="roll die d{{r.faces}}">{{r.results.0.result}}</li>
 						{{/each}}
 					</ol>
-					<p class="part-formula">{{localize "FU.UI.accuracy"}}: {{roll.formula}}</p>
+					<p class="part-formula">{{localize "FU.UI.accuracy"}}: {{accuracy.base}} ({{localize
+						"FU.UI.item"}}) + {{accuracy.bonus}} ({{localize "FU.UI.misc"}})</p>
 					{{#unless noDamage}}
 					<p class="part-formula">
 						{{localize "FU.UI.damage"}}: {{highRoll}} ({{localize "FU.Short.highRoll"}}) + {{damage.bonus}}
@@ -30,7 +31,7 @@
 		<h4 class="dice-total">
 			{{#unless crit}}
 			<i class="fas fa-solid fa-bullseye" title="{{localize 'FU.UI.toHit'}}"></i>
-			{{roll.total}}{{#unless noDamage}}, {{/unless}}
+			{{accuracy.total}}{{#unless noDamage}}, {{/unless}}
 			{{/unless}}
 			{{#unless noDamage}}
 			<img src="{{getElementalIcon damage.type}}" title="{{localize (concat 'FU.Elements.' damage.type)}}"

@@ -49,6 +49,11 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.dw = data.item.system.isDualWielding;
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
+            obj.accuracy = {
+                base: obj.roll.total,
+                bonus: 0,
+                total: 0,
+            };
             obj.damage = {
                 type: data.item.system.damage.type,
                 multi: data.item.system.multi.enabled,
@@ -56,6 +61,14 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             };
             obj.highRoll = data.highRoll;
             obj.itemName = data.item.name;
+
+            // Calculate accuracy bonus
+            obj.accuracy.bonus =
+                actor.system.bonuses.accuracy.physical +
+                actor.system.bonuses.accuracy[data.item.system.category];
+
+            // Calculate the total accuracy check
+            obj.accuracy.total = obj.accuracy.base + obj.accuracy.bonus;
 
             // Determine the correct damage bonus to apply
             if (data.item.system.category === "shield") {
@@ -128,12 +141,21 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.fumble = data.isFumble;
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
+            obj.accuracy = {
+                base: obj.roll.total,
+                bonus: actor.system.bonuses.accuracy.magic,
+                total: 0,
+            };
             obj.damage = {
-                bonus: data.item.system.damage.bonus,
+                bonus: actor.system.bonuses.damage.magic + data.item.system.damage.bonus,
                 type: data.item.system.damage.type,
             };
             obj.highRoll = data.highRoll;
             obj.itemName = data.item.name;
+
+            // Calculate the total accuracy check
+            obj.accuracy.total = obj.accuracy.base + obj.accuracy.bonus;
+
             obj.damage.total = obj.highRoll + obj.damage.bonus;
 
             result = await renderTemplate(
