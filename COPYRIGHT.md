@@ -18,6 +18,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Abdominal armor icon by Delapouite
 -   Ancient sword icon by Delapouite
 -   Andromeda chain icon by Lorc
+-   Amphora icon by Delapouite
 -   Angel outfit icon by Lorc
 -   Ant icon by Delapouite
 -   Antibody icon by Delapouite
@@ -72,10 +73,12 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Broken bone icon by Lorc
 -   Broken heart icon by Lorc
 -   Broken Shield icon by Lorc
+-   Bulb icon by Lorc
 -   Bullseye icon by Skoll
 -   Bully minion icon by Delapouite
 -   Burning book icon by Lorc
 -   Burning meteor icon by Lorc
+-   Butterfly icon by Lorc
 -   Butterfly knife icon by Delapouite
 -   C96 icon by Skoll
 -   Cactus icon by Delapouite
@@ -88,10 +91,12 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Card discard icon by Faithtoken
 -   Carillon icon by Lorc
 -   Carnival mask icon by Delapouite
+-   Carnivorous plant icon by Delapouite
 -   Cartwheel icon by Lorc
 -   Cat icon by Lorc
 -   Centipede icon by Lorc
 -   Chakram icon by Delapouite
+-   Chemical drop icon by Lorc
 -   Chess knight icon by Skoll
 -   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
@@ -118,12 +123,15 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Daggers icon by Lorc
 -   Dart icon by Delapouite
 -   Death note icon by Lorc
+-   Deathcab icon by Lorc
 -   Desert Eagle icon by Skoll
 -   Devil mask icon by Delapouite
 -   Diamond ring icon by Delapouite
+-   Dinosaur rex icon by Lorc
 -   Dodging icon by Lorc
 -   Double fish icon by Delapoiute
 -   Dragon breath icon by Lorc
+-   Dragon head icon by Lorc
 -   Dragon shield icon by Delapouite
 -   Dress icon by Skoll
 -   Dripping Knife icon by Lorc
@@ -162,7 +170,10 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Flame icon by Carl Olsen
 -   Flanged mace icon by Delapouite
 -   Flat Hammer icon by Lorc
+-   Fluffy cloud icon by Lorc
 -   Fox icon by Caro Ascercion
+-   Frankenstein Creature icon by Lorc
+-   Frostfire icon by Lorc
 -   Fruit tree icon by Delapouite
 -   Galaxy icon by Delapouite
 -   Gargoyle icon by Delapouite
@@ -193,6 +204,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Heart minus by Zeromancer (CC0 PDD)
 -   Heart shield icon by Delapouite
 -   Heavy rain icon by Lorc
+-   Heavy thorny triskelion icon by Lorc
 -   Herbs bundle icon by Delapouite
 -   Holy oak icon by Cathelineau
 -   Holy water icon by Delapouite
@@ -208,6 +220,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Insect Jaws icon by Lorc
 -   Internal injury icon by Lorc
 -   Invisible icon by Delapouite
+-   Jellyfish icon by Lorc
 -   Jester hat icon by Delapouite
 -   Journey icon by Lorc
 -   Katana icon by Delapouite
@@ -243,10 +256,14 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Meditation icon by Lorc
 -   Medusa head icon by Cathelineau
 -   Mighty force icon by Delapouite
+-   Mimic chest icon by Delapouite
 -   Minerals icon by Faithtoken
 -   Monkey icon by Lorc
+-   Morbid humor icon by Lorc
 -   Morph ball icon by Delapouite
+-   Mushroom icon by Lorc
 -   Musket icon by Skoll
+-   Musical notes by Delapouite
 -   Nails icon by Lorc
 -   Ninja armor by Delapouite
 -   Nunchaku icon by Delapouite
@@ -264,6 +281,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Pointing icon by Lorc
 -   Pointy hat icon by Lorc
 -   Poison bottle icon by Lorc
+-   Poison gas icon by Lorc
 -   Poker Hand icon by Lorc
 -   Pope crown icon by Delepouite
 -   Potion ball icon by Lorc
@@ -271,6 +289,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Prayer icon by Lorc
 -   Psychic waves icon by Lorc
 -   Public speaker icon by Delapouite
+-   Pumpkin lantern icon by Lorc
 -   Punch blast icon by Lorc
 -   Qaitbay Citadel icon by Delapouite
 -   Raise zombie icon by Skoll
@@ -287,6 +306,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Rober icon by Delapouite
 -   Rock icon by Lorc
 -   Roman shield icon by Delapouite
+-   Rooster icon by Delapouite
 -   Round shield icon by Wildabeast
 -   Run icon by Lorc
 -   Rune sword icon by Lorc
@@ -313,6 +333,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shut rose icon by Lorc
 -   Siren icon by Skoll
 -   Sitting dog icon by Delapouite
+-   Skeleton icon by Skoll
 -   Skull shield icon by Lorc
 -   Skull signet icon by Lorc
 -   Skull staff icon by Delapouite
@@ -329,6 +350,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Spartan icon by Lorc
 -   Spear feather icon by Delapouite
 -   Spear hook icon by Lorc
+-   Spectre icon by Lorc
 -   Speedometer icon by Delapouite
 -   Spiked mace icon by Lorc
 -   Spiked shield icon by Delapouite
@@ -353,11 +375,14 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Swords power icon by Delapouite
 -   Target arrows icon by Lorc
 -   Terror icon by Lorc
+-   Thermometer scale icon by Lorc
 -   Thor fist icon by Lorc
 -   Thor hammer icon by Delapouite
+-   Thorny tentacle icon by Lorc
 -   Thumb down icon by Delapouite
 -   Thumb up icon by Delapouite
 -   Tomahawk icon by Delapouite
+-   Tongue icon by Delapouite
 -   Tornado icon by Lorc
 -   Tortoise icon by Delapouite
 -   Transparent slime icon by Cathelineau
@@ -372,9 +397,11 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Vintage robot icon by Lorc
 -   Virus icon by Lorc
 -   Volcano icon by Lorc
+-   Vomiting icon by Lorc
 -   Walther PPK icon by Skoll
 -   War axe icon by Delapouite
 -   Warhammer icon by Delapouite
+-   Warlock eye icon by Delapouite
 -   Wasp sting icon by Lorc
 -   Werewolf icon by Lorc
 -   Western hat icon by Delapouite
