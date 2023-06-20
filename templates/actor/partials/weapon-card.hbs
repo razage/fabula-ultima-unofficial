@@ -44,13 +44,15 @@
 					{{/if_eq}}
 				</span>
 				<p>
-					{{#if_eq weapon.system.damage.bonus 0}}
-					{{localize "FU.UI.damage"}}: <b>[{{localize
-						"FU.Short.highRoll"}}]</b>
-					{{else}}
-					{{localize "FU.UI.damage"}}: <b>[{{localize
-						"FU.Short.highRoll"}}+{{weapon.system.damage.bonus}}]</b>
-					{{/if_eq}}
+					{{localize "FU.UI.damage"}}: <img title="{{getLocalizedElement weapon.system.damage.type}}"
+						class="element-icon" src="{{getElementalIcon weapon.system.damage.type}}" />
+					<b>
+						{{#if_not_eq weapon.system.damage.bonus 0}}
+						[{{localize "FU.Short.highRoll"}}+{{weapon.system.damage.bonus}}]
+						{{else}}
+						[{{localize "FU.Short.highRoll"}}]
+						{{/if_not_eq}}
+					</b>
 				</p>
 			</div>
 

@@ -645,6 +645,18 @@ button.fabula-button.item-create:hover {
   border: 1px solid #f8f8f8;
   border-radius: 10px;
 }
+.accessory-card img,
+.arcana-card img,
+.armor-card img,
+.bond-card img,
+.class-card img,
+.consumable-card img,
+.resource-card img,
+.skill-card img,
+.spell-card img,
+.weapon-card img {
+  border: none;
+}
 .accessory-card img.item-icon,
 .arcana-card img.item-icon,
 .armor-card img.item-icon,
@@ -657,7 +669,19 @@ button.fabula-button.item-create:hover {
 .weapon-card img.item-icon {
   width: 30px;
   height: 30px;
-  border: none;
+}
+.accessory-card img.element-icon,
+.arcana-card img.element-icon,
+.armor-card img.element-icon,
+.bond-card img.element-icon,
+.class-card img.element-icon,
+.consumable-card img.element-icon,
+.resource-card img.element-icon,
+.skill-card img.element-icon,
+.spell-card img.element-icon,
+.weapon-card img.element-icon {
+  width: 20px;
+  height: 20px;
 }
 .skill-card input {
   color: #f8f8f8;

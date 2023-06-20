@@ -61,6 +61,20 @@ Hooks.once("init", async function () {
         }
     });
 
+    Handlebars.registerHelper("toLowerCase", function (str) {
+        try {
+            return str.toLowerCase();
+        } catch (error) {
+            return "";
+        }
+    });
+
+    Handlebars.registerHelper("getLocalizedElement", function (element) {
+        element = element.toLowerCase();
+
+        return game.i18n.localize("FU.Elements." + element);
+    });
+
     Handlebars.registerHelper("getElementalIcon", function (element) {
         let output = "systems/fabulaultima/assets/ui/";
 

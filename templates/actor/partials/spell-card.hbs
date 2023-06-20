@@ -24,13 +24,15 @@
 				</span>
 				<p>
 					{{#unless spell.system.noDamage}}
-					{{#if_eq spell.system.damage.bonus 0}}
-					{{localize "FU.UI.damage"}}: <b>[{{localize
-						"FU.Short.highRoll"}}]</b>
-					{{else}}
-					{{localize "FU.UI.damage"}}: <b>[{{localize
-						"FU.Short.highRoll"}}+{{spell.system.damage.bonus}}]</b>
-					{{/if_eq}}
+					{{localize "FU.UI.damage"}}: <img title="{{getLocalizedElement spell.system.damage.type}}"
+						class="element-icon" src="{{getElementalIcon spell.system.damage.type}}" />
+					<b>
+						{{#if_not_eq spell.system.damage.bonus 0}}
+						[{{localize "FU.Short.highRoll"}}+{{spell.system.damage.bonus}}]
+						{{else}}
+						[{{localize "FU.Short.highRoll"}}]
+						{{/if_not_eq}}
+					</b>
 					{{else}}
 					{{localize "FU.UI.damage"}}: <b>N/A</b>
 					{{/unless}}
