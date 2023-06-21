@@ -263,6 +263,40 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         // Create an item
         html.find(".item-create").click(this._onItemCreate.bind(this));
 
+        html.find(".item-display").click(async (ev) => {
+            const itemId = $(ev.currentTarget).data("id");
+            const item = this.actor.items.get(itemId);
+            let obj = {
+                name: item.name,
+                img: item.img,
+                type: item.type,
+            };
+            let notes;
+
+            if (obj.type === "spell") {
+                notes = TextEditor.enrichHTML(item.system.notes);
+            } else {
+                notes = TextEditor.enrichHTML(item.system.quality);
+            }
+
+            notes.then((result) => {
+                let out = new DOMParser().parseFromString(result, "text/html");
+                obj["quality"] = out.body.innerText;
+            });
+
+            let content = await renderTemplate(
+                "systems/fabulaultima/templates/chat/item-display.hbs",
+                obj
+            );
+            let messageData = {
+                speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                content: content,
+                type: CONST.CHAT_MESSAGE_TYPES.OOC,
+            };
+
+            ChatMessage.create(messageData, {});
+        });
+
         // Update the equipped status for an item
         html.find(".equipped").click(this._onItemEquippedStatusChange.bind(this));
 

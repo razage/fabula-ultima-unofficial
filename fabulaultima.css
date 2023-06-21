@@ -139,6 +139,12 @@ img.damage-type {
 h4.dice-total .multi {
   font-size: 0.85rem;
 }
+.chat-item-card header h2.item-name {
+  text-align: center;
+}
+.chat-item-card header h2.item-name img {
+  border: none;
+}
 .character-sheet i.open-compendium,
 .npc-sheet i.open-compendium {
   color: #5b29cf;
