@@ -421,7 +421,8 @@ h4.dice-total .multi {
   color: #f8f8f8;
 }
 .app.window-app.dialog section.window-content .dialog-content form .form-group input[type="text"],
-.app.window-app.dialog section.window-content .dialog-content form .form-group input::placeholder {
+.app.window-app.dialog section.window-content .dialog-content form .form-group input::placeholder,
+.app.window-app.dialog section.window-content .dialog-content form .form-group .form-fields input {
   color: #f8f8f8;
 }
 .app.window-app.dialog section.window-content .dialog-content form .form-group select {

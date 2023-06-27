@@ -3,7 +3,7 @@
 ## Class-Specific Information
 
 -   (Arcanist)[./classes/arcanist.md]
--   Ace of Cards
+-   (Ace of Cards)[./classes/ace-of-cards.md]
 -   (Chimerist)[./classes/chimerist.md]
 -   (Darkblade)[./classes/darkblade.md]
 -   (Elementalist)[./classes/elementalist.md]
