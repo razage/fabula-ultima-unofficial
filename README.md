@@ -2,7 +2,13 @@
 
 A fan-made system for Foundry Virtual Tabletop to implement the ruleset for _Fabula Ultima_, a TTJRPG published by NEED GAMES!
 
-This system is unaffiliated with the creators or the publisher. Details about the Fabula Ultima system and links to support the creators and purchase the rulebook are available on [their website.](https://www.needgames.it/fabula-ultima-en/)
+## Disclaimer
+
+This system is unaffiliated with the creators or the publisher. The software is not made to invalidate or replace the official core rulebook. The only intention is to manage the math and dice rolls and allow Foundry users to play Fabula Ultima more conveniently. Please support the creator and/or his publisher by buying the book or supporting his Patreon.
+
+-   [Core Rules (DriveThruRPG, PDF)](https://www.drivethrurpg.com/product/410108/Fabula-Ultima-TTJRPG)
+-   [Core Rules (Amazon, Physical)](https://www.amazon.com/dp/B0C34VZ87R)
+-   [Patreon](https://www.patreon.com/roosterema)
 
 ## Status
 
@@ -10,13 +16,13 @@ This project is in active development and may still change at any time. That bei
 
 ### Future Content
 
-If/when new DLC or expansion modules are released for Fabula Ultima, I will probably get around to adding it in eventually. Certain things I will not be adding, such as major mechanic variants. I know there's something on the creator's Patreon about class spheres and that would be a large departure from what I've made, so I will not implement that, for example.
+If/when new DLC or expansion modules are released for Fabula Ultima, I will probably get around to adding it in eventually. Certain things I will not add myself, such as major mechanic variants. I know there's something on the creator's Patreon about class spheres and that would be a large departure from what I've made, so I will not implement that, for example.
+
+I am working on a basic implementation of the Ace of Cards. GMs won't enjoy running it, especially if there's multiple players using that class.
 
 ## Installation
 
-You probably shouldn't install this system right now. It barely functions and is in very early stages of development.
-
-But if you must, manually install this system by downloading the folder and placing it in your `Foundry/Data/Systems` folder. Make sure to rename the folder to `fabulaultima` or it won't work.
+In order to install this system, you will need to download this repository as a zip file and extract it to your foundry/systems folder. Alternatively, you can use the url `https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json` in the "Manifest URL" field when you click "Install System"
 
 # Copyright
 

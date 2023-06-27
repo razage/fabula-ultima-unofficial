@@ -166,6 +166,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Fire ray icon by Lorc
 -   Fire shield icon by Lorc
 -   Fist icon by Lorc
+-   Fizzing flask icon by Lorc
 -   Flail icon by Delapouite
 -   Flame icon by Carl Olsen
 -   Flanged mace icon by Delapouite
@@ -373,6 +374,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Sun icon by Lorc
 -   Surrounded shield icon by Lorc
 -   Swords power icon by Delapouite
+-   Syringe icon by Lorc
 -   Target arrows icon by Lorc
 -   Terror icon by Lorc
 -   Thermometer scale icon by Lorc

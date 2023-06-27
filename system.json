@@ -5,9 +5,9 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial/tree/beta",
     "license": "LICENSE.txt",
-    "version": "0.7.3b",
+    "version": "0.7.4b",
     "compatibility": {
-        "minimum": "10",
+        "minimum": "11",
         "verified": "11.301"
     },
     "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/beta/system.json",
@@ -29,7 +29,6 @@
             "name": "accessories",
             "label": "Accessories",
             "system": "fabulaultima",
-            "path": "packs/accessories.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -38,7 +37,6 @@
             "name": "arcana",
             "label": "Arcana",
             "system": "fabulaultima",
-            "path": "packs/arcana.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -47,7 +45,6 @@
             "name": "armor",
             "label": "Armor",
             "system": "fabulaultima",
-            "path": "packs/armor.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -56,7 +53,6 @@
             "name": "character-classes",
             "label": "Character Classes",
             "system": "fabulaultima",
-            "path": "packs/character-classes.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -65,7 +61,6 @@
             "name": "consumables",
             "label": "Consumables",
             "system": "fabulaultima",
-            "path": "packs/consumables.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -74,7 +69,6 @@
             "name": "npc-skills",
             "label": "NPC Skills",
             "system": "fabulaultima",
-            "path": "packs/npc-skills.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -83,7 +77,6 @@
             "name": "npcs",
             "label": "NPCs",
             "system": "fabulaultima",
-            "path": "packs/npcs.db",
             "private": false,
             "type": "Actor",
             "flags": {}
@@ -92,7 +85,6 @@
             "name": "skills",
             "label": "Skills",
             "system": "fabulaultima",
-            "path": "packs/skills.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -101,7 +93,6 @@
             "name": "spells",
             "label": "Spells",
             "system": "fabulaultima",
-            "path": "packs/spells.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -109,16 +100,23 @@
         {
             "name": "spellEffects",
             "label": "Spell Effects",
-            "path": "packs/spell-effects.db",
+            "system": "fabulaultima",
             "private": false,
             "type": "Item",
+            "flags": {}
+        },
+        {
+            "name": "tinkerer-potion-tables",
+            "label": "Tinkerer Potion Tables",
+            "system": "fabulaultima",
+            "private": false,
+            "type": "RollTable",
             "flags": {}
         },
         {
             "name": "weapons-arcane",
             "label": "Weapons - Arcane",
             "system": "fabulaultima",
-            "path": "packs/weapons-arcane.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -127,7 +125,6 @@
             "name": "weapons-bows",
             "label": "Weapons - Bows",
             "system": "fabulaultima",
-            "path": "packs/weapons-bows.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -136,7 +133,6 @@
             "name": "weapons-brawling",
             "label": "Weapons - Brawling",
             "system": "fabulaultima",
-            "path": "packs/weapons-brawling.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -145,7 +141,6 @@
             "name": "weapons-daggers",
             "label": "Weapons - Daggers",
             "system": "fabulaultima",
-            "path": "packs/weapons-daggers.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -154,7 +149,6 @@
             "name": "weapons-firearms",
             "label": "Weapons - Firearms",
             "system": "fabulaultima",
-            "path": "packs/weapons-firearms.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -163,7 +157,6 @@
             "name": "weapons-flails",
             "label": "Weapons - Flails",
             "system": "fabulaultima",
-            "path": "packs/weapons-flails.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -172,7 +165,6 @@
             "name": "weapons-heavy",
             "label": "Weapons - Heavy",
             "system": "fabulaultima",
-            "path": "packs/weapons-heavy.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -181,7 +173,6 @@
             "name": "weapons-shields",
             "label": "Weapons - Shields",
             "system": "fabulaultima",
-            "path": "packs/weapons-shields.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -190,7 +181,6 @@
             "name": "weapons-spears",
             "label": "Weapons - Spears",
             "system": "fabulaultima",
-            "path": "packs/weapons-spears.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -199,7 +189,6 @@
             "name": "weapons-swords",
             "label": "Weapons - Swords",
             "system": "fabulaultima",
-            "path": "packs/weapons-swords.db",
             "private": false,
             "type": "Item",
             "flags": {}
@@ -208,7 +197,6 @@
             "name": "weapons-thrown",
             "label": "Weapons - Thrown",
             "system": "fabulaultima",
-            "path": "packs/weapons-thrown.db",
             "private": false,
             "type": "Item",
             "flags": {}
