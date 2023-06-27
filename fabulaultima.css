@@ -420,18 +420,24 @@ h4.dice-total .multi {
   color: #f8f8f8;
   margin: 0 auto;
 }
-.app.window-app.dialog section.window-content .dialog-content form .form-group label {
+.app.window-app.dialog section.window-content .dialog-content form .form-group label,
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked label {
   color: #f8f8f8;
 }
 .app.window-app.dialog section.window-content .dialog-content form .form-group input[type="text"],
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked input[type="text"],
 .app.window-app.dialog section.window-content .dialog-content form .form-group input::placeholder,
-.app.window-app.dialog section.window-content .dialog-content form .form-group .form-fields input {
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked input::placeholder,
+.app.window-app.dialog section.window-content .dialog-content form .form-group .form-fields input,
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked .form-fields input {
   color: #f8f8f8;
 }
-.app.window-app.dialog section.window-content .dialog-content form .form-group select {
+.app.window-app.dialog section.window-content .dialog-content form .form-group select,
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked select {
   color: #f8f8f8;
 }
-.app.window-app.dialog section.window-content .dialog-content form .form-group select option {
+.app.window-app.dialog section.window-content .dialog-content form .form-group select option,
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked select option {
   background: #010661;
 }
 .app.window-app.dialog section.window-content .dialog-buttons button {
