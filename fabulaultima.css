@@ -412,6 +412,9 @@ h4.dice-total .multi {
   background: #2021a0;
   background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
 }
+.app.window-app.dialog section.window-content .dialog-content figcaption {
+  color: #f8f8f8;
+}
 .app.window-app.dialog section.window-content .dialog-content p,
 .app.window-app.dialog section.window-content .dialog-content h4 {
   color: #f8f8f8;

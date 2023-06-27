@@ -1,5 +1,9 @@
 # Fabula Ultima (Unofficial) for Foundry VTT
 
+## Compatibility
+
+I began work on this in Foundry 10. It _should_ still work in that, however the compendium will not port over. The spell buffs might not be very user-friendly to add yourself, so I'd recommend sticking with Foundry 11.
+
 ## Class-Specific Information
 
 -   (Arcanist)[./classes/arcanist.md]
