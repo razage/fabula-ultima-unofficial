@@ -80,7 +80,7 @@ export class FabulaUltimaItemSheet extends ItemSheet {
                 }
                 return owner.createEmbeddedDocuments("ActiveEffect", [
                     {
-                        label: game.i18n.localize("FU.UI.newEffect"),
+                        name: game.i18n.localize("FU.UI.newEffect"),
                         icon: "icons/svg/aura.svg",
                         origin: owner.uuid,
                         disabled: true,
