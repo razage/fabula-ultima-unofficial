@@ -408,49 +408,192 @@ h4.dice-total .multi {
 .weapon-sheet > .flexrow {
   padding: 2px;
 }
-.app.window-app.dialog section.window-content {
+.app.window-app.dialog section.window-content,
+.app.window-app.cards-config section.window-content {
   background: #2021a0;
   background: linear-gradient(180deg, #2021a0 0%, #010661 100%);
 }
-.app.window-app.dialog section.window-content .dialog-content figcaption {
+.app.window-app.dialog section.window-content form.editable .sheet-header h1.name input,
+.app.window-app.cards-config section.window-content form.editable .sheet-header h1.name input,
+.app.window-app.dialog section.window-content form.locked .sheet-header h1.name input,
+.app.window-app.cards-config section.window-content form.locked .sheet-header h1.name input {
+  color: #f8f8f8;
+}
+.app.window-app.dialog section.window-content form.editable div header,
+.app.window-app.cards-config section.window-content form.editable div header,
+.app.window-app.dialog section.window-content form.locked div header,
+.app.window-app.cards-config section.window-content form.locked div header {
+  border-color: #f8f8f8;
+}
+.app.window-app.dialog section.window-content form.editable div header,
+.app.window-app.cards-config section.window-content form.editable div header,
+.app.window-app.dialog section.window-content form.locked div header,
+.app.window-app.cards-config section.window-content form.locked div header,
+.app.window-app.dialog section.window-content form.editable div header a,
+.app.window-app.cards-config section.window-content form.editable div header a,
+.app.window-app.dialog section.window-content form.locked div header a,
+.app.window-app.cards-config section.window-content form.locked div header a,
+.app.window-app.dialog section.window-content form.editable div ol.cards li,
+.app.window-app.cards-config section.window-content form.editable div ol.cards li,
+.app.window-app.dialog section.window-content form.locked div ol.cards li,
+.app.window-app.cards-config section.window-content form.locked div ol.cards li,
+.app.window-app.dialog section.window-content form.editable div p,
+.app.window-app.cards-config section.window-content form.editable div p,
+.app.window-app.dialog section.window-content form.locked div p,
+.app.window-app.cards-config section.window-content form.locked div p,
+.app.window-app.dialog section.window-content form.editable div .card-faces a,
+.app.window-app.cards-config section.window-content form.editable div .card-faces a,
+.app.window-app.dialog section.window-content form.locked div .card-faces a,
+.app.window-app.cards-config section.window-content form.locked div .card-faces a,
+.app.window-app.dialog section.window-content form.editable div .card-controls a,
+.app.window-app.cards-config section.window-content form.editable div .card-controls a,
+.app.window-app.dialog section.window-content form.locked div .card-controls a,
+.app.window-app.cards-config section.window-content form.locked div .card-controls a {
+  color: #f8f8f8;
+}
+.app.window-app.dialog section.window-content form.editable .tab header,
+.app.window-app.cards-config section.window-content form.editable .tab header,
+.app.window-app.dialog section.window-content form.locked .tab header,
+.app.window-app.cards-config section.window-content form.locked .tab header {
+  border-color: #f8f8f8;
+}
+.app.window-app.dialog section.window-content form.editable .tab a,
+.app.window-app.cards-config section.window-content form.editable .tab a,
+.app.window-app.dialog section.window-content form.locked .tab a,
+.app.window-app.cards-config section.window-content form.locked .tab a,
+.app.window-app.dialog section.window-content form.editable .tab .form-group,
+.app.window-app.cards-config section.window-content form.editable .tab .form-group,
+.app.window-app.dialog section.window-content form.locked .tab .form-group,
+.app.window-app.cards-config section.window-content form.locked .tab .form-group,
+.app.window-app.dialog section.window-content form.editable .tab header,
+.app.window-app.cards-config section.window-content form.editable .tab header,
+.app.window-app.dialog section.window-content form.locked .tab header,
+.app.window-app.cards-config section.window-content form.locked .tab header,
+.app.window-app.dialog section.window-content form.editable .tab ol li,
+.app.window-app.cards-config section.window-content form.editable .tab ol li,
+.app.window-app.dialog section.window-content form.locked .tab ol li,
+.app.window-app.cards-config section.window-content form.locked .tab ol li,
+.app.window-app.dialog section.window-content form.editable .tab textarea,
+.app.window-app.cards-config section.window-content form.editable .tab textarea,
+.app.window-app.dialog section.window-content form.locked .tab textarea,
+.app.window-app.cards-config section.window-content form.locked .tab textarea {
+  color: #f8f8f8;
+}
+.app.window-app.dialog section.window-content form.editable .tab .form-fields,
+.app.window-app.cards-config section.window-content form.editable .tab .form-fields,
+.app.window-app.dialog section.window-content form.locked .tab .form-fields,
+.app.window-app.cards-config section.window-content form.locked .tab .form-fields {
+  color: #f8f8f8;
+}
+.app.window-app.dialog section.window-content form.editable .tab .form-fields button,
+.app.window-app.cards-config section.window-content form.editable .tab .form-fields button,
+.app.window-app.dialog section.window-content form.locked .tab .form-fields button,
+.app.window-app.cards-config section.window-content form.locked .tab .form-fields button,
+.app.window-app.dialog section.window-content form.editable .tab .form-fields input,
+.app.window-app.cards-config section.window-content form.editable .tab .form-fields input,
+.app.window-app.dialog section.window-content form.locked .tab .form-fields input,
+.app.window-app.cards-config section.window-content form.locked .tab .form-fields input {
+  color: #f8f8f8;
+}
+.app.window-app.dialog section.window-content form.editable .sheet-footer button,
+.app.window-app.cards-config section.window-content form.editable .sheet-footer button,
+.app.window-app.dialog section.window-content form.locked .sheet-footer button,
+.app.window-app.cards-config section.window-content form.locked .sheet-footer button {
+  background: #010661;
+  background: linear-gradient(180deg, #292aca 0%, #020993 100%);
+  color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 10px;
+}
+.app.window-app.dialog section.window-content form.editable .sheet-footer button:active,
+.app.window-app.cards-config section.window-content form.editable .sheet-footer button:active,
+.app.window-app.dialog section.window-content form.locked .sheet-footer button:active,
+.app.window-app.cards-config section.window-content form.locked .sheet-footer button:active,
+.app.window-app.dialog section.window-content form.editable .sheet-footer button:focus,
+.app.window-app.cards-config section.window-content form.editable .sheet-footer button:focus,
+.app.window-app.dialog section.window-content form.locked .sheet-footer button:focus,
+.app.window-app.cards-config section.window-content form.locked .sheet-footer button:focus,
+.app.window-app.dialog section.window-content form.editable .sheet-footer button:hover,
+.app.window-app.cards-config section.window-content form.editable .sheet-footer button:hover,
+.app.window-app.dialog section.window-content form.locked .sheet-footer button:hover,
+.app.window-app.cards-config section.window-content form.locked .sheet-footer button:hover {
+  box-shadow: none;
+}
+.app.window-app.dialog section.window-content form.editable .sheet-footer button:hover::not(:disabled),
+.app.window-app.cards-config section.window-content form.editable .sheet-footer button:hover::not(:disabled),
+.app.window-app.dialog section.window-content form.locked .sheet-footer button:hover::not(:disabled),
+.app.window-app.cards-config section.window-content form.locked .sheet-footer button:hover::not(:disabled) {
+  border-color: #929292;
+  background: #2021a0;
+  background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
+}
+.app.window-app.dialog section.window-content form.editable .sheet-footer button:disabled,
+.app.window-app.cards-config section.window-content form.editable .sheet-footer button:disabled,
+.app.window-app.dialog section.window-content form.locked .sheet-footer button:disabled,
+.app.window-app.cards-config section.window-content form.locked .sheet-footer button:disabled {
+  cursor: not-allowed;
+  background: #2021a0;
+  background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
+}
+.app.window-app.dialog section.window-content .dialog-content figcaption,
+.app.window-app.cards-config section.window-content .dialog-content figcaption {
   color: #f8f8f8;
 }
 .app.window-app.dialog section.window-content .dialog-content p,
-.app.window-app.dialog section.window-content .dialog-content h4 {
+.app.window-app.cards-config section.window-content .dialog-content p,
+.app.window-app.dialog section.window-content .dialog-content h4,
+.app.window-app.cards-config section.window-content .dialog-content h4 {
   color: #f8f8f8;
   margin: 0 auto;
 }
 .app.window-app.dialog section.window-content .dialog-content form .form-group label,
-.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked label {
+.app.window-app.cards-config section.window-content .dialog-content form .form-group label,
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked label,
+.app.window-app.cards-config section.window-content .dialog-content form .form-group-stacked label {
   color: #f8f8f8;
 }
 .app.window-app.dialog section.window-content .dialog-content form .form-group input[type="text"],
+.app.window-app.cards-config section.window-content .dialog-content form .form-group input[type="text"],
 .app.window-app.dialog section.window-content .dialog-content form .form-group-stacked input[type="text"],
+.app.window-app.cards-config section.window-content .dialog-content form .form-group-stacked input[type="text"],
 .app.window-app.dialog section.window-content .dialog-content form .form-group input::placeholder,
+.app.window-app.cards-config section.window-content .dialog-content form .form-group input::placeholder,
 .app.window-app.dialog section.window-content .dialog-content form .form-group-stacked input::placeholder,
+.app.window-app.cards-config section.window-content .dialog-content form .form-group-stacked input::placeholder,
 .app.window-app.dialog section.window-content .dialog-content form .form-group .form-fields input,
-.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked .form-fields input {
+.app.window-app.cards-config section.window-content .dialog-content form .form-group .form-fields input,
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked .form-fields input,
+.app.window-app.cards-config section.window-content .dialog-content form .form-group-stacked .form-fields input {
   color: #f8f8f8;
 }
 .app.window-app.dialog section.window-content .dialog-content form .form-group select,
-.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked select {
+.app.window-app.cards-config section.window-content .dialog-content form .form-group select,
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked select,
+.app.window-app.cards-config section.window-content .dialog-content form .form-group-stacked select {
   color: #f8f8f8;
 }
 .app.window-app.dialog section.window-content .dialog-content form .form-group select option,
-.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked select option {
+.app.window-app.cards-config section.window-content .dialog-content form .form-group select option,
+.app.window-app.dialog section.window-content .dialog-content form .form-group-stacked select option,
+.app.window-app.cards-config section.window-content .dialog-content form .form-group-stacked select option {
   background: #010661;
 }
-.app.window-app.dialog section.window-content .dialog-buttons button {
+.app.window-app.dialog section.window-content .dialog-buttons button,
+.app.window-app.cards-config section.window-content .dialog-buttons button {
   color: #f8f8f8;
   border: 1px solid #f8f8f8;
   border-radius: 10px;
 }
 .app.window-app.dialog section.window-content .dialog-buttons button:hover,
+.app.window-app.cards-config section.window-content .dialog-buttons button:hover,
 .app.window-app.dialog section.window-content .dialog-buttons button:active,
-.app.window-app.dialog section.window-content .dialog-buttons button:focus {
+.app.window-app.cards-config section.window-content .dialog-buttons button:active,
+.app.window-app.dialog section.window-content .dialog-buttons button:focus,
+.app.window-app.cards-config section.window-content .dialog-buttons button:focus {
   box-shadow: none;
 }
-.app.window-app.dialog section.window-content .dialog-buttons button:hover {
+.app.window-app.dialog section.window-content .dialog-buttons button:hover,
+.app.window-app.cards-config section.window-content .dialog-buttons button:hover {
   background: #010661;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);
   border: 1px solid #929292;
@@ -478,7 +621,7 @@ button.fabula-button:focus,
 button.fabula-button:hover {
   box-shadow: none;
 }
-button.fabula-button:hover {
+button.fabula-button:hover::not(:disabled) {
   border-color: #929292;
   background: #2021a0;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);

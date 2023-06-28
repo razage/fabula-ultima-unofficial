@@ -26,7 +26,7 @@ button.fabula-button {
         box-shadow: none;
     }
 
-    &:hover {
+    &:hover::not(:disabled) {
         border-color: darken(@font-color, 40%);
         background: @main-fallback;
         background: @darken-gradient;
