@@ -87,8 +87,40 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Calculator icon by Delapouite
 -   Camping tent icon by Delapouite
 -   Candles icon by Delapouite
+-   Card ace of clubs icon by Simon (aussiesim)
+-   Card 2 of clubs icon by Simon (aussiesim)
+-   Card 3 of clubs icon by Simon (aussiesim)
+-   Card 4 of clubs icon by Simon (aussiesim)
+-   Card 5 of clubs icon by Simon (aussiesim)
+-   Card 6 of clubs icon by Simon (aussiesim)
+-   Card 7 of clubs icon by Simon (aussiesim)
+-   Card 8 of clubs icon by Simon (aussiesim)
+-   Card ace of diamonds icon by Simon (aussiesim)
+-   Card 2 of diamonds icon by Simon (aussiesim)
+-   Card 3 of diamonds icon by Simon (aussiesim)
+-   Card 4 of diamonds icon by Simon (aussiesim)
+-   Card 5 of diamonds icon by Simon (aussiesim)
+-   Card 6 of diamonds icon by Simon (aussiesim)
 -   Card 7 of diamonds icon by Simon (aussiesim)
+-   Card 8 of diamonds icon by Simon (aussiesim)
+-   Card ace of hearts icon by Simon (aussiesim)
+-   Card 2 of hearts icon by Simon (aussiesim)
+-   Card 3 of hearts icon by Simon (aussiesim)
+-   Card 4 of hearts icon by Simon (aussiesim)
+-   Card 5 of hearts icon by Simon (aussiesim)
+-   Card 6 of hearts icon by Simon (aussiesim)
+-   Card 7 of hearts icon by Simon (aussiesim)
+-   Card 8 of hearts icon by Simon (aussiesim)
+-   Card ace of spades icon by Simon (aussiesim)
+-   Card 2 of spades icon by Simon (aussiesim)
+-   Card 3 of spades icon by Simon (aussiesim)
+-   Card 4 of spades icon by Simon (aussiesim)
+-   Card 5 of spades icon by Simon (aussiesim)
+-   Card 6 of spades icon by Simon (aussiesim)
+-   Card 7 of spades icon by Simon (aussiesim)
+-   Card 8 of spades icon by Simon (aussiesim)
 -   Card discard icon by Faithtoken
+-   Card joker icon by Delapouite
 -   Carillon icon by Lorc
 -   Carnival mask icon by Delapouite
 -   Carnivorous plant icon by Delapouite
