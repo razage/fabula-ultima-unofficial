@@ -107,6 +107,11 @@
 		</div>
 
 		<div class="tab skills" data-group="primary" data-tab="skills">
+			<h2>
+				{{localize "FU.Plural.skill"}}
+				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="npc-skills"
+					title="{{localize 'FU.UI.openCompendium'}}"></i>
+			</h2>
 			<button class="fabula-button item-create" data-type="skill"><i class="fas fa-solid fa-plus"></i></button>
 			<div class="item-list spells">
 				{{#each actor.system.skills as |item|}}
@@ -118,6 +123,11 @@
 		</div>
 
 		<div class="tab spells" data-group="primary" data-tab="spells">
+			<h2>
+				{{localize "FU.Spells.name"}}
+				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="spell"
+					title="{{localize 'FU.UI.openCompendium'}}"></i>
+			</h2>
 			<button class="fabula-button item-create" data-type="spell"><i class="fas fa-solid fa-plus"></i></button>
 			<div class="item-list spells">
 				{{#each actor.system.spells as |item|}}

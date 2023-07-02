@@ -82,7 +82,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
-        const buffs = [];
+        const spellEffects = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -125,8 +125,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     weapons.push(item);
                     break;
 
-                case "buff":
-                    buffs.push(item);
+                case "spell-effect":
+                    spellEffects.push(item);
                     break;
 
                 default:
@@ -144,7 +144,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
-        actorData.system.buffs = buffs;
+        actorData.system.spellEffects = spellEffects;
     }
 
     _prepareGroupData(sheetData) {
@@ -165,7 +165,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
-        const buffs = [];
+        const spellEffects = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -191,8 +191,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     weapons.push(item);
                     break;
 
-                case "buff":
-                    buffs.push(item);
+                case "spell-effect":
+                    spellEffects.push(item);
             }
         });
 
@@ -201,7 +201,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
-        actorData.system.buffs = buffs;
+        actorData.system.spellEffects = spellEffects;
     }
 
     activateListeners(html) {
@@ -263,6 +263,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         // Create an item
         html.find(".item-create").click(this._onItemCreate.bind(this));
 
+        // Display an item in chat
         html.find(".item-display").click(async (ev) => {
             const itemId = $(ev.currentTarget).data("id");
             const item = this.actor.items.get(itemId);
@@ -345,6 +346,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     game.packs
                         .find((k) => k.collection === "fabulaultima.consumables")
                         .render(true);
+                    break;
+                case "npc-skills":
+                    game.packs.find((k) => k.collection === "fabulaultima.npc-skills").render(true);
                     break;
                 case "skill": {
                     game.packs.find((k) => k.collection === "fabulaultima.skills").render(true);
