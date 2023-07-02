@@ -621,7 +621,7 @@ button.fabula-button:focus,
 button.fabula-button:hover {
   box-shadow: none;
 }
-button.fabula-button:hover::not(:disabled) {
+button.fabula-button:hover:not(:disabled) {
   border-color: #929292;
   background: #2021a0;
   background: linear-gradient(180deg, #1c1d8b 0%, #010448 100%);

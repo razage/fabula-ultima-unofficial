@@ -5,6 +5,7 @@ import { FabulaUltimaItemSheet } from "./item/item-sheet.js";
 import { FUActiveEffect } from "./FUActiveEffect.js";
 import { FUCombat } from "./combat/combat.js";
 import { FUCombatant } from "./combat/combatant.js";
+import { registerSystemSettings } from "./settings.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 
 Hooks.once("init", async function () {
@@ -24,6 +25,9 @@ Hooks.once("init", async function () {
     Items.unregisterSheet("core", ItemSheet);
     Actors.registerSheet("fabulaultima", FabulaUltimaActorSheet, { makeDefault: true });
     Items.registerSheet("fabulaultima", FabulaUltimaItemSheet, { makeDefault: true });
+
+    // Register system settings
+    registerSystemSettings();
 
     // Preload Handlebars partials
     preloadHandlebarsTemplates();
@@ -113,6 +117,31 @@ Hooks.once("init", async function () {
 
         return output;
     });
+});
+
+// Called once when it finishes loading
+Hooks.on("ready", () => {
+    let bgColors = [
+        game.settings.get("fabulaultima", "backgroundColor1"),
+        game.settings.get("fabulaultima", "backgroundColor2"),
+    ];
+    let fontColor = game.settings.get("fabulaultima", "fontColor");
+    let customCSS = "";
+    let customStyle = document.createElement("style");
+    customStyle.id = "fu-custom-css";
+
+    customCSS += `
+    .fabulaultima.sheet section.window-content {
+        color: ${fontColor};
+        background: ${bgColors[1]};
+        background: linear-gradient(180deg, ${bgColors[0]} 0%, ${bgColors[1]} 100%);
+    }`;
+
+    customStyle.innerHTML = customCSS;
+
+    if (customCSS != "") {
+        document.querySelector("head").appendChild(customStyle);
+    }
 });
 
 // This event is fired on all connected clients
