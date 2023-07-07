@@ -39,12 +39,6 @@ export class FabulaUltimaActor extends Actor {
         }
 
         if (actorData.type === "npc") {
-            const bossTypes = ["minor villain", "major villain", "supreme villain"];
-
-            if (bossTypes.includes(system.rank)) {
-                system.isBoss = true;
-            }
-
             system.initiative.base = Math.floor(
                 (system.attributes.dexterity.base + system.attributes.insight.base) / 2
             );
@@ -53,6 +47,16 @@ export class FabulaUltimaActor extends Actor {
             system.hp.max =
                 system.attributes.might.current * 5 + system.level * 2 + system.hp.bonus;
             system.mp.max = system.attributes.willpower.base * 5 + system.level + system.mp.bonus;
+
+            // Adjust the NPC's stats if they have the right rank
+            if (system.rank === "elite") {
+                system.hp.max *= 2;
+                system.initiative.value += 2;
+            }
+
+            if (system.rank === "champion") {
+                system.mp.max *= 2;
+            }
         }
 
         if (actorData.type === "companion") {

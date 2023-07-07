@@ -114,6 +114,7 @@
 
     "FU.Navigation.tabGear": "Gear",
 
+    "FU.NPC.bossRank": "Boss Rank",
     "FU.NPC.Rank.champion": "Champion",
     "FU.NPC.Rank.elite": "Elite",
     "FU.NPC.Rank.majorVillain": "Major Villain",
@@ -235,6 +236,8 @@
     "FU.UI.benefits": "Free Benefits",
     "FU.UI.bonus": "Bonus",
     "FU.UI.bonusStats": "Bonus Stats",
+    "FU.UI.boss": "Boss",
+    "FU.UI.bossEx": "This enemy is a boss. This grants them some Ultima Points and makes them important to the story.",
     "FU.UI.characterLevel": "Character Level",
     "FU.UI.checkBonuses": "Check Bonuses",
     "FU.UI.classLevel": "Class Level",

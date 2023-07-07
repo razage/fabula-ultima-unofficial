@@ -174,14 +174,29 @@
 								"FU.NPC.Rank.elite"}}</option>
 							<option value="champion" {{#if_eq actor.system.rank "champion" }}selected{{/if_eq}}>
 								{{localize "FU.NPC.Rank.champion"}}</option>
-							<option value="minor villain" {{#if_eq actor.system.rank "minor villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.minorVillain"}}</option>
-							<option value="major villain" {{#if_eq actor.system.rank "major villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.majorVillain"}}</option>
-							<option value="supreme villain" {{#if_eq actor.system.rank "supreme villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.supremeVillain"}}</option>
 						</select>
 					</div>
+					<div class="flexrow">
+						<label for="system.isBoss">{{localize "FU.UI.boss"}} <i class="fas fa-solid fa-question-circle"
+								title="{{localize 'FU.UI.bossEx'}}"></i></label>
+						<input name="system.isBoss" type="checkbox" {{#if actor.system.isBoss}}checked{{/if}}>
+					</div>
+					{{#if actor.system.isBoss}}
+					<div class="flexrow">
+						<label for="system.bossRank">{{localize "FU.NPC.bossRank"}}</label>
+						<select name="system.bossRank">
+							<option value="minor villain" {{#if_eq actor.system.bossRank "minor villain"
+								}}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.minorVillain"}}</option>
+							<option value="major villain" {{#if_eq actor.system.bossRank "major villain"
+								}}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.majorVillain"}}</option>
+							<option value="supreme villain" {{#if_eq actor.system.bossRank "supreme villain"
+								}}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.supremeVillain"}}</option>
+						</select>
+					</div>
+					{{/if}}
 				</div>
 				<h2>{{localize "FU.NPC.specialRules"}}</h2>
 				<div class="editor-host">
