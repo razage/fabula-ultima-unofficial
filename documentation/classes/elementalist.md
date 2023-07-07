@@ -8,7 +8,7 @@ This skill allows the player to deal more damage with spells if they spend more 
 
 ### Magical Artillery
 
-This skill gives you a bonus to your Magic Check based on its level if you have an arcane weapon equipped. If you are mostly using arcane weapons, this is easiest to manage by editing your spells accordingly. If you use other types of weapons, you'll have to remmeber this bonus and apply it manually.
+This skill gives you a bonus to your Magic Check based on its level if you have an arcane weapon equipped. This bonus can be applied in a couple of ways, but you'll need to verify that you have an arcane weapon manually. You can either edit your spells to have a +2 on accuracy, or you can go to the effects tab and add the `Magical Artillery` effect once for each skill rank you have.
 
 ### Ritual Elementalism
 
