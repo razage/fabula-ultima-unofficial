@@ -12,7 +12,7 @@
     },
     "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/beta/system.json",
     "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/beta.zip",
-    "primaryTokeAttribute": "hp",
+    "primaryTokenAttribute": "hp",
     "secondaryTokenAttribute": "mp",
     "esmodules": ["module/fabulaultima.js"],
     "styles": ["fabulaultima.css"],
