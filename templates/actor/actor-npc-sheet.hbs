@@ -176,6 +176,15 @@
 								{{localize "FU.NPC.Rank.champion"}}</option>
 						</select>
 					</div>
+					{{#if_eq actor.system.rank "champion"}}
+					<div class="flexrow">
+						<label for="system.numberOfEnemies">{{localize "FU.NPC.Rank.enemyCount"}} <i
+								class="fas fa-solid fa-circle-question"
+								title="{{localize 'FU.NPC.Rank.enemyCountEx'}}"></i></label>
+						<input name="system.numberOfEnemies" type="text" value="{{actor.system.numberOfEnemies}}"
+							data-dtype="Number">
+					</div>
+					{{/if_eq}}
 					<div class="flexrow">
 						<label for="system.isBoss">{{localize "FU.UI.boss"}} <i class="fas fa-solid fa-question-circle"
 								title="{{localize 'FU.UI.bossEx'}}"></i></label>

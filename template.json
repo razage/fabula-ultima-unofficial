@@ -231,11 +231,12 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.08",
+            "schemaVersion": "1.09",
             "species": "Beast",
             "rank": "soldier",
             "isBoss": false,
             "bossRank": "minor villain",
+            "numberOfEnemies": 1,
             "canUseEquipment": false,
             "initiative": {
                 "base": 0,

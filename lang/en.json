@@ -117,6 +117,8 @@
     "FU.NPC.bossRank": "Boss Rank",
     "FU.NPC.Rank.champion": "Champion",
     "FU.NPC.Rank.elite": "Elite",
+    "FU.NPC.Rank.enemyCount": "Enemy Count",
+    "FU.NPC.Rank.enemyCountEx": "Represents how many enemies this one replaces.",
     "FU.NPC.Rank.majorVillain": "Major Villain",
     "FU.NPC.Rank.minorVillain": "Minor Villain",
     "FU.NPC.Rank.name": "Rank",
