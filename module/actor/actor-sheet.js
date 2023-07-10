@@ -209,6 +209,17 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
         if (!this.options.editable) return;
 
+        html.find(".resource-reset").click((ev) => {
+            ev.preventDefault();
+            const data = $(ev.currentTarget).data();
+            const actor = game.actors.get(data.target);
+            let output = {};
+            output[data.resource] = {};
+            output[data.resource]["value"] = actor.system[data.resource].max;
+
+            actor.update({ data: output });
+        });
+
         // Edit items
         html.find(".item-edit").click((ev) => {
             const parent = $(ev.currentTarget).parents(".item");
