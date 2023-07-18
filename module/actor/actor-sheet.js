@@ -566,7 +566,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const dataset = element.dataset;
         const condition = this.actor.system.statuses[dataset.condition];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
-        const relevantEffect = effects.filter((ef) => ef.label === dataset.condition);
+        const relevantEffect = effects.filter((ef) => ef.name === dataset.condition);
 
         let newValue = !condition.active;
         let actorProp = { system: { statuses: {} } };
