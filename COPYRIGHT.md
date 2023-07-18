@@ -128,6 +128,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Cat icon by Lorc
 -   Centipede icon by Lorc
 -   Chakram icon by Delapouite
+-   Chemical bolt icon by Lorc
 -   Chemical drop icon by Lorc
 -   Chess knight icon by Skoll
 -   Chest armor icon by Lorc
@@ -437,6 +438,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Warhammer icon by Delapouite
 -   Warlock eye icon by Delapouite
 -   Wasp sting icon by Lorc
+-   Web spit icon by Lorc
 -   Werewolf icon by Lorc
 -   Western hat icon by Delapouite
 -   Whip icon by Lorc
