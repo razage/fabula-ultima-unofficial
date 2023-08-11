@@ -34,6 +34,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Back pain icon by Lorc
 -   Backpack icon by Delapouite
 -   Bad breath icon by Delapouite
+-   Ballerina shoes icon by Delapouite
 -   Ballista icon by Skoll
 -   Barbed Spear icon by Lorc
 -   Bat icon by Delapouite
@@ -228,6 +229,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Halberd icon by Lorc
 -   Hand bandage icon by Delapouite
 -   Hand of god icon by Delapouite
+-   Harpy icon by Lorc
 -   Hatchet icon by Delapouite
 -   Haunting icon by Lorc
 -   Hazard sign icon by Lorc
@@ -289,6 +291,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Medical pack icon by sbed
 -   Meditation icon by Lorc
 -   Medusa head icon by Cathelineau
+-   Microphone icon by Delapouite
 -   Mighty force icon by Delapouite
 -   Mimic chest icon by Delapouite
 -   Minerals icon by Faithtoken
@@ -329,9 +332,11 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Raise zombie icon by Skoll
 -   Rake icon by Delapouite
 -   Rampart icon by Delapouite
+-   Rank 3 icon by Skoll
 -   Rat icon by Delapouite
 -   Reaper scythe icon by Lorc
 -   Relic blade icon by Lorc
+-   Resonance icon by Lorc
 -   Revolver icon by Delapouite
 -   Ring icon by Delapouite
 -   Riposte icon by Andy Meneely
@@ -343,6 +348,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Rooster icon by Delapouite
 -   Round shield icon by Wildabeast
 -   Run icon by Lorc
+-   Rune stone icon by Lorc
 -   Rune sword icon by Lorc
 -   Saber slash icon by Lorc
 -   Sai icon by Delapouite
@@ -356,6 +362,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shambling mound icon by Delapouite
 -   Shambling zombie icon by Delapouite
 -   Shard sword icon by Lorc
+-   Shark jaws icon by Lorc
 -   Sharp axe icon by Delapouite
 -   Sharp haldberd icon by Delapouite
 -   Sherlock Holmes icon by Delapouite
@@ -365,6 +372,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Shirt icon by Lucas
 -   Shuriken icon by Lorc
 -   Shut rose icon by Lorc
+-   Sing icon by Lorc
 -   Siren icon by Skoll
 -   Sitting dog icon by Delapouite
 -   Skeleton icon by Skoll
@@ -427,6 +435,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Two handed sword icon by Delapouite
 -   Unfriendly fire icon by Lorc
 -   Upgrade icon Delapouite
+-   Vibrating shield icon by Delapouite
 -   Viking shield icon by Delapouite
 -   Vines icon by Delapouite
 -   Vintage robot icon by Lorc
