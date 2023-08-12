@@ -16,6 +16,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 
 -   3D Hammer icon by Delapouite
 -   Abdominal armor icon by Delapouite
+-   Acrobatic icon by DarkZaitzev
 -   Ancient sword icon by Delapouite
 -   Andromeda chain icon by Lorc
 -   Amphora icon by Delapouite
@@ -33,6 +34,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Back and forth icon by Lorc
 -   Back pain icon by Lorc
 -   Backpack icon by Delapouite
+-   Backup icon by Lorc
 -   Bad breath icon by Delapouite
 -   Ballerina shoes icon by Delapouite
 -   Ballista icon by Skoll
@@ -211,6 +213,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Flanged mace icon by Delapouite
 -   Flat Hammer icon by Lorc
 -   Fluffy cloud icon by Lorc
+-   Footsteps icon by Skoll
 -   Fox icon by Caro Ascercion
 -   Frankenstein Creature icon by Lorc
 -   Frostfire icon by Lorc
@@ -244,6 +247,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Heart armor icon by Delapouite
 -   Heart minus by Zeromancer (CC0 PDD)
 -   Heart shield icon by Delapouite
+-   Heat haze icon by Lorc
 -   Heavy rain icon by Lorc
 -   Heavy thorny triskelion icon by Lorc
 -   Herbs bundle icon by Delapouite
@@ -280,6 +284,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Lightning saber icon by Lorc
 -   Lightning shield icon by Lorc
 -   Lightning storm icon by Lorc
+-   Linked rings icon by Lorc
 -   Lion icon by Lorc
 -   Log icon by Delapouite
 -   Lunar wand icon by Delapouite
@@ -315,6 +320,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Paw icon by Lorc
 -   Pentacle icon by Skoll
 -   Pentagram rose icon by Lorc
+-   Pikeman icon by Delapouite
 -   Piranha icon by Delapouite
 -   Pirate cannon icon by Delapouite
 -   Pistol gun by John Colburn
@@ -452,6 +458,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Warhammer icon by Delapouite
 -   Warlock eye icon by Delapouite
 -   Wasp sting icon by Lorc
+-   Wax tablet icon by Delapouite
 -   Web spit icon by Lorc
 -   Werewolf icon by Lorc
 -   Western hat icon by Delapouite
