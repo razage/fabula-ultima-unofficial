@@ -127,11 +127,16 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Carnivorous plant icon by Delapouite
 -   Cartwheel icon by Lorc
 -   Cat icon by Lorc
+-   Cavalry icon by Delapouite
 -   Centipede icon by Lorc
 -   Chakram icon by Delapouite
+-   Chariot icon by Cathelineau
 -   Chemical bolt icon by Lorc
 -   Chemical drop icon by Lorc
+-   Chess bishop icon by Skoll
+-   Chess king icon by Skoll
 -   Chess knight icon by Skoll
+-   Chess queen icon by Skoll
 -   Chest armor icon by Lorc
 -   Claw hammer icon by Lorc
 -   Claw slashes icon by Lorc
