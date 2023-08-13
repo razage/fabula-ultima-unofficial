@@ -74,6 +74,14 @@
             "flags": {}
         },
         {
+            "name": "heroic-skills",
+            "label": "Heroic Skills",
+            "system": "fabulaultima",
+            "private": false,
+            "type": "Item",
+            "flags": {}
+        },
+        {
             "name": "npc-skills",
             "label": "NPC Skills",
             "system": "fabulaultima",

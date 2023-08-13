@@ -22,6 +22,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Amphora icon by Delapouite
 -   Angel outfit icon by Lorc
 -   Ant icon by Delapouite
+-   Anthem icon by Lorc
 -   Antibody icon by Delapouite
 -   Anvil icon by Lorc
 -   Archer icon by Delapouite
@@ -73,9 +74,11 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Broad dagger icon by Lorc
 -   Broadhead arrow icon by Lorc
 -   Broadsword icon by Lorc
+-   Broken arrow icon by catsu
 -   Broken bone icon by Lorc
 -   Broken heart icon by Lorc
 -   Broken Shield icon by Lorc
+-   Broken skull icon by Lorc
 -   Bulb icon by Lorc
 -   Bullseye icon by Skoll
 -   Bully minion icon by Delapouite
@@ -171,6 +174,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Dinosaur rex icon by Lorc
 -   Dodging icon by Lorc
 -   Double fish icon by Delapoiute
+-   Doubled icon by sbed
 -   Dragon breath icon by Lorc
 -   Dragon head icon by Lorc
 -   Dragon shield icon by Delapouite
@@ -185,6 +189,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Edged Shield icon by Lorc
 -   Electric whip icon by Lorc
 -   Elf helmet icon by Kier Heyl
+-   Empty chessboard icon by Delapouite
 -   Energise icon by Lorc
 -   Energy shield icon by Lorc
 -   Enlightenment icon by Lorc
@@ -214,6 +219,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Flat Hammer icon by Lorc
 -   Fluffy cloud icon by Lorc
 -   Footsteps icon by Skoll
+-   Forest icon by Delapouite
 -   Fox icon by Caro Ascercion
 -   Frankenstein Creature icon by Lorc
 -   Frostfire icon by Lorc
@@ -305,6 +311,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Mighty force icon by Delapouite
 -   Mimic chest icon by Delapouite
 -   Minerals icon by Faithtoken
+-   Moebius trefoil icon by Lorc
 -   Monkey icon by Lorc
 -   Morbid humor icon by Lorc
 -   Morph ball icon by Delapouite
@@ -419,6 +426,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Stiletto icon by Skoll
 -   Stone axe icon by Lorc
 -   Stone spear icon by Lorc
+-   Stone tablet icon by Lorc
 -   Stone tower icon by Lorc
 -   Stop sign icon by Delapouite
 -   Striking arrows icon by Lorc
@@ -429,6 +437,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Syringe icon by Lorc
 -   Target arrows icon by Lorc
 -   Terror icon by Lorc
+-   Theater curtains icon by Delapouite
 -   Thermometer scale icon by Lorc
 -   Thor fist icon by Lorc
 -   Thor hammer icon by Delapouite
@@ -458,6 +467,8 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Warhammer icon by Delapouite
 -   Warlock eye icon by Delapouite
 -   Wasp sting icon by Lorc
+-   Wave crest icon by Lorc
+-   Wax seal icon by Lorc
 -   Wax tablet icon by Delapouite
 -   Web spit icon by Lorc
 -   Werewolf icon by Lorc
