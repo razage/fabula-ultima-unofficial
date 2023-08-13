@@ -362,7 +362,26 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     game.packs.find((k) => k.collection === "fabulaultima.npc-skills").render(true);
                     break;
                 case "skill": {
-                    game.packs.find((k) => k.collection === "fabulaultima.skills").render(true);
+                    dialog = new Dialog({
+                        title: game.i18n.localize("FU.UI.selectCompendium"),
+                        buttons: {
+                            skills: {
+                                label: game.i18n.localize("FU.Plural.skill"),
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.skills")
+                                        .render(true),
+                            },
+                            heroicSkills: {
+                                label: game.i18n.localize("FU.Plural.heroic"),
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.heroic-skills")
+                                        .render(true),
+                            },
+                        },
+                    });
+                    dialog.render(true);
                     break;
                 }
                 case "spell": {
