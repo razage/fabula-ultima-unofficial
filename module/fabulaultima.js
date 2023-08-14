@@ -110,6 +110,9 @@ Hooks.once("init", async function () {
             case "poison":
                 output += "poison-bottle.svg";
                 break;
+            case "void":
+                output += "eclipse-flare.svg";
+                break;
             default:
                 output += "";
                 break;
