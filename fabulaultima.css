@@ -153,6 +153,12 @@ h4.dice-total .multi {
 .chat-item-card header h2.item-name img {
   border: none;
 }
+.chat-item-card i {
+  height: 20px;
+}
+.chat-item-card i.martial {
+  color: #c40101;
+}
 .character-sheet i.open-compendium,
 .npc-sheet i.open-compendium {
   color: #5b29cf;

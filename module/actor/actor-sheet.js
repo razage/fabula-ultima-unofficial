@@ -287,9 +287,45 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
             if (obj.type === "spell") {
                 notes = TextEditor.enrichHTML(item.system.notes);
-            } else {
-                notes = TextEditor.enrichHTML(item.system.quality);
+                obj.multiValue = item.system.target;
+
+                if (item.system.offensiveSpell) {
+                    obj.martial = true;
+                } else {
+                    obj.noDamage = true;
+                }
             }
+
+            if (obj.type === "weapon") {
+                notes = TextEditor.enrichHTML(item.system.quality);
+
+                if (item.system.multi.enabled) {
+                    obj.multiValue = item.system.multi.value;
+                } else {
+                    obj.multiValue = 0;
+                }
+
+                if (
+                    item.system.isMartial.melee ||
+                    item.system.isMartial.ranged ||
+                    item.system.isMartial.shield
+                )
+                    obj.martial = true;
+            }
+
+            obj.accuracy = `${game.i18n.localize(
+                "FU.Short." + item.system.accuracy.mainStat
+            )} + ${game.i18n.localize("FU.Short." + item.system.accuracy.secondaryStat)}`;
+
+            if (item.system.accuracy.bonus !== 0) {
+                obj.accuracy += ` + ${item.system.accuracy.bonus}`;
+            }
+            obj.damage = {
+                amount: `[${game.i18n.localize("FU.Short.highRoll")} + ${
+                    item.system.damage.bonus
+                }]`,
+                type: item.system.damage.type,
+            };
 
             notes.then((result) => {
                 let out = new DOMParser().parseFromString(result, "text/html");
@@ -305,7 +341,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 content: content,
                 type: CONST.CHAT_MESSAGE_TYPES.OOC,
             };
-
             ChatMessage.create(messageData, {});
         });
 

@@ -2,10 +2,19 @@
 	<header class="flexrow">
 		<h2 class="item-name">
 			<img src="{{img}}" width="40" height="40" />
-			{{name}}
+			{{name}} {{#if martial}} <i class="fas fa-solid fa-sword martial"></i>{{/if}}
 		</h2>
 	</header>
 	<div class="card-content">
+		{{#unless noDamage}}
+		<p><i class="fas fa-solid fa-bullseye" title="{{localize 'FU.UI.accuracy'}}"></i> {{accuracy}}</p>
+		<p>
+			<i class="fas fa-solid fa-sword" title="{{localize 'FU.UI.damage'}}"></i>
+			{{damage.amount}} <img src="{{getElementalIcon damage.type}}"
+				title="{{localize (concat 'FU.Elements.' damage.type)}}" class="damage-type {{damage.type}}" />
+		</p>
+		<p><i class="fas fa-solid fa-layer-group" title="{{localize 'FU.UI.multi'}}"></i> {{multiValue}}</p>
+		{{/unless}}
 		{{quality}}
 	</div>
 </div>
