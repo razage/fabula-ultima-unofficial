@@ -5,7 +5,7 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial/tree/beta",
     "license": "LICENSE.txt",
-    "version": "0.7.16b",
+    "version": "0.8.0b",
     "compatibility": {
         "minimum": "10.291",
         "verified": "11.304"
@@ -16,6 +16,20 @@
     "secondaryTokenAttribute": "mp",
     "esmodules": ["module/fabulaultima.js"],
     "styles": ["fabulaultima.css"],
+    "relationships": {
+        "recommends": [
+            {
+                "id": "challenge-tracker",
+                "type": "module",
+                "manifest": "https://raw.githubusercontent.com/Larkinabout/fvtt-challenge-tracker/master/module.json"
+            },
+            {
+                "id": "lancer-initiative",
+                "type": "module",
+                "manifest": "https://raw.githubusercontent.com/BoltsJ/lancer-initiative/default/public/module.json"
+            }
+        ]
+    },
     "languages": [
         {
             "lang": "en",

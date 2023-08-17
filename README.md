@@ -24,6 +24,15 @@ I am working on a basic implementation of the Ace of Cards. GMs won't enjoy runn
 
 In order to install this system, you will need to download this repository as a zip file and extract it to your foundry/systems folder. Alternatively, you can use the url `https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json` in the "Manifest URL" field when you click "Install System"
 
+### Recommended Modules
+
+I've added a few modules that will make running this game _much_ easier. They are not required to operate, so I made them recommended. Here's my reasoning for each.
+
+-   Challenge Tracker
+    -   This game uses clocks. This is my preferred clock plugin. Use whatever one you prefer if you don't want to use this. My system does **not** implement clocks otherwise.
+-   Lancer Initiative
+    -   Fabula Ultima's initiative system is largely incompatible with Foundry. My implementation sucked, so I found this as a good alternative. With this, you just need to use the party sheet to make an initiative roll (DEX + INS) and compare it to the highest enemy initiative. It even lets you give bosses multiple turns.
+
 # Copyright
 
 The code in this repository was written by Razage &copy; 2023 under the MIT license. _Fabula Ultima_ was written by Emanuele Galletto and published by NEED GAMES! This was made as a fan project for said game and not intended to replace the core rulebook in any way.
