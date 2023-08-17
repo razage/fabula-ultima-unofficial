@@ -106,16 +106,23 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.total = data.leader.rollObj.total + data.leader.successBonus;
             obj.leader = data.leader;
             obj.members = data.members;
+            obj.isInitiative = data.isInitiative;
 
             result = await renderTemplate(
                 "systems/fabulaultima/templates/rolls/group-roll.hbs",
                 obj
             );
-            flavor = `${game.i18n.localize("FU.Chat.rollingGroupSkillCheck")} (${game.i18n.localize(
-                "FU.Chat.using"
-            )} <b>${game.i18n.localize("FU.Short." + mainStat)} + ${game.i18n.localize(
-                "FU.Short." + secondaryStat
-            )}</b>)`;
+
+            if (data.isInitiative) {
+                flavor = `${game.i18n.localize("FU.Chat.rollingInitiative")}`;
+            } else {
+                flavor = `${game.i18n.localize(
+                    "FU.Chat.rollingGroupSkillCheck"
+                )} (${game.i18n.localize("FU.Chat.using")} <b>${game.i18n.localize(
+                    "FU.Short." + mainStat
+                )} + ${game.i18n.localize("FU.Short." + secondaryStat)}</b>)`;
+            }
+
             break;
         case "skill":
             obj.roll = data.rollObj;
@@ -188,24 +195,38 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
     ChatMessage.create(messageData, {});
 }
 
-export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) {
+export async function makeGroupRoll(
+    actors,
+    mainStat,
+    secondaryStat,
+    bonus = 0,
+    initiativeRoll = false
+) {
     let data = { members: {} };
     let successBonus = 0;
     let leader;
 
     actors.forEach(async (actor) => {
-        let isLeader = actor.system.isLeader;
-
         // Ignore any non-players, like groups
         if (actor.type !== "player") return;
 
+        let isLeader = actor.system.isLeader;
+        let actorRollData;
+        let statBonus;
+
         if (!isLeader) {
-            let actorRollData = await _fabulaRollCommon(
+            if (initiativeRoll) {
+                statBonus = actor.system.initiativeMod + bonus;
+            } else {
+                statBonus = bonus;
+            }
+
+            actorRollData = await _fabulaRollCommon(
                 actor,
                 null,
                 actor.system.attributes[mainStat],
                 actor.system.attributes[secondaryStat],
-                bonus
+                statBonus
             );
 
             actorRollData.total = actorRollData.rollObj.total;
@@ -218,16 +239,25 @@ export async function makeGroupRoll(actors, mainStat, secondaryStat, bonus = 0) 
         } else leader = actor;
     });
 
+    let leaderBonus = 0;
+
+    if (initiativeRoll) {
+        leaderBonus = successBonus + leader.system.initiativeMod;
+    } else {
+        leaderBonus = successBonus;
+    }
+
     let leaderRollData = await _fabulaRollCommon(
         leader,
         null,
         leader.system.attributes[mainStat],
         leader.system.attributes[secondaryStat],
-        successBonus
+        leaderBonus
     );
     data.leader = leaderRollData;
     data.leader.successBonus = successBonus;
     data.leader.total = leaderRollData.rollObj.total;
+    data.isInitiative = initiativeRoll;
 
     await sendRollToChat(leader, mainStat, secondaryStat, "groupRoll", data);
 }

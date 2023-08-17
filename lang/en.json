@@ -27,6 +27,7 @@
     "FU.Chat.fumble": "FUMBLE!!!",
     "FU.Chat.attackingWith": "Attacking with",
     "FU.Chat.rollingGroupSkillCheck": "Rolling a group skill check",
+    "FU.Chat.rollingInitiative": "Rolling for Initiative",
     "FU.Chat.rollingSkillCheck": "Rolling a skill check",
     "FU.Chat.using": "using",
 
@@ -269,6 +270,7 @@
     "FU.UI.requirements": "Requirements",
     "FU.UI.reset": "Reset",
     "FU.UI.roll": "Roll",
+    "FU.UI.rollInitiative": "Roll Initiative",
     "FU.UI.selectCompendium": "Select Compendium",
     "FU.UI.share": "Share",
     "FU.UI.target": "Target",

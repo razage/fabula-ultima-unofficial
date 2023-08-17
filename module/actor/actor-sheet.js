@@ -366,6 +366,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             makeGroupRoll(game.actors, main, sec, bonus);
         });
 
+        // Roll Initiative
+        html.find(".initiative-roll").click((ev) => {
+            ev.preventDefault();
+            makeGroupRoll(game.actors, "dexterity", "insight", 0, true);
+        });
+
         // Open compendium
         html.find(".open-compendium").click((ev) => {
             ev.preventDefault();

@@ -12,8 +12,8 @@
 			<section class="tooltip-part">
 				<div class="dice">
 					{{#each members as |m ind|}}
-					<p>{{ind}} ({{#if m.pass}}{{localize "FU.Group.pass"}}{{else}}{{localize "FU.Group.fail"}}{{/if}})
-					</p>
+					<p>{{ind}}: {{#if m.pass}}{{localize "FU.Group.pass"}}{{else}}{{localize "FU.Group.fail"}}{{/if}}
+						({{m.total}})</p>
 					<ol class="dice-rolls">
 						{{#each m.rollObj.terms as |r|}}
 						<li class="roll die d{{r.faces}}">{{r.results.0.result}}</li>
