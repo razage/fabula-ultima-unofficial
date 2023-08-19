@@ -8,7 +8,7 @@
     "version": "0.8.0b",
     "compatibility": {
         "minimum": "10.291",
-        "verified": "11.304"
+        "verified": "11.307"
     },
     "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/beta/system.json",
     "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/beta.zip",
@@ -146,94 +146,6 @@
         {
             "name": "weapons",
             "label": "Weapons",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-arcane",
-            "label": "Weapons - Arcane",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-bows",
-            "label": "Weapons - Bows",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-brawling",
-            "label": "Weapons - Brawling",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-daggers",
-            "label": "Weapons - Daggers",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-firearms",
-            "label": "Weapons - Firearms",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-flails",
-            "label": "Weapons - Flails",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-heavy",
-            "label": "Weapons - Heavy",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-shields",
-            "label": "Weapons - Shields",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-spears",
-            "label": "Weapons - Spears",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-swords",
-            "label": "Weapons - Swords",
-            "system": "fabulaultima",
-            "private": false,
-            "type": "Item",
-            "flags": {}
-        },
-        {
-            "name": "weapons-thrown",
-            "label": "Weapons - Thrown",
             "system": "fabulaultima",
             "private": false,
             "type": "Item",
