@@ -432,7 +432,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 case "weapons":
                     game.packs.find((k) => k.collection === "fabulaultima.weapons").render(true);
                     break;
-                case "skill-effects":
+                case "skill-effect":
                     game.packs
                         .find((k) => k.collection === "fabulaultima.skill-effects")
                         .render(true);
