@@ -59,12 +59,13 @@
             margin: 0 auto;
             border: none;
             height: 40px;
+            opacity: 0.55;
 
             &.immune {
-                opacity: 0.15;
+                border: 2px solid @bolt;
+                border-radius: 20px;
 
                 &:hover {
-                    height: 40px;
                     cursor: not-allowed;
                 }
             }

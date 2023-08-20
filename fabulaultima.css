@@ -235,14 +235,15 @@ h4.dice-total .multi {
   margin: 0 auto;
   border: none;
   height: 40px;
+  opacity: 0.55;
 }
 .character-sheet .conditions img.condition-icon.immune,
 .npc-sheet .conditions img.condition-icon.immune {
-  opacity: 0.15;
+  border: 2px solid #40faea;
+  border-radius: 20px;
 }
 .character-sheet .conditions img.condition-icon.immune:hover,
 .npc-sheet .conditions img.condition-icon.immune:hover {
-  height: 40px;
   cursor: not-allowed;
 }
 .character-sheet .rolls label,
