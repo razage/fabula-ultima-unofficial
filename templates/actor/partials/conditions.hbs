@@ -1,7 +1,7 @@
 <div class="grid grid-6col">
 	<div class="flexrow conditions">
 		<div class="flexcol">
-			<img class="condition-icon {{#unless actor.system.statuses.dazed.immune}} {{#if actor.system.statuses.dazed.active}}active{{/if}}{{else}}immune{{/unless}}"
+			<img class="condition-icon {{#if actor.system.statuses.dazed.immune}}immune{{/if}}"
 				src="systems/fabulaultima/assets/ui/knocked-out-stars.svg" title="{{localize 'FU.Status.dazed'}}"
 				data-condition="dazed" />
 			{{#if isNPC}}
@@ -13,7 +13,7 @@
 			{{/if}}
 		</div>
 		<div class="flexcol">
-			<img class="condition-icon {{#unless actor.system.statuses.enraged.immune}} {{#if actor.system.statuses.enraged.active}}active{{/if}}{{else}}immune{{/unless}}"
+			<img class="condition-icon {{#if actor.system.statuses.enraged.immune}}immune{{/if}}"
 				src="systems/fabulaultima/assets/ui/enrage.svg" title="{{localize 'FU.Status.enraged'}}"
 				data-condition="enraged" />
 			{{#if isNPC}}
@@ -25,7 +25,7 @@
 			{{/if}}
 		</div>
 		<div class="flexcol">
-			<img class="condition-icon {{#unless actor.system.statuses.poisoned.immune}} {{#if actor.system.statuses.poisoned.active}}active{{/if}}{{else}}immune{{/unless}}"
+			<img class="condition-icon {{#if actor.system.statuses.poisoned.immune}}immune{{/if}}"
 				src="systems/fabulaultima/assets/ui/poison-bottle.svg" title="{{localize 'FU.Status.poisoned'}}"
 				data-condition="poisoned" />
 			{{#if isNPC}}
@@ -37,7 +37,7 @@
 			{{/if}}
 		</div>
 		<div class="flexcol">
-			<img class="condition-icon {{#unless actor.system.statuses.shaken.immune}} {{#if actor.system.statuses.shaken.active}}active{{/if}}{{else}}immune{{/unless}}"
+			<img class="condition-icon {{#if actor.system.statuses.shaken.immune}}immune{{/if}}"
 				src="systems/fabulaultima/assets/ui/terror.svg" title="{{localize 'FU.Status.shaken'}}"
 				data-condition="shaken" />
 			{{#if isNPC}}
@@ -49,7 +49,7 @@
 			{{/if}}
 		</div>
 		<div class="flexcol">
-			<img class="condition-icon {{#unless actor.system.statuses.slow.immune}} {{#if actor.system.statuses.slow.active}}active{{/if}}{{else}}immune{{/unless}}"
+			<img class="condition-icon {{#if actor.system.statuses.slow.immune}}immune{{/if}}"
 				src="systems/fabulaultima/assets/ui/tortoise.svg" title="{{localize 'FU.Status.slow'}}"
 				data-condition="slow" />
 			{{#if isNPC}}
@@ -61,7 +61,7 @@
 			{{/if}}
 		</div>
 		<div class="flexcol">
-			<img class="condition-icon {{#unless actor.system.statuses.weak.immune}} {{#if actor.system.statuses.weak.active}}active{{/if}}{{else}}immune{{/unless}}"
+			<img class="condition-icon {{#if actor.system.statuses.weak.immune}}immune{{/if}}"
 				src="systems/fabulaultima/assets/ui/back-pain.svg" title="{{localize 'FU.Status.weak'}}"
 				data-condition="weak" />
 			{{#if isNPC}}

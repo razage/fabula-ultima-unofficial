@@ -82,7 +82,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
-        const spellEffects = [];
+        const skillEffects = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -125,8 +125,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     weapons.push(item);
                     break;
 
-                case "spell-effect":
-                    spellEffects.push(item);
+                case "skill-effect":
+                    skillEffects.push(item);
                     break;
 
                 default:
@@ -144,7 +144,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
-        actorData.system.spellEffects = spellEffects;
+        actorData.system.skillEffects = skillEffects;
     }
 
     _prepareGroupData(sheetData) {
@@ -165,7 +165,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
-        const spellEffects = [];
+        const skillEffects = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -191,8 +191,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     weapons.push(item);
                     break;
 
-                case "spell-effect":
-                    spellEffects.push(item);
+                case "skill-effect":
+                    skillEffects.push(item);
             }
         });
 
@@ -201,7 +201,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
-        actorData.system.spellEffects = spellEffects;
+        actorData.system.skillEffects = skillEffects;
     }
 
     activateListeners(html) {
@@ -432,9 +432,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                 case "weapons":
                     game.packs.find((k) => k.collection === "fabulaultima.weapons").render(true);
                     break;
-                case "spell-effects":
+                case "skill-effects":
                     game.packs
-                        .find((k) => k.collection === "fabulaultima.spellEffects")
+                        .find((k) => k.collection === "fabulaultima.skill-effects")
                         .render(true);
                     break;
 
@@ -463,9 +463,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
             fabulaSkillRoll(this.actor, main, sec, bonus);
         });
-
-        // Apply a condition
-        html.find(".condition-icon").click(this._onConditionStatusChange.bind(this));
     }
 
     _onItemCreate(event) {
@@ -528,109 +525,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         } catch (ex) {
             console.log(ex);
         }
-    }
-
-    async _onConditionStatusChange(event) {
-        event.preventDefault();
-        const element = event.currentTarget;
-        const dataset = element.dataset;
-        const condition = this.actor.system.statuses[dataset.condition];
-        const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
-        const relevantEffect = effects.filter((ef) => ef.name === dataset.condition);
-
-        let newValue = !condition.active;
-        let actorProp = { system: { statuses: {} } };
-        actorProp.system.statuses[dataset.condition] = {
-            active: this.actor.system.statuses[dataset.condition].active,
-            immune: this.actor.system.statuses[dataset.condition].immune,
-        };
-        actorProp.system.statuses[dataset.condition].active = newValue;
-
-        // If they are immune to this condition, skip everything
-        if (condition.immune) {
-            return;
-        }
-
-        if (relevantEffect.length > 0) {
-            let effect = relevantEffect[0];
-            await effect.update({ disabled: condition.active });
-        } else {
-            let data = {
-                label: dataset.condition,
-                icon: "icons/svg/aura.svg",
-                origin: this.actor.uuid,
-                disabled: condition.active,
-            };
-
-            switch (dataset.condition) {
-                case "dazed":
-                    data.changes = [
-                        {
-                            key: "system.attributes.insight.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "enraged":
-                    data.changes = [
-                        {
-                            key: "system.attributes.dexterity.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                        {
-                            key: "system.attributes.insight.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "poisoned":
-                    data.changes = [
-                        {
-                            key: "system.attributes.might.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                        {
-                            key: "system.attributes.willpower.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "shaken":
-                    data.changes = [
-                        {
-                            key: "system.attributes.willpower.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "slow":
-                    data.changes = [
-                        {
-                            key: "system.attributes.dexterity.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "weak":
-                    data.changes = [
-                        {
-                            key: "system.attributes.might.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-            }
-            await this.actor.createEmbeddedDocuments("ActiveEffect", [data]);
-        }
-        await this.actor.update(actorProp);
     }
 
     _applyUnequippableActiveEffect(effects, item) {

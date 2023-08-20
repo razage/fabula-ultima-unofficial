@@ -1,0 +1,5 @@
+2023/08/20-07:16:19.400431 15360d112b38 Delete type=3 #1
+2023/08/20-07:18:53.544661 15338cd12b38 Level-0 table #5: started
+2023/08/20-07:18:53.628003 15338cd12b38 Level-0 table #5: 9627 bytes OK
+2023/08/20-07:18:53.662603 15338cd12b38 Delete type=0 #3
+2023/08/20-07:18:53.711540 15338cd12b38 Manual compaction at level-0 from '!items!1ASxTCxDsyuJwYkx' @ 72057594037927935 : 1 .. '!items.effects!wpOqDLRH3ylOnruO.FUO6Vc0DQAAwa8P5' @ 0 : 0; will stop at (end)

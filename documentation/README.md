@@ -8,7 +8,10 @@ I began work on this in Foundry 10. It _should_ still work in that, however the 
 
 -   (Arcanist)[./classes/arcanist.md]
 -   (Ace of Cards)[./classes/ace-of-cards.md]
+-   Chanter
 -   (Chimerist)[./classes/chimerist.md]
+-   Commander
+-   Dancer
 -   (Darkblade)[./classes/darkblade.md]
 -   (Elementalist)[./classes/elementalist.md]
 -   (Entropist)[./classes/entropist.md]
@@ -20,6 +23,7 @@ I began work on this in Foundry 10. It _should_ still work in that, however the 
 -   (Rogue)[./classes/rogue.md]
 -   (Sharpshooter)[./classes/sharpshooter.md]
 -   (Spiritist)[./classes/spiritist.md]
+-   Symbolist
 -   (Tinkerer)[./classes/tinkerer.md]
 -   (Wayfarer)[./classes/wayfarer.md]
 -   (Weaponmaster)[./classes/weaponmaster.md]

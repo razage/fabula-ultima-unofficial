@@ -235,27 +235,10 @@ h4.dice-total .multi {
   margin: 0 auto;
   border: none;
   height: 40px;
-  opacity: 0.35;
-}
-.character-sheet .conditions img.condition-icon.active,
-.npc-sheet .conditions img.condition-icon.active {
-  height: 50px;
-  opacity: 1;
-}
-.character-sheet .conditions img.condition-icon.active:hover,
-.npc-sheet .conditions img.condition-icon.active:hover {
-  height: 48px;
-  opacity: 1;
-}
-.character-sheet .conditions img.condition-icon:hover,
-.npc-sheet .conditions img.condition-icon:hover {
-  cursor: pointer;
-  height: 48px;
-  opacity: 0.55;
 }
 .character-sheet .conditions img.condition-icon.immune,
 .npc-sheet .conditions img.condition-icon.immune {
-  opacity: 0.1;
+  opacity: 0.15;
 }
 .character-sheet .conditions img.condition-icon.immune:hover,
 .npc-sheet .conditions img.condition-icon.immune:hover {

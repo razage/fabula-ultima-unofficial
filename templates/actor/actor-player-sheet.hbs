@@ -257,16 +257,16 @@
             </div>
         </div>
 
-        {{!-- Buffs/Debuffs --}}
+        {{!-- Effects --}}
         <div class="tab effects" data-group="primary" data-tab="effects">
             <h2>
-                {{localize "FU.Items.Types.spellEffects"}}
-                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="spell-effects"
+                {{localize "FU.Items.Types.skillEffects"}}
+                <i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="skill-effects"
                     title="{{localize 'FU.UI.openCompendium'}}"></i>
             </h2>
             <div class="flexcol buffs">
                 <div class="item-list">
-                    {{#each actor.system.spellEffects as |buff|}}
+                    {{#each actor.system.skillEffects as |buff|}}
                     <div class="buff item" data-item-id="{{buff._id}}">
                         <div class="grid grid-3col">
                             <div class="flexrow">

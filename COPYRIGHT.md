@@ -160,6 +160,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Crossbow icon by Carl Olsen
 -   Crystal ball icon by Lorc
 -   Crystal wand icon by Lorc
+-   Curly wing icon by Lorc
 -   Cursed star icon by Lorc
 -   Curvy knife icon by Lorc
 -   Cut palm icon by Lorc

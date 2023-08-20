@@ -259,7 +259,7 @@
             "arcanum",
             "class",
             "spell",
-            "spell-effect",
+            "skill-effect",
             "skill",
             "bond"
         ],
@@ -375,7 +375,7 @@
             "ipCost": 0,
             "quality": "No Quality."
         },
-        "spellEffect": {
+        "skillEffect": {
             "schemaVersion": "2.0"
         },
         "skill": {

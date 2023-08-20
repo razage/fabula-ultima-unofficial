@@ -5,6 +5,7 @@ import { FabulaUltimaItemSheet } from "./item/item-sheet.js";
 import { FUActiveEffect } from "./FUActiveEffect.js";
 import { registerSystemSettings } from "./settings.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
+import { statusConditions } from "./other/statusConditions.js";
 
 Hooks.once("init", async function () {
     game.fabulaultima = {
@@ -16,6 +17,9 @@ Hooks.once("init", async function () {
     CONFIG.Actor.documentClass = FabulaUltimaActor;
     CONFIG.Item.documentClass = FabulaUltimaItem;
     CONFIG.ActiveEffect.documentClass = FUActiveEffect;
+
+    // Define custom status effects
+    CONFIG.statusEffects = statusConditions;
 
     Actors.unregisterSheet("core", ActorSheet);
     Items.unregisterSheet("core", ItemSheet);
