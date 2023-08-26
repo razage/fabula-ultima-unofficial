@@ -528,11 +528,17 @@ export class FabulaUltimaActorSheet extends ActorSheet {
     }
 
     _applyUnequippableActiveEffect(effects, item) {
-        let relevantEffects = effects.filter((effect) => effect.origin.endsWith(item._id));
-        let effect = relevantEffects[0];
+        try {
+            let relevantEffects = effects.filter((effect) => effect.origin.endsWith(item._id));
 
-        if (relevantEffects.length === 0) return;
+            let effect = relevantEffects[0];
 
-        effect.update({ disabled: false });
+            if (relevantEffects.length === 0) return;
+
+            effect.update({ disabled: false });
+        } catch (error) {
+            // This effect was applied via the UI and should be ignored.
+            return;
+        }
     }
 }
