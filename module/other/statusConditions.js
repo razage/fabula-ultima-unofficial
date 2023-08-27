@@ -247,6 +247,11 @@ export const statusConditions = [
         ],
     },
     {
+        id: "mercy",
+        label: "Mercy",
+        icon: "systems/fabulaultima/assets/ui/prayer.svg",
+    },
+    {
         id: "reinforce-dazed",
         label: "Reinforce (Dazed)",
         icon: "systems/fabulaultima/assets/ui/conditions/energy-shield-dazed.svg",
