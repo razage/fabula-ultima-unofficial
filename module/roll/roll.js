@@ -50,9 +50,9 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
             obj.accuracy = {
-                base: obj.roll.total,
+                base: 0,
                 bonus: 0,
-                total: 0,
+                total: obj.roll.total,
             };
             obj.damage = {
                 type: data.item.system.damage.type,
@@ -67,8 +67,8 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
                 actor.system.bonuses.accuracy.physical +
                 actor.system.bonuses.accuracy[data.item.system.category];
 
-            // Calculate the total accuracy check
-            obj.accuracy.total = obj.accuracy.base + obj.accuracy.bonus;
+            // Deduct the bonus to get the raw roll for the item
+            obj.accuracy.base = obj.accuracy.total - obj.accuracy.bonus;
 
             // Determine the correct damage bonus to apply
             if (data.item.system.category === "shield") {
@@ -149,9 +149,9 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.mainStat = mainStat;
             obj.secondaryStat = secondaryStat;
             obj.accuracy = {
-                base: obj.roll.total,
+                base: 0,
                 bonus: actor.system.bonuses.accuracy.magic,
-                total: 0,
+                total: obj.roll.total,
             };
             obj.damage = {
                 bonus: actor.system.bonuses.damage.magic + data.item.system.damage.bonus,
@@ -160,8 +160,8 @@ export async function sendRollToChat(actor, mainStat, secondaryStat, rollType, d
             obj.highRoll = data.highRoll;
             obj.itemName = data.item.name;
 
-            // Calculate the total accuracy check
-            obj.accuracy.total = obj.accuracy.base + obj.accuracy.bonus;
+            // Calculate the raw magic check
+            obj.accuracy.base = obj.accuracy.total - obj.accuracy.bonus;
 
             obj.damage.total = obj.highRoll + obj.damage.bonus;
 

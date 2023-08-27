@@ -104,7 +104,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
 
                 case "class":
-                    this._applyUnequippableActiveEffect(effects, item);
                     classes.push(item);
                     break;
 
@@ -113,7 +112,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
 
                 case "skill":
-                    this._applyUnequippableActiveEffect(effects, item);
                     skills.push(item);
                     break;
 
@@ -179,7 +177,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
 
                 case "skill":
-                    this._applyUnequippableActiveEffect(effects, item);
                     skills.push(item);
                     break;
 
@@ -254,7 +251,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
                 fabulaAttackRoll(this.actor, main, sec, item, "weapon", bonus);
             } else {
-                fabulaAttackRoll(this.actor, main, sec, item, "spell");
+                bonus += this.actor.system.bonuses.accuracy.magic;
+                fabulaAttackRoll(this.actor, main, sec, item, "spell", bonus);
             }
         });
 
@@ -488,7 +486,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const element = event.currentTarget;
         const dataset = element.dataset;
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
-        const relevantEffects = effects.filter((effect) => effect.origin.endsWith(dataset.id));
+        const relevantEffects = effects.filter(
+            (effect) => effect.origin === `Actor.${this.actor.id}.Item.${dataset.id}`
+        );
 
         try {
             const item = this.actor.items.get(dataset.id);
@@ -524,21 +524,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             this.render();
         } catch (ex) {
             console.log(ex);
-        }
-    }
-
-    _applyUnequippableActiveEffect(effects, item) {
-        try {
-            let relevantEffects = effects.filter((effect) => effect.origin.endsWith(item._id));
-
-            let effect = relevantEffects[0];
-
-            if (relevantEffects.length === 0) return;
-
-            effect.update({ disabled: false });
-        } catch (error) {
-            // This effect was applied via the UI and should be ignored.
-            return;
         }
     }
 }
