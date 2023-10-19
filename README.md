@@ -12,7 +12,7 @@ This system is unaffiliated with the creators or the publisher. The software is 
 
 ## Status
 
-This project is in active development and may still change at any time. That being said, all I have planned is minor visual stuff and some UI elements. As well as fixing any bugs I might find.
+This project is still in development and currently in a beta phase. I am testing it with a group I am running and mostly focusing on bugs.
 
 ### Future Content
 
