@@ -24,13 +24,15 @@
 				</span>
 				<p>
 					{{#unless spell.system.noDamage}}
-					{{#if_eq spell.system.damage.bonus 0}}
-					{{localize "FU.UI.damage"}}: <b>[{{localize
-						"FU.Short.highRoll"}}]</b>
-					{{else}}
-					{{localize "FU.UI.damage"}}: <b>[{{localize
-						"FU.Short.highRoll"}}+{{spell.system.damage.bonus}}]</b>
-					{{/if_eq}}
+					{{localize "FU.UI.damage"}}: <img title="{{getLocalizedElement spell.system.damage.type}}"
+						class="element-icon" src="{{getElementalIcon spell.system.damage.type}}" />
+					<b>
+						{{#if_not_eq spell.system.damage.bonus 0}}
+						[{{localize "FU.Short.highRoll"}}+{{spell.system.damage.bonus}}]
+						{{else}}
+						[{{localize "FU.Short.highRoll"}}]
+						{{/if_not_eq}}
+					</b>
 					{{else}}
 					{{localize "FU.UI.damage"}}: <b>N/A</b>
 					{{/unless}}
@@ -55,6 +57,8 @@
 								class="fas fa-solid fa-dice"></i> {{localize
 							"FU.UI.attack"}}</button>
 						{{/if}}
+						<button class="item-display fabula-button" data-id="{{spell._id}}"><i
+								class="fas fa-solid fa-share-nodes"></i> {{localize "FU.UI.share"}}</button>
 						<button class="item-edit fabula-button"><i class="fas fa-solid fa-pencil"></i> {{localize
 							"FU.UI.edit"}}</button>
 						<button class="item-delete fabula-button"><i class="fas fa-solid fa-trash"></i> {{localize

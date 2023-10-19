@@ -1,9 +1,98 @@
-.app.window-app.dialog {
+// Overriding base UI elements
+
+.app.window-app.dialog,
+.app.window-app.cards-config {
+
     section.window-content {
         background: @main-fallback;
         background: @main-gradient;
 
+        form.editable,
+        form.locked {
+            .sheet-header {
+
+                h1.name input {
+                    color: @font-color;
+                }
+            }
+
+            // Why did foundry do this?
+            div {
+                header {
+                    border-color: @font-color;
+                }
+
+                header,
+                header a,
+                ol.cards li,
+                p,
+                .card-faces a,
+                .card-controls a {
+                    color: @font-color;
+                }
+            }
+
+
+
+            .tab {
+
+                header {
+                    border-color: @font-color;
+                }
+
+                a,
+                .form-group,
+                header,
+                ol li,
+                textarea {
+                    color: @font-color;
+                }
+
+                .form-fields {
+                    color: @font-color;
+
+                    button,
+                    input {
+                        color: @font-color;
+                    }
+                }
+
+            }
+
+            .sheet-footer {
+                button {
+                    background: @accent-fallback;
+                    background: @highlight-gradient;
+                    color: @font-color;
+                    border: 1px solid @font-color;
+                    border-radius: 10px;
+
+                    &:active,
+                    &:focus,
+                    &:hover {
+                        box-shadow: none;
+                    }
+
+                    &:hover::not(:disabled) {
+                        border-color: darken(@font-color, 40%);
+                        background: @main-fallback;
+                        background: @darken-gradient;
+                    }
+
+                    &:disabled {
+                        cursor: not-allowed;
+                        background: @main-fallback;
+                        background: @darken-gradient;
+                    }
+                }
+            }
+        }
+
         .dialog-content {
+
+            figcaption {
+                color: @font-color;
+            }
 
             p,
             h4 {
@@ -12,13 +101,16 @@
             }
 
             form {
-                .form-group {
+
+                .form-group,
+                .form-group-stacked {
                     label {
                         color: @font-color;
                     }
 
                     input[type="text"],
-                    input::placeholder {
+                    input::placeholder,
+                    .form-fields input {
                         color: @font-color;
                     }
 

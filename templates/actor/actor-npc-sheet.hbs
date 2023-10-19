@@ -1,4 +1,4 @@
-<form class="{{cssClass}} npc-sheet" autocomplete="off">
+<form class="{{cssClass}} npc-sheet" autocomplete="off" onkeydown="return event.key != 'Enter';">
 	<header class="sheet-header flexcol">
 		<div class="header-fields">
 			<div class="flexrow">
@@ -174,14 +174,38 @@
 								"FU.NPC.Rank.elite"}}</option>
 							<option value="champion" {{#if_eq actor.system.rank "champion" }}selected{{/if_eq}}>
 								{{localize "FU.NPC.Rank.champion"}}</option>
-							<option value="minor villain" {{#if_eq actor.system.rank "minor villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.minorVillain"}}</option>
-							<option value="major villain" {{#if_eq actor.system.rank "major villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.majorVillain"}}</option>
-							<option value="supreme villain" {{#if_eq actor.system.rank "supreme villain"
-								}}selected{{/if_eq}}>{{localize "FU.NPC.Rank.supremeVillain"}}</option>
 						</select>
 					</div>
+					{{#if_eq actor.system.rank "champion"}}
+					<div class="flexrow">
+						<label for="system.numberOfEnemies">{{localize "FU.NPC.Rank.enemyCount"}} <i
+								class="fas fa-solid fa-circle-question"
+								title="{{localize 'FU.NPC.Rank.enemyCountEx'}}"></i></label>
+						<input name="system.numberOfEnemies" type="text" value="{{actor.system.numberOfEnemies}}"
+							data-dtype="Number">
+					</div>
+					{{/if_eq}}
+					<div class="flexrow">
+						<label for="system.isBoss">{{localize "FU.UI.boss"}} <i class="fas fa-solid fa-question-circle"
+								title="{{localize 'FU.UI.bossEx'}}"></i></label>
+						<input name="system.isBoss" type="checkbox" {{#if actor.system.isBoss}}checked{{/if}}>
+					</div>
+					{{#if actor.system.isBoss}}
+					<div class="flexrow">
+						<label for="system.bossRank">{{localize "FU.NPC.bossRank"}}</label>
+						<select name="system.bossRank">
+							<option value="minor villain" {{#if_eq actor.system.bossRank "minor villain"
+								}}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.minorVillain"}}</option>
+							<option value="major villain" {{#if_eq actor.system.bossRank "major villain"
+								}}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.majorVillain"}}</option>
+							<option value="supreme villain" {{#if_eq actor.system.bossRank "supreme villain"
+								}}selected{{/if_eq}}>{{localize
+								"FU.NPC.Rank.supremeVillain"}}</option>
+						</select>
+					</div>
+					{{/if}}
 				</div>
 				<h2>{{localize "FU.NPC.specialRules"}}</h2>
 				<div class="editor-host">
@@ -204,13 +228,13 @@
 		{{!-- Buffs/Debuffs --}}
 		<div class="tab effects" data-group="primary" data-tab="effects">
 			<h2>
-				{{localize "FU.Items.Types.spellEffects"}}
-				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="spell-effects"
+				{{localize "FU.Items.Types.skillEffects"}}
+				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="skill-effects"
 					title="{{localize 'FU.UI.openCompendium'}}"></i>
 			</h2>
 			<div class="flexcol buffs">
 				<div class="item-list">
-					{{#each actor.system.buffs as |buff|}}
+					{{#each actor.system.skillEffects as |buff|}}
 					<div class="buff item" data-item-id="{{buff._id}}">
 						<div class="grid grid-3col">
 							<div class="flexrow">

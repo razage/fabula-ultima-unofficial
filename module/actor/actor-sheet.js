@@ -82,7 +82,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
-        const buffs = [];
+        const skillEffects = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -104,7 +104,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
 
                 case "class":
-                    this._applyUnequippableActiveEffect(effects, item);
                     classes.push(item);
                     break;
 
@@ -113,7 +112,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
 
                 case "skill":
-                    this._applyUnequippableActiveEffect(effects, item);
                     skills.push(item);
                     break;
 
@@ -125,8 +123,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     weapons.push(item);
                     break;
 
-                case "buff":
-                    buffs.push(item);
+                case "skill-effect":
+                    skillEffects.push(item);
                     break;
 
                 default:
@@ -144,7 +142,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
-        actorData.system.buffs = buffs;
+        actorData.system.skillEffects = skillEffects;
     }
 
     _prepareGroupData(sheetData) {
@@ -165,7 +163,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skills = [];
         const spells = [];
         const weapons = [];
-        const buffs = [];
+        const skillEffects = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
         sheetData.items.forEach((item) => {
@@ -179,7 +177,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
 
                 case "skill":
-                    this._applyUnequippableActiveEffect(effects, item);
                     skills.push(item);
                     break;
 
@@ -191,8 +188,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     weapons.push(item);
                     break;
 
-                case "buff":
-                    buffs.push(item);
+                case "skill-effect":
+                    skillEffects.push(item);
             }
         });
 
@@ -201,13 +198,24 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         actorData.system.skills = skills;
         actorData.system.spells = spells;
         actorData.system.weapons = weapons;
-        actorData.system.buffs = buffs;
+        actorData.system.skillEffects = skillEffects;
     }
 
     activateListeners(html) {
         super.activateListeners(html);
 
         if (!this.options.editable) return;
+
+        html.find(".resource-reset").click((ev) => {
+            ev.preventDefault();
+            const data = $(ev.currentTarget).data();
+            const actor = game.actors.get(data.target);
+            let output = {};
+            output[data.resource] = {};
+            output[data.resource]["value"] = actor.system[data.resource].max;
+
+            actor.update({ data: output });
+        });
 
         // Edit items
         html.find(".item-edit").click((ev) => {
@@ -243,7 +251,8 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
                 fabulaAttackRoll(this.actor, main, sec, item, "weapon", bonus);
             } else {
-                fabulaAttackRoll(this.actor, main, sec, item, "spell");
+                bonus += this.actor.system.bonuses.accuracy.magic;
+                fabulaAttackRoll(this.actor, main, sec, item, "spell", bonus);
             }
         });
 
@@ -262,6 +271,76 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
         // Create an item
         html.find(".item-create").click(this._onItemCreate.bind(this));
+
+        // Display an item in chat
+        html.find(".item-display").click(async (ev) => {
+            const itemId = $(ev.currentTarget).data("id");
+            const item = this.actor.items.get(itemId);
+            let obj = {
+                name: item.name,
+                img: item.img,
+                type: item.type,
+            };
+            let notes;
+
+            if (obj.type === "spell") {
+                notes = TextEditor.enrichHTML(item.system.notes);
+                obj.multiValue = item.system.target;
+
+                if (item.system.offensiveSpell) {
+                    obj.martial = true;
+                } else {
+                    obj.noDamage = true;
+                }
+            }
+
+            if (obj.type === "weapon") {
+                notes = TextEditor.enrichHTML(item.system.quality);
+
+                if (item.system.multi.enabled) {
+                    obj.multiValue = item.system.multi.value;
+                } else {
+                    obj.multiValue = 0;
+                }
+
+                if (
+                    item.system.isMartial.melee ||
+                    item.system.isMartial.ranged ||
+                    item.system.isMartial.shield
+                )
+                    obj.martial = true;
+            }
+
+            obj.accuracy = `${game.i18n.localize(
+                "FU.Short." + item.system.accuracy.mainStat
+            )} + ${game.i18n.localize("FU.Short." + item.system.accuracy.secondaryStat)}`;
+
+            if (item.system.accuracy.bonus !== 0) {
+                obj.accuracy += ` + ${item.system.accuracy.bonus}`;
+            }
+            obj.damage = {
+                amount: `[${game.i18n.localize("FU.Short.highRoll")} + ${
+                    item.system.damage.bonus
+                }]`,
+                type: item.system.damage.type,
+            };
+
+            notes.then((result) => {
+                let out = new DOMParser().parseFromString(result, "text/html");
+                obj["quality"] = out.body.innerText;
+            });
+
+            let content = await renderTemplate(
+                "systems/fabulaultima/templates/chat/item-display.hbs",
+                obj
+            );
+            let messageData = {
+                speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                content: content,
+                type: CONST.CHAT_MESSAGE_TYPES.OOC,
+            };
+            ChatMessage.create(messageData, {});
+        });
 
         // Update the equipped status for an item
         html.find(".equipped").click(this._onItemEquippedStatusChange.bind(this));
@@ -283,6 +362,12 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             }
 
             makeGroupRoll(game.actors, main, sec, bonus);
+        });
+
+        // Roll Initiative
+        html.find(".initiative-roll").click((ev) => {
+            ev.preventDefault();
+            makeGroupRoll(game.actors, "dexterity", "insight", 0, true);
         });
 
         // Open compendium
@@ -312,8 +397,30 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                         .find((k) => k.collection === "fabulaultima.consumables")
                         .render(true);
                     break;
+                case "npc-skills":
+                    game.packs.find((k) => k.collection === "fabulaultima.npc-skills").render(true);
+                    break;
                 case "skill": {
-                    game.packs.find((k) => k.collection === "fabulaultima.skills").render(true);
+                    dialog = new Dialog({
+                        title: game.i18n.localize("FU.UI.selectCompendium"),
+                        buttons: {
+                            skills: {
+                                label: game.i18n.localize("FU.Plural.skill"),
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.skills")
+                                        .render(true),
+                            },
+                            heroicSkills: {
+                                label: game.i18n.localize("FU.Plural.heroic"),
+                                callback: () =>
+                                    game.packs
+                                        .find((k) => k.collection === "fabulaultima.heroic-skills")
+                                        .render(true),
+                            },
+                        },
+                    });
+                    dialog.render(true);
                     break;
                 }
                 case "spell": {
@@ -321,101 +428,11 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                     break;
                 }
                 case "weapons":
-                    dialog = new Dialog({
-                        title: game.i18n.localize("FU.UI.selectCompendium"),
-                        buttons: {
-                            arcane: {
-                                label: game.i18n.localize("FU.Weapons.Categories.arcane"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.weapons-arcane")
-                                        .render(true),
-                            },
-                            bows: {
-                                label: game.i18n.localize("FU.Weapons.Categories.bow"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.weapons-bows")
-                                        .render(true),
-                            },
-                            brawling: {
-                                label: game.i18n.localize("FU.Weapons.Categories.brawling"),
-                                callback: () =>
-                                    game.packs
-                                        .find(
-                                            (k) => k.collection === "fabulaultima.weapons-brawling"
-                                        )
-                                        .render(true),
-                            },
-                            daggers: {
-                                label: game.i18n.localize("FU.Weapons.Categories.dagger"),
-                                callback: () =>
-                                    game.packs
-                                        .find(
-                                            (k) => k.collection === "fabulaultima.weapons-daggers"
-                                        )
-                                        .render(true),
-                            },
-                            firearms: {
-                                label: game.i18n.localize("FU.Weapons.Categories.firearm"),
-                                callback: () =>
-                                    game.packs
-                                        .find(
-                                            (k) => k.collection === "fabulaultima.weapons-firearms"
-                                        )
-                                        .render(true),
-                            },
-                            flails: {
-                                label: game.i18n.localize("FU.Weapons.Categories.flail"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.weapons-flails")
-                                        .render(true),
-                            },
-                            heavy: {
-                                label: game.i18n.localize("FU.Weapons.Categories.heavy"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.weapons-heavy")
-                                        .render(true),
-                            },
-                            shields: {
-                                label: game.i18n.localize("FU.Weapons.Categories.shield"),
-                                callback: () =>
-                                    game.packs
-                                        .find(
-                                            (k) => k.collection === "fabulaultima.weapons-shields"
-                                        )
-                                        .render(true),
-                            },
-                            spears: {
-                                label: game.i18n.localize("FU.Weapons.Categories.spear"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.weapons-spears")
-                                        .render(true),
-                            },
-                            swords: {
-                                label: game.i18n.localize("FU.Weapons.Categories.sword"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.weapons-swords")
-                                        .render(true),
-                            },
-                            thrown: {
-                                label: game.i18n.localize("FU.Weapons.Categories.thrown"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.weapons-thrown")
-                                        .render(true),
-                            },
-                        },
-                    });
-                    dialog.render(true);
+                    game.packs.find((k) => k.collection === "fabulaultima.weapons").render(true);
                     break;
-                case "spell-effects":
+                case "skill-effects":
                     game.packs
-                        .find((k) => k.collection === "fabulaultima.spellEffects")
+                        .find((k) => k.collection === "fabulaultima.skill-effects")
                         .render(true);
                     break;
 
@@ -444,9 +461,6 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
             fabulaSkillRoll(this.actor, main, sec, bonus);
         });
-
-        // Apply a condition
-        html.find(".condition-icon").click(this._onConditionStatusChange.bind(this));
     }
 
     _onItemCreate(event) {
@@ -472,7 +486,9 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const element = event.currentTarget;
         const dataset = element.dataset;
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
-        const relevantEffects = effects.filter((effect) => effect.origin.endsWith(dataset.id));
+        const relevantEffects = effects.filter(
+            (effect) => effect.origin === `Actor.${this.actor.id}.Item.${dataset.id}`
+        );
 
         try {
             const item = this.actor.items.get(dataset.id);
@@ -509,117 +525,5 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         } catch (ex) {
             console.log(ex);
         }
-    }
-
-    async _onConditionStatusChange(event) {
-        event.preventDefault();
-        const element = event.currentTarget;
-        const dataset = element.dataset;
-        const condition = this.actor.system.statuses[dataset.condition];
-        const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
-        const relevantEffect = effects.filter((ef) => ef.label === dataset.condition);
-
-        let newValue = !condition.active;
-        let actorProp = { system: { statuses: {} } };
-        actorProp.system.statuses[dataset.condition] = {
-            active: this.actor.system.statuses[dataset.condition].active,
-            immune: this.actor.system.statuses[dataset.condition].immune,
-        };
-        actorProp.system.statuses[dataset.condition].active = newValue;
-
-        // If they are immune to this condition, skip everything
-        if (condition.immune) {
-            return;
-        }
-
-        if (relevantEffect.length > 0) {
-            let effect = relevantEffect[0];
-            await effect.update({ disabled: condition.active });
-        } else {
-            let data = {
-                label: dataset.condition,
-                icon: "icons/svg/aura.svg",
-                origin: this.actor.uuid,
-                disabled: condition.active,
-            };
-
-            switch (dataset.condition) {
-                case "dazed":
-                    data.changes = [
-                        {
-                            key: "system.attributes.insight.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "enraged":
-                    data.changes = [
-                        {
-                            key: "system.attributes.dexterity.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                        {
-                            key: "system.attributes.insight.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "poisoned":
-                    data.changes = [
-                        {
-                            key: "system.attributes.might.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                        {
-                            key: "system.attributes.willpower.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "shaken":
-                    data.changes = [
-                        {
-                            key: "system.attributes.willpower.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "slow":
-                    data.changes = [
-                        {
-                            key: "system.attributes.dexterity.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-                case "weak":
-                    data.changes = [
-                        {
-                            key: "system.attributes.might.bonus",
-                            mode: 2,
-                            value: -2,
-                        },
-                    ];
-                    break;
-            }
-            await this.actor.createEmbeddedDocuments("ActiveEffect", [data]);
-        }
-        await this.actor.update(actorProp);
-    }
-
-    _applyUnequippableActiveEffect(effects, item) {
-        let relevantEffects = effects.filter((effect) => effect.origin.endsWith(item._id));
-        let effect = relevantEffects[0];
-
-        if (relevantEffects.length === 0) return;
-
-        effect.update({ disabled: false });
     }
 }

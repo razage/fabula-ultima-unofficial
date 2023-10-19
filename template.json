@@ -231,10 +231,12 @@
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.07",
+            "schemaVersion": "1.09",
             "species": "Beast",
             "rank": "soldier",
             "isBoss": false,
+            "bossRank": "minor villain",
+            "numberOfEnemies": 1,
             "canUseEquipment": false,
             "initiative": {
                 "base": 0,
@@ -257,7 +259,7 @@
             "arcanum",
             "class",
             "spell",
-            "buff",
+            "skill-effect",
             "skill",
             "bond"
         ],
@@ -373,8 +375,8 @@
             "ipCost": 0,
             "quality": "No Quality."
         },
-        "buff": {
-            "schemaVersion": "1.0"
+        "skillEffect": {
+            "schemaVersion": "2.0"
         },
         "skill": {
             "templates": ["hasClass"],

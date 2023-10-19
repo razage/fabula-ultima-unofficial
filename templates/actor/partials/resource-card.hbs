@@ -1,7 +1,8 @@
 <div class="resource-card">
     <div class="flexcol {{r}}">
         <label for="{{inputName}}" title="{{title}}">
-            <i class="{{icon}}"></i>{{toUpperCase r}}
+            <i class="{{icon}}"></i>{{toUpperCase r}} <i class="fas fa-solid fa-rotate-left resource-reset"
+                title="{{localize 'FU.UI.reset'}}" data-target="{{actor._id}}" data-resource="{{r}}"></i>
         </label>
         <input name="{{inputName}}" type="text" data-dtype="Number" value="{{rValue}}" />
         <p>{{rMax}}</p>
