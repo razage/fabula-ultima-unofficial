@@ -5,10 +5,10 @@
     "authors": [{ "name": "razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.8.7b",
+    "version": "0.8.8b",
     "compatibility": {
         "minimum": "10.291",
-        "verified": "11.307"
+        "verified": "11.313"
     },
     "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/beta/system.json",
     "download": "https://github.com/razage/fabula-ultima-unofficial/archive/refs/heads/master.zip",
