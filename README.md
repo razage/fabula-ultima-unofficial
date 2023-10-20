@@ -10,6 +10,10 @@ This system is unaffiliated with the creators or the publisher. The software is 
 -   [Core Rules (Amazon, Physical)](https://www.amazon.com/dp/B0C34VZ87R)
 -   [Patreon](https://www.patreon.com/roosterema)
 
+## The UI
+
+Early on in the project, I decided to make my sheets mimic the old-school _Final Fantasy_ menus. I personally like this style and I will not be changing it. Since somebody requested it early on in development, I did add some configuration options to change the color. It is not perfect and I will probably revisit that at a later date. Ultimately, I would like to make a few UI designs and just let you pick from those. It will take some time for me to add this and it isn't my top priority, so stay tuned.
+
 ## Status
 
 This project is still in development and currently in a beta phase. I am testing it with a group I am running and mostly focusing on bugs.
