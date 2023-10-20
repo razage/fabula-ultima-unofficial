@@ -28,6 +28,10 @@ I am working on a basic implementation of the Ace of Cards. GMs won't enjoy runn
 
 In order to install this system, you will need to download this repository as a zip file and extract it to your foundry/systems folder. Alternatively, you can use the url `https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json` in the "Manifest URL" field when you click "Install System"
 
+### Note for Beta Users
+
+If you happened to use this system while I had a beta branch and you were using that, you will have to recreate your world. It is pulling updates from the wrong place, and it won't work anymore. I will never do this again so it shouldn't be a problem going forward. You should be able to export anything that you made and reimport it when you create your new world.
+
 ### Recommended Modules
 
 I've added a few modules that will make running this game _much_ easier. They are not required to operate, so I made them recommended. Here's my reasoning for each.
