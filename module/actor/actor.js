@@ -24,8 +24,8 @@ export class FabulaUltimaActor extends Actor {
         }
 
         // Calculate derived stats
-        system.defenses.physical.base = system.attributes.dexterity.base;
-        system.defenses.magic.base = system.attributes.insight.base;
+        system.defenses.physical.base = system.attributes.dexterity.current;
+        system.defenses.magic.base = system.attributes.insight.current;
 
         this._applyEquipment(actorData);
 
@@ -115,11 +115,11 @@ export class FabulaUltimaActor extends Actor {
 
                     // If the armor uses a static value for the defense, subtract the attribute from the total
                     if (!element.system.defense.useDex) {
-                        system.defenses.physical.bonus -= system.attributes.dexterity.base;
+                        system.defenses.physical.bonus -= system.attributes.dexterity.current;
                     }
 
                     if (!element.system.mDefense.useIns) {
-                        system.defenses.magic.bonus -= system.attributes.insight.base;
+                        system.defenses.magic.bonus -= system.attributes.insight.current;
                     }
 
                     if (actorData.type === "player")
