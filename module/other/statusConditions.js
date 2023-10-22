@@ -1,5 +1,10 @@
 export const statusConditions = [
     {
+        id: "dead",
+        label: "Dead",
+        icon: "systems/fabulaultima/assets/ui/conditions/death-skull.svg",
+    },
+    {
         id: "guard",
         label: "Guard",
         icon: "systems/fabulaultima/assets/ui/conditions/round-shield.svg",
@@ -320,6 +325,30 @@ export const statusConditions = [
                 key: "system.statuses.weak.immune",
                 mode: 4,
                 value: true,
+            },
+        ],
+    },
+    {
+        id: "withstand-mig",
+        label: "Withstand (MIG)",
+        icon: "systems/fabulaultima/assets/ui/conditions/internal-injury-mig.svg",
+        changes: [
+            {
+                key: "system.attributes.might.bonus",
+                mode: 2,
+                value: 2,
+            },
+        ],
+    },
+    {
+        id: "withstand-wlp",
+        label: "Withstand (WLP)",
+        icon: "systems/fabulaultima/assets/ui/conditions/internal-injury-wlp.svg",
+        changes: [
+            {
+                key: "system.attributes.willpower.bonus",
+                mode: 2,
+                value: 2,
             },
         ],
     },
