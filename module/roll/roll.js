@@ -239,6 +239,11 @@ export async function makeGroupRoll(
         } else leader = actor;
     });
 
+    if (leader === undefined) {
+        ui.notifications.error(game.i18n.localize("FU.UI.Notifications.noLeader"));
+        return;
+    }
+
     let leaderBonus = 0;
 
     if (initiativeRoll) {
