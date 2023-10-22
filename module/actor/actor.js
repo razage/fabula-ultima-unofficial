@@ -87,6 +87,33 @@ export class FabulaUltimaActor extends Actor {
         system.ip.value = clamp(system.ip.value, 0, system.ip.max);
 
         system.hp.crisis = Math.floor(system.hp.max / 2);
+
+        // Automatic application of Crisis status
+        if (system.hp.value <= system.hp.crisis) {
+            let effects = this.getEmbeddedCollection("ActiveEffect").contents;
+            let relEffect = effects.filter((effect) => effect.name === "Crisis");
+
+            // Crisis is not yet assigned
+            if (relEffect.length == 0) {
+                this.createEmbeddedDocuments("ActiveEffect", [
+                    {
+                        id: "crisis",
+                        label: "Crisis",
+                        icon: "systems/fabulaultima/assets/ui/conditions/heart-beats.svg",
+                        statuses: ["crisis"],
+                    },
+                ]);
+            }
+        }
+        // The creature is not in Crisis or it is no longer in Crisis
+        else {
+            let effects = this.getEmbeddedCollection("ActiveEffect").contents;
+            let relEffect = effects.filter((effect) => effect.name === "Crisis");
+
+            if (relEffect.length != 0) {
+                this.deleteEmbeddedDocuments("ActiveEffect", [relEffect[0]._id]);
+            }
+        }
     }
 
     _applyEquipment(actorData) {

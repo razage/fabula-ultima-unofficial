@@ -168,6 +168,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Daggers icon by Lorc
 -   Dart icon by Delapouite
 -   Death note icon by Lorc
+-   Death skull icon by sbed
 -   Deathcab icon by Lorc
 -   Desert Eagle icon by Skoll
 -   Devil mask icon by Delapouite
