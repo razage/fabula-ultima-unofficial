@@ -1,7 +1,7 @@
 import gulp from "gulp";
 import less from "gulp-less";
 
-const LESS_DEST = "./";
+const LESS_DEST = "./styles/";
 const LESS_SRC = "less/fabulaultima.less";
 const LESS_WATCH = ["less/*.less"];
 
