@@ -1,3 +1,11 @@
+/*  Modes
+0   Custom
+1   Multiply
+2   Add
+3   Downgrade
+4   Upgrade
+5   Override
+*/
 export const statusConditions = [
     {
         id: "dead",
@@ -325,6 +333,102 @@ export const statusConditions = [
                 key: "system.statuses.weak.immune",
                 mode: 4,
                 value: true,
+            },
+        ],
+    },
+    {
+        id: "vulnerability-air",
+        label: "Vulnerability (Air)",
+        icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-air.svg",
+        changes: [
+            {
+                key: "system.resistances.air",
+                mode: 3,
+                value: -1,
+            },
+        ],
+    },
+    {
+        id: "vulnerability-bolt",
+        label: "Vulnerability (Bolt)",
+        icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-bolt.svg",
+        changes: [
+            {
+                key: "system.resistances.bolt",
+                mode: 3,
+                value: -1,
+            },
+        ],
+    },
+    {
+        id: "vulnerability-dark",
+        label: "Vulnerability (Dark)",
+        icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-dark.svg",
+        changes: [
+            {
+                key: "system.resistances.earth",
+                mode: 3,
+                value: -1,
+            },
+        ],
+    },
+    {
+        id: "vulnerability-earth",
+        label: "Vulnerability (Earth)",
+        icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-earth.svg",
+        changes: [
+            {
+                key: "system.resistances.earth",
+                mode: 3,
+                value: -1,
+            },
+        ],
+    },
+    {
+        id: "vulnerability-fire",
+        label: "Vulnerability (Fire)",
+        icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-fire.svg",
+        changes: [
+            {
+                key: "system.resistances.fire",
+                mode: 3,
+                value: -1,
+            },
+        ],
+    },
+    {
+        id: "vulnerability-ice",
+        label: "Vulnerability (Ice)",
+        icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-ice.svg",
+        changes: [
+            {
+                key: "system.resistances.ice",
+                mode: 3,
+                value: -1,
+            },
+        ],
+    },
+    {
+        id: "vulnerability-light",
+        label: "Vulnerability (Light)",
+        icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-light.svg",
+        changes: [
+            {
+                key: "system.resistances.light",
+                mode: 3,
+                value: -1,
+            },
+        ],
+    },
+    {
+        id: "vulnerability-poison",
+        label: "Vulnerability (Poison)",
+        icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-poison.svg",
+        changes: [
+            {
+                key: "system.resistances.poison",
+                mode: 3,
+                value: -1,
             },
         ],
     },

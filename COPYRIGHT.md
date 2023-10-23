@@ -27,6 +27,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Anvil icon by Lorc
 -   Archer icon by Delapouite
 -   Archive research icon by Delapouite
+-   Armor downgrade icon by Delapouite
 -   Armor punch icon by Delapouite
 -   Arrow shield icon by Lorc
 -   Arrowhead icon by Lorc
