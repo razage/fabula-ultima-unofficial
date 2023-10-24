@@ -224,6 +224,18 @@ export const statusConditions = [
         ],
     },
     {
+        id: "resistance-dark",
+        label: "Resistance (Dark)",
+        icon: "systems/fabulaultima/assets/ui/conditions/skull-shield.svg",
+        changes: [
+            {
+                key: "system.resistances.dark",
+                mode: 4,
+                value: 1,
+            },
+        ],
+    },
+    {
         id: "elemental-shroud-earth",
         label: "Elemental Shroud (Earth)",
         icon: "systems/fabulaultima/assets/ui/conditions/cracked-shield.svg",
@@ -254,6 +266,30 @@ export const statusConditions = [
         changes: [
             {
                 key: "system.resistances.ice",
+                mode: 4,
+                value: 1,
+            },
+        ],
+    },
+    {
+        id: "resistance-light",
+        label: "Resistance (Light)",
+        icon: "systems/fabulaultima/assets/ui/conditions/rosa-shield.svg",
+        changes: [
+            {
+                key: "system.resistances.light",
+                mode: 4,
+                value: 1,
+            },
+        ],
+    },
+    {
+        id: "resistance-poison",
+        label: "Resistance (Poison)",
+        icon: "systems/fabulaultima/assets/ui/conditions/eye-shield.svg",
+        changes: [
+            {
+                key: "system.resistances.poison",
                 mode: 4,
                 value: 1,
             },
