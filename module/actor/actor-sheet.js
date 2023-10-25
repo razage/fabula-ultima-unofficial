@@ -55,7 +55,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
             this._prepareCharacterItems(data);
         }
 
-        if (this.actor.type === "npc") {
+        if (this.actor.type === "npc" || this.actor.type === "grand-summon") {
             data.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
                 async: true,
             });
@@ -166,38 +166,52 @@ export class FabulaUltimaActorSheet extends ActorSheet {
         const skillEffects = [];
         const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
 
-        sheetData.items.forEach((item) => {
-            switch (item.type) {
-                case "armor":
-                    armor.push(item);
-                    break;
+        if (sheetData.actor.type === "grand-summon") {
+            sheetData.items.forEach((item) => {
+                switch (item.type) {
+                    case "skill":
+                        skills.push(item);
+                        break;
 
-                case "accessory":
-                    accessories.push(item);
-                    break;
+                    case "skill-effect":
+                        skillEffects.push(item);
+                }
+            });
+        } else {
+            sheetData.items.forEach((item) => {
+                switch (item.type) {
+                    case "armor":
+                        armor.push(item);
+                        break;
 
-                case "skill":
-                    skills.push(item);
-                    break;
+                    case "accessory":
+                        accessories.push(item);
+                        break;
 
-                case "spell":
-                    spells.push(item);
-                    break;
+                    case "skill":
+                        skills.push(item);
+                        break;
 
-                case "weapon":
-                    weapons.push(item);
-                    break;
+                    case "spell":
+                        spells.push(item);
+                        break;
 
-                case "skill-effect":
-                    skillEffects.push(item);
-            }
-        });
+                    case "weapon":
+                        weapons.push(item);
+                        break;
 
-        actorData.system.accessories = accessories;
-        actorData.system.armor = armor;
+                    case "skill-effect":
+                        skillEffects.push(item);
+                }
+            });
+
+            actorData.system.accessories = accessories;
+            actorData.system.armor = armor;
+            actorData.system.spells = spells;
+            actorData.system.weapons = weapons;
+        }
+
         actorData.system.skills = skills;
-        actorData.system.spells = spells;
-        actorData.system.weapons = weapons;
         actorData.system.skillEffects = skillEffects;
     }
 

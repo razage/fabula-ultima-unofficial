@@ -53,6 +53,8 @@
     "FU.Companion.name": "Companion",
     "FU.Companion.heroic": "Heroic Companion",
     "FU.Companion.heroicEx": "Check this if you master the Wayfarer class and select this heroic skill. It will add the bonus HP automatically.",
+    "FU.Companion.ownerBonus": "Owner Bonus",
+    "FU.Companion.ownerBonusEx": "Grand Summons get a bonus to their HP equal to half of the summoner's max HP. Use your Crisis score.",
     "FU.Companion.ownerLevel": "Owner Level",
     "FU.Companion.ownerLevelEx": "Your character's current level.",
     "FU.Companion.skillLevel": "Skill Level",

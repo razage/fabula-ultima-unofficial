@@ -1,0 +1,164 @@
+<form class="{{cssClass}} npc-sheet" autocomplete="off" onkeydown="return event.key != 'Enter';">
+	<header class="sheet-header flexcol">
+		<div class="header-fields">
+			<div class="flexrow">
+				<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+				<h1 class="character-name"><input name="name" type="text" data-dtype="String" value="{{actor.name}}" />
+				</h1>
+			</div>
+
+			<div class="grid grid-6col">
+				<div class="flexrow">
+					<label for="system.level">{{localize "FU.Short.level"}}</label>
+					<input name="system.level" type="text" value="{{actor.system.level}}" data-dtype="Number" />
+					<label class="label-pad-left" for="system.ownerBonus">{{localize "FU.Companion.ownerBonus"}} <i
+							class="fas fa-solid fa-circle-question"
+							title="{{localize 'FU.Companion.ownerBonusEx'}}"></i></label>
+					<input name="system.ownerBonus" type="text" value="{{actor.system.ownerBonus}}"
+						data-dtype="Number" />
+				</div>
+			</div>
+
+			<div class="grid grid-2col">
+				<div class="flexrow">
+					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize
+					'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis
+					inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max isNPC=true}}
+					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="mp" title=(localize
+					'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value"
+					rValue=actor.system.mp.value rMax=actor.system.mp.max isNPC=true}}
+				</div>
+			</div>
+
+			<div class="grid grid-3col">
+				<div class="flexrow defenses">
+					<div class="flexcol">
+						<label for="system.defenses.physical.value"><i class="fas fa-solid fa-shield"></i> {{localize
+							"FU.Short.defense"}}</label>
+						<span>
+							<p>{{actor.system.defenses.physical.value}}</p>
+							<input name="system.defenses.physical.bonus" type="text"
+								value="{{actor.system.defenses.physical.bonus}}" data-dtype="Number" />
+						</span>
+					</div>
+
+					<div class="flexcol">
+						<label for="system.defenses.magic.value"><i class="fas fa-solid fa-circle-nodes"></i> {{localize
+							"FU.Short.magicDefense"}}</label>
+						<span>
+							<p>{{actor.system.defenses.magic.value}}</p>
+							<input name="system.defenses.magic.bonus" type="text"
+								value="{{actor.system.defenses.magic.bonus}}" data-dtype="Number" />
+						</span>
+					</div>
+
+					<div class="flexcol">
+						<label for="system.initiative.value"><i class="fas fa-solid fa-person-running"></i> {{localize
+							"FU.Short.initiative"}}</label>
+						<p class="initiative-score">{{actor.system.initiative.value}}</p>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="rolls"><i class="fas fa-solid fa-dice-d20"></i> {{localize "FU.UI.roll"}}</a>
+		<a class="item" data-tab="attributes"><i class="fas fa-solid fa-person"></i>
+			{{localize "FU.Attributes.name"}}</a>
+		<a class="item" data-tab="attacks"><i class="fas fa-solid fa-swords"></i> {{localize "FU.Plural.attack"}}</a>
+		<a class="item" data-tab="skills"><i class="fas fa-solid fa-paintbrush"></i> {{localize "FU.Plural.skill"}}</a>
+		<a class="item" data-tab="info"><i class="fas fa-solid fa-message"></i> {{localize "FU.UI.information"}}</a>
+		<a class="item" data-tab="effects"><i class="fa-solid fa-wand-magic-sparkles"></i> {{localize
+			"FU.Items.effects"}}</a>
+	</nav>
+
+	<section class="sheet-body">
+		{{> "systems/fabulaultima/templates/actor/partials/roll-tab.hbs"}}
+
+		<div class="tab attributes" data-group="primary" data-tab="attributes">
+			<div class="grid grid-4col">
+				<div class="flexrow">
+					{{#each actor.system.attributes as |attribute key|}}
+					<span class="stat-container">
+						<label for="system.attributes.{{key}}.base">{{localize (concat "FU.Attributes." key)}}</label>
+						{{> "systems/fabulaultima/templates/actor/partials/attribute-dropdown.hbs" stat=key
+						obj=attribute}}
+					</span>
+					{{/each}}
+				</div>
+			</div>
+			<h2>{{localize "FU.Status.name"}}</h2>
+			{{> "systems/fabulaultima/templates/actor/partials/conditions.hbs" isNPC=true}}
+			{{> "systems/fabulaultima/templates/actor/partials/resistances.hbs" isNPC=true}}
+		</div>
+
+		<div class="tab attacks" data-group="primary" data-tab="attacks">
+			<button class="fabula-button item-create" data-type="weapon"><i class="fas fa-solid fa-plus"></i></button>
+			<div class="item-list attacks">
+				{{#each actor.system.weapons as |item|}}
+				<div class="item" data-item-id="{{item._id}}">
+					{{> "systems/fabulaultima/templates/actor/partials/weapon-card.hbs" weapon=item}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="tab skills" data-group="primary" data-tab="skills">
+			<button class="fabula-button item-create" data-type="skill"><i class="fas fa-solid fa-plus"></i></button>
+			<div class="item-list spells">
+				{{#each actor.system.skills as |item|}}
+				<div class="item" data-item-id="{{item._id}}">
+					{{> "systems/fabulaultima/templates/actor/partials/skill-card.hbs" skill=item}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="tab info" data-group="primary" data-tab="info">
+			<div class="flexcol">
+				<div class="grid grid-2col">
+					<div class="flexrow">
+						<label for="system.rank">{{localize "FU.NPC.Rank.name"}}</label>
+						<p>{{localize "FU.NPC.Rank.soldier"}}</p>
+					</div>
+				</div>
+				<h2>{{localize "FU.NPC.specialRules"}}</h2>
+				<div class="editor-host">
+					{{editor enrichedSpecial target="system.specialRules" button=true owner=owner
+					editable=editable}}
+				</div>
+				<h3>{{localize "FU.UI.description"}}</h3>
+				<div class="editor-host">
+					{{editor enrichedDescription target="system.description" button=true owner=owner
+					editable=editable}}
+				</div>
+			</div>
+		</div>
+
+		{{!-- Buffs/Debuffs --}}
+		<div class="tab effects" data-group="primary" data-tab="effects">
+			<h2>
+				{{localize "FU.Items.Types.skillEffects"}}
+				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="skill-effects"
+					title="{{localize 'FU.UI.openCompendium'}}"></i>
+			</h2>
+			<div class="flexcol buffs">
+				<div class="item-list">
+					{{#each actor.system.skillEffects as |buff|}}
+					<div class="buff item" data-item-id="{{buff._id}}">
+						<div class="grid grid-3col">
+							<div class="flexrow">
+								<p>{{buff.name}}</p>
+								<button class="fabula-button item-delete" title="{{localize 'FU.UI.delete'}}"><i
+										class="fas fa-solid fa-trash"></i></button>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
