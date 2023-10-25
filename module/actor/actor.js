@@ -84,8 +84,7 @@ export class FabulaUltimaActor extends Actor {
 
         // Special version of an Arcanum granted by a heroic skill
         if (actorData.type === "grand-summon") {
-            system.hp.bonus = system.ownerBonus;
-            system.hp.max = system.attributes.might.base * 2 + system.hp.bonus;
+            system.hp.max = system.attributes.might.base * 2 + system.ownerBonus + system.hp.bonus;
 
             // They get no mana
             system.mp.max = 0;
@@ -239,7 +238,8 @@ export class FabulaUltimaActor extends Actor {
     static async create(data, options = {}) {
         data.prototypeToken = data.prototypeToken || {};
 
-        if (data.type === "player") {
+        // actorLink ONLY for actors that should be unique. Multiples will mirror each other.
+        if (data.type === "player" || data.type === "companion" || data.type === "grand-summon") {
             mergeObject(
                 data.prototypeToken,
                 {
