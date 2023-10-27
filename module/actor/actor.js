@@ -82,6 +82,20 @@ export class FabulaUltimaActor extends Actor {
             }
         }
 
+        // Special version of an Arcanum granted by a heroic skill
+        if (actorData.type === "grand-summon") {
+            system.hp.max = system.attributes.might.base * 2 + system.ownerBonus + system.hp.bonus;
+
+            // They get no mana
+            system.mp.max = 0;
+
+            // Calculate initiative
+            system.initiative.base = Math.floor(
+                (system.attributes.dexterity.base + system.attributes.insight.base) / 2
+            );
+            system.initiative.value = system.initiative.base + system.initiative.bonus;
+        }
+
         system.hp.value = clamp(system.hp.value, 0, system.hp.max);
         system.mp.value = clamp(system.mp.value, 0, system.mp.max);
         system.ip.value = clamp(system.ip.value, 0, system.ip.max);
@@ -224,7 +238,8 @@ export class FabulaUltimaActor extends Actor {
     static async create(data, options = {}) {
         data.prototypeToken = data.prototypeToken || {};
 
-        if (data.type === "player") {
+        // actorLink ONLY for actors that should be unique. Multiples will mirror each other.
+        if (data.type === "player" || data.type === "companion" || data.type === "grand-summon") {
             mergeObject(
                 data.prototypeToken,
                 {

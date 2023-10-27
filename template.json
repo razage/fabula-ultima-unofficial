@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["player", "companion", "npc", "group"],
+        "types": ["player", "companion", "npc", "grand-summon", "group"],
         "templates": {
             "charAttributes": {
                 "attributes": {
@@ -170,10 +170,31 @@
             "level": 5,
             "description": ""
         },
+        "grand-summon": {
+            "templates": [
+                "charAttributes",
+                "charBonuses",
+                "charDefenses",
+                "charStatuses",
+                "charResistances",
+                "charResources"
+            ],
+            "schemaVersion": "1.02",
+            "species": "Demon",
+            "rank": "soldier",
+            "initiative": {
+                "base": 0,
+                "bonus": 0,
+                "value": 0
+            },
+            "level": 30,
+            "ownerBonus": 0,
+            "description": "",
+            "specialRules": ""
+        },
         "group": {
-            "schemaVersion": "1.01",
+            "schemaVersion": "1.02",
             "partyMembers": [],
-            "characters": [],
             "creatures": "",
             "locations": "",
             "notes": ""
