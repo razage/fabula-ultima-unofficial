@@ -85,6 +85,10 @@
                 "spells": [],
                 "weapons": []
             },
+            "charFlags": {
+                "canSummon": false,
+                "hasFrenzy": false
+            },
             "charStatuses": {
                 "statuses": {
                     "slow": {
@@ -205,11 +209,12 @@
                 "charBonuses",
                 "charDefenses",
                 "charEquipment",
+                "charFlags",
                 "charStatuses",
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.30",
+            "schemaVersion": "1.31",
             "pronouns": "",
             "identity": "",
             "theme": "",
@@ -238,8 +243,6 @@
             "classes": [],
             "consumables": [],
             "zenit": 500,
-            "canSummon": false,
-            "hasFrenzy": false,
             "notes": ""
         },
         "npc": {
@@ -248,11 +251,12 @@
                 "charBonuses",
                 "charDefenses",
                 "charEquipment",
+                "charFlags",
                 "charStatuses",
                 "charResistances",
                 "charResources"
             ],
-            "schemaVersion": "1.09",
+            "schemaVersion": "1.10",
             "species": "Beast",
             "rank": "soldier",
             "isBoss": false,
