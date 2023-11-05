@@ -108,7 +108,7 @@ export class FabulaUltimaActor extends Actor {
             let relEffect = effects.filter((effect) => effect.name === "Crisis");
 
             // Crisis is not yet assigned
-            if (relEffect.length == 0) {
+            if (relEffect.length == 0 && game.user.isGM) {
                 this.createEmbeddedDocuments("ActiveEffect", [
                     {
                         id: "crisis",
@@ -124,7 +124,7 @@ export class FabulaUltimaActor extends Actor {
             let effects = this.getEmbeddedCollection("ActiveEffect").contents;
             let relEffect = effects.filter((effect) => effect.name === "Crisis");
 
-            if (relEffect.length != 0) {
+            if (relEffect.length != 0 && game.user.isGM) {
                 this.deleteEmbeddedDocuments("ActiveEffect", [relEffect[0]._id]);
             }
         }
