@@ -233,8 +233,8 @@ export class FabulaUltimaActor extends Actor {
                 let effects = this.getEmbeddedCollection("ActiveEffect").contents;
                 let relEffect = effects.filter((effect) => effect.name === "Crisis");
 
-                if (relEffect.length != 0) {
-                    this.deleteEmbeddedDocuments("ActiveEffect", [relEffect[0]._id]);
+                if (relEffect.length > 0) {
+                    this.deleteEmbeddedDocuments("ActiveEffect", relEffect.map(x => x._id));
                 }
             }
         }
