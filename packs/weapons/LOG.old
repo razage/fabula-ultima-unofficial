@@ -1,5 +1,5 @@
-2023/10/28-20:51:01.891076 146857124b38 Log #132: 0 ops saved to Table #135 OK
-2023/10/28-20:51:01.892313 146857124b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/weapons/000132.log: OK
-2023/10/28-20:51:01.914568 146857124b38 Table #134: 192 entries OK
-2023/10/28-20:51:01.916753 146857124b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/weapons/MANIFEST-000130: OK
-2023/10/28-20:51:01.949249 146857124b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/weapons; recovered 1 files; 57201 bytes. Some data may have been lost. ****
+2023/11/19-22:44:38.110649 1476a360fb38 Log #206: 0 ops saved to Table #207 OK
+2023/11/19-22:44:38.112141 1476a360fb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/weapons/000206.log: OK
+2023/11/19-22:44:38.119203 1476a360fb38 Table #199: 192 entries OK
+2023/11/19-22:44:38.121554 1476a360fb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/weapons/MANIFEST-000204: OK
+2023/11/19-22:44:38.373671 1476a360fb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/weapons; recovered 1 files; 57201 bytes. Some data may have been lost. ****

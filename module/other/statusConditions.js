@@ -9,12 +9,15 @@
 export const statusConditions = [
     {
         id: "dead",
-        label: "Dead",
+        label: "Surrendered",
+        description: "You have been defeated and surrendered to the enemy.",
         icon: "systems/fabulaultima/assets/ui/conditions/death-skull.svg",
     },
     {
         id: "guard",
         label: "Guard",
+        description:
+            "You enter a defensive stance, taking half damage from all sources until your next turn.",
         icon: "systems/fabulaultima/assets/ui/conditions/round-shield.svg",
         changes: [
             {
@@ -278,6 +281,19 @@ export const statusConditions = [
         changes: [
             {
                 key: "system.resistances.light",
+                mode: 4,
+                value: 1,
+            },
+        ],
+    },
+    {
+        id: "resistance-physical",
+        label: "Resistance (Physical)",
+        description: "1/2 damage from all sources that deal Physical damage.",
+        icon: "systems/fabulaultima/assets/ui/conditions/shieldcomb.svg",
+        changes: [
+            {
+                key: "system.resistances.physical",
                 mode: 4,
                 value: 1,
             },

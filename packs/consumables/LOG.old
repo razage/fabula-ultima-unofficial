@@ -1,5 +1,5 @@
-2023/10/28-20:50:59.997275 146856f21b38 Log #230: 0 ops saved to Table #233 OK
-2023/10/28-20:50:59.998400 146856f21b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/consumables/000230.log: OK
-2023/10/28-20:50:59.999676 146856f21b38 Table #232: 5 entries OK
-2023/10/28-20:51:00.001376 146856f21b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/consumables/MANIFEST-000228: OK
-2023/10/28-20:51:00.035549 146856f21b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/consumables; recovered 1 files; 1301 bytes. Some data may have been lost. ****
+2023/11/19-22:44:37.074412 1476a340cb38 Log #304: 0 ops saved to Table #305 OK
+2023/11/19-22:44:37.075685 1476a340cb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/consumables/000304.log: OK
+2023/11/19-22:44:37.077116 1476a340cb38 Table #297: 5 entries OK
+2023/11/19-22:44:37.079018 1476a340cb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/consumables/MANIFEST-000302: OK
+2023/11/19-22:44:37.129673 1476a340cb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/consumables; recovered 1 files; 1301 bytes. Some data may have been lost. ****

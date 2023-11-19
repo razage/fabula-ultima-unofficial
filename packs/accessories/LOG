@@ -1,11 +1,1 @@
-2023/10/28-20:50:59.430079 146856b1bb38 Delete type=3 #1
-2023/10/29-20:14:46.316079 1465d667fb38 Level-0 table #238: started
-2023/10/29-20:14:46.316545 1465d667fb38 Level-0 table #238: 0 bytes OK
-2023/10/29-20:14:46.373762 1465d667fb38 Delete type=0 #236
-2023/10/29-20:14:46.399959 1465d667fb38 Manual compaction at level-0 from '!items!1K4ZvMARzqVu7S41' @ 72057594037927935 : 1 .. '!items.effects!wrw3ekQ0sB2NjntI.aTIWTbmG6AlIGLZQ' @ 0 : 0; will stop at '!items.effects!wrw3ekQ0sB2NjntI.aTIWTbmG6AlIGLZQ' @ 41 : 1
-2023/10/29-20:14:46.400029 1465d667fb38 Compacting 1@0 + 0@1 files
-2023/10/29-20:14:46.449449 1465d667fb38 Generated table #239@0: 44 keys, 10079 bytes
-2023/10/29-20:14:46.449517 1465d667fb38 Compacted 1@0 + 0@1 files => 10079 bytes
-2023/10/29-20:14:46.471436 1465d667fb38 compacted to: files[ 0 1 0 0 0 0 0 ]
-2023/10/29-20:14:46.472097 1465d667fb38 Delete type=2 #233
-2023/10/29-20:14:46.516442 1465d667fb38 Manual compaction at level-0 from '!items.effects!wrw3ekQ0sB2NjntI.aTIWTbmG6AlIGLZQ' @ 41 : 1 .. '!items.effects!wrw3ekQ0sB2NjntI.aTIWTbmG6AlIGLZQ' @ 0 : 0; will stop at (end)
+2023/11/19-22:44:36.562637 1476a3812b38 Delete type=3 #1

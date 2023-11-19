@@ -1,5 +1,5 @@
-2023/10/28-20:51:00.706573 146856d1eb38 Log #232: 0 ops saved to Table #235 OK
-2023/10/28-20:51:00.707973 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/npcs/000232.log: OK
-2023/10/28-20:51:00.711377 146856d1eb38 Table #234: 421 entries OK
-2023/10/28-20:51:00.713409 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/npcs/MANIFEST-000230: OK
-2023/10/28-20:51:00.773172 146856d1eb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/npcs; recovered 1 files; 199654 bytes. Some data may have been lost. ****
+2023/11/19-22:44:37.459081 1476a3812b38 Log #306: 0 ops saved to Table #309 OK
+2023/11/19-22:44:37.460249 1476a3812b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/npcs/000306.log: OK
+2023/11/19-22:44:37.462156 1476a3812b38 Table #308: 421 entries OK
+2023/11/19-22:44:37.464020 1476a3812b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/npcs/MANIFEST-000304: OK
+2023/11/19-22:44:37.488427 1476a3812b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/npcs; recovered 1 files; 199728 bytes. Some data may have been lost. ****

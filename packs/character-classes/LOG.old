@@ -1,5 +1,5 @@
-2023/10/28-20:50:59.872985 146856d1eb38 Log #232: 0 ops saved to Table #235 OK
-2023/10/28-20:50:59.874302 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/character-classes/000232.log: OK
-2023/10/28-20:50:59.875750 146856d1eb38 Table #234: 24 entries OK
-2023/10/28-20:50:59.877646 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/character-classes/MANIFEST-000230: OK
-2023/10/28-20:50:59.910457 146856d1eb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/character-classes; recovered 1 files; 5421 bytes. Some data may have been lost. ****
+2023/11/19-22:44:36.949551 1476a3812b38 Log #306: 0 ops saved to Table #307 OK
+2023/11/19-22:44:36.950976 1476a3812b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/character-classes/000306.log: OK
+2023/11/19-22:44:36.962460 1476a3812b38 Table #299: 24 entries OK
+2023/11/19-22:44:36.964842 1476a3812b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/character-classes/MANIFEST-000304: OK
+2023/11/19-22:44:36.996026 1476a3812b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/character-classes; recovered 1 files; 5421 bytes. Some data may have been lost. ****

@@ -1,5 +1,5 @@
-2023/10/28-20:51:01.633766 146856d1eb38 Log #214: 0 ops saved to Table #217 OK
-2023/10/28-20:51:01.634872 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables/000214.log: OK
-2023/10/28-20:51:01.641618 146856d1eb38 Table #216: 25 entries OK
-2023/10/28-20:51:01.643701 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables/MANIFEST-000212: OK
-2023/10/28-20:51:01.738793 146856d1eb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables; recovered 1 files; 3135 bytes. Some data may have been lost. ****
+2023/11/19-22:44:37.976845 1476a3812b38 Log #288: 0 ops saved to Table #289 OK
+2023/11/19-22:44:37.978045 1476a3812b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables/000288.log: OK
+2023/11/19-22:44:37.989542 1476a3812b38 Table #281: 25 entries OK
+2023/11/19-22:44:37.991569 1476a3812b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables/MANIFEST-000286: OK
+2023/11/19-22:44:38.039095 1476a3812b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables; recovered 1 files; 3135 bytes. Some data may have been lost. ****

@@ -1,5 +1,5 @@
-2023/10/28-20:50:59.624841 146856d1eb38 Log #233: 0 ops saved to Table #236 OK
-2023/10/28-20:50:59.626102 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/arcana/000233.log: OK
-2023/10/28-20:50:59.634757 146856d1eb38 Table #235: 17 entries OK
-2023/10/28-20:50:59.636676 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/arcana/MANIFEST-000231: OK
-2023/10/28-20:50:59.679926 146856d1eb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/arcana; recovered 1 files; 6793 bytes. Some data may have been lost. ****
+2023/11/19-22:44:36.709484 1476a3209b38 Log #307: 0 ops saved to Table #308 OK
+2023/11/19-22:44:36.710733 1476a3209b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/arcana/000307.log: OK
+2023/11/19-22:44:36.712234 1476a3209b38 Table #300: 17 entries OK
+2023/11/19-22:44:36.714360 1476a3209b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/arcana/MANIFEST-000305: OK
+2023/11/19-22:44:36.745735 1476a3209b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/arcana; recovered 1 files; 6793 bytes. Some data may have been lost. ****

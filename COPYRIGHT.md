@@ -389,6 +389,7 @@ All icons are obtained from https://game-icons.net/ under the [CC-BY-3.0 license
 -   Sherlock Holmes icon by Delapouite
 -   Shield opposition icon by Delapouite
 -   Shield reflect icon by Delapouite
+-   Shieldcomb icon by Lorc
 -   Shiny omega icon by Lorc
 -   Shirt icon by Lucas
 -   Shuriken icon by Lorc

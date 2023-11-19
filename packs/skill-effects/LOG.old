@@ -1,5 +1,5 @@
-2023/10/28-20:51:01.142959 146856d1eb38 Log #59: 0 ops saved to Table #62 OK
-2023/10/28-20:51:01.144201 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/skill-effects/000059.log: OK
-2023/10/28-20:51:01.154476 146856d1eb38 Table #61: 36 entries OK
-2023/10/28-20:51:01.156747 146856d1eb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/skill-effects/MANIFEST-000057: OK
-2023/10/28-20:51:01.206913 146856d1eb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/skill-effects; recovered 1 files; 6091 bytes. Some data may have been lost. ****
+2023/11/19-22:44:37.743710 1476a3209b38 Log #133: 0 ops saved to Table #134 OK
+2023/11/19-22:44:37.744965 1476a3209b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/skill-effects/000133.log: OK
+2023/11/19-22:44:37.752772 1476a3209b38 Table #126: 36 entries OK
+2023/11/19-22:44:37.754962 1476a3209b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/skill-effects/MANIFEST-000131: OK
+2023/11/19-22:44:37.780561 1476a3209b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/skill-effects; recovered 1 files; 6091 bytes. Some data may have been lost. ****

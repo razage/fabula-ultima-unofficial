@@ -1,5 +1,5 @@
-2023/10/28-20:51:00.338642 146857124b38 Log #230: 0 ops saved to Table #233 OK
-2023/10/28-20:51:00.339990 146857124b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/npc-skills/000230.log: OK
-2023/10/28-20:51:00.341649 146857124b38 Table #232: 22 entries OK
-2023/10/28-20:51:00.343621 146857124b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/npc-skills/MANIFEST-000228: OK
-2023/10/28-20:51:00.553127 146857124b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/npc-skills; recovered 1 files; 7266 bytes. Some data may have been lost. ****
+2023/11/19-22:44:37.341356 1476a360fb38 Log #304: 0 ops saved to Table #305 OK
+2023/11/19-22:44:37.342392 1476a360fb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/npc-skills/000304.log: OK
+2023/11/19-22:44:37.360874 1476a360fb38 Table #297: 22 entries OK
+2023/11/19-22:44:37.363214 1476a360fb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/npc-skills/MANIFEST-000302: OK
+2023/11/19-22:44:37.405039 1476a360fb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/npc-skills; recovered 1 files; 7266 bytes. Some data may have been lost. ****

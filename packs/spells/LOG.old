@@ -1,5 +1,5 @@
-2023/10/28-20:51:01.290969 146856f21b38 Log #233: 0 ops saved to Table #236 OK
-2023/10/28-20:51:01.292084 146856f21b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/spells/000233.log: OK
-2023/10/28-20:51:01.293468 146856f21b38 Table #235: 47 entries OK
-2023/10/28-20:51:01.295511 146856f21b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/spells/MANIFEST-000231: OK
-2023/10/28-20:51:01.336940 146856f21b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/spells; recovered 1 files; 24044 bytes. Some data may have been lost. ****
+2023/11/19-22:44:37.835285 1476a340cb38 Log #307: 0 ops saved to Table #308 OK
+2023/11/19-22:44:37.836480 1476a340cb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/spells/000307.log: OK
+2023/11/19-22:44:37.868899 1476a340cb38 Table #300: 47 entries OK
+2023/11/19-22:44:37.871222 1476a340cb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/spells/MANIFEST-000305: OK
+2023/11/19-22:44:37.897510 1476a340cb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/spells; recovered 1 files; 24044 bytes. Some data may have been lost. ****
