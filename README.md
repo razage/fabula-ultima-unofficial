@@ -2,10 +2,10 @@
 
 A fan-made system for Foundry Virtual Tabletop to implement the ruleset for _Fabula Ultima_, a TTJRPG published by NEED GAMES!
 
-![Character Sheet - Attributes Tab](./screenshots/attribtab.png)
-![Character Sheet - Class Tab](./screenshots/classtab.png)
-![Character Sheet - Gear Tab](./screenshots/geartab.png)
-![Group Sheet](./screenshots/groupsheet.png)
+![Character Sheet - Attributes Tab](./screenshots/attribtab.PNG)
+![Character Sheet - Class Tab](./screenshots/classtab.PNG)
+![Character Sheet - Gear Tab](./screenshots/geartab.PNG)
+![Group Sheet](./screenshots/groupsheet.PNG)
 
 ## Disclaimer
 
