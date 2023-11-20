@@ -16,21 +16,15 @@ Early on in the project, I decided to make my sheets mimic the old-school _Final
 
 ## Status
 
-This project is still in development and currently in a beta phase. I am testing it with a group I am running and mostly focusing on bugs.
+This project is still in development and currently in a beta phase.
 
 ### Future Content
 
-If/when new DLC or expansion modules are released for Fabula Ultima, I will probably get around to adding it in eventually. Certain things I will not add myself, such as major mechanic variants. I know there's something on the creator's Patreon about class spheres and that would be a large departure from what I've made, so I will not implement that, for example.
-
-I am working on a basic implementation of the Ace of Cards. GMs won't enjoy running it, especially if there's multiple players using that class.
+If/when new DLC or expansion modules are released for Fabula Ultima, I will probably get around to adding it in eventually. If a rule or new book features something that is optional, there is a chance I might not implement it.
 
 ## Installation
 
 In order to install this system, you will need to download this repository as a zip file and extract it to your foundry/systems folder. Alternatively, you can use the url `https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json` in the "Manifest URL" field when you click "Install System"
-
-### Note for Beta Users
-
-If you happened to use this system while I had a beta branch and you were using that, you will have to recreate your world. It is pulling updates from the wrong place, and it won't work anymore. I will never do this again so it shouldn't be a problem going forward. You should be able to export anything that you made and reimport it when you create your new world.
 
 ### Recommended Modules
 
@@ -47,4 +41,6 @@ The code in this repository was written by Razage &copy; 2023 under the MIT lice
 
 ## Icons
 
-Due to the length of the list of icons in use, this has been moved to its own file. Please see [this file](./COPYRIGHT.md) all of the credits and information.
+All icons were obtained on [game-icons.net](https://game-icons.net/) and licensed under [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/)
+
+Due to the length of the list of icons in use, this has been moved to its own file. Please see [this file](./COPYRIGHT.md) the credits for each specific icon.
