@@ -30,29 +30,29 @@
                 </div>
                 {{/if}}
 
-                <div class="flexrow">
+                <div class="flexrow" style="text-align: center">
+                    <p class="defense" title="{{localize 'FU.Attributes.defense'}}"><i
+                            class="fas fa-solid fa-shield"></i> {{localize "FU.Short.defense"}}:
+                        {{actor.system.defenses.physical.value}}</p>
+                    <p class="mdefense" title="{{localize 'FU.Attributes.magicDefense'}}"><i
+                            class="fas fa-solid fa-circle-nodes"></i> {{localize "FU.Short.magicDefense"}}:
+                        {{actor.system.defenses.magic.value}}</p>
                     <span class="fabula">
                         <label for="system.fabulaPoints" title="{{localize 'FU.Resources.fp'}}">
-                            <i class="fas fa-solid fa-feather"></i>
-                            FP:
+                            <i class="fas fa-solid fa-feather"></i> {{localize "FU.Short.fabulaPoints"}}:
                         </label>
                         <input name="system.fabulaPoints" type="text" data-dtype="Number"
                             value="{{actor.system.fabulaPoints}}" />
                     </span>
                     <span class="experience">
                         <label for="system.experiencePoints" title="{{localize 'FU.Resources.xp'}}">
-                            <i class="fas fa-solid fa-arrow-trend-up"></i>
-                            XP:
+                            <i class="fas fa-solid fa-arrow-trend-up"></i> {{localize "FU.Short.experiencePoints"}}:
                         </label>
                         <input name="system.experiencePoints" type="text" data-dtype="Number"
                             value="{{actor.system.experiencePoints}}" />
                     </span>
-                    <span class="initiative"><i class="fas fa-solid fa-person-running"></i> {{localize
-                        "FU.Attributes.initiative"}}:
-                        {{actor.system.initiativeMod}}</span>
                 </div>
             </div>
-
             {{!-- Status Conditions --}}
             {{> "systems/fabulaultima/templates/actor/partials/conditions.hbs"}}
         </div>
@@ -108,16 +108,9 @@
                         {{/each}}
                     </div>
                 </div>
-                <h2>{{localize "FU.UI.defenses"}}</h2>
-                <div class="grid grid-2col defenses">
-                    <div class="flexrow">
-                        <p class="defense"><i class="fas fa-solid fa-shield"></i> {{localize
-                            "FU.Attributes.defense"}}:
-                            {{actor.system.defenses.physical.value}}</p>
-                        <p class="mdefense"><i class="fas fa-solid fa-circle-nodes"></i> {{localize
-                            "FU.Attributes.magicDefense"}}:
-                            {{actor.system.defenses.magic.value}}</p>
-                    </div>
+                <div class="flexrow">
+                    <span class="player-initiative" title="{{localize 'FU.Attributes.initiative'}}"><i
+                            class="fas fa-solid fa-person-running"></i> {{actor.system.initiativeMod}}</span>
                 </div>
                 {{> "systems/fabulaultima/templates/actor/partials/resistances.hbs"}}
             </div>

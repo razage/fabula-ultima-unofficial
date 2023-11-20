@@ -199,6 +199,13 @@ h4.dice-total .multi {
   color: #f8f8f8;
   width: 2rem;
 }
+.character-sheet .player-initiative,
+.npc-sheet .player-initiative {
+  color: #f8f8f8;
+  width: 2rem;
+  text-align: center;
+  padding-top: 12px;
+}
 .character-sheet .attributes label,
 .npc-sheet .attributes label,
 .character-sheet .defenses label,

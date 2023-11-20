@@ -1,5 +1,11 @@
-2023/11/19-22:44:37.976845 1476a3812b38 Log #288: 0 ops saved to Table #289 OK
-2023/11/19-22:44:37.978045 1476a3812b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables/000288.log: OK
-2023/11/19-22:44:37.989542 1476a3812b38 Table #281: 25 entries OK
-2023/11/19-22:44:37.991569 1476a3812b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables/MANIFEST-000286: OK
-2023/11/19-22:44:38.039095 1476a3812b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables; recovered 1 files; 3135 bytes. Some data may have been lost. ****
+2023/11/19-22:44:38.098111 1476a3812b38 Delete type=3 #1
+2023/11/20-03:12:34.939551 147422905b38 Level-0 table #293: started
+2023/11/20-03:12:34.939988 147422905b38 Level-0 table #293: 0 bytes OK
+2023/11/20-03:12:34.980706 147422905b38 Delete type=0 #291
+2023/11/20-03:12:35.039717 147422905b38 Manual compaction at level-0 from '!tables!ZE4i9679EP7F8LYh' @ 72057594037927935 : 1 .. '!tables.results!y2cqdkNogUCbjybR.s0LhNp1eUYaI2IjG' @ 0 : 0; will stop at '!tables.results!y2cqdkNogUCbjybR.s0LhNp1eUYaI2IjG' @ 24 : 1
+2023/11/20-03:12:35.039789 147422905b38 Compacting 1@0 + 0@1 files
+2023/11/20-03:12:35.073009 147422905b38 Generated table #294@0: 25 keys, 3135 bytes
+2023/11/20-03:12:35.073090 147422905b38 Compacted 1@0 + 0@1 files => 3135 bytes
+2023/11/20-03:12:35.096550 147422905b38 compacted to: files[ 0 1 0 0 0 0 0 ]
+2023/11/20-03:12:35.097264 147422905b38 Delete type=2 #281
+2023/11/20-03:12:35.181125 147422905b38 Manual compaction at level-0 from '!tables.results!y2cqdkNogUCbjybR.s0LhNp1eUYaI2IjG' @ 24 : 1 .. '!tables.results!y2cqdkNogUCbjybR.s0LhNp1eUYaI2IjG' @ 0 : 0; will stop at (end)

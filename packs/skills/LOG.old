@@ -1,5 +1,11 @@
-2023/11/19-22:44:37.604937 1476a360fb38 Log #311: 0 ops saved to Table #312 OK
-2023/11/19-22:44:37.606095 1476a360fb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/skills/000311.log: OK
-2023/11/19-22:44:37.633456 1476a360fb38 Table #304: 140 entries OK
-2023/11/19-22:44:37.635683 1476a360fb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/skills/MANIFEST-000309: OK
-2023/11/19-22:44:37.663768 1476a360fb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/skills; recovered 1 files; 59444 bytes. Some data may have been lost. ****
+2023/11/19-22:44:37.731006 1476a360fb38 Delete type=3 #1
+2023/11/20-03:12:34.780698 147422905b38 Level-0 table #316: started
+2023/11/20-03:12:34.781164 147422905b38 Level-0 table #316: 0 bytes OK
+2023/11/20-03:12:34.813972 147422905b38 Delete type=0 #314
+2023/11/20-03:12:34.873054 147422905b38 Manual compaction at level-0 from '!folders!4DukP50q12i8v8Pb' @ 72057594037927935 : 1 .. '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 0 : 0; will stop at '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 563 : 1
+2023/11/20-03:12:34.873145 147422905b38 Compacting 1@0 + 0@1 files
+2023/11/20-03:12:34.922784 147422905b38 Generated table #317@0: 140 keys, 59444 bytes
+2023/11/20-03:12:34.922849 147422905b38 Compacted 1@0 + 0@1 files => 59444 bytes
+2023/11/20-03:12:34.938388 147422905b38 compacted to: files[ 0 1 0 0 0 0 0 ]
+2023/11/20-03:12:34.939044 147422905b38 Delete type=2 #304
+2023/11/20-03:12:35.039638 147422905b38 Manual compaction at level-0 from '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 563 : 1 .. '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 0 : 0; will stop at (end)

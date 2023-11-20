@@ -175,6 +175,8 @@
     "FU.Short.dexterity": "DEX",
     "FU.Short.difficultyLevel": "DL",
     "FU.Short.dualWielding": "DW",
+    "FU.Short.experiencePoints": "XP",
+    "FU.Short.fabulaPoints": "FP",
     "FU.Short.highRoll": "HR",
     "FU.Short.hitPoints": "HP",
     "FU.Short.immune": "IM",
