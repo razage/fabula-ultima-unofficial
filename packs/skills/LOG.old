@@ -1,11 +1,14 @@
-2023/11/19-22:44:37.731006 1476a360fb38 Delete type=3 #1
-2023/11/20-03:12:34.780698 147422905b38 Level-0 table #316: started
-2023/11/20-03:12:34.781164 147422905b38 Level-0 table #316: 0 bytes OK
-2023/11/20-03:12:34.813972 147422905b38 Delete type=0 #314
-2023/11/20-03:12:34.873054 147422905b38 Manual compaction at level-0 from '!folders!4DukP50q12i8v8Pb' @ 72057594037927935 : 1 .. '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 0 : 0; will stop at '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 563 : 1
-2023/11/20-03:12:34.873145 147422905b38 Compacting 1@0 + 0@1 files
-2023/11/20-03:12:34.922784 147422905b38 Generated table #317@0: 140 keys, 59444 bytes
-2023/11/20-03:12:34.922849 147422905b38 Compacted 1@0 + 0@1 files => 59444 bytes
-2023/11/20-03:12:34.938388 147422905b38 compacted to: files[ 0 1 0 0 0 0 0 ]
-2023/11/20-03:12:34.939044 147422905b38 Delete type=2 #304
-2023/11/20-03:12:35.039638 147422905b38 Manual compaction at level-0 from '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 563 : 1 .. '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 0 : 0; will stop at (end)
+2023/11/20-03:18:53.765345 147ca4353b38 Recovering log #315
+2023/11/20-03:18:53.859681 147ca4353b38 Delete type=3 #313
+2023/11/20-03:18:53.860284 147ca4353b38 Delete type=0 #315
+2023/11/20-18:27:42.066694 147a23b2db38 Level-0 table #321: started
+2023/11/20-18:27:42.114509 147a23b2db38 Level-0 table #321: 1686 bytes OK
+2023/11/20-18:27:42.148797 147a23b2db38 Delete type=0 #319
+2023/11/20-18:27:42.316445 147a23b2db38 Manual compaction at level-0 from '!folders!4DukP50q12i8v8Pb' @ 72057594037927935 : 1 .. '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 0 : 0; will stop at '!items!zk5RoJ1DtWovsuKU' @ 580 : 1
+2023/11/20-18:27:42.316517 147a23b2db38 Compacting 1@0 + 1@1 files
+2023/11/20-18:27:42.374925 147a23b2db38 Generated table #322@0: 140 keys, 59531 bytes
+2023/11/20-18:27:42.375006 147a23b2db38 Compacted 1@0 + 1@1 files => 59531 bytes
+2023/11/20-18:27:42.423763 147a23b2db38 compacted to: files[ 0 1 0 0 0 0 0 ]
+2023/11/20-18:27:42.424537 147a23b2db38 Delete type=2 #317
+2023/11/20-18:27:42.425135 147a23b2db38 Delete type=2 #321
+2023/11/20-18:27:42.484357 147a23b2db38 Manual compaction at level-0 from '!items!zk5RoJ1DtWovsuKU' @ 580 : 1 .. '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 0 : 0; will stop at (end)
