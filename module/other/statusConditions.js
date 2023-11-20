@@ -508,4 +508,17 @@ export const statusConditions = [
             },
         ],
     },
+    {
+        id: "accuracy-buff-1",
+        label: "Accuracy Bonus (+1)",
+        description: "You have a +1 on all Accuracy Checks.",
+        icon: "systems/fabulaultima/assets/ui/conditions/bullseye.svg",
+        changes: [
+            {
+                key: "system.bonuses.accuracy.physical",
+                mode: 2,
+                value: 1,
+            },
+        ],
+    },
 ];
