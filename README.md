@@ -2,6 +2,11 @@
 
 A fan-made system for Foundry Virtual Tabletop to implement the ruleset for _Fabula Ultima_, a TTJRPG published by NEED GAMES!
 
+![Character Sheet - Attributes Tab](./screenshots/attribtab.png)
+![Character Sheet - Class Tab](./screenshots/classtab.png)
+![Character Sheet - Gear Tab](./screenshots/geartab.png)
+![Group Sheet](./screenshots/groupsheet.png)
+
 ## Disclaimer
 
 This system is unaffiliated with the creators or the publisher. The software is not made to invalidate or replace the official core rulebook. The only intention is to manage the math and dice rolls and allow Foundry users to play Fabula Ultima more conveniently. Please support the creator and/or his publisher by buying the book or supporting his Patreon.
