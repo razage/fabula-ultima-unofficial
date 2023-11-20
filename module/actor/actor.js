@@ -222,6 +222,7 @@ export class FabulaUltimaActor extends Actor {
                         {
                             id: "crisis",
                             label: "Crisis",
+                            description: "You are at half health or lower. Nearing defeat...",
                             icon: "systems/fabulaultima/assets/ui/conditions/heart-beats.svg",
                             statuses: ["crisis"],
                         },
@@ -234,10 +235,14 @@ export class FabulaUltimaActor extends Actor {
                 let relEffect = effects.filter((effect) => effect.name === "Crisis");
 
                 if (relEffect.length > 0) {
-                    this.deleteEmbeddedDocuments("ActiveEffect", relEffect.map(x => x._id));
+                    this.deleteEmbeddedDocuments(
+                        "ActiveEffect",
+                        relEffect.map((x) => x._id)
+                    );
                 }
             }
         }
+        super._onUpdate(data, options, userId);
     }
 
     static async create(data, options = {}) {
