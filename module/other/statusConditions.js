@@ -14,6 +14,13 @@ export const statusConditions = [
         icon: "systems/fabulaultima/assets/ui/conditions/death-skull.svg",
     },
     {
+        id: "crisis",
+        label: "Crisis",
+        description: "You are at half health or lower. Nearing defeat...",
+        icon: "systems/fabulaultima/assets/ui/conditions/heart-beats.svg",
+        statuses: ["crisis"],
+    },
+    {
         id: "guard",
         label: "Guard",
         description:

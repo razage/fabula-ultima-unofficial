@@ -1,4 +1,5 @@
 import { clamp } from "../other/helpers.js";
+import { statusConditions } from "../other/statusConditions.js";
 
 export class FabulaUltimaActor extends Actor {
     prepareData() {
@@ -219,13 +220,7 @@ export class FabulaUltimaActor extends Actor {
                 // Crisis is not yet assigned
                 if (relEffect.length == 0) {
                     this.createEmbeddedDocuments("ActiveEffect", [
-                        {
-                            id: "crisis",
-                            label: "Crisis",
-                            description: "You are at half health or lower. Nearing defeat...",
-                            icon: "systems/fabulaultima/assets/ui/conditions/heart-beats.svg",
-                            statuses: ["crisis"],
-                        },
+                        statusConditions.filter((s) => s.id == "crisis")[0],
                     ]);
                 }
             }
