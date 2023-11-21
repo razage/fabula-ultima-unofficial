@@ -1,11 +1,7 @@
-2023/11/19-22:44:37.447376 1476a360fb38 Delete type=3 #1
-2023/11/20-03:12:34.180679 147422905b38 Level-0 table #309: started
-2023/11/20-03:12:34.181126 147422905b38 Level-0 table #309: 0 bytes OK
-2023/11/20-03:12:34.221889 147422905b38 Delete type=0 #307
-2023/11/20-03:12:34.297543 147422905b38 Manual compaction at level-0 from '!items!5ezTcRkfWcIqqKG8' @ 72057594037927935 : 1 .. '!items.effects!taXrMqghYhTEmB1j.nwPUkQZ1hGFDndeW' @ 0 : 0; will stop at '!items.effects!taXrMqghYhTEmB1j.nwPUkQZ1hGFDndeW' @ 29 : 1
-2023/11/20-03:12:34.297609 147422905b38 Compacting 1@0 + 0@1 files
-2023/11/20-03:12:34.355732 147422905b38 Generated table #310@0: 22 keys, 7266 bytes
-2023/11/20-03:12:34.355804 147422905b38 Compacted 1@0 + 0@1 files => 7266 bytes
-2023/11/20-03:12:34.379696 147422905b38 compacted to: files[ 0 1 0 0 0 0 0 ]
-2023/11/20-03:12:34.380377 147422905b38 Delete type=2 #297
-2023/11/20-03:12:34.514328 147422905b38 Manual compaction at level-0 from '!items.effects!taXrMqghYhTEmB1j.nwPUkQZ1hGFDndeW' @ 29 : 1 .. '!items.effects!taXrMqghYhTEmB1j.nwPUkQZ1hGFDndeW' @ 0 : 0; will stop at (end)
+2023/11/21-01:36:38.519050 147ca4556b38 Recovering log #317
+2023/11/21-01:36:38.758186 147ca4556b38 Delete type=3 #315
+2023/11/21-01:36:38.758756 147ca4556b38 Delete type=0 #317
+2023/11/21-01:53:38.611971 147a23b2db38 Level-0 table #322: started
+2023/11/21-01:53:38.612402 147a23b2db38 Level-0 table #322: 0 bytes OK
+2023/11/21-01:53:38.663984 147a23b2db38 Delete type=0 #320
+2023/11/21-01:53:38.756169 147a23b2db38 Manual compaction at level-0 from '!items!5ezTcRkfWcIqqKG8' @ 72057594037927935 : 1 .. '!items.effects!taXrMqghYhTEmB1j.nwPUkQZ1hGFDndeW' @ 0 : 0; will stop at (end)

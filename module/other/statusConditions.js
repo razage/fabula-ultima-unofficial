@@ -14,6 +14,13 @@ export const statusConditions = [
         icon: "systems/fabulaultima/assets/ui/conditions/death-skull.svg",
     },
     {
+        id: "crisis",
+        label: "Crisis",
+        description: "You are at half health or lower. Nearing defeat...",
+        icon: "systems/fabulaultima/assets/ui/conditions/heart-beats.svg",
+        statuses: ["crisis"],
+    },
+    {
         id: "guard",
         label: "Guard",
         description:
@@ -70,11 +77,14 @@ export const statusConditions = [
     {
         id: "flying",
         label: "Flying",
+        description:
+            "May not be targeted by melee attacks. Can be forced to land with an opportunity or certain effects. This creature will automatically land when it enters Crisis.",
         icon: "systems/fabulaultima/assets/ui/conditions/curly-wing.svg",
     },
     {
         id: "dazed",
         label: "Dazed",
+        description: "Insight (INS) is lowered by one die size (min. d6).",
         icon: "systems/fabulaultima/assets/ui/knocked-out-stars.svg",
         changes: [
             {
@@ -87,6 +97,7 @@ export const statusConditions = [
     {
         id: "enraged",
         label: "Enraged",
+        description: "Dexterity (DEX) and Insight (INS) are lowered by one die size (min. d6).",
         icon: "systems/fabulaultima/assets/ui/enrage.svg",
         changes: [
             {
@@ -104,6 +115,7 @@ export const statusConditions = [
     {
         id: "poisoned",
         label: "Poisoned",
+        description: "Might (MIG) and Willpower (WLP) are lowered by one die size (min. d6).",
         icon: "systems/fabulaultima/assets/ui/poison-bottle.svg",
         changes: [
             {
@@ -121,6 +133,7 @@ export const statusConditions = [
     {
         id: "shaken",
         label: "Shaken",
+        description: "Willpower (WLP) is lowered by one die size (min. d6)",
         icon: "systems/fabulaultima/assets/ui/terror.svg",
         changes: [
             {
@@ -133,6 +146,7 @@ export const statusConditions = [
     {
         id: "slow",
         label: "Slow",
+        description: "Dexterity (DEX) is lowered by one die size (min. d6).",
         icon: "systems/fabulaultima/assets/ui/tortoise.svg",
         changes: [
             {
@@ -145,6 +159,7 @@ export const statusConditions = [
     {
         id: "weak",
         label: "Weak",
+        description: "Might (MIG) is lowered by one die size (min. d6).",
         icon: "systems/fabulaultima/assets/ui/back-pain.svg",
         changes: [
             {
@@ -157,6 +172,7 @@ export const statusConditions = [
     {
         id: "awaken-dex",
         label: "Awaken (DEX)",
+        description: "Dexterity (DEX) is increased by one die size (max d12).",
         icon: "systems/fabulaultima/assets/ui/conditions/extra-lucid-dex.svg",
         changes: [
             {
@@ -169,6 +185,7 @@ export const statusConditions = [
     {
         id: "awaken-ins",
         label: "Awaken (INS)",
+        description: "Insight (INS) is increased by one die size (max d12).",
         icon: "systems/fabulaultima/assets/ui/conditions/extra-lucid-ins.svg",
         changes: [
             {
@@ -181,6 +198,7 @@ export const statusConditions = [
     {
         id: "awaken-mig",
         label: "Awaken (MIG)",
+        description: "Might (MIG) is increased by one die size (max d12).",
         icon: "systems/fabulaultima/assets/ui/conditions/extra-lucid-mig.svg",
         changes: [
             {
@@ -193,6 +211,7 @@ export const statusConditions = [
     {
         id: "awaken-wlp",
         label: "Awaken (WLP)",
+        description: "Willpower (WLP) is increased by one die size (max d12).",
         icon: "systems/fabulaultima/assets/ui/conditions/extra-lucid-wlp.svg",
         changes: [
             {
@@ -205,6 +224,7 @@ export const statusConditions = [
     {
         id: "elemental-shroud-air",
         label: "Elemental Shroud (Air)",
+        description: "1/2 damage from all sources that deal Air damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/winged-shield.svg",
         changes: [
             {
@@ -217,6 +237,7 @@ export const statusConditions = [
     {
         id: "elemental-shroud-bolt",
         label: "Elemental Shroud (Bolt)",
+        description: "1/2 damage from all sources that deal Bolt damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/lightning-shield.svg",
         changes: [
             {
@@ -229,6 +250,7 @@ export const statusConditions = [
     {
         id: "resistance-dark",
         label: "Resistance (Dark)",
+        description: "1/2 damage from all sources that deal Dark damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/skull-shield.svg",
         changes: [
             {
@@ -241,6 +263,7 @@ export const statusConditions = [
     {
         id: "elemental-shroud-earth",
         label: "Elemental Shroud (Earth)",
+        description: "1/2 damage from all sources that deal Earth damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/cracked-shield.svg",
         changes: [
             {
@@ -253,6 +276,7 @@ export const statusConditions = [
     {
         id: "elemental-shroud-fire",
         label: "Elemental Shroud (Fire)",
+        description: "1/2 damage from all sources that deal Fire damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/fire-shield.svg",
         changes: [
             {
@@ -265,6 +289,7 @@ export const statusConditions = [
     {
         id: "elemental-shroud-ice",
         label: "Elemental Shroud (Ice)",
+        description: "1/2 damage from all sources that deal Ice damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/ice-shield.svg",
         changes: [
             {
@@ -277,6 +302,7 @@ export const statusConditions = [
     {
         id: "resistance-light",
         label: "Resistance (Light)",
+        description: "1/2 damage from all sources that deal Light damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/rosa-shield.svg",
         changes: [
             {
@@ -302,6 +328,7 @@ export const statusConditions = [
     {
         id: "resistance-poison",
         label: "Resistance (Poison)",
+        description: "1/2 damage from all sources that deal Poison damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/eye-shield.svg",
         changes: [
             {
@@ -314,11 +341,14 @@ export const statusConditions = [
     {
         id: "mercy",
         label: "Mercy",
+        description:
+            "The next time damage brings you to 0 Hit Points, you survive with 1 Hit Point instead.",
         icon: "systems/fabulaultima/assets/ui/prayer.svg",
     },
     {
         id: "reinforce-dazed",
         label: "Reinforce (Dazed)",
+        description: "Immune to the Dazed status effect.",
         icon: "systems/fabulaultima/assets/ui/conditions/energy-shield-dazed.svg",
         changes: [
             {
@@ -331,6 +361,7 @@ export const statusConditions = [
     {
         id: "reinforce-enraged",
         label: "Reinforce (Enraged)",
+        description: "Immune to the Enraged status effect.",
         icon: "systems/fabulaultima/assets/ui/conditions/energy-shield-enraged.svg",
         changes: [
             {
@@ -343,6 +374,7 @@ export const statusConditions = [
     {
         id: "reinforce-poisoned",
         label: "Reinforce (Poisoned)",
+        description: "Immune to the Poisoned status effect.",
         icon: "systems/fabulaultima/assets/ui/conditions/energy-shield-poisoned.svg",
         changes: [
             {
@@ -355,6 +387,7 @@ export const statusConditions = [
     {
         id: "reinforce-shaken",
         label: "Reinforce (Shaken)",
+        description: "Immune to the Shaken status effect.",
         icon: "systems/fabulaultima/assets/ui/conditions/energy-shield-shaken.svg",
         changes: [
             {
@@ -367,6 +400,7 @@ export const statusConditions = [
     {
         id: "reinforce-slow",
         label: "Reinforce (Slow)",
+        description: "Immune to the Slow status effect.",
         icon: "systems/fabulaultima/assets/ui/conditions/energy-shield-slow.svg",
         changes: [
             {
@@ -379,6 +413,7 @@ export const statusConditions = [
     {
         id: "reinforce-weak",
         label: "Reinforce (Weak)",
+        description: "Immune to the Weak status effect.",
         icon: "systems/fabulaultima/assets/ui/conditions/energy-shield-weak.svg",
         changes: [
             {
@@ -391,6 +426,7 @@ export const statusConditions = [
     {
         id: "vulnerability-air",
         label: "Vulnerability (Air)",
+        description: "2x damage from all sources that deal Air damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-air.svg",
         changes: [
             {
@@ -402,6 +438,7 @@ export const statusConditions = [
     },
     {
         id: "vulnerability-bolt",
+        description: "2x damage from all sources that deal Bolt damage.",
         label: "Vulnerability (Bolt)",
         icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-bolt.svg",
         changes: [
@@ -415,6 +452,7 @@ export const statusConditions = [
     {
         id: "vulnerability-dark",
         label: "Vulnerability (Dark)",
+        description: "2x damage from all sources that deal Dark damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-dark.svg",
         changes: [
             {
@@ -427,6 +465,7 @@ export const statusConditions = [
     {
         id: "vulnerability-earth",
         label: "Vulnerability (Earth)",
+        description: "2x damage from all sources that deal Earth damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-earth.svg",
         changes: [
             {
@@ -439,6 +478,7 @@ export const statusConditions = [
     {
         id: "vulnerability-fire",
         label: "Vulnerability (Fire)",
+        description: "2x damage from all sources that deal Fire damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-fire.svg",
         changes: [
             {
@@ -451,6 +491,7 @@ export const statusConditions = [
     {
         id: "vulnerability-ice",
         label: "Vulnerability (Ice)",
+        description: "2x damage from all sources that deal Ice damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-ice.svg",
         changes: [
             {
@@ -463,6 +504,7 @@ export const statusConditions = [
     {
         id: "vulnerability-light",
         label: "Vulnerability (Light)",
+        description: "2x damage from all sources that deal Light damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-light.svg",
         changes: [
             {
@@ -475,6 +517,7 @@ export const statusConditions = [
     {
         id: "vulnerability-poison",
         label: "Vulnerability (Poison)",
+        description: "2x damage from all sources that deal Poison damage.",
         icon: "systems/fabulaultima/assets/ui/conditions/armor-downgrade-poison.svg",
         changes: [
             {
@@ -487,6 +530,7 @@ export const statusConditions = [
     {
         id: "withstand-mig",
         label: "Withstand (MIG)",
+        description: "Might (MIG) is increased by one die size (max d12).",
         icon: "systems/fabulaultima/assets/ui/conditions/internal-injury-mig.svg",
         changes: [
             {
@@ -498,7 +542,7 @@ export const statusConditions = [
     },
     {
         id: "withstand-wlp",
-        label: "Withstand (WLP)",
+        label: "Willpower (WLP) is increased by one die size (max d12).",
         icon: "systems/fabulaultima/assets/ui/conditions/internal-injury-wlp.svg",
         changes: [
             {
