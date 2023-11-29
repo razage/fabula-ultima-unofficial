@@ -15,6 +15,9 @@ This system is unaffiliated with the creators or the publisher. The software is 
 -   [Core Rules (Amazon, Physical)](https://www.amazon.com/dp/B0C34VZ87R)
 -   [Patreon](https://www.patreon.com/roosterema)
 
+## Known Issues
+There is currently a problem that prevents the system from loading if you open Foundry in Firefox. I am trying to figure out what in my system causes this, because it appears to be related to icons built in to Foundry itself. This can be remedied by using _literally_ any other browser, since everything is based on Chrome (besides Firefox).
+
 ## The UI
 
 Early on in the project, I decided to make my sheets mimic the old-school _Final Fantasy_ menus. I personally like this style and I will not be changing it. Since somebody requested it early on in development, I did add some configuration options to change the color. It is not perfect and I will probably revisit that at a later date. Ultimately, I would like to make a few UI designs and just let you pick from those. It will take some time for me to add this and it isn't my top priority, so stay tuned.
