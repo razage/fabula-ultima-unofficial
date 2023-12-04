@@ -238,16 +238,17 @@ h4.dice-total .multi {
 }
 .character-sheet .conditions img.condition-icon,
 .npc-sheet .conditions img.condition-icon {
-  display: block;
   margin: 0 auto;
   border: none;
-  height: 40px;
-  opacity: 0.55;
+  flex: 0 0 45px;
+  height: 45px;
+  opacity: 0.65;
 }
 .character-sheet .conditions img.condition-icon.immune,
 .npc-sheet .conditions img.condition-icon.immune {
   border: 2px solid #40faea;
-  border-radius: 20px;
+  border-radius: 12px;
+  opacity: 0.35;
 }
 .character-sheet .conditions img.condition-icon.immune:hover,
 .npc-sheet .conditions img.condition-icon.immune:hover {
