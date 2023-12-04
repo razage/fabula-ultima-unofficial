@@ -542,7 +542,8 @@ export const statusConditions = [
     },
     {
         id: "withstand-wlp",
-        label: "Willpower (WLP) is increased by one die size (max d12).",
+        label: "Withstand (WLP)",
+        description: "Willpower (WLP) is increased by one die size (max d12).",
         icon: "systems/fabulaultima/assets/ui/conditions/internal-injury-wlp.svg",
         changes: [
             {
