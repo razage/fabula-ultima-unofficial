@@ -33,9 +33,9 @@ export class FabulaUltimaActor extends Actor {
         if (actorData.type === "player") {
             // Update resources to reflect bonuses
             system.hp.max =
-                system.attributes.might.current * 5 + system.characterLevel + system.hp.bonus;
+                system.attributes.might.base * 5 + system.characterLevel + system.hp.bonus;
             system.mp.max =
-                system.attributes.willpower.current * 5 + system.characterLevel + system.mp.bonus;
+                system.attributes.willpower.base * 5 + system.characterLevel + system.mp.bonus;
             system.ip.max = 6 + system.ip.bonus;
         }
 
@@ -43,8 +43,7 @@ export class FabulaUltimaActor extends Actor {
             system.initiative.base = Math.floor(
                 (system.attributes.dexterity.base + system.attributes.insight.base) / 2
             );
-            system.hp.max =
-                system.attributes.might.current * 5 + system.level * 2 + system.hp.bonus;
+            system.hp.max = system.attributes.might.base * 5 + system.level * 2 + system.hp.bonus;
             system.mp.max = system.attributes.willpower.base * 5 + system.level + system.mp.bonus;
 
             // Adjust the NPC's stats if they have the right rank

@@ -5,9 +5,9 @@
     "authors": [{ "name": "razage", "discord": "razage", "url": "https://github.com/razage" }],
     "url": "https://github.com/razage/fabula-ultima-unofficial",
     "license": "LICENSE.txt",
-    "version": "0.8.22b",
+    "version": "0.8.23b",
     "compatibility": {
-        "minimum": "10.291",
+        "minimum": "11",
         "verified": "11.315"
     },
     "manifest": "https://raw.githubusercontent.com/razage/fabula-ultima-unofficial/master/system.json",
