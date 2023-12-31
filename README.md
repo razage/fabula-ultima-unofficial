@@ -16,7 +16,10 @@ This system is unaffiliated with the creators or the publisher. The software is 
 -   [Patreon](https://www.patreon.com/roosterema)
 
 ## Known Issues
-There is currently a problem that prevents the system from loading if you open Foundry in Firefox. I am trying to figure out what in my system causes this, because it appears to be related to icons built in to Foundry itself. This can be remedied by using _literally_ any other browser, since everything is based on Chrome (besides Firefox).
+
+### Firefox
+
+The Firefox issue that was preventing Foundry from loading maps is fixed. It was caused by a Firefox-specific decision to not accept SVG images with undefined dimensions. No other browsers (at least chromium-based ones) have this issue. Going forward, I will try my best to remember to add this property to all relevant SVG images going forward.
 
 ## The UI
 
@@ -42,6 +45,7 @@ I've added a few modules that will make running this game _much_ easier. They ar
     -   This game uses clocks. This is my preferred clock plugin. Use whatever one you prefer if you don't want to use this. My system does **not** implement clocks otherwise.
 -   Lancer Initiative
     -   Fabula Ultima's initiative system is largely incompatible with Foundry. My implementation sucked, so I found this as a good alternative. With this, you just need to use the party sheet to make an initiative roll (DEX + INS) and compare it to the highest enemy initiative. It even lets you give bosses multiple turns.
+    -   The only downside is players can't activate their own turn. GMs will need to manage whose turn it is and when a round ends. Rolling is not restricted by the turn though, so you could ignore the combat tracker if you want.
 
 # Copyright
 

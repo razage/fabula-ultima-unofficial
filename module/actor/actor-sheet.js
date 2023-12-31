@@ -390,72 +390,47 @@ export class FabulaUltimaActorSheet extends ActorSheet {
 
             let dataset = ev.currentTarget.dataset;
             let dialog;
+            let compendiums = game.packs.filter((k) => k.collection.includes(dataset.compendium));
 
-            switch (dataset.compendium) {
-                case "accessory": {
-                    game.packs
-                        .find((k) => k.collection === "fabulaultima.accessories")
-                        .render(true);
-                    break;
-                }
-                case "armor":
-                    game.packs.find((k) => k.collection === "fabulaultima.armor").render(true);
-                    break;
-                case "classes":
-                    game.packs
-                        .find((k) => k.collection === "fabulaultima.character-classes")
-                        .render(true);
-                    break;
-                case "consumables":
-                    game.packs
-                        .find((k) => k.collection === "fabulaultima.consumables")
-                        .render(true);
-                    break;
-                case "npc-skills":
-                    game.packs.find((k) => k.collection === "fabulaultima.npc-skills").render(true);
-                    break;
-                case "skill": {
-                    dialog = new Dialog({
-                        title: game.i18n.localize("FU.UI.selectCompendium"),
-                        buttons: {
-                            skills: {
-                                label: game.i18n.localize("FU.Plural.skill"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.skills")
-                                        .render(true),
-                            },
-                            heroicSkills: {
-                                label: game.i18n.localize("FU.Plural.heroic"),
-                                callback: () =>
-                                    game.packs
-                                        .find((k) => k.collection === "fabulaultima.heroic-skills")
-                                        .render(true),
-                            },
-                        },
-                    });
-                    dialog.render(true);
-                    break;
-                }
-                case "spell": {
-                    game.packs.find((k) => k.collection === "fabulaultima.spells").render(true);
-                    break;
-                }
-                case "weapons":
-                    game.packs.find((k) => k.collection === "fabulaultima.weapons").render(true);
-                    break;
-                case "skill-effects":
-                    game.packs
-                        .find((k) => k.collection === "fabulaultima.skill-effects")
-                        .render(true);
-                    break;
+            if (compendiums.length > 1) {
+                let buttons = {};
 
-                default:
-                    console.log(
-                        "Compendium ",
-                        dataset.compendium,
-                        " is not currently implemented."
-                    );
+                compendiums.forEach((compendium) => {
+                    let data = {};
+
+                    if (compendium.metadata.id.includes("fabulaultima")) {
+                        switch (dataset.compendium) {
+                            case "accessories":
+                                data.label = game.i18n.localize("FU.Plural.accessory");
+                                break;
+                            case "skill":
+                                if (compendium.metadata.id.includes("heroic"))
+                                    data.label = game.i18n.localize("FU.Plural.heroic");
+                                else if (compendium.metadata.id.includes("npc"))
+                                    data.label = game.i18n.localize("FU.Plural.npcSkill");
+                                else data.label = game.i18n.localize("FU.Plural.skill");
+                                break;
+                            default:
+                                game.i18n.localize(`FU.Plural.${dataset.compendium}`);
+                                break;
+                        }
+                    } else {
+                        data.label = compendium.metadata.label;
+                    }
+                    data.callback = () =>
+                        game.packs
+                            .find((k) => k.collection === compendium.metadata.id)
+                            .render(true);
+                    buttons[compendium.metadata.name] = data;
+                });
+
+                dialog = new Dialog({
+                    title: game.i18n.localize("FU.UI.selectCompendium"),
+                    buttons: buttons,
+                });
+                dialog.render(true);
+            } else {
+                compendiums[0].render(true);
             }
         });
 
