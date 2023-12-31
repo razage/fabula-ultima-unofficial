@@ -19,7 +19,7 @@ This system is unaffiliated with the creators or the publisher. The software is 
 
 ### Firefox
 
-The Firefox issue that was preventing Foundry from loading maps is fixed. It was caused by a Firefox-specific decision to not accept SVG images with undefined dimensions. No other browser (at least chromium-based ones) have this issue. Going forward, I will try my best to remember to add this property to all relevant SVG images.
+The Firefox issue that was preventing Foundry from loading maps is fixed. It was caused by a Firefox-specific decision to not accept SVG images with undefined dimensions. No other browsers (at least chromium-based ones) have this issue. Going forward, I will try my best to remember to add this property to all relevant SVG images going forward.
 
 ## The UI
 
