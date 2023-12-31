@@ -8,7 +8,7 @@
 	{{!-- Weapons --}}
 	<h2>
 		{{localize "FU.Items.Types.weapon"}}
-		<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="weapons"
+		<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="weapon"
 			title="{{localize 'FU.UI.openCompendium'}}"></i>
 	</h2>
 	<div class="flexcol">
@@ -40,7 +40,7 @@
 	{{!-- Accessories --}}
 	<h3>
 		{{localize "FU.Plural.accessory"}}
-		<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="accessory"
+		<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="accessories"
 			title="{{localize 'FU.UI.openCompendium'}}"></i>
 	</h3>
 	<div class="flexcol accessories">
@@ -61,13 +61,12 @@
 			title="{{localize 'FU.UI.openCompendium'}}"></i>
 	</h2>
 	<div class="flexcol">
-		<div class="grid grid-4col">
+		<div class="grid grid-3col">
 			{{#each actor.system.consumables as |item|}}
-			<div class="flexrow consumable-card" data-item-id="{{item._id}}">
+			<div class="flexrow consumable-card" data-item-id="{{item._id}}" data-tooltip="{{{item.system.quality}}}">
 				<img src="{{item.img}}" class="item-icon">
 				<p>{{item.name}}</p>
-				<p>{{item.system.ipCost}} IP</p>
-				<p>{{localize (concat "FU.Items.Blurbs." item.system.internalName)}}</p>
+				<p>{{item.system.ipCost}} {{localize "FU.Short.inventoryPoints"}}</p>
 			</div>
 			{{/each}}
 		</div>
