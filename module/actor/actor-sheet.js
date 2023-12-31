@@ -411,7 +411,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
                                 else data.label = game.i18n.localize("FU.Plural.skill");
                                 break;
                             default:
-                                game.i18n.localize(`FU.Plural.${dataset.compendium}`);
+                                data.label = game.i18n.localize(`FU.Plural.${dataset.compendium}`);
                                 break;
                         }
                     } else {
