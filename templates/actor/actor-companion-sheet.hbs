@@ -74,8 +74,10 @@
 	</nav>
 
 	<section class="sheet-body">
+		{{!-- roll tab --}}
 		{{> "systems/fabulaultima/templates/actor/partials/roll-tab.hbs"}}
 
+		{{!-- attributes tab --}}
 		<div class="tab attributes" data-group="primary" data-tab="attributes">
 			<div class="grid grid-4col">
 				<div class="flexrow">
@@ -93,8 +95,10 @@
 			{{> "systems/fabulaultima/templates/actor/partials/resistances.hbs" isNPC=true}}
 		</div>
 
+		{{!-- equipment tab --}}
 		{{> "systems/fabulaultima/templates/actor/partials/equipment-tab.hbs"}}
 
+		{{!-- attacks tab --}}
 		<div class="tab attacks" data-group="primary" data-tab="attacks">
 			<button class="fabula-button item-create" data-type="weapon"><i class="fas fa-solid fa-plus"></i></button>
 			<div class="item-list attacks">
@@ -106,10 +110,11 @@
 			</div>
 		</div>
 
+		{{!-- skills tab --}}
 		<div class="tab skills" data-group="primary" data-tab="skills">
 			<h2>
 				{{localize "FU.Plural.skill"}}
-				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="npc-skills"
+				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="skill"
 					title="{{localize 'FU.UI.openCompendium'}}"></i>
 			</h2>
 			<button class="fabula-button item-create" data-type="skill"><i class="fas fa-solid fa-plus"></i></button>
@@ -122,6 +127,7 @@
 			</div>
 		</div>
 
+		{{!-- spells tab --}}
 		<div class="tab spells" data-group="primary" data-tab="spells">
 			<h2>
 				{{localize "FU.Spells.name"}}
@@ -138,6 +144,7 @@
 			</div>
 		</div>
 
+		{{!-- information tab --}}
 		<div class="tab info" data-group="primary" data-tab="info">
 			<div class="grid grid-2col">
 				<div class="flexrow">
