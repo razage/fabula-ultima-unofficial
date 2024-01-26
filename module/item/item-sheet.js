@@ -1,6 +1,6 @@
 export class FabulaUltimaItemSheet extends ItemSheet {
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        let options = {
             classes: ["fabulaultima", "sheet", "item"],
             width: 560,
             height: 500,
@@ -8,10 +8,11 @@ export class FabulaUltimaItemSheet extends ItemSheet {
                 {
                     navSelector: ".sheet-tabs",
                     contentSelector: ".sheet-body",
-                    initial: "attributes",
+                    initial: "description",
                 },
             ],
-        });
+        };
+        return mergeObject(super.defaultOptions, options);
     }
 
     get template() {

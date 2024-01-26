@@ -1,7 +1,5 @@
-2023/12/04-16:44:36.939104 14b9a5302b38 Recovering log #309
-2023/12/04-16:44:37.012831 14b9a5302b38 Delete type=0 #309
-2023/12/04-16:44:37.013314 14b9a5302b38 Delete type=3 #307
-2023/12/31-18:29:11.925846 14b724af3b38 Level-0 table #314: started
-2023/12/31-18:29:11.926582 14b724af3b38 Level-0 table #314: 0 bytes OK
-2023/12/31-18:29:11.975300 14b724af3b38 Delete type=0 #312
-2023/12/31-18:29:12.033963 14b724af3b38 Manual compaction at level-0 from '!tables!ZE4i9679EP7F8LYh' @ 72057594037927935 : 1 .. '!tables.results!y2cqdkNogUCbjybR.s0LhNp1eUYaI2IjG' @ 0 : 0; will stop at (end)
+2023/12/31-21:57:03.211930 1524d77bbb38 Log #317: 0 ops saved to Table #318 OK
+2023/12/31-21:57:03.213454 1524d77bbb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables/000317.log: OK
+2023/12/31-21:57:03.214678 1524d77bbb38 Table #294: 25 entries OK
+2023/12/31-21:57:03.216579 1524d77bbb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables/MANIFEST-000315: OK
+2023/12/31-21:57:03.240395 1524d77bbb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/tinkerer-potion-tables; recovered 1 files; 3135 bytes. Some data may have been lost. ****

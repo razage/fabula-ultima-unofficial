@@ -1,7 +1,5 @@
-2023/12/04-16:44:36.255390 14b9a50ffb38 Recovering log #328
-2023/12/04-16:44:36.311838 14b9a50ffb38 Delete type=0 #328
-2023/12/04-16:44:36.312348 14b9a50ffb38 Delete type=3 #326
-2023/12/31-18:29:11.211267 14b724af3b38 Level-0 table #333: started
-2023/12/31-18:29:11.222117 14b724af3b38 Level-0 table #333: 0 bytes OK
-2023/12/31-18:29:11.276836 14b724af3b38 Delete type=0 #331
-2023/12/31-18:29:11.351523 14b724af3b38 Manual compaction at level-0 from '!items!1FPCB03FTyc2QtEl' @ 72057594037927935 : 1 .. '!items.effects!xaFoarwH3pNojvxt.IkslqcvzwTq8UZft' @ 0 : 0; will stop at (end)
+2023/12/31-21:57:02.085264 1524d7df0b38 Log #336: 0 ops saved to Table #337 OK
+2023/12/31-21:57:02.086606 1524d7df0b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/arcana/000336.log: OK
+2023/12/31-21:57:02.087905 1524d7df0b38 Table #313: 17 entries OK
+2023/12/31-21:57:02.090031 1524d7df0b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/arcana/MANIFEST-000334: OK
+2023/12/31-21:57:02.139042 1524d7df0b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/arcana; recovered 1 files; 6793 bytes. Some data may have been lost. ****

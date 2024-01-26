@@ -1,7 +1,5 @@
-2023/12/04-16:44:36.057725 14b9a50ffb38 Recovering log #326
-2023/12/04-16:44:36.153568 14b9a50ffb38 Delete type=0 #326
-2023/12/04-16:44:36.154211 14b9a50ffb38 Delete type=3 #324
-2023/12/31-18:29:11.094062 14b724af3b38 Level-0 table #331: started
-2023/12/31-18:29:11.094787 14b724af3b38 Level-0 table #331: 0 bytes OK
-2023/12/31-18:29:11.135084 14b724af3b38 Delete type=0 #329
-2023/12/31-18:29:11.277377 14b724af3b38 Manual compaction at level-0 from '!items!1K4ZvMARzqVu7S41' @ 72057594037927935 : 1 .. '!items.effects!wrw3ekQ0sB2NjntI.aTIWTbmG6AlIGLZQ' @ 0 : 0; will stop at (end)
+2023/12/31-21:57:01.800530 1524d79beb38 Log #334: 0 ops saved to Table #335 OK
+2023/12/31-21:57:01.801932 1524d79beb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/accessories/000334.log: OK
+2023/12/31-21:57:01.803281 1524d79beb38 Table #311: 44 entries OK
+2023/12/31-21:57:01.805578 1524d79beb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/accessories/MANIFEST-000332: OK
+2023/12/31-21:57:01.829326 1524d79beb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/accessories; recovered 1 files; 10079 bytes. Some data may have been lost. ****

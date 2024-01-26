@@ -1,7 +1,5 @@
-2023/12/04-16:44:36.387592 14b9a50ffb38 Recovering log #327
-2023/12/04-16:44:36.427466 14b9a50ffb38 Delete type=0 #327
-2023/12/04-16:44:36.428027 14b9a50ffb38 Delete type=3 #325
-2023/12/31-18:29:11.469105 14b724af3b38 Level-0 table #332: started
-2023/12/31-18:29:11.469879 14b724af3b38 Level-0 table #332: 0 bytes OK
-2023/12/31-18:29:11.518585 14b724af3b38 Delete type=0 #330
-2023/12/31-18:29:11.569061 14b724af3b38 Manual compaction at level-0 from '!folders!1OpzYy5wScYcWkI2' @ 72057594037927935 : 1 .. '!items!uX3CMZPuZqwG3P7S' @ 0 : 0; will stop at (end)
+2023/12/31-21:57:02.310239 1524d77bbb38 Log #335: 0 ops saved to Table #336 OK
+2023/12/31-21:57:02.311793 1524d77bbb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/character-classes/000335.log: OK
+2023/12/31-21:57:02.313327 1524d77bbb38 Table #312: 24 entries OK
+2023/12/31-21:57:02.315529 1524d77bbb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/character-classes/MANIFEST-000333: OK
+2023/12/31-21:57:02.364453 1524d77bbb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/character-classes; recovered 1 files; 5421 bytes. Some data may have been lost. ****

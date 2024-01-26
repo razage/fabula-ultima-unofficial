@@ -29,6 +29,12 @@ Early on in the project, I decided to make my sheets mimic the old-school _Final
 
 This project is still in development and currently in a beta phase.
 
+### Releasing on Foundry
+
+I have tried to release this officially on Foundry, but they weren't willing to post it without _explicit_ permission from the author and/or publisher. I have spoken with both Need Games and Emanuele. At the very least, the publisher has clarified to Foundry that the character sheet is fine. The process was paused because Need Games wanted to discuss the possiblity of an official implementation with their assets. I would still be happy to continue the discussion if Need Games or Emanuele see this. At this time, I have not heard from Need Games in around a month.
+
+So for now, I'm just leaving things as-is. It will not be listed on Foundry until further notice.
+
 ### Future Content
 
 If/when new DLC or expansion modules are released for Fabula Ultima, I will probably get around to adding it in eventually. If a rule or new book features something that is optional, there is a chance I might not implement it.
