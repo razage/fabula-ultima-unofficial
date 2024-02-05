@@ -1,5 +1,7 @@
-2023/12/31-21:57:03.005519 1524d7df0b38 Log #341: 0 ops saved to Table #342 OK
-2023/12/31-21:57:03.007217 1524d7df0b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/skills/000341.log: OK
-2023/12/31-21:57:03.009047 1524d7df0b38 Table #322: 140 entries OK
-2023/12/31-21:57:03.011331 1524d7df0b38 Archiving /foundry/data/Data/systems/fabulaultima/packs/skills/MANIFEST-000339: OK
-2023/12/31-21:57:03.090215 1524d7df0b38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/skills; recovered 1 files; 59531 bytes. Some data may have been lost. ****
+2024/01/28-01:51:07.910729 1524d7df0b38 Recovering log #345
+2024/01/28-01:51:08.000106 1524d7df0b38 Delete type=3 #343
+2024/01/28-01:51:08.000600 1524d7df0b38 Delete type=0 #345
+2024/01/30-03:49:58.274832 152256f82b38 Level-0 table #351: started
+2024/01/30-03:49:58.275584 152256f82b38 Level-0 table #351: 0 bytes OK
+2024/01/30-03:49:58.349285 152256f82b38 Delete type=0 #349
+2024/01/30-03:49:58.442725 152256f82b38 Manual compaction at level-0 from '!folders!4DukP50q12i8v8Pb' @ 72057594037927935 : 1 .. '!items.effects!morD2K0ZPqcnyOGh.VPLMX1zpVG1O4Fdv' @ 0 : 0; will stop at (end)

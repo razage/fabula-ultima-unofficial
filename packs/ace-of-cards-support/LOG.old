@@ -1,5 +1,7 @@
-2023/12/31-21:57:01.934304 1524d79beb38 Log #338: 0 ops saved to Table #339 OK
-2023/12/31-21:57:01.935917 1524d79beb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/ace-of-cards-support/000338.log: OK
-2023/12/31-21:57:01.937335 1524d79beb38 Table #315: 33 entries OK
-2023/12/31-21:57:01.939399 1524d79beb38 Archiving /foundry/data/Data/systems/fabulaultima/packs/ace-of-cards-support/MANIFEST-000336: OK
-2023/12/31-21:57:01.980578 1524d79beb38 **** Repaired leveldb /foundry/data/Data/systems/fabulaultima/packs/ace-of-cards-support; recovered 1 files; 4745 bytes. Some data may have been lost. ****
+2024/01/28-01:51:06.897750 1524d77bbb38 Recovering log #342
+2024/01/28-01:51:06.933083 1524d77bbb38 Delete type=3 #340
+2024/01/28-01:51:06.933634 1524d77bbb38 Delete type=0 #342
+2024/01/30-03:49:57.808051 152256f82b38 Level-0 table #348: started
+2024/01/30-03:49:57.808787 152256f82b38 Level-0 table #348: 0 bytes OK
+2024/01/30-03:49:57.833466 152256f82b38 Delete type=0 #346
+2024/01/30-03:49:57.892409 152256f82b38 Manual compaction at level-0 from '!cards!37ruJLBQ51yfJGX0' @ 72057594037927935 : 1 .. '!cards.cards!37ruJLBQ51yfJGX0.qsjGGXzZuJSzPpMF' @ 0 : 0; will stop at (end)

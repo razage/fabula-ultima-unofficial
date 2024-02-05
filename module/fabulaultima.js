@@ -134,11 +134,16 @@ Hooks.on("ready", () => {
     customStyle.id = "fu-custom-css";
 
     customCSS += `
-    .fabulaultima.sheet section.window-content {
+    .fabulaultima.sheet section.window-content, .sheet-body select, .sheet-header select, .sheet-header select option {
         color: ${fontColor};
         background: ${bgColors[1]};
         background: linear-gradient(180deg, ${bgColors[0]} 0%, ${bgColors[1]} 100%);
-    }`;
+    }
+    
+    .npc-sheet label, .npc-sheet h1.character-name input[type="text"], .character-sheet h1.character-name input[type="text"], .npc-sheet input[type="text"]:not(:disabled), .character-sheet .fabula input, .character-sheet .experience input {
+        color: ${fontColor};
+    }
+    `;
 
     customStyle.innerHTML = customCSS;
 
