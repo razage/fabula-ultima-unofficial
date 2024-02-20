@@ -43,10 +43,12 @@
 
 			<div class="grid grid-2col">
 				<div class="flexrow">
-					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize
+					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r=(localize
+					'FU.Short.hitPoints') title=(localize
 					'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis
 					inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max isNPC=true}}
-					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="mp" title=(localize
+					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r=(localize
+					'FU.Short.mindPoints') title=(localize
 					'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value"
 					rValue=actor.system.mp.value rMax=actor.system.mp.max isNPC=true}}
 				</div>
@@ -229,7 +231,7 @@
 		<div class="tab effects" data-group="primary" data-tab="effects">
 			<h2>
 				{{localize "FU.Items.Types.skillEffects"}}
-				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="skill-effects"
+				<i class="fas fa-solid fa-book-atlas open-compendium" data-compendium="effect"
 					title="{{localize 'FU.UI.openCompendium'}}"></i>
 			</h2>
 			<div class="flexcol buffs">

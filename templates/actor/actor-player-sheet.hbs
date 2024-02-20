@@ -10,20 +10,25 @@
             {{!-- Resources --}}
             <div class="grid grid-3col">
                 <div class="flexrow">
-                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize
-                    'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r=(localize
+                    'FU.Short.hitPoints') title=(localize 'FU.Resources.hp') icon="fas fa-solid fa-heart"
+                    crisis=actor.system.hp.crisis
                     inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max}}
-                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="mp" title=(localize
-                    'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value"
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r=(localize
+                    'FU.Short.mindPoints')
+                    title=(localize 'FU.Resources.mp') icon="fas fa-solid fa-sparkles"
+                    inputName="system.mp.value"
                     rValue=actor.system.mp.value rMax=actor.system.mp.max}}
-                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="ip" title=(localize
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r=(localize
+                    'FU.Short.inventoryPoints') title=(localize
                     'FU.Resources.ip') icon="fas fa-solid fa-bag-shopping" inputName="system.ip.value"
                     rValue=actor.system.ip.value rMax=actor.system.ip.max}}
                 </div>
                 {{#if actor.system.gp.enabled}}
                 <div class="flexrow">
                     <span></span>
-                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="gp" title=(localize
+                    {{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r=(localize
+                    'FU.Short.gravePoints') title=(localize
                     'FU.Resources.gp') icon="fas fa-solid fa-tombstone-blank" inputName="system.gp.value"
                     rValue=actor.system.gp.value rMax=actor.system.gp.max}}
                     <span></span>

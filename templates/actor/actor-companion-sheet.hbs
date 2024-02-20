@@ -24,10 +24,12 @@
 
 			<div class="grid grid-2col">
 				<div class="flexrow">
-					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="hp" title=(localize
+					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r=(localize
+					'FU.Short.hitPoints') title=(localize
 					'FU.Resources.hp') icon="fas fa-solid fa-heart" crisis=actor.system.hp.crisis
 					inputName="system.hp.value" rValue=actor.system.hp.value rMax=actor.system.hp.max isNPC=true}}
-					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r="mp" title=(localize
+					{{> "systems/fabulaultima/templates/actor/partials/resource-card.hbs" r=(localize
+					'FU.Short.mindPoints') title=(localize
 					'FU.Resources.mp') icon="fas fa-solid fa-sparkles" inputName="system.mp.value"
 					rValue=actor.system.mp.value rMax=actor.system.mp.max isNPC=true}}
 				</div>

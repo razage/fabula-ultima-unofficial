@@ -23,9 +23,13 @@ Early on in the project, I decided to make my sheets mimic the old-school _Final
 
 This project is still in development and currently in a beta phase.
 
+### Strange Behavior
+
+A lot of issues I see come up seem to be Firefox exclusive. If you are having an issue, please feel free to post a ticket. But you might also want to try running Foundry from a different browser as a temporary fix.
+
 ### Releasing on Foundry
 
-I have tried to release this officially on Foundry, but they weren't willing to post it without _explicit_ permission from the author and/or publisher. I have spoken with both Need Games and Emanuele. At the very least, the publisher has clarified to Foundry that the character sheet is fine. The process was paused because Need Games wanted to discuss the possiblity of an official implementation with their assets. I would still be happy to continue the discussion if Need Games or Emanuele see this. At this time, I have not heard from Need Games in around a month.
+I have tried to release this officially on Foundry, but they weren't willing to post it without _explicit_ permission from the author and/or publisher. I have spoken with both Need Games and Emanuele. At the very least, the publisher has clarified to Foundry that the character sheet is fine. The process was paused because Need Games wanted to discuss the possiblity of an official implementation with their assets. I would still be happy to continue the discussion if Need Games or Emanuele see this. At this time, I have not heard from Need Games in over a month.
 
 So for now, I'm just leaving things as-is. It will not be listed on Foundry until further notice.
 
